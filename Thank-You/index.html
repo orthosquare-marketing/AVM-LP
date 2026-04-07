@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <style>
+      :root {
+        --purple: #362997;
+        --red: #df2028;
+        --text: rgba(0, 0, 0, 0.8);
+        --bg-start: #fffdee;
+        --bg-mid: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Helvetica", "Arial", sans-serif;
+        background: linear-gradient(180deg, var(--bg-start) 25%, var(--bg-mid) 50%, #ffffff 100%);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .thankyou-card {
+        text-align: center;
+        max-width: 620px;
+        width: 100%;
+      }
+
+      .thankyou-image {
+        width: 140px;
+        height: auto;
+        margin: 0 auto 18px;
+        display: block;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        color: var(--purple);
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        margin: 0 auto 26px;
+        font-size: 27px;
+        line-height: 31px;
+        max-width: 520px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--red);
+        color: #ffffff;
+        padding: 12px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 640px) {
+        h1 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 20px;
+          line-height: 26px;
+        }
+
+        .thankyou-image {
+          width: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="thankyou-card">
+      <img
+        class="thankyou-image"
+        src="../assets/thankyouimg/thankyouimg.png"
+        alt="Thank you"
+      />
+      <h1>Our Team will Reach Out Soon</h1>
+      <p>
+        You have successfully registered your details with us. A smile partner will
+        connect with you at the earliest.
+      </p>
+      <a class="cta-button" href="../index.html">Back to Home</a>
+    </main>
+  </body>
+</html>
