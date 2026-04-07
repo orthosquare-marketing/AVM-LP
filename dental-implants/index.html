@@ -1,0 +1,2644 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Graduate&family=Poppins:wght@400;600;700&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <!-- Splide CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link rel="icon" href="assets/ortho-square-logo.png" type="image/x-icon">
+
+  <style>
+    .h2-c {
+      color: #362997
+    }
+
+    .p-c {
+      color: #141414
+    }
+
+    .font-young {
+      font-family: "Young Serif", serif;
+    }
+
+    .font-graduate {
+      font-family: "Graduate", serif;
+    }
+
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .review-clamp {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      line-clamp: 5;
+      overflow: auto;
+    }
+
+    /* Mobile stacked (deck) carousel for reels */
+    @media (max-width: 767px) {
+      .reel-stack {
+        position: relative;
+        height: 420px;
+      }
+
+      .reel-stack__card {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: min(78vw, 320px);
+        transform: translateX(-50%) scale(0.85);
+        opacity: 0;
+        transition: transform 320ms ease, opacity 320ms ease;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .reel-stack__card.is-active {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+        z-index: 30;
+        pointer-events: auto;
+      }
+
+      .reel-stack__card.is-prev {
+        transform: translateX(calc(-50% - 55%)) scale(0.85);
+        opacity: 0.5;
+        z-index: 20;
+      }
+
+      .reel-stack__card.is-next {
+        transform: translateX(calc(-50% + 55%)) scale(0.85);
+        opacity: 0.5;
+        z-index: 20;
+      }
+
+      #reel-stack-dots button[aria-current="true"] {
+        opacity: 1;
+        background: #0578B1;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(.9);
+      }
+
+      70% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(.9);
+      }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MVRJ7DL');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MVRJ7DL');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2500465470228146');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2500465470228146&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+
+
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- End Vercel Web Analytics -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <section class="md:mb-[60px] relative">
+    <picture>
+      <!-- Mobile first -->
+      <source media="(max-width: 767px)" srcset="assets/img/mobile14999.jpg">
+
+      <!-- Desktop / fallback -->
+      <img src="assets/img/desktop14999.jpg" alt="AVM Smiles Dental Clinic" loading="eager" decoding="async"
+        style="width: 100%; height: auto; display: block;">
+    </picture>
+
+    <button type="button" id="modal-form-btn" onclick="openModalForm()" class="hidden md:block pulse active:scale-[0.9] absolute min-w-[90vw] md:min-w-0   md:max-w-md 
+      left-1/2 -translate-x-1/2 bottom-6 z-20 bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] 
+      md:left-[50%] md:right-16 md:top-[80%] md:bottom-auto md:-translate-y-1/2 md:translate-x-0 md:px-6 md:py-3  ">
+      <span rel="noopener noreferrer" class="text-white font-bold ">
+        Get Free Consultation
+      </span>
+    </button>
+  </section>
+  <section class="md:hidden mb-[40px] w-[90%] justify-self-center">
+    <div class=" flex justify-center">
+      <button type="submit"
+        class="pulse active:scale-[0.9] w-full md:w-auto rounded-xl bg-[#FF7F00] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold ">
+        START YOUR JOURNEY TODAY
+      </button>
+    </div>
+  </section>
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee {
+      overflow: hidden;
+    }
+
+    .marquee__track {
+      display: flex;
+      width: max-content;
+      animation: marquee 19s linear infinite;
+    }
+
+    .marquee__group {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee__track {
+        animation: none;
+      }
+    }
+  </style>
+
+  <!-- badges marquee -->
+  <section class="mb-[60px] ">
+    <div class="marquee w-full ">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <div><img src="assets/img/Badge1.svg" alt=""></div>
+          <div><img src="assets/img/Badge2.svg" alt=""></div>
+          <div><img src="assets/img/Badge3.svg" alt=""></div>
+          <div><img src="assets/img/Badge4.svg" alt=""></div>
+          <div><img src="assets/img/Badge5.svg" alt=""></div>
+          
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <div><img src="assets/img/badges1.svg" alt=""></div>
+          <div><img src="assets/img/badges2.svg" alt=""></div>
+          <div><img src="assets/img/badges3.svg" alt=""></div>
+          <div><img src="assets/img/badges4.svg" alt=""></div>
+          <div><img src="assets/img/badges5.svg" alt=""></div>
+          <div><img src="assets/img/badges6.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- form and 3 day  -->
+  <section class="flex flex-col md:flex-col mb-[60px] md:mb-0">
+
+    <div class="md:hidden mx-[5%] mb-6">
+      <h2
+        class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
+        Thinking About Implants? <br> Watch This
+      </h2>
+      <div class="aspect-video w-full overflow-hidden rounded-xl shadow-md">
+        <iframe class="h-full w-full" src="https://www.youtube.com/embed/16xwDFV8Qts?si=S_78b_ATT-mpmgyS&amp;controls=0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- form -->
+    <div class="mx-[5%] md:mx-[10%] mb-[60px] ">
+      <div
+        class="mt-6 md:mt-0 rounded-2xl bg-[#F7F9FF] shadow-[0_0px_12px_0_rgba(0,0,0,15)] px-4 py-6 md:px-10 md:py-8">
+        <div class="mx-auto max-w-3xl text-center ">
+          <h2 class="h2-c font-bold text-center
+          text-[#362997]
+          mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
+">
+            Offering Free First Visit for Dental Implants
+          </h2>
+        </div>
+        <!---->
+        <form id="implant-lead-form" class="implant-lead-form">
+          <div class="grid gap-4 md:grid-cols-6 md:gap-6 mb-7">
+            <input type="text" name="firstName" placeholder="First Name" aria-label="First Name"
+              class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+            <input type="text" name="lastName" placeholder="Last Name" aria-label="Last Name"
+              class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+            <input type="text" name="pincode_desktop" placeholder="PIN Code" aria-label="PIN Code"
+              class="hidden md:block md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+            <input type="email" name="email" placeholder="Email ID" aria-label="Email ID"
+              class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+            <input type="tel" name="phone" placeholder="Contact Number" aria-label="Contact Number"
+              required inputmode="numeric" autocomplete="tel" minlength="10" maxlength="10" pattern="[0-9]{10}"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+              class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+            <input type="text" name="pincode_mobile" placeholder="PIN Code" aria-label="PIN Code"
+              class="md:hidden md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+          </div>
+
+          <!-- Hidden fields (same names so it writes to same Google Sheet columns) -->
+          <input type="hidden" name="pincode" value="" />
+          <input type="hidden" name="utm_campaign" value="" />
+          <input type="hidden" name="utm_medium" value="" />
+          <input type="hidden" name="utm_source" value="" />
+          <input type="hidden" name="utm_term" value="" />
+          <input type="hidden" name="utm_content" value="" />
+          <input type="hidden" name="date" value="" />
+          <input type="hidden" name="sheet_tab" value="dental-Implant" />
+
+          <div class="mt-6 flex justify-center">
+            <button type="submit"
+              class="w-full md:w-auto rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
+              Talk to an Implant Expert
+            </button>
+          </div>
+
+          <p id="implant-lead-status" class="mt-3 text-center text-sm text-[#141414]/70"></p>
+        </form>
+        <!---->
+      </div>
+    </div>
+
+
+
+    <div class="mx-[5%] md:mx-[10%] md:mb-[10px] ">
+      <h2
+        class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)]">
+        Choose the Dental Implant that best suits you!
+      </h2>
+
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 place-items-center">
+        <!-- 1 -->
+        <div class="w-full max-w-sm text-center bg-[#F6FCFF] shadow-sm rounded-xl p-6">
+          <img class="mx-auto mb-3" src="assets/img/Rectangle1.webp" alt="">
+          <h3 class="h2-c text-base md:text-lg font-semibold">Single Tooth Implant</h3>
+          <p class="p-c text-sm md:text-base mt-1">
+            Designed to replace a single missing tooth, this implant consists of a titanium
+            post placed in the jawbone, topped with a crown that blends seamlessly with natural teeth.
+          </p>
+
+          <button type="button" id="modal-form-btn" onclick="openModalForm()" class="w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold
+              transition animate-bounce hover:animate-none active:scale-[0.96] active:translate-y-[2px] ">
+            Learn More &gt;
+          </button>
+
+        </div>
+
+        <!-- 2 -->
+        <div class="w-full max-w-sm text-center bg-[#F6FCFF] shadow-sm rounded-xl p-6">
+          <img class="mx-auto mb-3" src="assets/img/Rectangle2.webp" alt="">
+          <h3 class="h2-c text-base md:text-lg font-semibold">Full Mouth Restoration</h3>
+          <p class="p-c text-sm md:text-base mt-1">
+            A comprehensive solution for patients with extensive tooth loss or damage, this
+            approach uses multiple implants to support a full set of prosthetic teeth, restoring functionality and
+            aesthetics.
+          </p>
+          <button type="button" id="modal-form-btn" onclick="openModalForm()" class="w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold
+              transition animate-bounce hover:animate-none active:scale-[0.96] active:translate-y-[2px]
+              ">
+            Learn More &gt;
+          </button>
+        </div>
+
+        <!-- 3 -->
+        <div class="w-full max-w-sm text-center bg-[#F6FCFF] shadow-sm rounded-xl p-6">
+          <img class="mx-auto mb-3" src="assets/img/Rectangle3.webp" alt="">
+          <h3 class="h2-c text-base md:text-lg font-semibold">All-on-4 Implants</h3>
+          <p class="p-c text-sm md:text-base mt-1">
+            A revolutionary option for those needing a full-arch replacement, using only four
+            implants to support an entire set of teeth for a cost-effective and durable solution.
+          </p>
+          <button type="button" id="modal-form-btn" onclick="openModalForm()" class="w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold
+              transition animate-bounce hover:animate-none active:scale-[0.96] active:translate-y-[2px]
+              ">
+            Learn More &gt;
+          </button>
+        </div>
+
+        <!-- 4 -->
+        <div class="w-full max-w-sm text-center bg-[#F6FCFF] shadow-sm rounded-xl p-6">
+          <img class="mx-auto mb-3" src="assets/img/Rectangle4.webp" alt="">
+          <h3 class="h2-c text-base md:text-lg font-semibold">All-on-6 Implants</h3>
+          <p class="p-c text-sm md:text-base mt-1">
+            Designed to securely anchor dentures using implants, providing superior stability, comfort,
+            and improved chewing ability compared to traditional dentures.
+          </p>
+          <button type="button" id="modal-form-btn" onclick="openModalForm()" class="w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold
+              transition animate-bounce hover:animate-none active:scale-[0.96] active:translate-y-[2px]
+              ">
+            Learn More &gt;
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <section>
+    <!-- See How Dental Implants Changed Lives -->
+    <div class="relative mb-[0px] md:mb-[10px] md:mx-[10%] bg-[#E8F7FF] md:bg-[#fff] overflow-hidden">
+      <div
+        class="md:hidden pointer-events-none absolute left-1/2 -translate-x-1/2 -top-[30px] h-[100%] w-screen rounded-b-full bg-white">
+      </div>
+      <div class="grid items-center gap-5 md:grid-cols-[1fr_2fr]">
+        <!-- Left text -->
+        <div class="z-10 text-center md:text-left 1 mx-[5%]  md:mx-[0%]">
+          <h2
+            class="h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
+            See How Dental<br class="hidden md:block" /> Implants Changed Lives
+          </h2>
+          <p class="text-[#141414]/80 font-semibold  md:mb-20 text-center text-base md:text-3xl md:hidden">
+            Stories from patients across 125+ clinics with thousands of successful implants
+          </p>
+        </div>
+
+        <!-- reel Right carousel -->
+
+        <div class="relative mx-[5%]  md:mx-[0%] py-5">
+          <!-- Mobile stacked carousel (3-card deck) -->
+          <div id="reel-stack" class="reel-stack md:hidden flex justify-center items-start select-none touch-pan-y"
+            aria-label="Patient reels carousel">
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/6jbS7XTUxLI?rel=0"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/-XhNPxzSXWQ?rel=0"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/mwtP7fwoggI?rel=0"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/VJHg4gT5YqA?rel=0"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/Y-3T6OjOF4U"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/1gZMs98ub4Q"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/1HwV_hdNcU8"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/m_3MhXGnc8I"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/56jwA3oRhX8"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reel-stack__card" data-reel-card>
+              <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
+                <div class="h-full w-full rounded-[10px] border-2 border-[#0578B1] overflow-hidden">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/MVTfWhE7MxY"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p id="reel-stack-status" class="sr-only" aria-live="polite"></p>
+          </div>
+
+          <!-- Desktop carousel (keep current structure) -->
+          <div id="reel-splide" class="splide hidden md:block">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/6jbS7XTUxLI"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/-XhNPxzSXWQ"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/mwtP7fwoggI"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/VJHg4gT5YqA"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/Y-3T6OjOF4U"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/1gZMs98ub4Q"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/1HwV_hdNcU8"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/m_3MhXGnc8I"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/56jwA3oRhX8"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+
+                <li class="splide__slide" style="text-align: -webkit-center;">
+                  <div class="aspect-[9/16] h-full w-full">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/MVTfWhE7MxY"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- arrows -->
+          <div class=" flex justify-center md:justify-end gap-5 mt-5 md:mt-10">
+            <button type="button" data-ab-prev
+              class="h-9 w-9 rounded-full border-2 border-[#0578B1] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+              aria-label="Previous">
+              <img src="assets/img/prearrow.svg" alt="">
+            </button>
+            <button type="button" data-ab-next
+              class="h-9 w-9 rounded-full border-2 border-[#0578B1] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+              aria-label="Next">
+              <img src="assets/img/nextarrow.svg" alt="">
+            </button>
+          </div>
+
+          <!-- <div id="reel-stack-dots" class="md:hidden mt-4 flex justify-center gap-2" aria-label="Reel carousel pagination"></div> -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Counter (matches the given design) -->
+    <div class="md:hidden bg-[#DFF3FF] py-8 px-4 border border-black/20 mb-[40px] mt-[40px] ">
+      <div class="mx-auto max-w-sm text-center">
+        <p class="text-[16px] font-semibold leading-snug text-black">
+          Dental Implants starting at just Rs. 14,999 With Cap + Free Consultation + Free Digital X-ray
+        </p>
+
+        <h3 class="mt-3 text-3xl font-extrabold text-black" data-total-title>48 Hours</h3>
+
+        <p class="mt-3 text-[26px] font-extrabold text-[#5C8EA2]">
+          Hurry, limited slots remaining
+        </p>
+
+        <div class="mt-5 grid grid-cols-4 gap-2">
+          <div class="rounded-md bg-[#3E7D93] shadow-sm py-3">
+            <div class="text-3xl font-extrabold text-white leading-none" data-days>00</div>
+            <div class="text-sm font-medium text-white/95 mt-1">Days</div>
+          </div>
+
+          <div class="rounded-md bg-[#3E7D93] shadow-sm py-3">
+            <div class="text-3xl font-extrabold text-white leading-none" data-hours>16</div>
+            <div class="text-sm font-medium text-white/95 mt-1">Hours</div>
+          </div>
+
+          <div class="rounded-md bg-[#3E7D93] shadow-sm py-3">
+            <div class="text-3xl font-extrabold text-white leading-none" data-minutes>10</div>
+            <div class="text-sm font-medium text-white/95 mt-1">Minutes</div>
+          </div>
+
+          <div class="rounded-md bg-[#3E7D93] shadow-sm py-3">
+            <div class="text-3xl font-extrabold text-white leading-none" data-seconds>14</div>
+            <div class="text-sm font-medium text-white/95 mt-1">Seconds</div>
+          </div>
+        </div>
+
+        <p class="mt-5 text-[18px] font-extrabold text-black">
+          The time is ending soon - act up!
+        </p>
+
+        <button type="button" id="modal-form-btn" onclick="openModalForm()"
+          class="mt-5 inline-flex items-center justify-center w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
+          Schedule Now
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var daysEl = document.querySelector("[data-days]");
+        var hoursEl = document.querySelector("[data-hours]");
+        var minutesEl = document.querySelector("[data-minutes]");
+        var secondsEl = document.querySelector("[data-seconds]");
+        var titleEl = document.querySelector("[data-total-title]");
+
+        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+        // 48 hours countdown (loops)
+        var startSeconds = 17 * 3600;
+        var endSeconds = 0;
+        var current = startSeconds;
+
+        function pad2(n) {
+          return String(n).padStart(2, "0");
+        }
+
+        function render() {
+          var days = Math.floor(current / 86400);
+          var hrs = Math.floor((current % 86400) / 3600);
+          var mins = Math.floor((current % 3600) / 60);
+          var secs = current % 60;
+
+          daysEl.textContent = pad2(days);
+          hoursEl.textContent = pad2(hrs);
+          minutesEl.textContent = pad2(mins);
+          secondsEl.textContent = pad2(secs);
+
+          if (titleEl) {
+            // keep title as "48 Hours" like the image
+            titleEl.textContent = "17 Hours";
+          }
+        }
+
+        function tick() {
+          current -= 1;
+          if (current < endSeconds) current = startSeconds;
+          render();
+        }
+
+        render();
+        setInterval(tick, 1000);
+      })();
+    </script>
+
+  </section>
+  <script>
+    (function () {
+      var reelRoot = document.getElementById('reel-splide');
+
+      if (reelRoot) {
+        var isDesktop = window.matchMedia && window.matchMedia('(min-width: 768px)').matches;
+        if (!isDesktop) return;
+
+        var reelSplide = new Splide(reelRoot, {
+          type: 'loop',
+          perPage: 3,
+          perMove: 1,
+          gap: '24px',
+          arrows: false,
+          pagination: false,
+          speed: 500,
+          easing: 'ease',
+          breakpoints: {
+            768: { perPage: 1, gap: '0px' }
+          },
+        });
+
+        reelSplide.mount();
+
+        var wrapper = reelRoot.closest('.relative');
+        var reelPrev = wrapper ? wrapper.querySelector('[data-ab-prev]') : null;
+        var reelNext = wrapper ? wrapper.querySelector('[data-ab-next]') : null;
+
+        if (reelPrev) reelPrev.addEventListener('click', function () { reelSplide.go('<'); });
+        if (reelNext) reelNext.addEventListener('click', function () { reelSplide.go('>'); });
+      }
+
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var root = document.getElementById('reel-stack');
+      if (!root) return;
+
+      var cards = Array.prototype.slice.call(root.querySelectorAll('[data-reel-card]'));
+      if (!cards.length) return;
+
+      var status = document.getElementById('reel-stack-status');
+      var dotsRoot = document.getElementById('reel-stack-dots');
+      var wrapper = root.closest('.relative');
+      var prevBtn = wrapper ? wrapper.querySelector('[data-ab-prev]') : null;
+      var nextBtn = wrapper ? wrapper.querySelector('[data-ab-next]') : null;
+
+      var index = 0;
+      var intervalMs = 3000;
+      var timerId = 0;
+      var paused = false;
+
+      function mod(n, m) {
+        return (n % m + m) % m;
+      }
+
+      function applyState() {
+        var total = cards.length;
+        var prev = mod(index - 1, total);
+        var next = mod(index + 1, total);
+
+        cards.forEach(function (c, i) {
+          c.classList.remove('is-prev', 'is-active', 'is-next');
+          if (i === index) c.classList.add('is-active');
+          else if (i === prev) c.classList.add('is-prev');
+          else if (i === next) c.classList.add('is-next');
+        });
+
+        if (status) status.textContent = 'Slide ' + (index + 1) + ' of ' + total;
+        syncDots();
+      }
+
+      function ensureDots() {
+        if (!dotsRoot) return;
+        if (dotsRoot.dataset.inited) return;
+        dotsRoot.dataset.inited = '1';
+
+        cards.forEach(function (_, i) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'h-2 w-2 rounded-full bg-[#0578B1] opacity-30';
+          btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          btn.addEventListener('click', function () {
+            goTo(i, true);
+          });
+          dotsRoot.appendChild(btn);
+        });
+      }
+
+      function syncDots() {
+        if (!dotsRoot) return;
+        var dots = Array.prototype.slice.call(dotsRoot.querySelectorAll('button'));
+        dots.forEach(function (d, i) {
+          var isActive = i === index;
+          d.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+      }
+
+      function stopAutoplay() {
+        if (timerId) clearInterval(timerId);
+        timerId = 0;
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+        timerId = setInterval(function () {
+          if (paused) return;
+          goTo(index + 1, false);
+        }, intervalMs);
+      }
+
+      function pauseFor(ms) {
+        paused = true;
+        stopAutoplay();
+        setTimeout(function () {
+          paused = false;
+          startAutoplay();
+        }, ms);
+      }
+
+      function goTo(i, fromUser) {
+        index = mod(i, cards.length);
+        applyState();
+        if (fromUser) pauseFor(800);
+      }
+
+      ensureDots();
+      applyState();
+      startAutoplay();
+
+      if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1, true); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1, true); });
+
+      root.addEventListener('mouseenter', function () { paused = true; stopAutoplay(); });
+      root.addEventListener('mouseleave', function () { paused = false; startAutoplay(); });
+
+      // Swipe gestures
+      var startX = 0;
+      var startY = 0;
+      var tracking = false;
+
+      root.addEventListener('touchstart', function (e) {
+        if (!e.touches || !e.touches[0]) return;
+        tracking = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        paused = true;
+        stopAutoplay();
+      }, { passive: true });
+
+      root.addEventListener('touchend', function (e) {
+        if (!tracking) return;
+        tracking = false;
+        var t = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0] : null;
+        if (!t) return;
+        var dx = t.clientX - startX;
+        var dy = t.clientY - startY;
+        var threshold = Math.max(40, root.clientWidth * 0.12);
+
+        if (Math.abs(dx) > threshold && Math.abs(dy) < 60) {
+          if (dx < 0) goTo(index + 1, true);
+          else goTo(index - 1, true);
+        }
+
+        paused = false;
+        startAutoplay();
+      }, { passive: true });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var viewport = document.querySelector("[data-carousel-viewport]");
+      var track = document.querySelector("[data-carousel-track]");
+      if (!viewport || !track) return;
+
+      var index = 0;
+      var total = track.children.length;
+      var intervalId = null;
+
+      var isDesktop = false;
+      var userPaused = false; // mobile tap/click pauses permanently until reload
+      var hoverPaused = false;
+
+      // swipe state
+      var isDragging = false;
+      var startX = 0;
+      var currentX = 0;
+      var baseTranslate = 0;
+
+      function clamp(i) {
+        if (i < 0) return 0;
+        if (i > total - 1) return total - 1;
+        return i;
+      }
+
+      function update(animate) {
+        if (animate === false) {
+          track.classList.remove("transition-transform", "duration-500", "ease-in-out");
+        } else {
+          track.classList.add("transition-transform", "duration-500", "ease-in-out");
+        }
+        track.style.transform = "translateX(-" + index * 100 + "%)";
+      }
+
+      function start() {
+        if (intervalId || isDesktop || userPaused) return;
+        intervalId = setInterval(function () {
+          index = (index + 1) % total;
+          update(true);
+        }, 5000);
+      }
+
+      function stop() {
+        if (!intervalId) return;
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+
+      function handleResize() {
+        isDesktop = window.innerWidth >= 768;
+
+        if (isDesktop) {
+          stop();
+          track.style.transform = "";
+          return;
+        }
+
+        // mobile/tablet
+        index = clamp(index);
+        update(true);
+
+        if (!userPaused && !hoverPaused) start();
+      }
+
+      // Desktop hover pause
+      viewport.addEventListener("mouseenter", function () {
+        if (window.innerWidth >= 768) return;
+        hoverPaused = true;
+        stop();
+      });
+
+      viewport.addEventListener("mouseleave", function () {
+        if (window.innerWidth >= 768) return;
+        hoverPaused = false;
+        if (!userPaused) start();
+      });
+
+      // Mobile tap/click pauses autoplay
+      viewport.addEventListener("click", function () {
+        if (window.innerWidth >= 768) return;
+        userPaused = true;
+        stop();
+      });
+
+      // Swipe (pointer events)
+      viewport.addEventListener("pointerdown", function (e) {
+        if (window.innerWidth >= 768) return;
+
+        userPaused = true; // any interaction stops autoplay
+        stop();
+
+        isDragging = true;
+        startX = e.clientX;
+        currentX = startX;
+        baseTranslate = -index * viewport.clientWidth;
+
+        track.classList.remove("transition-transform", "duration-500", "ease-in-out");
+        viewport.setPointerCapture(e.pointerId);
+      });
+
+      viewport.addEventListener("pointermove", function (e) {
+        if (!isDragging) return;
+        currentX = e.clientX;
+
+        var dx = currentX - startX;
+        var translate = baseTranslate + dx;
+
+        track.style.transform = "translateX(" + translate + "px)";
+      });
+
+      function endDrag(e) {
+        if (!isDragging) return;
+        isDragging = false;
+
+        var dx = currentX - startX;
+        var threshold = Math.max(50, viewport.clientWidth * 0.15);
+
+        if (dx <= -threshold) index = clamp(index + 1);
+        else if (dx >= threshold) index = clamp(index - 1);
+
+        update(true);
+
+        try { viewport.releasePointerCapture(e.pointerId); } catch (_) { }
+      }
+
+      viewport.addEventListener("pointerup", endDrag);
+      viewport.addEventListener("pointercancel", endDrag);
+
+      handleResize();
+      window.addEventListener("resize", handleResize);
+    })();
+  </script>
+
+  <!-- Choose Orthosquare for Dental Implants that Last -->
+  <section class="mx-[5%] md:mx-[10%] mb-[60px] mt-[44px] md:mt-0 hidden md:block">
+    <h2
+      class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)]leading-[110%]">
+      Choose Orthosquare for Dental Implants that Last
+    </h2>
+
+    <div class="">
+      <!-- viewport -->
+      <div data-carousel-viewport class="overflow-hidden md:overflow-visible touch-pan-y select-none">
+        <div data-carousel-track
+          class="flex  transition-transform duration-500 ease-in-out md:grid md:grid-cols-3 md:gap-6">
+          <!-- Card 1 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon1.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Experienced Implant <br>Specialists
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Our surgeons are experienced and trained with thousands of successful implant cases.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon2.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Easy EMI Options <br>Available
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Pay in small monthly parts instead of all at once, making your dental implant journey easier.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon3.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Natural-Looking <br>Results
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Implants are designed to match your teeth, giving a seamless and aesthetic smile.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon4.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Painless, Guided <br>Procedure
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Computer-assisted techniques ensure a comfortable, minimally invasive experience.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon5.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Premium-Grade <br>Implants
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              We use globally trusted, FDA-approved implant systems for long-term durability.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon6.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Custom Treatment <br>Planning
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Every smile is different, so your implant plan is tailored specifically for your needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="">
+    <!-- cta -->
+    <div class="p-6 hidden mx-[5%] mb-[60px] md:mx-[10%] md:block ">
+      <!-- CTA Section -->
+      <div
+        class="border-y-2 border-[#0578B1] p-6 rounded-lg flex justify-between items-center shadow-[0px_0px_11.5px_0px_rgba(0,0,0,0.17)]">
+        <!-- Text -->
+        <p class="h2-c font-bold md:text-3xl">
+          Quality Dental Implants at Low Price
+        </p>
+        <!-- CTA Button -->
+        <button type="button" id="modal-form-btn" onclick="openModalForm()"
+          class="pulse active:scale-[0.9] rounded-xl bg-[#FF7F00] py-2 px-3 rounded-2xl border-2 border-white shadow-md md:px-6 md:py-3 text-white font-bold ">
+
+          Download Costing Details
+        </button>
+
+      </div>
+    </div>
+
+    <div class="bg-[#FF7F00] md:hidden mb-[60px] border border-[#FF7F00]">
+
+      <h2 class="font-bold text-2xl text-center text-white pt-4 text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
+" style="    line-height: 120%;
+    letter-spacing: -1px;">Quality Dental Implants at Low <br>Transparent Pricing</h2>
+      <div style="background-image: url(assets/img/costingdetails.jpg);"
+        class=" rounded-xl m-5  flex justify-center items-center shadow-[0_4px_20px_5px_rgba(231,231,231,0.4)] min-h-[200px]">
+
+        <button type="button" id="modal-form-btn" onclick="openModalForm()"
+          class="pulse active:scale-[0.9] rounded-xl bg-[#FF7F00] py-2 px-3 rounded-2xl border-2 border-white shadow-md md:px-6 md:py-3 text-white font-bold ">
+
+          Download Costing Details
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- crousel 2 -->
+    <div class="relative md:mb-[30px] md:mx-[10%] bg-[#E8F7FF] md:bg-[#fff] overflow-hidden">
+      <div
+        class="md:hidden pointer-events-none absolute left-1/2 -translate-x-1/2 -top-[30px] h-[100%] w-screen rounded-b-full bg-white">
+      </div>
+      <div class="grid items-center gap-5 md:grid-cols-[1fr_2fr]">
+        <!-- Left text -->
+        <div class=" z-10 text-center mx-[5%] md:mx-[0%] ">
+          <h2 class="h2-c font-bold text-center mb-4 md:mb-7 text-2xl md:text-3xl md:text-left  hidden md:block">
+            2 Lakh+ Real Dental<br class="hidden md:block" />
+            Implants Transformation
+          </h2>
+          <h2 class="h2-c font-bold text-center mb-4 md:mb-7 text-2xl md:text-3xl md:text-left md:hidden">
+            Real Dental Implants <br class="hidden md:block" />
+            Transformation
+          </h2>
+          <p class="text-[#141414]/80 font-semibold  md:mb-20 text-center text-base md:text-3xl md:hidden">
+            Documented results from 2 lakh+ dental implant treatments
+          </p>
+        </div>
+
+        <!-- Right carousel -->
+        <div class="relative min-w-0 mx-[5%] md:mx-[0%] overflow-x-hidden">
+          <div id="ab-splide" class="splide w-full max-w-full">
+            <div class="splide__track w-full overflow-hidden">
+              <ul class="splide__list w-full">
+                <li class="splide__slide md:p-0 content-center">
+                  <img src="assets/img/ab1.svg" class=" w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+                    alt="Transformation 1" />
+                </li>
+                <li class="splide__slide md:p-0 content-center">
+                  <img src="assets/img/ab2.svg" class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+                    alt="Transformation 2" />
+                </li>
+                <li class="splide__slide md:p-0 content-center">
+                  <img src="assets/img/ab3.svg" class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+                    alt="Transformation 3" />
+                </li>
+                <li class="splide__slide md:p-0 content-center">
+                  <img src="assets/img/ab4.svg" class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+                    alt="Transformation 4" />
+                </li>
+                <li class="splide__slide md:p-0 content-center">
+                  <img src="assets/img/ab5.svg" class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+                    alt="Transformation 5" />
+                </li>
+                <li class="splide__slide md:p-0 content-center">
+                  <img src="assets/img/ab6.svg" class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+                    alt="Transformation 5" />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- arrows -->
+          <div class=" flex justify-center md:justify-end gap-5 md:mt-10 py-5 md:py-0">
+            <button type="button" data-ab-prev
+              class="h-9 w-9 rounded-full border-2 border-[#0578B1] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+              aria-label="Previous">
+              <img src="assets/img/prearrow.svg" alt="">
+            </button>
+            <button type="button" data-ab-next
+              class="h-9 w-9 rounded-full border-2 border-[#0578B1] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+              aria-label="Next">
+              <img src="assets/img/nextarrow.svg" alt="" srcset="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+
+
+  <!--for mobile -->
+  <!-- Choose Orthosquare for Dental Implants that Last -->
+  <section class="mx-[5%] md:mx-[10%] my-[60px] md:hidden">
+    <h2
+      class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)]leading-[110%]">
+      Choose Orthosquare for Dental Implants that Last
+    </h2>
+
+    <div class="">
+      <!-- viewport -->
+      <div data-carousel-viewport class="overflow-hidden md:overflow-visible touch-pan-y select-none">
+        <div data-carousel-track
+          class="flex  transition-transform duration-500 ease-in-out md:grid md:grid-cols-3 md:gap-6">
+          <!-- Card 1 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon1.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Experienced Implant <br>Specialists
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Our surgeons are experienced and trained with thousands of successful implant cases.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon2.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Easy EMI Options <br>Available
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Pay in small monthly parts instead of all at once, making your dental implant journey easier.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon3.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Natural-Looking <br>Results
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Implants are designed to match your teeth, giving a seamless and aesthetic smile.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon4.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Painless, Guided <br>Procedure
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Computer-assisted techniques ensure a comfortable, minimally invasive experience.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon5.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Premium-Grade <br>Implants
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              We use globally trusted, FDA-approved implant systems for long-term durability.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img class="h-8 w-8" src="assets/img/icon6.png" alt="">
+              <h3 class="text-[#0578B1] font-semibold text-base border-l-2 -ml-1 pl-3">
+                Custom Treatment <br>Planning
+              </h3>
+            </div>
+            <p class="text-[#141414] text-base mt-2">
+              Every smile is different, so your implant plan is tailored specifically for your needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Your Trust, Our Biggest Achievement-->
+  <style>
+    .review-clamp {
+      display: block;
+      max-height: 110px;
+      overflow-y: scroll;
+      padding-right: 16px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .review-clamp::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    @media (min-width: 768px) {
+      .review-clamp {
+        max-height: 140px;
+      }
+    }
+
+    .review-scroll {
+      position: relative;
+    }
+
+    .review-scrollbar {
+      position: absolute;
+      right: 2px;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+
+    .review-scrollbar-thumb {
+      width: 100%;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.35);
+      height: 18px;
+      transform: translateY(0);
+    }
+  </style>
+  <section class=" mx-[5%] mb-[50px] md:mx-[10%]">
+    <div class="text-center ">
+      <h2
+        class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
+        Your Trust, Our<br class=" md:hidden" />
+        Biggest Achievement
+      </h2>
+    </div>
+    <div id="reviews-splide" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide px-3 shadow-[0px_24px_35px_-38px_rgba(0,0,0,0.64)] " style="margin-bottom: 25px;">
+            <div class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-gray-100">
+              <div class="px-6 pt-6 ">
+                <div class="flex items-start justify-between ">
+                  <img src="assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                </div>
+                <div class="review-scroll mt-4">
+                  <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
+                    I came to orthosquare dental clinic for my implants. I got all on 6 implants done both upper and
+                    lower.
+                    I am very much satisfied with the treatment. The staff here is very helpful and experienced.
+                  </p>
+                  <div class="review-scrollbar" aria-hidden="true">
+                    <div class="review-scrollbar-thumb"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
+
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 ">
+                  <img src="assets/img/man.png" alt="">
+                </span>
+                Mujib Kazi
+
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide px-3 shadow-[0px_24px_35px_-38px_rgba(0,0,0,0.64)] " style="margin-bottom: 25px;">
+            <div class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-gray-100">
+              <div class="px-6 pt-6 ">
+                <div class="flex items-start justify-between ">
+                  <img src="assets/img/quotation.png" alt="profile" class="h-8 w-8 opacity-80">
+                </div>
+                <div class="review-scroll mt-4">
+                  <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
+                    I came to orthosquare dental clinic for dental implants. I am a heart patient. The doctors followed
+                    protocol regarding my heart condition that is required for dental implants. I did immediate loading
+                    implants and got my teeth within ३ days. The staff is very friendly. I am happy with my treatment.
+                  </p>
+                  <div class="review-scrollbar" aria-hidden="true">
+                    <div class="review-scrollbar-thumb"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
+                  <img src="assets/img/man.png" alt="">
+                </span>
+                Ramakant Bhopi
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide px-3 shadow-[0px_24px_35px_-38px_rgba(0,0,0,0.64)] " style="margin-bottom: 25px;">
+            <div class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-gray-100">
+              <div class="px-6 pt-6 ">
+                <div class="flex items-start justify-between ">
+                  <img src="assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                </div>
+                <div class="review-scroll mt-4">
+                  <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
+                    Very good experience at orthosqure. Full mouth implants done for my mother in law. Doctors are very
+                    helpful and very experienced with all advanced form of treatments and they give the ideal advice for
+                    every patient. Very much satisfied with the treatment
+                  </p>
+                  <div class="review-scrollbar" aria-hidden="true">
+                    <div class="review-scrollbar-thumb"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
+                  <img src="assets/img/man.png" alt="">
+                </span>
+                Jasmita Kadu
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide px-3 shadow-[0px_24px_35px_-38px_rgba(0,0,0,0.64)] " style="margin-bottom: 25px;">
+            <div class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-gray-100">
+              <div class="px-6 pt-6 ">
+                <div class="flex items-start justify-between ">
+                  <img src="assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                </div>
+                <div class="review-scroll mt-4">
+                  <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
+                    Neelam Shah We were very concerned about the implant treatment to begin with. But the team of
+                    doctors did a fantastic job in ensuring that the treatment was made with utmost care. I'm very
+                    satisfied and highly recommend Orthosquare for the implant and oral treatments.
+                  </p>
+                  <div class="review-scrollbar" aria-hidden="true">
+                    <div class="review-scrollbar-thumb"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
+                  <img src="assets/img/man.png" alt="">
+                </span>
+                Neelam Shah
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide px-3 shadow-[0px_24px_35px_-38px_rgba(0,0,0,0.64)] " style="margin-bottom: 25px;">
+            <div class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-gray-100">
+              <div class="px-6 pt-6 ">
+                <div class="flex items-start justify-between ">
+                  <img src="assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                </div>
+                <div class="review-scroll mt-4">
+                  <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
+                    I got my mother implants done in very afforadable price, best service provided to me and i am
+                    satisfied with treatment. I recommended to others.
+                  </p>
+                  <div class="review-scrollbar" aria-hidden="true">
+                    <div class="review-scrollbar-thumb"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
+                  <img src="assets/img/man.png" alt="">
+                </span>
+                Valmiki Rane
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide px-3 shadow-[0px_24px_35px_-38px_rgba(0,0,0,0.64)] " style="margin-bottom: 25px;">
+            <div class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-gray-100">
+              <div class="px-6 pt-6 ">
+                <div class="flex items-start justify-between ">
+                  <img src="assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                </div>
+                <div class="review-scroll mt-4">
+                  <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
+                    I underwent implant treatment at orthosquare Dental clinic. Amazing patient service. I am very much
+                    satisfied with my treatment. Would recommend orthosquare for implant treatment.
+                  </p>
+                  <div class="review-scrollbar" aria-hidden="true">
+                    <div class="review-scrollbar-thumb"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
+                  <img src="assets/img/man.png" alt="">
+                </span>
+                Maya Kapse
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (typeof Splide === 'undefined') return;
+
+        function initReviewScrollbars() {
+          document.querySelectorAll('#reviews-splide .review-scroll').forEach(function (wrap) {
+            if (wrap.dataset.reviewScrollInit) return;
+            wrap.dataset.reviewScrollInit = '1';
+
+            var scroller = wrap.querySelector('.review-clamp');
+            var bar = wrap.querySelector('.review-scrollbar');
+            var thumb = wrap.querySelector('.review-scrollbar-thumb');
+            if (!scroller || !bar || !thumb) return;
+
+            function sync() {
+              var client = scroller.clientHeight;
+              var scroll = scroller.scrollHeight;
+              var maxScrollTop = scroll - client;
+
+              if (maxScrollTop <= 1) {
+                bar.style.display = 'none';
+                return;
+              }
+
+              bar.style.display = 'block';
+
+              var thumbH = Math.max(18, Math.round(client * (client / scroll)));
+              thumb.style.height = thumbH + 'px';
+
+              var maxThumbTop = client - thumbH;
+              var top = maxScrollTop ? (scroller.scrollTop / maxScrollTop) * maxThumbTop : 0;
+              thumb.style.transform = 'translateY(' + top + 'px)';
+            }
+
+            var raf = 0;
+            scroller.addEventListener('scroll', function () {
+              if (raf) cancelAnimationFrame(raf);
+              raf = requestAnimationFrame(sync);
+            }, { passive: true });
+
+            window.addEventListener('resize', sync, { passive: true });
+            sync();
+          });
+        }
+
+        var reviewsRoot = document.getElementById('reviews-splide');
+        if (reviewsRoot) {
+          var reviewsSplide = new Splide(reviewsRoot, {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+            gap: '20px',
+            focus: 'center',
+            trimSpace: false,
+            speed: 500,
+            easing: 'ease',
+            arrows: false,
+            pagination: false,
+            autoplay: true,
+            interval: 3000,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            breakpoints: {
+              1024: { perPage: 2, gap: '16px' },
+              768: { perPage: 1, gap: '12px' }
+            },
+          });
+          reviewsSplide.on('mounted moved updated resized', initReviewScrollbars);
+          reviewsSplide.mount();
+          initReviewScrollbars();
+        }
+
+        var abRoot = document.getElementById('ab-splide');
+        if (abRoot) {
+          var abSplide = new Splide(abRoot, {
+            type: 'loop',
+            perPage: 2,
+            perMove: 1,
+            gap: '24px',
+            arrows: false,
+            pagination: false,
+            speed: 500,
+            easing: 'ease',
+            breakpoints: {
+              768: { perPage: 1, gap: '' }
+            },
+          });
+          abSplide.mount();
+
+          var abPrev = abRoot.closest('.relative')?.querySelector('[data-ab-prev]');
+          var abNext = abRoot.closest('.relative')?.querySelector('[data-ab-next]');
+          if (abPrev) abPrev.addEventListener('click', function () { abSplide.go('<'); });
+          if (abNext) abNext.addEventListener('click', function () { abSplide.go('>'); });
+        }
+
+      })();
+    </script>
+
+    <button type="button" id="modal-form-btn" onclick="openModalForm()"
+      class="mt-5 inline-flex items-center justify-center w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
+      Get Free Implant Consultation
+    </button>
+  </section>
+  <!-- Smile With Confidence : Key Benefits
+of Dental Implants -->
+
+  <style>
+    .tooth-bg {
+      background-color: #f5fbff;
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+    }
+
+    .faq-card.active .faq-content {
+      max-height: 300px;
+      /* Increased to accommodate longer text if needed */
+      padding-top: 1rem;
+    }
+
+    .faq-card.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+
+  <section class="mb-[60px] tooth-bg py-5 md:py-7" id="benefits">
+
+    <div class="mx-[5%] md:mx-[10%] ">
+      <div class="text-center px-2">
+        <h2 class="h2-c font-extrabold text-center mb-3 md:mb-4 text-2xl md:text-4xl text-[#0B79B7] leading-tight">
+          Smile With Confidence: Key Benefits<br class="hidden md:block" />
+          of Dental Implants
+        </h2>
+      </div>
+
+      <!-- Grid Container: Added 'items-start' to prevent other cards in the row from stretching -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+
+        <!-- FAQ Card 1 -->
+        <div
+          class="faq-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onclick="toggleFaq(this)">
+          <div class="flex items-start justify-between gap-4 ">
+            <h3 class="text-[#0578B1] font-semibold text-base md:text-lg">Natural Look and Feel</h3>
+            <div class="faq-icon transition-transform duration-300 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="faq-content text-slate-600 text-base leading-relaxed">
+            Regain the confidence of a natural smile with teeth that look, feel, and function like your own.
+          </div>
+        </div>
+
+        <!-- FAQ Card 2 -->
+        <div
+          class="faq-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onclick="toggleFaq(this)">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[#0578B1] font-semibold text-base md:text-lg">Permanent Solution</h3>
+            <div class="faq-icon transition-transform duration-300 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="faq-content text-slate-600 text-sm leading-relaxed">
+            Forget removable dentures! dental implant offer a secure, lasting fix for missing teeth.
+          </div>
+        </div>
+
+        <!-- FAQ Card 3 -->
+        <div
+          class="faq-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onclick="toggleFaq(this)">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[#0578B1] font-semibold text-base md:text-lg">Faster Results</h3>
+            <div class="faq-icon transition-transform duration-300 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="faq-content text-slate-600 text-sm leading-relaxed">
+            Complete your smile in as little as one day with our streamlined dental implant process.
+          </div>
+        </div>
+
+        <!-- FAQ Card 4 -->
+        <div
+          class="faq-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onclick="toggleFaq(this)">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[#0578B1] font-semibold text-base md:text-lg">Cost Effective</h3>
+            <div class="faq-icon transition-transform duration-300 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="faq-content text-slate-600 text-sm leading-relaxed">
+            Achieve a full arch using just four implants, minimizing cost while maximizing results.
+          </div>
+        </div>
+
+        <!-- FAQ Card 5 -->
+        <div
+          class="faq-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onclick="toggleFaq(this)">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[#0578B1] font-semibold text-base md:text-lg">Improved Oral Health</h3>
+            <div class="faq-icon transition-transform duration-300 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="faq-content text-slate-600 text-sm leading-relaxed">
+            Preserve your jawbone density and facial structure while maintaining overall oral health.
+          </div>
+        </div>
+
+        <!-- FAQ Card 6 -->
+        <div
+          class="faq-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          onclick="toggleFaq(this)">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[#0578B1] font-semibold text-base md:text-lg">Enhanced Comfort</h3>
+            <div class="faq-icon transition-transform duration-300 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          <div class="faq-content text-slate-600 text-sm leading-relaxed">
+            Enjoy stability and comfort with implants designed to stay secure—no slipping or discomfort!
+          </div>
+        </div>
+
+      </div>
+
+      <button type="button" id="modal-form-btn" onclick="openModalForm()"
+        class="mt-5 inline-flex items-center justify-center w-full md:w-auto rounded-xl bg-[#FF7F00] mt-4 py-1 px-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
+        START YOUR JOURNEY TODAY
+      </button>
+    </div>
+  </section>
+  <script>
+    function toggleFaq(element) {
+      // Close other open cards
+      document.querySelectorAll('.faq-card').forEach(card => {
+        if (card !== element) {
+          card.classList.remove('active');
+        }
+      });
+
+      // Toggle current card
+      element.classList.toggle('active');
+    }
+  </script>
+
+
+
+
+
+  <!-- A New Smile is Just aFew Step Away no chaing in  -->
+
+  <section class="mb-[20px] md:mb-[60px]  ">
+    <div class=" bg-[#F6FCFF]">
+      <div class="grid items-center md:gap-8 md:grid-cols-2 mx-[5%] md:mx-[10%] ">
+        <div class="order-2 md:order-1 flex justify-center self-end relative overflow-hidden">
+          <img src="assets/img/newsmile.png" alt="Smiling man" class="w-[80%] relative z-10 hidden md:block" />
+          <img src="assets/img/newsmailuncel.png" alt="Smiling man" class="w-[100%] relative z-10 md:hidden " />
+
+          <!-- white gradient overlay -->
+          <div
+            class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none">
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 text-left pt-10 md:py-10">
+          <h2 class="h2-c font-bold mb-4 text-2xl md:text-4xl text-center">
+            WE ENSURE THE SAFETY OF OUR PATIENTS...
+          </h2>
+
+          <!-- 4-card grid -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div class="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+              <div class="overflow-hidden rounded-lg ">
+                <img src="assets/img/ensure1.webp" alt="Sterile instruments" class="w-full h-32 md:h-36 object-contain"
+                  loading="lazy" />
+              </div>
+              <p class="mt-2 text-base text-center">
+                Sterile instruments and sealed kits for every procedure.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+              <div class="overflow-hidden rounded-lg ">
+                <img src="assets/img/ensure2.webp" alt="Sterile instruments" class="w-full h-32 md:h-36 object-contain"
+                  loading="lazy" />
+              </div>
+              <p class="mt-2 text-base text-center">
+                Sterile instruments and sealed kits for every procedure.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+              <div class="overflow-hidden rounded-lg ">
+                <img src="assets/img/ensure3.webp" alt="Sterile instruments" class="w-full h-32 md:h-36 object-contain"
+                  loading="lazy" />
+              </div>
+              <p class="mt-2 text-base text-center">
+                Sterile instruments and sealed kits for every procedure.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+              <div class="overflow-hidden rounded-lg ">
+                <img src="assets/img/ensure4.webp" alt="Sterile instruments" class="w-full h-32 md:h-36 object-contain"
+                  loading="lazy" />
+              </div>
+              <p class="mt-2 text-base text-center">
+                Sterile instruments and sealed kits for every procedure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="  bg-[#FF7F00] px-4 py-4 md:px-8 ">
+      <div
+        class="flex flex-col items-center gap-3 text-center md:flex-row md:justify-between md:text-left mx-[5%] md:mx-[10%]">
+        <p class="text-white font-semibold text-base md:text-[22px]">
+          Get the smile you always wished for, talk to our experts now at NO COST
+        </p>
+        <button type="button" id="modal-form-btn" onclick="openModalForm()"
+          class="rounded-xl bg-white px-6 py-2 text-[#FF7F00] font-bold border-2 order-[#FF7F00] shadow-[5px_2px_6.2px_-2px_rgba(0,0,0,0.14)] pulse active:scale-[0.9]">
+          <span class="hidden md:block text-lg">Book Now</span>
+          <span class="md:hidden ">Take Your First Step Today</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="md:hidden mb-[60px]">
+    <img src="assets/img/cta.png" alt="" class="w-full">
+  </section>
+  <!-- Recognized For Exceptional Implant Expertise -->
+  <section class=" md:mx-[10%] mb-[60px] md:mt-[90px]">
+    <!-- desktop: 1/3 (image) + 2/3 (text) -->
+    <div class="grid items-center gap-10 md:grid-cols-3">
+      <!-- Left: 1/3 -->
+      <div class="order-1 md:col-span-1 flex justify-center md:justify-start mx-[5%]">
+        <div class="relative w-full max-w-[420px] overflow-visible">
+          <!-- Wave -->
+          <img src="assets/img/waveRing.png" alt=""
+            class="absolute left-1 -top-10 md:-left-16 md:-top-20 w-[80%] md:w-[120%] h-auto -z-10 pointer-events-none select-none max-w-none" />
+
+          <!-- Award circle -->
+          <div class="relative flex items-center justify-center">
+            <div class="rounded-full bg-white shadow-[0_14px_40px_rgba(0,0,0,0.10)]
+                   w-[270px] h-[270px] md:w-[300px] md:h-[300px]
+                   flex items-center justify-center">
+              <img src="assets/img/award.png" alt="award" class="w-60 md:w-64" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: 2/3 -->
+      <div class="order-2 md:col-span-2 text-center md:text-left">
+        <h2
+          class="h2-c font-bold text-left mb-4 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] hidden md:block md:mx-[5%]">
+          Recognized For Exceptional<br class="hidden md:block" />
+          Implant Expertise
+        </h2>
+        <p class="mt-3 text-[#141414]/80 font-bold  text-lg md:text-lg bg-[#D2D2D2]/19 md:bg-white  md:mx-[5%]">
+          All-on-4 Treatment Concept <br class="md:hidden"> Center of Excellence - 2025
+        </p>
+        <p class="mt-4 text-[#141414]/80 text-base  mx-[5%] md:text-base md:mx-[5%]">
+          These honors celebrate our excellence in implant dentistry combining experienced specialists, digital
+          precision, and ethical, transparent care. We take pride in earning recognition for the results we deliver
+          and the trust our patients place in us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- faq -->
+  <section class="bg-[#F6FCFF] py-10 md:py-16">
+    <div class="mx-[5%] md:mx-[10%]">
+      <div>
+        <h2 class="h2-c font-bold  text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
+          Got Doubts ?
+        </h2>
+        <h3 class="h2-c font-medium  mb-4 md:mb-7 text-lg md:text-3xl">
+          We’ve Got All Answers
+        </h3>
+      </div>
+      <div class="grid gap-8 md:grid-cols-[1.6fr_1fr] md:items-start">
+        <div>
+          <!-- FAQ LIST -->
+          <div class="mt-6 space-y-4" id="faq">
+            <!-- 0 (OPEN BY DEFAULT) -->
+            <div class="faq-item rounded-xl bg-white p-4
+            shadow-none md:shadow-[0_8px_18px_rgba(0,0,0,0.06)]
+            border-[0.5px] border-[#CBCBCB] md:border-0">
+              <button type="button" class="faq-btn w-full text-left flex items-start justify-between gap-3">
+                <h3 class="text-[#141414] md:font-semibold">What’s the cost of implants?</h3>
+                <span class="faq-icon text-[#141414] font-bold text-lg leading-none">−</span>
+              </button>
+              <div class="faq-panel mt-2">
+                <p class="text-[#141414]/70 text-base">
+                  The cost varies based on individual needs; consult us for a detailed quote.
+                </p>
+              </div>
+            </div>
+            <!-- 1 (OPEN BY DEFAULT) -->
+            <div class="faq-item rounded-xl bg-white p-4
+            shadow-none md:shadow-[0_8px_18px_rgba(0,0,0,0.06)]
+            border-[0.5px] border-[#CBCBCB] md:border-0">
+              <button type="button" class="faq-btn w-full text-left flex items-start justify-between gap-3">
+                <h3 class="text-[#141414] md:font-semibold">Are dental implants painful?</h3>
+                <span class="faq-icon text-[#141414] font-bold text-lg leading-none">−</span>
+              </button>
+              <div class="faq-panel mt-2">
+                <p class="text-[#141414]/70 text-base">
+                  No. The procedure is done under local anesthesia, so you feel minimal discomfort. Most patients resume
+                  normal activities within a day.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2 (OPEN BY DEFAULT) -->
+            <div class="faq-item rounded-xl bg-white p-4
+            shadow-none md:shadow-[0_8px_18px_rgba(0,0,0,0.06)]
+            border-[0.5px] border-[#CBCBCB] md:border-0">
+              <button type="button" class="faq-btn w-full text-left flex items-start justify-between gap-3">
+                <h3 class="text-[#141414] md:font-semibold">How soon can I start eating after the procedure?</h3>
+                <span class="faq-icon text-[#141414] font-bold text-lg leading-none">−</span>
+              </button>
+              <div class="faq-panel mt-2">
+                <p class="text-[#141414]/70 text-base">
+                  You can begin with soft foods within 24–48 hours and gradually return to normal eating as healing
+                  progresses.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="faq-item rounded-xl bg-white p-4
+            shadow-none md:shadow-[0_8px_18px_rgba(0,0,0,0.06)]
+            border-[0.5px] border-[#CBCBCB] md:border-0">
+              <button type="button" class="faq-btn w-full text-left flex items-start justify-between gap-3">
+                <h3 class="text-[#141414] md:font-semibold">Are dental implants better than dentures?</h3>
+                <span class="faq-icon text-[#141414] font-bold text-lg leading-none">+</span>
+              </button>
+              <div class="faq-panel mt-2 hidden">
+                <p class="text-[#141414]/70 text-base">
+                  Yes. Implants look and feel like natural teeth, stay firmly in place, and let you eat and speak
+                  confidently without slipping or discomfort.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="faq-item rounded-xl bg-white p-4
+            shadow-none md:shadow-[0_8px_18px_rgba(0,0,0,0.06)]
+            border-[0.5px] border-[#CBCBCB] md:border-0">
+              <button type="button" class="faq-btn w-full text-left flex items-start justify-between gap-3">
+                <h3 class="text-[#141414] md:font-semibold">Are implants safe for older patients?</h3>
+                <span class="faq-icon text-[#141414] font-bold text-lg leading-none">+</span>
+              </button>
+              <div class="faq-panel mt-2 hidden">
+                <p class="text-[#141414]/70 text-base">
+                  Yes, absolutely. Many patients in their 50s, 60s, and 70s receive implants safely with excellent
+                  results.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="faq-item rounded-xl bg-white p-4
+            shadow-none md:shadow-[0_8px_18px_rgba(0,0,0,0.06)]
+            border-[0.5px] border-[#CBCBCB] md:border-0">
+              <button type="button" class="faq-btn w-full text-left flex items-start justify-between gap-3">
+                <h3 class="text-[#141414] md:font-semibold">How are implants completed in just 3 days?</h3>
+                <span class="faq-icon text-[#141414] font-bold text-lg leading-none">+</span>
+              </button>
+              <div class="faq-panel mt-2 hidden">
+                <p class="text-[#141414]/70 text-base">
+                  We use digital planning and quick-healing techniques to place the implant and fix a tooth within 72
+                  hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support card -->
+        <div class="rounded-2xl bg-white p-6 text-center shadow-[0_10px_24px_rgba(0,0,0,0.08)] self-center">
+          <img src="assets/img/support.png" alt="Support" class="mx-auto h-45 w-50 object-contain" />
+          <h3 class="mt-4 text-[#141414] font-semibold md:text-[17px]">Have more questions ? Contact Now</h3>
+          <div class="mt-4 space-y-2 text-left">
+            <div class="flex items-center gap-3 text-[#141414]">
+              <span class="text-[#0578B1]"><i class="fa fa-phone"></i></span>
+              <span class="underline text-base font-medium">+91 7700950647</span>
+            </div>
+            <div class="flex items-center gap-3 text-[#141414]">
+              <span class="text-[#0578B1]"><i class="fa fa-envelope"></i></span>
+              <span class="underline text-base font-medium">queries@orthosquare.in</span>
+            </div>
+          </div>
+          <button type="button" id="modal-form-btn" onclick="openModalForm()" class="mt-6 w-full rounded-xl bg-[#FF7F00] py-2 px-3 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] md:px-6 md:py-3 text-white font-bold 
+            transition animate-bounce hover:animate-none active:scale-[0.96] active:translate-y-[2px]">
+            Get Instant Callback
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ toggle (multiple can be open). First two are open by default (already set in HTML).
+    document.querySelectorAll("#faq .faq-item").forEach((item) => {
+      const btn = item.querySelector(".faq-btn");
+      const panel = item.querySelector(".faq-panel");
+      const icon = item.querySelector(".faq-icon");
+
+      btn.addEventListener("click", () => {
+        const isHidden = panel.classList.contains("hidden");
+        panel.classList.toggle("hidden");
+        icon.textContent = isHidden ? "−" : "+";
+      });
+    });
+  </script>
+
+  <!-- modal form  -->
+
+  <!-- Modal (popup) -->
+  <div id="modal-form"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 px-4 opacity-0 transition-opacity duration-200"
+    aria-hidden="true">
+    <div
+      class="w-full max-w-3xl rounded-2xl bg-[#F6FCFF]/95 shadow-[0_4px_20px_0_rgba(231,231,231,1)] px-4 pt-12 pb-6 md:px-10 md:py-8 relative transform transition-transform duration-200 scale-95"
+      role="dialog" aria-modal="true" aria-labelledby="modal-form-title">
+      <!-- Close button -->
+      <button type="button"
+        class="absolute right-3 top-3 z-10 rounded-lg bg-white/80 px-3 py-2 text-black/70 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
+        onclick="closeModalForm()" aria-label="Close">
+        ✕
+      </button>
+
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 id="modal-form-title"
+          class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
+          Offering Free First Visit for Dental Implants
+        </h2>
+      </div>
+
+      <!-- New IDs + classes (different from your current form) -->
+      <form id="implant-lead-form-modal" class="implant-lead-form-modal">
+        <div class="grid gap-4 md:grid-cols-6 md:gap-6 mb-7">
+          <input type="text" name="firstName" placeholder="First Name" aria-label="First Name"
+            class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#0578B1] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+          <input type="text" name="lastName" placeholder="Last Name" aria-label="Last Name"
+            class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#0578B1] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+          <input type="text" name="pincode_desktop" placeholder="PIN Code" aria-label="PIN Code"
+            class="hidden md:block md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#0578B1] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+          <input type="email" name="email" placeholder="Email ID" aria-label="Email ID"
+            class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#0578B1] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+          <input type="tel" name="phone" placeholder="Contact Number" aria-label="Contact Number" required
+            inputmode="numeric" autocomplete="tel" minlength="10" maxlength="10" pattern="[0-9]{10}"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+            class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#0578B1] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+
+          <input type="text" name="pincode_mobile" placeholder="PIN Code" aria-label="PIN Code"
+            class="md:hidden md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#0578B1] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
+        </div>
+
+        <!-- Hidden fields (same names so it writes to same Google Sheet columns) -->
+        <input type="hidden" name="pincode" value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="utm_medium" value="" />
+        <input type="hidden" name="utm_source" value="" />
+        <input type="hidden" name="utm_term" value="" />
+        <input type="hidden" name="utm_content" value="" />
+        <input type="hidden" name="date" value="" />
+        <input type="hidden" name="sheet_tab" value="dental-Implant" />
+
+        <div class="mt-6 flex justify-center">
+          <button type="submit"
+            class="w-full md:w-auto rounded-xl bg-[#FF7F00] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
+            Talk to an Implant Expert
+          </button>
+        </div>
+
+        <p id="implant-lead-status-modal" class="mt-3 text-center text-sm text-[#141414]/70"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwg_W9o_gZmulQ3XJHmHJtDcShNDt3tfEHlqXYYVB-KDKKaqVHiRZWfwtDe-kULP3o/exec";
+      const THANK_YOU_URL = "https://orthosquare.in/Thank-You";
+
+      const form = document.getElementById("implant-lead-form-modal");
+      const statusEl = document.getElementById("implant-lead-status-modal");
+      if (!form) return;
+
+      let isSubmitting = false;
+
+      function setStatus(msg, isError) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.style.color = isError ? "#b91c1c" : "#166534";
+      }
+
+      function setHidden(name, value) {
+        const el = form.querySelector(`[name="${name}"]`);
+        if (el) el.value = value || "";
+      }
+
+      function ensureHiddenValues() {
+        const params = new URLSearchParams(window.location.search);
+
+        const pinDesktop = (form.querySelector('[name="pincode_desktop"]')?.value || "").trim();
+        const pinMobile = (form.querySelector('[name="pincode_mobile"]')?.value || "").trim();
+        const pincode = pinDesktop || pinMobile || (form.querySelector('[name="pincode"]')?.value || "").trim();
+
+        setHidden("pincode", pincode);
+
+        setHidden("utm_campaign", params.get("utm_campaign") || "");
+        setHidden("utm_medium", params.get("utm_medium") || "");
+        setHidden("utm_source", params.get("utm_source") || "");
+        setHidden("utm_term", params.get("utm_term") || "");
+        setHidden("utm_content", params.get("utm_content") || "");
+
+        setHidden("date", new Date().toISOString());
+
+        if (!form.querySelector('[name="sheet_tab"]')?.value) {
+          setHidden("sheet_tab", "dental-Implant");
+        }
+      }
+
+      function disableForm(disabled) {
+        // disable all submit buttons inside the form
+        form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((btn) => {
+          btn.disabled = disabled;
+          btn.style.opacity = disabled ? "0.7" : "";
+          btn.style.pointerEvents = disabled ? "none" : "";
+        });
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        if (isSubmitting) return; // block double click / multiple submits
+        isSubmitting = true;
+        disableForm(true);
+
+        setStatus("Submitting...", false);
+
+        try {
+          ensureHiddenValues();
+
+          const fd = new FormData(form);
+          const phone = (fd.get("phone") || "").toString().trim();
+          if (!phone) {
+            setStatus("Please enter your contact number.", true);
+            isSubmitting = false;
+            disableForm(false);
+            return;
+          }
+
+          const body = new URLSearchParams();
+          for (const [k, v] of fd.entries()) body.append(k, v);
+
+          const prodocPayload = {
+            "leads": [
+              {
+                "name": ((fd.get("firstName") || "") + " " + (fd.get("lastName") || "")).trim() || "Unknown",
+                "phone": "91" + phone,
+                "email": fd.get("email") || "",
+                "tags": ["demo", "inbound"],
+                "source": "website orthosquare-In orthosquare.in",
+                "status": "new",
+                "summary": "Added via Leads API",
+                "priority": "medium",
+                "sentiment": "neutral",
+                "dynamicFields": { "utm_source": fd.get("utm_source") || "" },
+                "whatsappMessageParams": { "name": fd.get("firstName") || "User" }
+              }
+            ],
+            "config": {
+              "whatsappMessageDetails": {
+                "templateName": "lead_welcome",
+                "broadcastName": "Leads API"
+              },
+              "taskDetails": {
+                "createTask": true,
+                "taskStatus": "pending",
+                "taskPriority": "medium",
+                "taskType": "followup",
+                "taskDueDate": "2025-12-01T10:00:00.000Z"
+              }
+            }
+          };
+
+          const res = await fetch(WEB_APP_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+            body: body.toString(),
+          });
+
+          fetch("https://cep.prodoc.ai/api/v1/leads", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer 7b0690d1a49cce2e7b17b84143c4a3a9d1544eedfd75156bdb3aac3975209044"
+            },
+            body: JSON.stringify(prodocPayload)
+          }).catch(err => console.error("Prodoc API Error:", err));
+
+          const text = await res.text();
+          if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
+
+          window.location.href = THANK_YOU_URL;
+        } catch (err) {
+          setStatus("Something went wrong. Please try again.", true);
+          isSubmitting = false;
+          disableForm(false);
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwg_W9o_gZmulQ3XJHmHJtDcShNDt3tfEHlqXYYVB-KDKKaqVHiRZWfwtDe-kULP3o/exec";
+      const THANK_YOU_URL = "https://orthosquare.in/Thank-You";
+
+      const form = document.getElementById("implant-lead-form");
+      const statusEl = document.getElementById("implant-lead-status");
+      if (!form) return;
+
+      let isSubmitting = false;
+
+      function setStatus(msg, isError) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.style.color = isError ? "#b91c1c" : "#166534";
+      }
+
+      function setHidden(name, value) {
+        const el = form.querySelector(`[name="${name}"]`);
+        if (el) el.value = value || "";
+      }
+
+      function ensureHiddenValues() {
+        const params = new URLSearchParams(window.location.search);
+
+        const pinDesktop = (form.querySelector('[name="pincode_desktop"]')?.value || "").trim();
+        const pinMobile = (form.querySelector('[name="pincode_mobile"]')?.value || "").trim();
+        const pincode = pinDesktop || pinMobile || (form.querySelector('[name="pincode"]')?.value || "").trim();
+
+        setHidden("pincode", pincode);
+
+        setHidden("utm_campaign", params.get("utm_campaign") || "");
+        setHidden("utm_medium", params.get("utm_medium") || "");
+        setHidden("utm_source", params.get("utm_source") || "");
+        setHidden("utm_term", params.get("utm_term") || "");
+        setHidden("utm_content", params.get("utm_content") || "");
+
+        setHidden("date", new Date().toISOString());
+
+        if (!form.querySelector('[name="sheet_tab"]')?.value) {
+          setHidden("sheet_tab", "dental-Implant");
+        }
+      }
+
+      function disableForm(disabled) {
+        form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((btn) => {
+          btn.disabled = disabled;
+          btn.style.opacity = disabled ? "0.7" : "";
+          btn.style.pointerEvents = disabled ? "none" : "";
+        });
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        if (isSubmitting) return;
+        isSubmitting = true;
+        disableForm(true);
+
+        setStatus("Submitting...", false);
+
+        try {
+          ensureHiddenValues();
+
+          const fd = new FormData(form);
+          const phone = (fd.get("phone") || "").toString().trim();
+          if (!phone) {
+            setStatus("Please enter your contact number.", true);
+            isSubmitting = false;
+            disableForm(false);
+            return;
+          }
+
+          const body = new URLSearchParams();
+          for (const [k, v] of fd.entries()) body.append(k, v);
+
+          const prodocPayload = {
+            "leads": [
+              {
+                "name": ((fd.get("firstName") || "") + " " + (fd.get("lastName") || "")).trim() || "Unknown",
+                "phone": "91" + phone,
+                "email": fd.get("email") || "",
+                "tags": ["demo", "inbound"],
+                "source": "website orthosquare-in orthosquare.in",
+                "status": "new",
+                "summary": "Added via Leads API",
+                "priority": "medium",
+                "sentiment": "neutral",
+                "dynamicFields": { "utm_source": fd.get("utm_source") || "" },
+                "whatsappMessageParams": { "name": fd.get("firstName") || "User" }
+              }
+            ],
+            "config": {
+              "whatsappMessageDetails": {
+                "templateName": "lead_welcome",
+                "broadcastName": "Leads API"
+              },
+              "taskDetails": {
+                "createTask": true,
+                "taskStatus": "pending",
+                "taskPriority": "medium",
+                "taskType": "followup",
+                "taskDueDate": "2025-12-01T10:00:00.000Z"
+              }
+            }
+          };
+
+          const res = await fetch(WEB_APP_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+            body: body.toString(),
+          });
+
+          fetch("https://cep.prodoc.ai/api/v1/leads", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer 7b0690d1a49cce2e7b17b84143c4a3a9d1544eedfd75156bdb3aac3975209044"
+            },
+            body: JSON.stringify(prodocPayload)
+          }).catch(err => console.error("Prodoc API Error:", err));
+
+          const text = await res.text();
+          if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
+
+          window.location.href = THANK_YOU_URL;
+        } catch (err) {
+          setStatus("Something went wrong. Please try again.", true);
+          isSubmitting = false;
+          disableForm(false);
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+
+      window.openModalForm = function () {
+        var m = document.getElementById("modal-form");
+        if (!m) return;
+        m.classList.remove("hidden", "opacity-0");
+        m.classList.add("flex");
+        m.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        var panel = m.querySelector('[role="dialog"]');
+        if (panel) panel.classList.remove("scale-95");
+        requestAnimationFrame(function () {
+          m.classList.add("opacity-100");
+          if (panel) panel.classList.add("scale-100");
+        });
+      };
+
+      window.closeModalForm = function () {
+        var m = document.getElementById("modal-form");
+        if (!m) return;
+        var panel = m.querySelector('[role="dialog"]');
+        m.classList.remove("opacity-100");
+        m.classList.add("opacity-0");
+        if (panel) {
+          panel.classList.remove("scale-100");
+          panel.classList.add("scale-95");
+        }
+        m.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+
+        setTimeout(function () {
+          m.classList.add("hidden");
+          m.classList.remove("flex");
+        }, 200);
+      };
+
+      // Close on backdrop click
+      document.addEventListener("click", function (e) {
+        var m = document.getElementById("modal-form");
+        if (!m || m.classList.contains("hidden")) return;
+        if (e.target === m) closeModalForm();
+      });
+
+      // Close on ESC
+      document.addEventListener("keydown", function (e) {
+        var m = document.getElementById("modal-form");
+        if (!m || m.classList.contains("hidden")) return;
+        if (e.key === "Escape") closeModalForm();
+      });
+
+
+    })();
+  </script>
+
+
+
+
+  <!-- btn  -->
+
+  <style>
+    /* wave pulse */
+    .pulse-wave {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .pulse-wave::before,
+    .pulse-wave::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: currentColor;
+      /* uses element color */
+      opacity: 0.25;
+      z-index: -1;
+      transform: scale(1);
+      animation: wavePulse 1.8s ease-out infinite;
+    }
+
+    .pulse-wave::after {
+      animation-delay: 0.9s;
+      /* second wave */
+    }
+
+    @keyframes wavePulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.35;
+      }
+
+      70% {
+        transform: scale(1.9);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(2.1);
+        opacity: 0;
+      }
+    }
+
+    /* respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+
+      .pulse-wave::before,
+      .pulse-wave::after {
+        animation: none;
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="fixed bottom-15 right-6 z-[9999] flex flex-col gap-10">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919699128442?text=Hi%20Orthosquare%2C%20I%20want%20to%20know%20more%20about%20dental%20implants."
+      target="_blank" rel="noopener noreferrer"
+      class="pulse-wave grid h-14 w-14 md:h-10 md:w-10 place-items-center rounded-2xl bg-[#25D366] shadow-[0_10px_25px_rgba(0,0,0,0.18)]"
+      style="color:#25D366" aria-label="Chat on WhatsApp" title="WhatsApp">
+      <i class="fa fa-whatsapp text-white leading-none" style="font-size: 30px"></i>
+    </a>
+
+    <!-- Call -->
+    <a href="tel:9699185023"
+      class="pulse-wave grid h-14 w-14 md:h-10 md:w-10 place-items-center rounded-full bg-[#0B8F2A] shadow-[0_10px_25px_rgba(0,0,0,0.18)]"
+      style="color:#0B8F2A" aria-label="Call now" title="Call">
+      <i class="fa fa-phone text-white leading-none" style="font-size: 30px"></i>
+    </a>
+  </div>
+
+</body>
+
+</html>
