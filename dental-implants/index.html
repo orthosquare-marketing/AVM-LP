@@ -171,667 +171,294 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <section class="mb-[40px] md:mb-[60px] relative">
+
+
+<section class="relative w-screen max-w-none left-1/2 right-1/2 
+                -ml-[50vw] -mr-[50vw]">
+
+
+    <!-- Mobile Image -->
+     <!-- Mobile Image -->
+    <img 
+        src="../assets/dental-impact/image23.png" 
+        alt="Dental Impact"
+        class="w-full h-screen object-contain md:hidden"
+    />
+
+    <!-- Desktop Image -->
+    <img 
+        src="../assets/dental-impact/image23.png" 
+        alt="Clear Aligners"
+        class="w-full h-screen object-contain hidden md:block"
+    />
+
+    <button type="button" id="modal-form-btn" onclick="openModalForm()" 
+        class="pulse active:scale-[0.9] absolute min-w-[90vw] mt-[-20px]
+        left-1/2 -translate-x-1/2 z-20 bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white
+        shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] 
+        md:min-w-0 md:max-w-md md:left-[60%] md:right-16 md:top-[80%] md:bottom-auto
+        md:-translate-y-1/2 md:translate-x-0 md:px-6 md:py-3">
         
-        <!-- Mobile Image -->
-<img 
-  src="../assets/dental-impact/image23.png" 
-  alt="Dental Impact"
-  class="w-screen h-auto block object-cover md:hidden"
-/>
+        <span class="text-white font-bold">
+            Claim Implants for 14999
+        </span>
+    </button>
 
-<!-- Desktop Image -->
-<img 
-  src="../assets/clear-aligners/clear-alignershero.jpg" 
-  alt="Clear Aligners"
-  class="w-screen h-auto hidden md:block object-cover"
-/>
-        <button type="button" id="modal-form-btn" onclick="openModalForm()" class="pulse active:scale-[0.9] absolute min-w-[90vw]  mt-[-20px]
-         left-1/2 -translate-x-1/2  z-20 bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white
-         shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] 
-         md:min-w-0   md:max-w-md md:left-[60%] md:right-16 md:top-[80%] md:bottom-auto
-        md:-translate-y-1/2 md:translate-x-0 md:px-6 md:py-3
-        ">
-            <span rel="noopener noreferrer" class="text-white font-bold ">
-                Claim Implants for 14999
-            </span>
-        </button>
-    </section>
+</section>
 
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+  }
 
-    <style>
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
+  .stats-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
 
-            100% {
-                transform: translateX(-50%);
-            }
-        }
+  .stats-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-        .marquee {
-            overflow: hidden;
-        }
+  .stat-card {
+    background: #fff;
+    border: 2px solid #2f5bd3;
+    border-radius: 12px;
+    padding: 20px 25px;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
 
-        .marquee__track {
-            display: flex;
-            width: max-content;
-            animation: marquee 19s linear infinite;
-        }
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
 
-        .marquee__group {
-            display: flex;
-            gap: 0.25rem;
-        }
+  .stat-number {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+  }
 
-        @media (prefers-reduced-motion: reduce) {
-            .marquee__track {
-                animation: none;
-            }
-        }
-    </style>
+  .stat-text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+  }
 
-    <!-- badges marquee -->
-    <section class="mb-[60px] ">
-        <div class="marquee w-full ">
-            <div class="marquee__track">
-                <div class="marquee__group">
-                    <div><img src="../assets/clear-aligners/newbadges1.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges2.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges3.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges4.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges5.png" alt=""></div>
-                    <!-- <div><img src="../assets/clear-aligners/badges6.png" alt=""></div> -->
-                </div>
-                <div class="marquee__group" aria-hidden="true">
-                    <div><img src="../assets/clear-aligners/newbadges1.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges2.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges3.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges4.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges5.png" alt=""></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stat-card {
+      min-width: 150px;
+      padding: 15px;
+    }
 
+    .stat-number {
+      font-size: 18px;
+    }
 
-    <!-- 1) Mobile Video Section -->
-    <section class="md:hidden mx-[5%] mb-6">
-        <h2
-            class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
-            Thinking About Aligners? <br> Watch This
-        </h2>
+    .stat-text {
+      font-size: 12px;
+    }
+  }
+</style>
 
-        <div class="aspect-video w-full overflow-hidden rounded-xl shadow-md">
-            <iframe class="h-full w-full"
-                src="https://www.youtube.com/embed/mXiCz4RtlE0?si=6zY4bw2TccuMNuKj&amp;controls=0"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
+<section class="stats-section">
+  <div class="stats-container">
 
-    <!-- 2) Form Section -->
-    <section class="mx-[5%] md:mx-[10%] mb-[60px]">
-        <div
-            class="mt-6 md:mt-0 rounded-2xl bg-[#F6FCFF]/80 shadow-[0_4px_20px_0_rgba(231,231,231,1)] px-4 py-6 md:px-10 md:py-8">
-            <div class="mx-auto max-w-3xl text-center">
-                <h2
-                    class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
-                    Offering Free First Visit for Clear Aligners
-                </h2>
-            </div>
-
-            <form id="implant-lead-form" class="implant-lead-form">
-                <div class="grid gap-4 md:grid-cols-6 md:gap-6 mb-7">
-                    <input type="text" name="firstName" placeholder="First Name" aria-label="First Name"
-                        class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
-
-                    <input type="text" name="lastName" placeholder="Last Name" aria-label="Last Name"
-                        class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
-
-                    <input type="text" name="pincode_desktop" placeholder="PIN Code" aria-label="PIN Code"
-                        class="hidden md:block md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
-
-                    <input type="email" name="email" placeholder="Email ID" aria-label="Email ID"
-                        class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
-
-                    <input type="tel" name="phone" placeholder="Contact Number (only 10 digits)"
-                        aria-label="Contact Number" required inputmode="numeric" autocomplete="tel" minlength="10"
-                        maxlength="10" pattern="[0-9]{10}"
-                        oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
-                        class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
-
-                    <input type="text" name="pincode_mobile" placeholder="PIN Code" aria-label="PIN Code"
-                        class="md:hidden md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]" />
-                </div>
-
-                <!-- Hidden fields (same names so it writes to same Google Sheet columns) -->
-                <input type="hidden" name="pincode" value="" />
-                <input type="hidden" name="utm_campaign" value="" />
-                <input type="hidden" name="utm_medium" value="" />
-                <input type="hidden" name="utm_source" value="" />
-                <input type="hidden" name="utm_term" value="" />
-                <input type="hidden" name="utm_content" value="" />
-                <input type="hidden" name="date" value="" />
-                <input type="hidden" name="sheet_tab" value="clear-aligners" />
-
-                <div class="mt-6 flex justify-center">
-                    <button type="submit"
-                        class="w-full md:w-auto rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
-                        Talk to an Aligner Expert
-                    </button>
-                </div>
-
-                <p id="implant-lead-status" class="mt-3 text-center text-sm text-[#141414]/70"></p>
-            </form>
-        </div>
-    </section>
-
-    <!-- 3) 3-Day Implant Info Section (Desktop) -->
-    <section class="mx-[5%] md:mx-[10%] mb-[40px] md:mb-[60px] hidden md:block">
-        <h2
-            class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-[32px] text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)]">
-            Clear Aligners Made for Everyday Life
-        </h2>
-
-        <p class="text-[#141414]/80 font-medium mb-10 text-center text-base
-           md:mb-20 md:text-3xl
-           lg:w-[900px] lg:ml-[150px]">
-            A comfortable, step-by-step aligner treatment designed to straighten your smile
-        </p>
-
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:grid-rows-2 md:gap-0">
-            <!-- 1 -->
-            <div class="text-center max-w-xs mx-auto md:col-start-1 md:row-start-1">
-                <img class="mx-auto mb-3" src="../assets/clear-aligners/Mirror.png" alt="">
-                <h3 class="h2-c text-base md:text-lg font-semibold">Comfort You Can Live With</h3>
-                <p class="p-c text-sm md:text-base mt-1">
-                    Smooth, removable aligners that let you eat, speak, and smile naturally while your teeth gradually
-                    shift into place.
-                </p>
-            </div>
-
-            <!-- 2 -->
-            <div class="text-center max-w-xs mx-auto md:col-start-3 md:row-start-1">
-                <img class="mx-auto mb-3" src="../assets/img/Appointment.png" alt="">
-                <h3 class="h2-c text-base md:text-lg font-semibold">Expert-Planned, Fully Guided</h3>
-                <p class="p-c text-sm md:text-base mt-1">
-                    Every step is carefully planned using digital scans to ensure safety, comfort, and confidence.
-                </p>
-            </div>
-
-            <!-- 3 -->
-            <div class="text-center max-w-xs mx-auto md:col-start-2 md:row-start-2">
-                <img class="mx-auto mb-3" src="../assets/img/Teeth.png" alt="">
-                <h3 class="h2-c text-base md:text-lg font-semibold">Flexible Options for Every Smile</h3>
-                <p class="p-c text-sm md:text-base mt-1">
-                    Multiple aligner plans are available, so you can choose what suits your dental needs, timeline, and
-                    budget.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Smile Problems Clear Aligners Can Fix (MObile) -->
-    <section class="mx-[5%] md:mx-[10%] mb-[40px] md:mb-[60px]  md:hidden">
-        <div class="text-center">
-            <h2
-                class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
-                Smile Problems Clear Aligners Can Fix
-            </h2>
-
-            <p class="text-[#141414]/80 font-semibold mb-10 md:mb-20 text-center text-base md:text-3xl md:hidden">
-                Clear aligners gently correct common <br> alignment and bite issues
-            </p>
-        </div>
-
-        <!-- Grid: 1 col mobile, 2 cols desktop -->
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2  md:place-items-stretch mb-7 " style="justify-items: center;">
-
-            <div class="card w-full md:max-w-sm ">
-                <h3 class="h2-c  font-semibold text-xl mb-4">Crowded Teeth</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions1" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
- mb-4" />
-                <p class=" text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
-                    When teeth look pushed together, overlap, or feel difficult to clean properly.
-                </p>
-
-                <div class="my-2 md:my-4  mb-4 ">
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm  mr-2">Too close</span>
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm  ">Overlapping</span>
-                </div>
-            </div>
-
-            <div class="card w-full md:max-w-sm ">
-                <h3 class="h2-c  font-semibold text-xl mb-4">Crossbite</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions2" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
- mb-4" />
-                <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
-                    When some upper teeth sit inside or behind the lower teeth while biting.
-                </p>
-                <div class="my-2 md:my-4 mb-4">
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm  mr-2">Misaligned</span>
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm ">Uneven Bite</span>
-                </div>
-            </div>
-
-            <div class="card w-full md:max-w-sm ">
-                <h3 class="h2-c  font-semibold text-xl mb-4">Gapped Teeth</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions3" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
- mb-4" />
-                <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
-                    When there are noticeable gaps between teeth that make the smile feel incomplete.
-                </p>
-                <div class="my-2 md:my-4 mb-4">
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm  mr-2">Gaps</span>
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm ">Spaces</span>
-                </div>
-            </div>
-
-            <div class="card w-full md:max-w-sm ">
-                <h3 class="h2-c  font-semibold text-xl mb-4">Open / Deep Bite</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions4" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
- mb-4" />
-                <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
-                    When front teeth don’t meet properly or cover too much when you close your mouth.
-                </p>
-                <div class="my-2 md:my-4 mb-4">
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm  mr-2">Teeth Gap</span>
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm ">Over Bite</span>
-                </div>
-            </div>
-
-            <div class="card w-full md:max-w-sm ">
-                <h3 class="h2-c  font-semibold text-xl mb-4">Spacing Issues</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions4" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
- mb-4" />
-                <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
-                    When teeth are unevenly spaced and the smile looks irregular or unbalanced.
-                </p>
-                <div class="my-2 md:my-4 mb-4">
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm  mr-2">Uneven</span>
-                    <span class="text-[#141414]/70 bg-[#EDEDED] p-2 rounded-full text-sm ">Irregular gap</span>
-                </div>
-            </div>
-        </div>
-
-        <button type="button" id="modal-form-btn" onclick="openModalForm()"
-            class="w-full md:w-auto rounded-2xl bg-[#DF2028] py-2 px-3 border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold md:hidden pulse active:scale-[0.9]">
-            See What Suits You Best
-        </button>
-    </section>
-    <div class="bg-[#DF2028] md:hidden mb-[60px] border border-[#DF2028]">
-
-        <h2 class="font-bold text-2xl text-center text-white pt-4 text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
-" style="    line-height: 120%;
-    letter-spacing: -1px;">Quality Clear Aligners at Low <br>Transparent Pricing</h2>
-        <div style="background-image: url(../assets/img/costingdetails.jpg);"
-            class=" rounded-xl m-5  flex justify-center items-center shadow-[0_4px_20px_5px_rgba(231,231,231,0.4)] min-h-[200px]">
-
-            <button type="button" id="modal-form-btn" onclick="openModalForm()"
-                class="pulse active:scale-[0.9] rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-md md:px-6 md:py-3 text-white font-bold ">
-
-                Download Costing Details
-            </button>
-
-        </div>
-
+    <div class="stat-card">
+      <div class="stat-number">3,00,000+</div>
+      <div class="stat-text">Successful Implants</div>
     </div>
 
-    <section>
-        <!-- See How Dental Implants Changed Lives -->
-        <div class="relative mb-[40px] md:mb-[10px] md:mx-[10%] bg-[#E8F7FF] md:bg-[#fff] overflow-hidden">
-            <div
-                class="md:hidden pointer-events-none absolute left-1/2 -translate-x-1/2 -top-[30px] h-[100%] w-screen rounded-b-full bg-white">
-            </div>
-            <div class="grid items-center gap-5 md:grid-cols-[1fr_2fr]">
-                <!-- Left text -->
-                <div class="z-10 text-center md:text-left 1 mx-[5%]  md:mx-[0%]">
-                    <h2
-                        class="hidden md:block h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
-                        50k+ Real Aligners
-                        <br class="hidden md:block" />
-                        Transformation
-                    </h2>
-                    <h2
-                        class="md:hidden h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
-                        See How Clear Aligners
-                        <br class="hidden md:block" />
-                        Changed Lives
-                    </h2>
-                    <p
-                        class="text-[#141414]/80 font-semibold text-[16px] md:mb-20 text-center text-base md:text-3xl md:hidden">
-                        Stories from patients across 125+ clinics with thousands of successful aligners
-                    </p>
-                </div>
+    <div class="stat-card">
+      <div class="stat-number">5,00,000+</div>
+      <div class="stat-text">Happy Patients</div>
+    </div>
 
-                <!-- reel Right carousel -->
+    <div class="stat-card">
+      <div class="stat-number">20+ Years</div>
+      <div class="stat-text">Of Industry-leading Experience</div>
+    </div>
 
-                <div class="relative mx-[5%]  md:mx-[0%] py-5">
-                    <!-- Mobile stacked carousel (3-card deck) -->
-                    <div id="reel-stack"
-                        class="reel-stack md:hidden flex justify-center items-start select-none touch-pan-y"
-                        aria-label="Patient reels carousel">
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/oHsEwYx5L4w?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/K6-HEJ-OkJ8?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/iqbGYxB0KlE?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/6JmvrsITMZc?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/vUioINdiY5Q?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="stat-card">
+      <div class="stat-number">25000+</div>
+      <div class="stat-text">Google Reviews</div>
+    </div>
 
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/mOvM0pcyPBc?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/tGXou-fW2t4?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/m_3MhXGnc8I"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/56jwA3oRhX8"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reel-stack__card" data-reel-card>
-                            <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
-                                <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/MVTfWhE7MxY"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <p id="reel-stack-status" class="sr-only" aria-live="polite"></p>
-                    </div>
+  </div>
+</section>
 
-                    <!-- Desktop carousel (keep current structure) -->
-                    <div id="reel-splide" class="splide hidden md:block">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/oHsEwYx5L4w"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/K6-HEJ-OkJ8?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/iqbGYxB0KlE?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/6JmvrsITMZc?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
-                                            src="https://www.youtube.com/embed/vUioINdiY5Q?rel=0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+  }
 
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/mOvM0pcyPBc"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
+  .form-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+  }
 
-                                <li class="splide__slide" style="text-align: -webkit-center;">
-                                    <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/tGXou-fW2t4
-                                            title=" YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </li>
+  .form-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-left {
+    flex: 1;
+  }
+
+  .form-title {
+    color: #3b3bb3;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .form-subtext {
+    margin: 10px 0 20px;
+    color: #555;
+    font-size: 14px;
+    max-width: 500px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .form-grid input {
+    padding: 12px;
+    border: 1.5px solid #5a5acb;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+
+  .form-bottom {
+    margin-top: 15px;
+  }
+
+  .checkbox {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    gap: 8px;
+  }
+
+  .submit-btn {
+    margin-top: 15px;
+    background: #e32222;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.9;
+  }
+
+  .form-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-box {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .video-box video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .form-container {
+      flex-direction: column;
+    }
+
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .full-width {
+      grid-column: span 1;
+    }
+  }
+</style>
+
+<section class="form-section">
+  <div class="form-container">
+
+    <!-- LEFT -->
+    <div class="form-left">
+      <div class="form-title">SCHEDULE YOUR FREE CONSULTATION</div>
+
+      <div class="form-subtext">
+        Fill out the form below and enjoy up to 25% off your treatment—let's bring back your confident smile!
+      </div>
+
+      <div class="form-grid">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Contact Number">
+        <input type="text" placeholder="PIN Code" class="full-width">
+      </div>
+
+      <div class="form-bottom">
+        <label class="checkbox">
+          <input type="checkbox">
+          By checking this box, I confirm that I agree to Privacy Policy and consent to the use of my information.
+        </label>
+
+        <button class="submit-btn">Confirm Your Free Slot</button>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="form-right">
+      <div class="video-box">
+        <video controls poste="" >
+            <source src="" type="video">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
-                            </ul>
-                        </div>
-                    </div>
 
-                    <!-- arrows -->
-                    <div class=" flex justify-center md:justify-end gap-5 mt-5 md:mt-10">
-                        <button type="button" data-ab-prev
-                            class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
-                            aria-label="Previous">
-                            <img src="../assets/img/prearrow.svg" alt="">
-                        </button>
-                        <button type="button" data-ab-next
-                            class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
-                            aria-label="Next">
-                            <img src="../assets/img/nextarrow.svg" alt="">
-                        </button>
-                    </div>
-
-                    <!-- <div id="reel-stack-dots" class="md:hidden mt-4 flex justify-center gap-2" aria-label="Reel carousel pagination"></div> -->
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Counter -->
-
-        <div
-            class="md:hidden bg-[linear-gradient(180deg,rgba(255,255,255,1)_40%,rgba(232,247,255,1)_60%)] py-8 mb-[60px]">
-            <div class="mx-[5%] text-center">
-                <h2 class="h2-c  leading-tight text-3xl md:text-3xl font-young text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
-">
-                    Last chance to avail<br>Aligners Offer
-                </h2>
-                <p class="text-lg text-[#141414]/80 font-medium">
-                    Limited-time savings on invisible aligners designed for faster, comfortable results
-                </p>
-
-                <div class="mt-6 flex items-center justify-center gap-[0.5] text-5xl text-black">
-                    <span
-                        class="rounded-xl bg-white px-3 max-[380px]:px-1 py-2 shadow-[0px_2px_1.9px_0px_rgba(0,0,0,0.25)] font-graduate"
-                        data-hrs-tens>1</span>
-
-                    <span
-                        class="rounded-xl bg-white px-3 max-[380px]:px-1 py-2 shadow-[0px_2px_1.9px_0px_rgba(0,0,0,0.25)] font-graduate"
-                        data-hrs-ones>7</span>
-
-                    <span class="font-graduate p-1">:</span>
-
-                    <span
-                        class="rounded-xl bg-white px-3 max-[380px]:px-1 py-2 shadow-[0px_2px_1.9px_0px_rgba(0,0,0,0.25)] font-graduate"
-                        data-min-tens>0</span>
-
-                    <span
-                        class="rounded-xl bg-white px-3 max-[380px]:px-1 py-2 shadow-[0px_2px_1.9px_0px_rgba(0,0,0,0.25)] font-graduate"
-                        data-min-ones>0</span>
-
-                    <span class="font-graduate p-1">:</span>
-
-                    <span
-                        class="rounded-xl bg-white px-3 max-[380px]:px-1 py-2 shadow-[0px_2px_1.9px_0px_rgba(0,0,0,0.25)] font-graduate"
-                        data-sec-tens>0</span>
-
-                    <span
-                        class="rounded-xl bg-white px-3 max-[380px]:px-1 py-2 shadow-[0px_2px_1.9px_0px_rgba(0,0,0,0.25)] font-graduate"
-                        data-sec-ones>0</span>
-                </div>
-
-                <div class="mt-6 flex justify-center">
-                    <button type="button" id="modal-form-btn" onclick="openModalForm()"
-                        class="w-full md:w-auto rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]">
-                        Begin Free Assessment
-                    </button>
-                </div>
-            </div>
-        </div>
-        <script>
-            (function () {
-                var hrsTensEl = document.querySelector("[data-hrs-tens]");
-                var hrsOnesEl = document.querySelector("[data-hrs-ones]");
-                var minTensEl = document.querySelector("[data-min-tens]");
-                var minOnesEl = document.querySelector("[data-min-ones]");
-                var secTensEl = document.querySelector("[data-sec-tens]");
-                var secOnesEl = document.querySelector("[data-sec-ones]");
-                if (!hrsTensEl || !hrsOnesEl || !minTensEl || !minOnesEl || !secTensEl || !secOnesEl) return;
-
-                var startSeconds = 17 * 3600;
-                var endSeconds = 10 * 3600;
-                var current = startSeconds;
-
-                function pad(n) {
-                    return String(n).padStart(2, "0");
-                }
-
-                function render() {
-                    var hrs = Math.floor(current / 3600);
-                    var mins = Math.floor((current % 3600) / 60);
-                    var secs = current % 60;
-                    var hrsStr = pad(hrs);
-                    var minStr = pad(mins);
-                    var secStr = pad(secs);
-                    hrsTensEl.textContent = hrsStr[0];
-                    hrsOnesEl.textContent = hrsStr[1];
-                    minTensEl.textContent = minStr[0];
-                    minOnesEl.textContent = minStr[1];
-                    secTensEl.textContent = secStr[0];
-                    secOnesEl.textContent = secStr[1];
-                }
-
-                function tick() {
-                    current -= 1;
-                    if (current < endSeconds) current = startSeconds;
-                    render();
-                }
-
-                render();
-                setInterval(tick, 1000);
-            })();
-        </script>
-    </section>
     <script>
         (function () {
             var reelRoot = document.getElementById('reel-splide');
@@ -1623,7 +1250,7 @@
             height: 18px;
             transform: translateY(0);
         }
-    </style>
+    </>
     <section class=" mx-[5%] mt-[60px] mb-[50px] h-[400px] md:mx-[10%]">
         <div class="text-center ">
             <h2
