@@ -1630,12 +1630,10 @@
 
 <!-- Section 7 -->
 <section class="promo-offer-section">
-  <div class="promo-container">
+  <div class="promo-container" >
     
-    <div class="promo-left">
-      <div class="watermark-bg" style="background-image: url('../assets/dental-impact/Rectangle1.png')"></div>
-      
-      <div class="left-content">
+    <div class="promo-left"  >
+      <div class="left-content"   >
         <h2 class="main-heading">Discover the smile you<br />deserve!</h2>
         <p class="sub-heading">
           Explore how Dental implants can transform your confidence with a
@@ -1652,7 +1650,7 @@
       </div>
     </div>
 
-    <div class="promo-right" style="background-image: url('')">
+    <div class="promo-right" ">
       <div class="right-content">
         <h3 class="time-limit-text">48 Hours</h3>
         <h2 class="offer-heading">Hurry, limited slots remaining</h2>
@@ -1718,7 +1716,7 @@
   /* Left Side (Purple) Styling */
   .promo-left {
     flex: 1 1 50%;
-    background-color: #6a5ba2; /* Purple background */
+    background-color: #6a5ba2; /* Solid Purple background, no image */
     color: #ffffff;
     padding: 60px 40px;
     display: flex;
@@ -1729,25 +1727,11 @@
     min-width: 320px;
   }
 
-  .watermark-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; /* Spans the full colored area */
-    height: 100%;
-    background-size: cover; /* Cover full area with pattern */
-    background-position: center;
-    background-repeat: repeat; /* Repeat pattern to fill */
-    opacity: 0.05; /* Fainter than desire output to integrate subtly */
-    z-index: 1;
-  }
-
   .left-content {
     position: relative;
     z-index: 2;
     max-width: 480px;
-    text-align: center; /* Center all text in the left block */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1786,7 +1770,6 @@
     text-align: center;
   }
 
-  /* Styling for the combined happy patients image asset (2lac+ and avatars) */
   .combined-proof-img {
     width: 100%;
     max-width: 250px;
@@ -1810,7 +1793,7 @@
 
   .right-content {
     max-width: 500px;
-    text-align: center; /* Center all text in the right block */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1827,13 +1810,12 @@
   .offer-heading {
     font-size: 2rem;
     font-weight: 800;
-    color: #3b2f8a; /* Darker purple for text */
+    color: #3b2f8a; 
     margin: 0 0 25px 0;
     line-height: 1.2;
     text-align: center;
   }
 
-  /* Timer Styling, clean and centered */
   .countdown-wrapper {
     display: flex;
     justify-content: center;
@@ -1888,13 +1870,13 @@
   .offer-description {
     font-size: 0.85rem;
     color: #777777;
-    margin: 0 0 40px 0; /* Space before button */
+    margin: 0 0 40px 0;
     line-height: 1.5;
     text-align: center;
   }
 
   .schedule-btn {
-    background-color: #de2a32; /* Red button */
+    background-color: #de2a32;
     color: #ffffff;
     border: none;
     padding: 14px 35px;
@@ -1914,30 +1896,24 @@
     .promo-container {
       flex-direction: column;
     }
-
     .happy-patients-container {
       flex-direction: column;
       text-align: center;
       gap: 15px;
     }
-
     .main-heading {
       font-size: 2rem;
     }
-
     .offer-heading {
       font-size: 1.7rem;
     }
-
     .countdown-wrapper {
       gap: 10px;
     }
-
     .time-block {
       width: 65px;
       padding: 10px 5px;
     }
-
     .time-value {
       font-size: 1.4rem;
     }
@@ -2007,9 +1983,9 @@
         background-color: #f5f7fd;
 
         /* Replace this URL with the actual path to your repeating dental pattern image */
-        background-image: url("your-dental-pattern-bg.png");
-        background-repeat: repeat;
-        background-size: 300px; /* Adjust this size based on your actual pattern image */
+        background-image: url("../assets/dental-impact/toothwatermark.png");
+        
+         /* Adjust this size based on your actual pattern image */
         background-position: center;
 
         border-radius: 16px;
@@ -2240,24 +2216,23 @@
 
         <div class="carousel-wrapper">
           <div class="carousel-slide">
-            <div class="image-pair">
-              <img src="../assets/dental-impact/ab1.svg" alt="Before treatment" class="slide-img" />
-              <!-- <img src="" alt="After treatment" class="slide-img" /> -->
-            </div>
+            <img src="../assets/dental-impact/ab1.svg" alt="Transformation 1" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <div class="image-pair">
-              <img src="../assets/dental-impact/Slide Item — 1.png" alt="Before treatment" class="slide-img" />
-              <img src="../assets/dental-impact/unsplash_YFFGkE3y4F8.png" alt="After treatment" class="slide-img" />
-            </div>
+            <img src="../assets/dental-impact/ab2.svg" alt="Transformation 2" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <div class="image-pair">
-              <img src="../assets/dental-impact/Slide Item — 2.png" alt="Before treatment" class="slide-img" />
-              <img src="../assets/dental-impact/Slide Item — 4.png" alt="After treatment" class="slide-img" />
-            </div>
+            <img src="../assets/dental-impact/ab4.svg" alt="Transformation 3" class="slide-img" />
+          </div>
+
+          <div class="carousel-slide">
+            <img src="../assets/dental-impact/ab5.svg" alt="Transformation 4" class="slide-img" />
+          </div>
+
+          <div class="carousel-slide">
+            <img src="../assets/dental-impact/ab6.svg" alt="Transformation 5" class="slide-img" />
           </div>
         </div>
 
@@ -2306,7 +2281,7 @@
         padding: 60px 20px;
         background-color: #ffffff;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        overflow: hidden; /* Prevents horizontal scroll from absolute slides */
+        overflow: hidden; 
       }
 
       .transformation-container {
@@ -2322,19 +2297,19 @@
       }
 
       .heading-bold {
-        color: #2b1c85; /* Dark purple/blue */
+        color: #2b1c85; 
         font-weight: 800;
       }
 
       .heading-light {
-        color: #4b3eb4; /* Lighter purple/blue */
+        color: #4b3eb4; 
         font-weight: 400;
       }
 
-      /* Carousel 3D Coverflow Setup */
+      /* Carousel Setup */
       .carousel-wrapper {
         position: relative;
-        height: 350px; /* INCREASED: Was 250px */
+        height: 350px; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2344,27 +2319,32 @@
       .carousel-slide {
         position: absolute;
         width: 60%;
+        height: 100%; 
         max-width: 500px;
         transition:
           transform 0.5s ease,
           opacity 0.5s ease,
           z-index 0.5s ease;
         will-change: transform, opacity;
-        border-radius: 8px;
+        
+        /* 1. Remove the white background and border-radius from the container */
+        background-color: transparent; 
+        
+        /* 2. Remove the shadow from the container (we will move it to the image) */
+        box-shadow: none; 
+        
         overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      .image-pair {
-        display: flex;
-        width: 100%;
-        height: 100%;
       }
 
       .slide-img {
-        width: 50%;
-        object-fit: cover;
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
         display: block;
+        
+        /* 3. Add the shadow and rounded corners directly to the image instead */
+        border-radius: 8px;
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
       }
 
       /* Navigation Controls */
@@ -2409,13 +2389,13 @@
       }
 
       .dot.active {
-        background-color: #0077c8; /* Blue dot matching design */
+        background-color: #0077c8; 
         transform: scale(1.2);
       }
 
       /* CTA Button */
       .cta-button {
-        background-color: #e62b34; /* Red button */
+        background-color: #e62b34; 
         color: #ffffff;
         border: none;
         padding: 14px 32px;
@@ -2440,7 +2420,7 @@
           font-size: 1.6rem;
         }
         .carousel-wrapper {
-          height: 250px; /* INCREASED: Was 180px */
+          height: 250px; 
         }
         .carousel-slide {
           width: 85%;
@@ -2449,10 +2429,11 @@
 
       @media (max-width: 480px) {
         .carousel-wrapper {
-          height: 180px; /* INCREASED: Was 140px */
+          height: 180px; 
         }
       }
     </style>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const slides = document.querySelectorAll(".carousel-slide");
@@ -2485,8 +2466,8 @@
             let offset = index - currentIndex;
 
             // Handle looping so items wrap around smoothly
-            if (offset < -1) offset = slides.length + offset;
-            if (offset > 1) offset = offset - slides.length;
+            if (offset < -2) offset = slides.length + offset;
+            if (offset > 2) offset = offset - slides.length;
 
             // Apply CSS transforms to create the 3D depth effect
             if (offset === 0) {
@@ -2511,7 +2492,7 @@
               slide.style.opacity = "0.5";
               slide.style.zIndex = "5";
             } else {
-              // Hidden Slides (if you add more than 3)
+              // Hidden Slides (the 4th and 5th ones)
               slide.style.transform = "translateX(0) scale(0.5)";
               slide.style.opacity = "0";
               slide.style.zIndex = "1";
@@ -2541,6 +2522,7 @@
         updateCarousel();
       });
     </script>
+<!-- Section -->
 
     <section class="patient-reviews-section">
       <div class="reviews-container">
@@ -2805,38 +2787,67 @@
         // 1. DATA ARRAY (Add your reviews here!)
         // ==========================================
         const reviewsData = [
-          {
-            author: "Ananya S",
-            initial: "A",
-            bgColor: "#e05b45", // Custom avatar background color
-            avatarSrc: "", // Leave empty if you want to use the initial, or put image URL
-            meta: "5 reviews",
-            time: "4 months ago",
-            rating: 5,
-            text: "I am very happy with the treatment. I have visited many clinics but the way they explained the procedure and took over by end it is very remarkable. All the doctors are very friendly. I have started my implant treatment...",
-          },
-          {
-            author: "Ravinder Singh",
-            initial: "R",
-            bgColor: "#ff8a65",
-            avatarSrc: "",
-            meta: "Local Guide · 8 reviews · 11 photos",
-            time: "5 years ago",
-            rating: 5,
-            text: "I got two implants done at Orthosquare Dental Clinic, Nanavati Hospital. The work was done by Dr Riddhi Rathi Shet & assisted by Dr Nikita Naik.<br><br>All I can say is this team of doctors is one of the most professional and the work done is excellent. They provided personal touch and made me so comfortable in the dentist's chair which I dread so much.<br><br>I would recommend Dr Riddhi Shet is the most expert doc to visit as far as implants are concerned. Way to go Orthosquare! Best wishes!",
-          },
-          {
-            author: "Mohit Desai",
-            initial: "M",
-            bgColor: "#4cb050",
-            avatarSrc: "",
-            meta: "12 reviews",
-            time: "1 year ago",
-            rating: 5,
-            text: "I am very happy with how the staff handled me in my worst pain. The implant procedure was smooth and painless. I will always recommend AVMSmiles to everyone.",
-          },
-          // You can easily add more review objects here!
-        ];
+  {
+    author: "Mujib Kazi",
+    initial: "M",
+    bgColor: "#e05b45", // Red-Orange
+    avatarSrc: "", 
+    meta: "Google Review",
+    time: "Recently",
+    rating: 5,
+    text: "I came to orthosquare dental clinic for my implants. I got all on 6 implants done both upper and lower. I am very much satisfied with the treatment. The staff here is very helpful and experienced.",
+  },
+  {
+    author: "Ramakant Bhopi",
+    initial: "R",
+    bgColor: "#ff8a65", // Coral
+    avatarSrc: "",
+    meta: "Google Review",
+    time: "Recently",
+    rating: 5,
+    text: "I came to orthosquare dental clinic for dental implants. I am a heart patient. The doctors followed protocol regarding my heart condition that is required for dental implants. I did immediate loading implants and got my teeth within 3 days. The staff is very friendly. I am happy with my treatment.",
+  },
+  {
+    author: "Jasmita Kadu",
+    initial: "J",
+    bgColor: "#4cb050", // Green
+    avatarSrc: "",
+    meta: "Google Review",
+    time: "Recently",
+    rating: 5,
+    text: "Very good experience at orthosqure. Full mouth implants done for my mother in law. Doctors are very helpful and very experienced with all advanced form of treatments and they give the ideal advice for every patient. Very much satisfied with the treatment",
+  },
+  {
+    author: "Neelam Shah",
+    initial: "N",
+    bgColor: "#2196f3", // Blue
+    avatarSrc: "",
+    meta: "Google Review",
+    time: "Recently",
+    rating: 5,
+    text: "We were very concerned about the implant treatment to begin with. But the team of doctors did a fantastic job in ensuring that the treatment was made with utmost care. I'm very satisfied and highly recommend Orthosquare for the implant and oral treatments.",
+  },
+  {
+    author: "Valmiki Rane",
+    initial: "V",
+    bgColor: "#9c27b0", // Purple
+    avatarSrc: "",
+    meta: "Google Review",
+    time: "Recently",
+    rating: 5,
+    text: "I got my mother implants done in very afforadable price, best service provided to me and i am satisfied with treatment. I recommended to others.",
+  },
+  {
+    author: "Maya Kapse",
+    initial: "M",
+    bgColor: "#fbc02d", // Yellow
+    avatarSrc: "",
+    meta: "Google Review",
+    time: "Recently",
+    rating: 5,
+    text: "I underwent implant treatment at orthosquare Dental clinic. Amazing patient service. I am very much satisfied with my treatment. Would recommend orthosquare for implant treatment.",
+  }
+];
 
         // ==========================================
         // 2. DYNAMICALLY RENDER REVIEWS
@@ -2976,22 +2987,20 @@
       });
     </script>
 
-    <section
-      class="hidden mx-[5%] mb-[90px] md:mx-[20%] md:block lg:flex lg:justify-center"
+<section
+      class="hidden mx-[5%] mb-8 md:mx-[20%] md:block lg:flex lg:justify-center"
     >
-      <div class="p-6 mb-[60px] md:block lg:flex lg:justify-center">
-        <!-- CTA Button -->
+      <div class="py-4 md:block lg:flex lg:justify-center">
         <button
           type="button"
           id="modal-form-btn"
           onclick="openModalForm()"
-          class="rounded-xl bg-[#DF2021] py-2 px-3 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]"
+          class="rounded-xl bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]"
         >
           Book Free Consultation
         </button>
       </div>
     </section>
-
     <!-- Your Dental Concerns, Solved Simply -->
 
     <section class="bg-white py-12 px-[5%] md:py-20 lg:px-[8%] font-hind">
