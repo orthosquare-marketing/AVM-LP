@@ -106,30 +106,15 @@
             animation: pulse 2s infinite;
         }
     </style>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MVRJ7DL');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MVRJ7DL');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Meta Pixel Code -->
+   
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W9RNL2H8');</script>
+<!-- End Google Tag Manager -->
+     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -150,9 +135,23 @@
             src="https://www.facebook.com/tr?id=2500465470228146&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
-
-
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '873079932230196');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=873079932230196&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
   <!-- Vercel Web Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
   <!-- End Vercel Web Analytics -->
@@ -160,17 +159,12 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9RNL2H8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <section class="mb-[40px] md:mb-[60px] relative">
         <video autoplay muted playsinline loop class="w-screen h-auto block object-cover md:hidden">
             <source src="../assets/clear-aligners/mobile.mp4" type="video/mp4">
@@ -2425,276 +2419,7 @@
             </form>
         </div>
     </div>
-    <script>
-        (function () {
-            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxihHxIU7CpzggdiqBh8g3ucJbcusOTJLJHa9Oyw-cGAw-i9Hh02CUC7N86WwLd_ckh/exec";
-            const THANK_YOU_URL = "https://dentaloffers.avmsmiles.com/thank-you";
-
-            const form = document.getElementById("implant-lead-form-modal");
-            const statusEl = document.getElementById("implant-lead-status-modal");
-            if (!form) return;
-
-            let isSubmitting = false;
-
-            function setStatus(msg, isError) {
-                if (!statusEl) return;
-                statusEl.textContent = msg;
-                statusEl.style.color = isError ? "#b91c1c" : "#166534";
-            }
-
-            function setHidden(name, value) {
-                const el = form.querySelector(`[name="${name}"]`);
-                if (el) el.value = value || "";
-            }
-
-            function ensureHiddenValues() {
-                const params = new URLSearchParams(window.location.search);
-
-                const pinDesktop = (form.querySelector('[name="pincode_desktop"]')?.value || "").trim();
-                const pinMobile = (form.querySelector('[name="pincode_mobile"]')?.value || "").trim();
-                const pincode = pinDesktop || pinMobile || (form.querySelector('[name="pincode"]')?.value || "").trim();
-
-                setHidden("pincode", pincode);
-
-                setHidden("utm_campaign", params.get("utm_campaign") || "");
-                setHidden("utm_medium", params.get("utm_medium") || "");
-                setHidden("utm_source", params.get("utm_source") || "");
-                setHidden("utm_term", params.get("utm_term") || "");
-                setHidden("utm_content", params.get("utm_content") || "");
-
-                setHidden("date", new Date().toISOString());
-
-                if (!form.querySelector('[name="sheet_tab"]')?.value) {
-                    setHidden("sheet_tab", "clear-aligners");
-                }
-            }
-
-            function disableForm(disabled) {
-                // disable all submit buttons inside the form
-                form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((btn) => {
-                    btn.disabled = disabled;
-                    btn.style.opacity = disabled ? "0.7" : "";
-                    btn.style.pointerEvents = disabled ? "none" : "";
-                });
-            }
-
-            form.addEventListener("submit", async function (e) {
-                e.preventDefault();
-
-                if (isSubmitting) return; // block double click / multiple submits
-                isSubmitting = true;
-                disableForm(true);
-
-                setStatus("Submitting...", false);
-
-                try {
-                    ensureHiddenValues();
-
-                    const fd = new FormData(form);
-                    const phone = (fd.get("phone") || "").toString().trim();
-                    if (!phone) {
-                        setStatus("Please enter your contact number.", true);
-                        isSubmitting = false;
-                        disableForm(false);
-                        return;
-                    }
-
-                    const body = new URLSearchParams();
-                    for (const [k, v] of fd.entries()) body.append(k, v);
-
-                    const prodocPayload = {
-                        "leads": [
-                            {
-                                "name": ((fd.get("firstName") || "") + " " + (fd.get("lastName") || "")).trim() || "Unknown",
-                                "phone": "91" + phone,
-                                "email": fd.get("email") || "",
-                                "tags": ["demo", "inbound"],
-                                "source": "website clear-aligners orthosquare.in",
-                                "status": "new",
-                                "summary": "Added via Leads API",
-                                "priority": "medium",
-                                "sentiment": "neutral",
-                                "dynamicFields": { "utm_source": fd.get("utm_source") || "" },
-                                "whatsappMessageParams": { "name": fd.get("firstName") || "User" }
-                            }
-                        ],
-                        "config": {
-                            "whatsappMessageDetails": {
-                                "templateName": "lead_welcome",
-                                "broadcastName": "Leads API"
-                            },
-                            "taskDetails": {
-                                "createTask": true,
-                                "taskStatus": "pending",
-                                "taskPriority": "medium",
-                                "taskType": "followup",
-                                "taskDueDate": "2025-12-01T10:00:00.000Z"
-                            }
-                        }
-                    };
-
-                    const res = await fetch(WEB_APP_URL, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-                        body: body.toString(),
-                    });
-
-                    fetch("https://cep.prodoc.ai/api/v1/leads", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Authorization": "Bearer 7b0690d1a49cce2e7b17b84143c4a3a9d1544eedfd75156bdb3aac3975209044"
-                        },
-                        body: JSON.stringify(prodocPayload)
-                    }).catch(err => console.error("Prodoc API Error:", err));
-
-                    const text = await res.text();
-                    if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
-
-                    window.location.href = THANK_YOU_URL;
-                } catch (err) {
-                    setStatus("Something went wrong. Please try again.", true);
-                    isSubmitting = false;
-                    disableForm(false);
-                }
-            });
-        })();
-    </script>
-
-    <script>
-        (function () {
-            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxihHxIU7CpzggdiqBh8g3ucJbcusOTJLJHa9Oyw-cGAw-i9Hh02CUC7N86WwLd_ckh/exec";
-            const THANK_YOU_URL = "https://dentaloffers.avmsmiles.com/thank-you";
-
-            const form = document.getElementById("implant-lead-form");
-            const statusEl = document.getElementById("implant-lead-status");
-            if (!form) return;
-
-            let isSubmitting = false;
-
-            function setStatus(msg, isError) {
-                if (!statusEl) return;
-                statusEl.textContent = msg;
-                statusEl.style.color = isError ? "#b91c1c" : "#166534";
-            }
-
-            function setHidden(name, value) {
-                const el = form.querySelector(`[name="${name}"]`);
-                if (el) el.value = value || "";
-            }
-
-            function ensureHiddenValues() {
-                const params = new URLSearchParams(window.location.search);
-
-                const pinDesktop = (form.querySelector('[name="pincode_desktop"]')?.value || "").trim();
-                const pinMobile = (form.querySelector('[name="pincode_mobile"]')?.value || "").trim();
-                const pincode = pinDesktop || pinMobile || (form.querySelector('[name="pincode"]')?.value || "").trim();
-
-                setHidden("pincode", pincode);
-
-                setHidden("utm_campaign", params.get("utm_campaign") || "");
-                setHidden("utm_medium", params.get("utm_medium") || "");
-                setHidden("utm_source", params.get("utm_source") || "");
-                setHidden("utm_term", params.get("utm_term") || "");
-                setHidden("utm_content", params.get("utm_content") || "");
-
-                setHidden("date", new Date().toISOString());
-
-                if (!form.querySelector('[name="sheet_tab"]')?.value) {
-                    setHidden("sheet_tab", "clear-aligners");
-                }
-            }
-
-            function disableForm(disabled) {
-                form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((btn) => {
-                    btn.disabled = disabled;
-                    btn.style.opacity = disabled ? "0.7" : "";
-                    btn.style.pointerEvents = disabled ? "none" : "";
-                });
-            }
-
-            form.addEventListener("submit", async function (e) {
-                e.preventDefault();
-
-                if (isSubmitting) return;
-                isSubmitting = true;
-                disableForm(true);
-
-                setStatus("Submitting...", false);
-
-                try {
-                    ensureHiddenValues();
-
-                    const fd = new FormData(form);
-                    const phone = (fd.get("phone") || "").toString().trim();
-                    if (!phone) {
-                        setStatus("Please enter your contact number.", true);
-                        isSubmitting = false;
-                        disableForm(false);
-                        return;
-                    }
-
-                    const body = new URLSearchParams();
-                    for (const [k, v] of fd.entries()) body.append(k, v);
-
-                    const prodocPayload = {
-                        "leads": [
-                            {
-                                "name": ((fd.get("firstName") || "") + " " + (fd.get("lastName") || "")).trim() || "Unknown",
-                                "phone": "91" + phone,
-                                "email": fd.get("email") || "",
-                                "tags": ["demo", "inbound"],
-                                "source": "website clear-aligners orthosquare.in",
-                                "status": "new",
-                                "summary": "Added via Leads API",
-                                "priority": "medium",
-                                "sentiment": "neutral",
-                                "dynamicFields": { "utm_source": fd.get("utm_source") || "" },
-                                "whatsappMessageParams": { "name": fd.get("firstName") || "User" }
-                            }
-                        ],
-                        "config": {
-                            "whatsappMessageDetails": {
-                                "templateName": "lead_welcome",
-                                "broadcastName": "Leads API"
-                            },
-                            "taskDetails": {
-                                "createTask": true,
-                                "taskStatus": "pending",
-                                "taskPriority": "medium",
-                                "taskType": "followup",
-                                "taskDueDate": "2025-12-01T10:00:00.000Z"
-                            }
-                        }
-                    };
-
-                    const res = await fetch(WEB_APP_URL, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-                        body: body.toString(),
-                    });
-
-                    fetch("https://cep.prodoc.ai/api/v1/leads", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Authorization": "Bearer 7b0690d1a49cce2e7b17b84143c4a3a9d1544eedfd75156bdb3aac3975209044"
-                        },
-                        body: JSON.stringify(prodocPayload)
-                    }).catch(err => console.error("Prodoc API Error:", err));
-
-                    const text = await res.text();
-                    if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
-
-                    window.location.href = THANK_YOU_URL;
-                } catch (err) {
-                    setStatus("Something went wrong. Please try again.", true);
-                    isSubmitting = false;
-                    disableForm(false);
-                }
-            });
-        })();
-    </script>
+    <script src="../submission.js"></script>
 
     <script>
         (function () {
