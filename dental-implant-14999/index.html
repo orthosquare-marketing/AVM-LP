@@ -538,6 +538,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   /* Responsive Adjustments for Mobile & Tablets */
   @media (max-width: 950px) {
+    .form-title {
+      font-size: 1.8rem;
+    }
+
     .consultation-grid {
       grid-template-columns: 1fr; /* Stacks everything on smaller screens */
       gap: 20px;
@@ -566,37 +570,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="form-title text-[#362997]">SCHEDULE YOUR FREE CONSULTATION</h2>
       <p class="form-subtitle">Fill out the form below and enjoy up to 25% off your treatment—let's bring back your confident smile!</p>
 
-      <form class="form-inputs-container">
+      <form id="implant-lead-form" class="form-inputs-container">
         <div class="input-row-2">
-          <input type="text" placeholder="First Name" class="form-input">
-          <input type="text" placeholder="Last Name" class="form-input">
+          <input type="text" name="firstName" placeholder="First Name" class="form-input">
+          <input type="text" name="lastName" placeholder="Last Name" class="form-input">
         </div>
 
         <div class="input-row-3">
-          <input type="email" placeholder="Email" class="form-input">
-          <input type="tel" placeholder="Contact Number" class="form-input">
-          <input type="text" placeholder="PIN Code" class="form-input">
+          <input type="email" name="email" placeholder="Email" class="form-input">
+          <input type="tel" name="phone" placeholder="Contact Number" class="form-input" inputmode="numeric" autocomplete="tel" minlength="10" maxlength="10" pattern="[0-9]{10}" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);">
+          <input type="text" name="pincode_desktop" placeholder="PIN Code" class="form-input">
         </div>
 
-        <div class="checkbox-wrapper">
-          <input type="checkbox" id="privacy-consent" class="form-checkbox">
-          <label for="privacy-consent" class="checkbox-label">
-            By checking this box, I confirm that I agree to AVMSmiles's Privacy Policy and consent to the use of my information as stated.
-          </label>
-        </div>
+        <input type="hidden" name="pincode" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="date" value="">
+        <input type="hidden" name="sheet_tab" value="dental-Implant">
       </form>
     </div>
     
     <div class="video-area">
       <h2 class="section-title md:hidden">Thinking About Implants? Watch This</h2>
-      <iframe class="promo-video" src="https://www.youtube.com/embed/mXiCz4RtlE0?si=6zY4bw2TccuMNuKj&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="promo-video" src="https://www.youtube.com/embed/v3ocCemLU0I?si=dvZo4OnacYXlTlXI&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
    <div class="button-area">
-  <button type="submit" class="bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]" style="border: 2px solid #ffffff;">
+  <button type="submit" form="implant-lead-form" class="bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]" style="border: 2px solid #ffffff;">
     Confirm Your Free Slot
   </button>
 </div>
+  <p id="implant-lead-status" class="mt-3 text-center text-sm text-[#141414]/70"></p>
 
   </div>
 </section>
