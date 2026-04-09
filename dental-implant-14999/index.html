@@ -1072,7 +1072,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     type="button"
     id="modal-form-btn"
     onclick="openModalForm()"
-    class="w-full md:w-auto bg-[#FF7F00] px-3 py-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse-orange active:scale-[0.9]"
+    class="w-full md:w-auto bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse-orange active:scale-[0.9]"
   >
     HEAR MORE FROM OUR PATIENTS
   </button>
@@ -1843,7 +1843,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="promo-offer-section">
   <div class="promo-container" >
     
-    <div class="promo-left"  >
+    <div class="promo-left"   >
       <div class="left-content"   >
         <h2 class="main-heading">Discover the smile you<br />deserve!</h2>
         <p class="sub-heading">
@@ -1928,7 +1928,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* Left Side (Purple) Styling */
   .promo-left {
     flex: 1 1 50%;
-    background-color: #6a5ba2; /* Solid Purple background, no image */
+    background-color: #6a5ba2; 
+    background-image: url('../assets/dental-impact/Rectangle1.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    
     color: #ffffff;
     padding: 60px 40px;
     display: flex;
@@ -1967,8 +1972,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
  .happy-patients-container {
   display: flex;
-  flex-direction: row; /* Changes layout to side-by-side */
-  align-items: center; /* Vertically centers the image and text */
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
   gap: 20px;
 }
@@ -1979,8 +1984,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   font-weight: 700;
   line-height: 1.4;
   margin: 0;
-  text-align: left; /* Changed to left so it reads naturally next to the image */
-  flex: 1; /* Allows the text block to flexibly fill the remaining space */
+  text-align: left; 
+  flex: 1; 
 }
 
 .combined-proof-img {
@@ -2494,9 +2499,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
         </div>
 
-        <div class="cta-wrapper">
-          <button class="cta-button">Book Free Consultation</button>
-        </div>
+        <div class="py-4 md:block lg:flex lg:justify-center">
+        <button
+          type="button"
+          id="modal-form-btn"
+          onclick="openModalForm()"
+          class="rounded-xl bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]"
+        >
+          Book Free Consultation
+        </button>
+      </div>
       </div>
     </section>
 
@@ -2928,7 +2940,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
 
       .stars {
-        color: #fbbc04; /* Google Yellow */
+        color: #DF2021; /* Google Yellow */
         font-size: 1.2rem;
         letter-spacing: 2px;
       }
@@ -3311,7 +3323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- cta -->
     <section
-      class="hidden mx-[5%] mb-[90px] md:mx-[20%] md:block lg:flex lg:justify-center"
+      class="hidden mx-[5%] mb-[30px] md:mx-[20%] md:block lg:flex lg:justify-center"
     >
       <div class="p-6 mb-[60px] md:block lg:flex lg:justify-center">
         <!-- CTA Button -->
