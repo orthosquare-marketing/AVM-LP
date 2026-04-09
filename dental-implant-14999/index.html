@@ -113,6 +113,36 @@
       .pulse {
         animation: pulse 2s infinite;
       }
+
+      .avm-modal-btn {
+        background: #df2028;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 1rem;
+        padding: 0.5rem 0.75rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 5px 6px 2.5px -2px rgba(0, 0, 0, 0.14);
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease;
+      }
+
+      .avm-modal-btn:hover {
+        background: #cc252e;
+      }
+
+      .avm-modal-btn:active {
+        transform: scale(0.96);
+      }
+
+      @media (min-width: 768px) {
+        .avm-modal-btn {
+          padding: 0.75rem 1.5rem;
+        }
+      }
     </style>
   
 
@@ -210,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         type="button"
         id="modal-form-btn"
         onclick="openModalForm()"
-        class="pulse active:scale-[0.9] absolute min-w-[90vw] mt-[-20px] left-1/2 -translate-x-1/2 z-20 bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] md:min-w-0 md:max-w-md md:left-[60%] md:right-16 md:top-[80%] md:bottom-auto md:-translate-y-1/2 md:translate-x-0 md:px-6 md:py-3"
+        class="avm-modal-btn pulse active:scale-[0.9] absolute min-w-[90vw] mt-[-20px] left-1/2 -translate-x-1/2 z-20 md:min-w-0 md:max-w-md md:left-[60%] md:right-16 md:top-[80%] md:bottom-auto md:-translate-y-1/2 md:translate-x-0"
       >
         <span class="text-white font-bold"> Claim Implants for 14999 </span>
       </button>
@@ -563,7 +593,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
    <div class="button-area">
-  <button type="submit" class="bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]">
+  <button type="submit" class="bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]" style="border: 2px solid #ffffff;">
     Confirm Your Free Slot
   </button>
 </div>
@@ -645,9 +675,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div class="cta-container">
-      <button class="cta-button">Get Expert Guidance</button>
-    </div>
+    <div class="py-4 flex">
+        <button
+          type="button"
+          id="modal-form-btn"
+          onclick="openModalForm()"
+          class="rounded-xl bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]"
+        >
+          Get Expert Guidance
+        </button>
+      </div>
+
+    
   </div>
 </section>
 
@@ -770,7 +809,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="costing-title">Get Your Personalized Cost Estimate Now!</h2>
     <p class="costing-subtitle">Help us understand your unique restoration plan for the best estimate</p>
     <div class="costing-visual">
-      <button class="costing-button" type="button" onclick="openModalForm()">Get Cost Details</button>
+      <button class="costing-button avm-modal-btn" type="button" onclick="openModalForm()">Get Cost Details</button>
     </div>
   </div>
 </section>
@@ -934,7 +973,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button
       type="button"
       onclick="openModalForm()"
-      class="w-full bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] flex justify-center items-center text-white font-bold pulse-orange active:scale-[0.9]"
+      class="avm-modal-btn w-full pulse-orange active:scale-[0.9]"
     >
       HEAR MORE FROM OUR PATIENTS
     </button>
@@ -986,7 +1025,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="urgency-warning">The time is ending soon - act up!</p>
      
 
-        <button class="schedule-btn">Confirm Your Free Slot</button>
+        <button type="button" class="schedule-btn avm-modal-btn" onclick="openModalForm()" style="border: 2px solid #ffffff;">Confirm Your Free Slot</button>
       </div>
     </div>
     
@@ -1261,7 +1300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 <div class="cta-container flex justify-center mt-10">
-    <button type="button" class="bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]">
+    <button type="button" onclick="openModalForm()" class="avm-modal-btn pulse active:scale-[0.9]">
       Start Your Dental Journey
     </button>
   </div>
@@ -1763,7 +1802,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="cta-container">
-          <button class="cta-button">Get Expert Guidance</button>
+          <button type="button" class="cta-button avm-modal-btn rounded-xl bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]" style="border: 2px solid #ffffff;" onclick="openModalForm()" >Get Expert Guidance</button>
         </div>
       </div>
     </section>
@@ -2318,7 +2357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           your life.
         </p>
 
-        <button class="schedule-btn">Confirm Your Free Slot</button>
+        <button type="button" class="schedule-btn avm-modal-btn" onclick="openModalForm()">Confirm Your Free Slot</button>
       </div>
     </div>
     
@@ -2632,7 +2671,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Hurry – limited consultations remaining! Discover your personalized
           Dental Implant cost now.
         </p>
-        <button class="cta-btn">Get Expert Guidance</button>
+        <button type="button" class="cta-btn avm-modal-btn rounded-xl bg-[#DF2021] px-3 py-2 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] flex justify-center items-center md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]" onclick="openModalForm()" style="border: 2px solid #ffffff;">Get Expert Guidance</button>
       </div>
     </section>
 
