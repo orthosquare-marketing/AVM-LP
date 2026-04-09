@@ -634,7 +634,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           of a titanium post placed in the jawbone, topped with a crown that
           blends seamlessly with natural teeth.
         </p>
-        <a href="#" class="card-link">Learn More &gt;</a>
+        <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
       </div>
 
       <div class="guide-card">
@@ -649,7 +649,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           damage, this approach uses multiple implants to support a full set
           of prosthetic teeth, restoring functionality and aesthetics.
         </p>
-        <a href="#" class="card-link">Learn More &gt;</a>
+        <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
       </div>
 
       <div class="guide-card">
@@ -660,7 +660,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           using only four implants to support an entire set of teeth for a
           cost-effective and durable solution.
         </p>
-        <a href="#" class="card-link">Learn More &gt;</a>
+        <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
       </div>
 
       <div class="guide-card">
@@ -671,7 +671,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           superior stability, comfort, and improved chewing ability compared
           to traditional dentures.
         </p>
-        <a href="#" class="card-link">Learn More &gt;</a>
+        <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
       </div>
     </div>
 
@@ -1760,7 +1760,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               of a titanium post placed in the jawbone, topped with a crown that
               blends seamlessly with natural teeth.
             </p>
-            <a href="#" class="card-link">Learn More &gt;</a>
+            <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
           </div>
 
           <div class="guide-card">
@@ -1775,7 +1775,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               damage, this approach uses multiple implants to support a full set
               of prosthetic teeth, restoring functionality and aesthetics.
             </p>
-            <a href="#" class="card-link">Learn More &gt;</a>
+            <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
           </div>
 
           <div class="guide-card">
@@ -1786,7 +1786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               using only four implants to support an entire set of teeth for a
               cost-effective and durable solution.
             </p>
-            <a href="#" class="card-link">Learn More &gt;</a>
+            <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
           </div>
 
           <div class="guide-card">
@@ -1797,7 +1797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               superior stability, comfort, and improved chewing ability compared
               to traditional dentures.
             </p>
-            <a href="#" class="card-link">Learn More &gt;</a>
+            <a  class="card-link" onclick="openModalForm()">Learn More &gt;</a>
           </div>
         </div>
 
@@ -4173,91 +4173,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </form>
         </div>
 
-        <!-- New IDs + classes (different from your current form) -->
-        <form id="implant-lead-form-modal" class="implant-lead-form-modal">
-          <div class="grid gap-4 md:grid-cols-6 md:gap-6 mb-7">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name"
-              aria-label="First Name"
-              class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
-            />
-
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              aria-label="Last Name"
-              class="md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
-            />
-
-            <input
-              type="text"
-              name="pincode_desktop"
-              placeholder="PIN Code"
-              aria-label="PIN Code"
-              class="hidden md:block md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email ID"
-              aria-label="Email ID"
-              class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
-            />
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Contact Number"
-              aria-label="Contact Number"
-              required
-              inputmode="numeric"
-              autocomplete="tel"
-              minlength="10"
-              maxlength="10"
-              pattern="[0-9]{10}"
-              oninput="
-                this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)
-              "
-              class="md:col-span-3 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
-            />
-
-            <input
-              type="text"
-              name="pincode_mobile"
-              placeholder="PIN Code"
-              aria-label="PIN Code"
-              class="md:hidden md:col-span-2 w-full rounded-[8px] border-t-0 border-l border-r border-b-2 border-[#362997] bg-white px-4 py-3 text-black/60 placeholder:text-black/60 focus:outline-none focus:ring-0 shadow-[0px_1px_5.3px_0px_rgba(0,0,0,0.13)]"
-            />
-          </div>
-
-          <!-- Hidden fields (same names so it writes to same Google Sheet columns) -->
-          <input type="hidden" name="pincode" value="" />
-          <input type="hidden" name="utm_campaign" value="" />
-          <input type="hidden" name="utm_medium" value="" />
-          <input type="hidden" name="utm_source" value="" />
-          <input type="hidden" name="utm_term" value="" />
-          <input type="hidden" name="utm_content" value="" />
-          <input type="hidden" name="date" value="" />
-          <input type="hidden" name="sheet_tab" value="clear-aligners" />
-
-          <div class="mt-6 flex justify-center">
-            <button
-              type="submit"
-              class="w-full md:w-auto rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold"
-            >
-              Talk to an Implant Expert
-            </button>
-          </div>
-
-          <p
-            id="implant-lead-status-modal"
-            class="mt-3 text-center text-sm text-[#141414]/70"
-          ></p>
-        </form>
       </div>
     </div>
     <script src="../submission.js"></script>
