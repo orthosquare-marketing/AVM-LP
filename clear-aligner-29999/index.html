@@ -106,15 +106,30 @@
             animation: pulse 2s infinite;
         }
     </style>
-   
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W9RNL2H8');</script>
-<!-- End Google Tag Manager -->
-     <!-- Meta Pixel Code -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MVRJ7DL');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MVRJ7DL');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -135,23 +150,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             src="https://www.facebook.com/tr?id=2500465470228146&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '873079932230196');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=873079932230196&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+
+
   <!-- Vercel Web Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
   <!-- End Vercel Web Analytics -->
@@ -159,12 +160,17 @@ src="https://www.facebook.com/tr?id=873079932230196&ev=PageView&noscript=1"
 </head>
 
 <body>
-    
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9RNL2H8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVRJ7DL" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <section class="mb-[40px] md:mb-[60px] relative">
         <video autoplay muted playsinline loop class="w-screen h-auto block object-cover md:hidden">
             <source src="../assets/clear-aligners/mobile.mp4" type="video/mp4">
@@ -206,7 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .marquee__track {
             display: flex;
             width: max-content;
-            animation: marquee 19s linear infinite;
+            animation: marquee 21s linear infinite;
         }
 
         .marquee__group {
@@ -261,10 +267,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
+    <button type="button" id="modal-form-btn" onclick="openModalForm()" class="pulse active:scale-[0.9] absolute min-w-[90vw]  mt-[-20px]
+         left-1/2 -translate-x-1/2  z-20 bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white
+         shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] md:hidden
+         md:min-w-0   md:max-w-md md:left-[60%] md:right-16 md:top-[80%] md:bottom-auto
+        md:-translate-y-1/2 md:translate-x-0 md:px-6 md:py-3
+        ">
+            <span rel="noopener noreferrer" class="text-white font-bold ">
+                Start Your Journey Today
+            </span>
+        </button>
+
     <!-- 2) Form Section -->
-    <section class="mx-[5%] md:mx-[10%] mb-[60px]">
+    <section class="mx-[5%] md:mx-[10%] mb-[60px] lg:mb-[60px]">
         <div
-            class="mt-6 md:mt-0 rounded-2xl bg-[#F6FCFF]/80 shadow-[0_4px_20px_0_rgba(231,231,231,1)] px-4 py-6 md:px-10 md:py-8">
+            class="mt-6 md:mt-0 rounded-2xl bg-[#F7F9FF] shadow-[0_4px_20px_0_rgba(231,231,231,1)] px-4 py-6 md:px-10 md:py-8">
             <div class="mx-auto max-w-3xl text-center">
                 <h2
                     class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
@@ -319,15 +336,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- 3) 3-Day Implant Info Section (Desktop) -->
-    <section class="mx-[5%] md:mx-[10%] mb-[40px] md:mb-[60px] hidden md:block">
+    <section class="mx-[5%] md:mx-[10%] mb-[40px] md:mb-[60px] lg:mb-[60px] flex flex-col justify-center items-center hidden md:block">
         <h2
             class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-[32px] text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)]">
             Clear Aligners Made for Everyday Life
         </h2>
 
-        <p class="text-[#141414]/80 font-medium mb-10 text-center text-base
-           md:mb-20 md:text-3xl
-           lg:w-[900px] lg:ml-[150px]">
+        <p class="text-[#141414]/80 font-medium mb-10  text-center text-base
+           md:mb-20 md:text-2xl
+           lg:w-[800px] ">
             A comfortable, step-by-step aligner treatment designed to straighten your smile
         </p>
 
@@ -451,23 +468,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             See What Suits You Best
         </button>
     </section>
-    <div class="bg-[#DF2028] md:hidden mb-[60px] border border-[#DF2028]">
 
-        <h2 class="font-bold text-2xl text-center text-white pt-4 text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
-" style="    line-height: 120%;
-    letter-spacing: -1px;">Quality Clear Aligners at Low <br>Transparent Pricing</h2>
-        <div style="background-image: url(../assets/img/costingdetails.jpg);"
-            class=" rounded-xl m-5  flex justify-center items-center shadow-[0_4px_20px_5px_rgba(231,231,231,0.4)] min-h-[200px]">
-
-            <button type="button" id="modal-form-btn" onclick="openModalForm()"
-                class="pulse active:scale-[0.9] rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-md md:px-6 md:py-3 text-white font-bold ">
-
-                Download Costing Details
-            </button>
-
+     <section class="hidden mx-[5%] mb-[90px] md:mx-[10%] md:block md:mt-[-20px]">
+        <div class="p-6 mb-[60px]  md:block ">
+            <div
+                class="border-y-2 border-[#362997] p-6 rounded-lg flex justify-between items-center shadow-[0px_0px_11.5px_0px_rgba(0,0,0,0.17)]">
+                <!-- Text -->
+                <p class="h2-c font-bold md:text-3xl max-w-xl">
+                    Looking to get a perfect smile? Your first visit is on us, start now
+                </p>
+                <!-- CTA Button -->
+                <button type="button" id="modal-form-btn" onclick="openModalForm()"
+                    class="rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]">
+                    Begin Free Assessment
+                </button>
+            </div>
         </div>
+    </section>
 
-    </div>
+
+    
 
     <section>
         <!-- See How Dental Implants Changed Lives -->
@@ -479,13 +499,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Left text -->
                 <div class="z-10 text-center md:text-left 1 mx-[5%]  md:mx-[0%]">
                     <h2
-                        class="hidden md:block h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
+                        class="hidden md:block h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl lg:text-[40px] text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
                         50k+ Real Aligners
                         <br class="hidden md:block" />
                         Transformation
                     </h2>
                     <h2
-                        class="md:hidden h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
+                        class="md:hidden h2-c font-bold text-center md:text-left mb-3 md:mb-7 text-2xl md:text-3xl lg:text-[40px]   text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] ">
                         See How Clear Aligners
                         <br class="hidden md:block" />
                         Changed Lives
@@ -709,14 +729,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- arrows -->
                     <div class=" flex justify-center md:justify-end gap-5 mt-5 md:mt-10">
                         <button type="button" data-ab-prev
-                            class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+                            class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Previous">
-                            <img src="../assets/img/prearrow.svg" alt="">
+                            <img src="../assets/img/prearrow.png" alt="">
                         </button>
                         <button type="button" data-ab-next
-                            class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+                            class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Next">
-                            <img src="../assets/img/nextarrow.svg" alt="">
+                            <img src="../assets/img/nextarrow.png" alt="">
                         </button>
                     </div>
 
@@ -821,6 +841,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             })();
         </script>
     </section>
+    
     <script>
         (function () {
             var reelRoot = document.getElementById('reel-splide');
@@ -1131,7 +1152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="mx-[5%] 
                     md:mx-[10%] mb-[60px] md:mt-[20px] ">
         <h2 class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl md:mt-[60px]
-            text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)]leading-[110%]
+            text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
             ">
             Choose AVMSmiles’s Discreet Smile Correction
         </h2>
@@ -1146,7 +1167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     md:grid md:grid-cols-3 md:gap-[30px]">
                     <!-- Card 1 -->
                     <div
-                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
                             <img class="h-8 w-8" src="../assets/clear-aligners/icon1.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
@@ -1160,9 +1181,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- Card 2 -->
                     <div
-                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/img/icon2.png" alt="">
+                            <img class="h-8 w-8" src="../assets/clear-aligners/icon2.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Easy EMI Options<br>Available
                             </h3>
@@ -1174,7 +1195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- Card 3 -->
                     <div
-                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
                             <img class="h-8 w-8" src="../assets/clear-aligners/icon3.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
@@ -1188,9 +1209,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- Card 4 -->
                     <div
-                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/img/icon4.png" alt="">
+                            <img class="h-8 w-8" src="../assets/clear-aligners/icon4.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Painless, Guided<br>Procedure
                             </h3>
@@ -1202,9 +1223,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- Card 5 -->
                     <div
-                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/img/icon5.png" alt="">
+                            <img class="h-8 w-8" src="../assets/clear-aligners/icon5.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Personalised to Your<br>Smile
                             </h3>
@@ -1216,9 +1237,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- Card 6 -->
                     <div
-                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-white md:bg-[#F6FCFF] p-4 shadow-sm">
+                        class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/img/icon6.png" alt="">
+                            <img class="h-8 w-8" src="../assets/clear-aligners/icon6.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Regular Progress<br>Monitoring
                             </h3>
@@ -1404,7 +1425,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         See How Clear Aligners<br class="hidden md:block" />
                         Changed Lives
                     </h2>
-                    <h2 class="h2-c font-bold text-center mb-4 md:mb-7 text-2xl md:text-3xl md:text-left md:hidden">
+                    <h2 class="h2-c font-bold text-center mb-4 md:mb-7 text-2xl md:text-2xl  md:text-left md:hidden">
                         50k+ Real Aligners <br class="hidden md:block" />
                         Transformation
                     </h2>
@@ -1450,14 +1471,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- arrows -->
                     <div class=" flex justify-center md:justify-end gap-5 md:mt-10 py-5 md:py-0">
                         <button type="button" data-ab-prev
-                            class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+                            class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Previous">
-                            <img src="../assets/img/prearrow.svg" alt="">
+                            <img src="../assets/img/prearrow.png" alt="">
                         </button>
                         <button type="button" data-ab-next
-                            class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+                            class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Next">
-                            <img src="../assets/img/nextarrow.svg" alt="" srcset="">
+                            <img src="../assets/img/nextarrow.png" alt="" srcset="">
                         </button>
                     </div>
                 </div>
@@ -1467,6 +1488,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     </section>
+
+    <div class="bg-[#DF2028]/60 md:hidden mb-[60px] border border-[#DF2028]">
+
+        <h2 class="font-bold text-2xl text-center text-white pt-4 text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]
+" style="    line-height: 120%;
+    letter-spacing: -1px;">Quality Clear Aligners at Low <br>Transparent Pricing</h2>
+        <div style="background-image: url(../assets/img/costingdetails.jpg);"
+            class=" rounded-xl m-5  flex justify-center items-center shadow-[0_4px_20px_5px_rgba(231,231,231,0.4)] min-h-[200px]">
+
+            <button type="button" id="modal-form-btn" onclick="openModalForm()"
+                class="pulse active:scale-[0.9] rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-md md:px-6 md:py-3 text-white font-bold ">
+
+                Download Costing Details
+            </button>
+
+        </div>
+
+    </div>
 
     <!-- Smile Problems Clear Aligners Can Fix (Desktop)-->
     <section class="mx-[5%] md:mx-[10%] md:mt-[60px] mb-[40px] md:mb-[60px] hidden md:block">
@@ -1908,8 +1947,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     <!-- A New Smile is Just aFew Step Away no chaing in h2 need -->
 
-    <section class="mb-[60px]  ">
-        <div class=" bg-[#F6FCFF]">
+    <section class="mb-[60px] md:mb-[80px]">
+        <div class=" bg-[#F7F9FF]">
             <div class="grid items-center md:gap-8 md:grid-cols-2 mx-[5%] md:mx-[10%] ">
                 <div class="order-2 md:order-1 flex justify-center self-end relative overflow-hidden">
                     <img src="../assets/clear-aligners/womendesktop.png" alt="Smiling man"
@@ -1933,7 +1972,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </p>
                     <div class="mt-6 space-y-4">
                         <div class="flex items-start gap-3">
-                            <div class=" h-7 w-15 md:w-8  mt-[1%] md:mt-1">
+                            <div class=" h-7 w-15 md:w-9 mt-[1%] md:mt-1">
                                 <img src="../assets/img/one.png" alt="one">
                             </div>
                             <div>
@@ -1945,7 +1984,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class=" h-7 w-15 md:w-7 mt-[1%] md:mt-1">
+                            <div class=" h-7 w-15 md:w-10 mt-[1%] md:mt-1">
                                 <img src="../assets/img/two.png" alt="one">
                             </div>
                             <div>
@@ -1957,7 +1996,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class=" h-7 w-15 md:w-7 mt-[1%] md:mt-1">
+                            <div class=" h-7 w-15 md:w-8 mt-[1%] md:mt-1">
                                 <img src="../assets/img/three.png" alt="one">
                             </div>
                             <div>
@@ -2017,7 +2056,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </section>
             </div>
         </div>
-        <div class="  bg-[#DF2028]/38 px-4 py-4 md:px-8 ">
+        <div class="  bg-[#DF2028]/38 px-4 py-4 md:px-8 md:mb-[60px] lg:mb-[60px] ">
             <div
                 class="flex flex-col items-center gap-3 text-center md:flex-row md:justify-between md:text-left mx-[5%] md:mx-[10%]">
                 <p class="text-white font-semibold text-base md:text-[22px]">
@@ -2033,29 +2072,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 
-    <section class="hidden mx-[5%] mb-[90px] md:mx-[10%] md:block md:mt-[-20px]">
-        <div class="p-6 mb-[60px]  md:block ">
-            <div
-                class="border-y-2 border-[#362997] p-6 rounded-lg flex justify-between items-center shadow-[0px_0px_11.5px_0px_rgba(0,0,0,0.17)]">
-                <!-- Text -->
-                <p class="h2-c font-bold md:text-3xl max-w-xl">
-                    Looking to get a perfect smile? Your first visit is on us, start now
-                </p>
-                <!-- CTA Button -->
-                <button type="button" id="modal-form-btn" onclick="openModalForm()"
-                    class="rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[5px_6px_2.5px_-2px_rgba(0,0,0,0.14)] md:px-6 md:py-3 text-white font-bold pulse active:scale-[0.9]">
-                    Begin Free Assessment
-                </button>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- Your Dental Concerns, Solved Simply -->
-    <section class="mx-[5%] mb-[40px] md:mb-[60px] md:mx-[10%]">
+    <section class="mx-[5%] mb-[40px] md:mb-[60px] md:mt-[60px] md:mx-[10%] ">
         <div class="text-center">
             <h2 class="h2-c font-bold text-center mb-3 md:mb-7 text-2xl md:text-3xl 
                 text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%] md:mt-[-50px]">
-                Your Dental Concerns, <br class="md:block"> Solved Simply
+                Your Dental Concerns, Solved Simply
             </h2>
         </div>
         <div class="grid  md:grid-cols-[1fr_auto_1fr] md:items-center 
@@ -2166,7 +2190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="../assets/clear-aligners/Group 206.svg" alt="" class="w-full">
     </section>
     <!-- Recognized For Exceptional Implant Expertise -->
-    <section class=" md:mx-[10%] mb-[80px] ">
+    <section class=" md:mx-[10%] mb-[80px] md:mt-[60px]">
         <!-- desktop: 1/3 (image) + 2/3 (text) -->
         <div class="grid items-center gap-10 md:grid-cols-3">
             <!-- Left: 1/3 -->
@@ -2174,7 +2198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="relative w-full max-w-[420px] overflow-visible">
                     <!-- Wave -->
                     <img src="../assets/img/waveRing.png" alt=""
-                        class="absolute left-1 -top-10 md:-left-16 md:-top-20 w-[80%] md:w-[120%] h-auto -z-10 pointer-events-none select-none max-w-none" />
+                        class="absolute left-1 -top-10 md:-left-16 md:-top-20 w-[80%] md:w-[110%] h-auto -z-10 pointer-events-none select-none max-w-none" />
 
                     <!-- Award circle -->
                     <div class="relative flex items-center justify-center">
@@ -2209,7 +2233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <!-- faq -->
-    <section class="bg-[#F6FCFF] py-10 md:py-16">
+    <section class="bg-[#F7F9FF] py-10 md:py-16">
         <div class="mx-[5%] md:mx-[10%]">
             <div>
                 <h2
@@ -2319,11 +2343,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3 class="mt-4 text-[#141414] font-semibold md:text-[17px]">Have more questions ? Contact Now</h3>
                     <div class="mt-4 space-y-2 text-left">
                         <div class="flex items-center gap-3 text-[#141414]">
-                            <span class="text-[#362997]"><i class="fa fa-phone"></i></span>
+                            <span class="text-[#DF2028]"><i class="fa fa-phone"></i></span>
                             <span class="underline text-base font-medium">+91 77009 50647</span>
                         </div>
                         <div class="flex items-center gap-3 text-[#141414]">
-                            <span class="text-[#362997]"><i class="fa fa-envelope"></i></span>
+                            <span class="text-[#DF2028]"><i class="fa fa-envelope"></i></span>
                             <span class="underline text-base font-medium">info@avmsmiles.com</span>
                         </div>
                     </div>
@@ -2419,7 +2443,276 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </form>
         </div>
     </div>
-    <script src="../submission.js"></script>
+    <script>
+        (function () {
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxihHxIU7CpzggdiqBh8g3ucJbcusOTJLJHa9Oyw-cGAw-i9Hh02CUC7N86WwLd_ckh/exec";
+            const THANK_YOU_URL = "https://dentaloffers.avmsmiles.com/thank-you";
+
+            const form = document.getElementById("implant-lead-form-modal");
+            const statusEl = document.getElementById("implant-lead-status-modal");
+            if (!form) return;
+
+            let isSubmitting = false;
+
+            function setStatus(msg, isError) {
+                if (!statusEl) return;
+                statusEl.textContent = msg;
+                statusEl.style.color = isError ? "#b91c1c" : "#166534";
+            }
+
+            function setHidden(name, value) {
+                const el = form.querySelector(`[name="${name}"]`);
+                if (el) el.value = value || "";
+            }
+
+            function ensureHiddenValues() {
+                const params = new URLSearchParams(window.location.search);
+
+                const pinDesktop = (form.querySelector('[name="pincode_desktop"]')?.value || "").trim();
+                const pinMobile = (form.querySelector('[name="pincode_mobile"]')?.value || "").trim();
+                const pincode = pinDesktop || pinMobile || (form.querySelector('[name="pincode"]')?.value || "").trim();
+
+                setHidden("pincode", pincode);
+
+                setHidden("utm_campaign", params.get("utm_campaign") || "");
+                setHidden("utm_medium", params.get("utm_medium") || "");
+                setHidden("utm_source", params.get("utm_source") || "");
+                setHidden("utm_term", params.get("utm_term") || "");
+                setHidden("utm_content", params.get("utm_content") || "");
+
+                setHidden("date", new Date().toISOString());
+
+                if (!form.querySelector('[name="sheet_tab"]')?.value) {
+                    setHidden("sheet_tab", "clear-aligners");
+                }
+            }
+
+            function disableForm(disabled) {
+                // disable all submit buttons inside the form
+                form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((btn) => {
+                    btn.disabled = disabled;
+                    btn.style.opacity = disabled ? "0.7" : "";
+                    btn.style.pointerEvents = disabled ? "none" : "";
+                });
+            }
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                if (isSubmitting) return; // block double click / multiple submits
+                isSubmitting = true;
+                disableForm(true);
+
+                setStatus("Submitting...", false);
+
+                try {
+                    ensureHiddenValues();
+
+                    const fd = new FormData(form);
+                    const phone = (fd.get("phone") || "").toString().trim();
+                    if (!phone) {
+                        setStatus("Please enter your contact number.", true);
+                        isSubmitting = false;
+                        disableForm(false);
+                        return;
+                    }
+
+                    const body = new URLSearchParams();
+                    for (const [k, v] of fd.entries()) body.append(k, v);
+
+                    const prodocPayload = {
+                        "leads": [
+                            {
+                                "name": ((fd.get("firstName") || "") + " " + (fd.get("lastName") || "")).trim() || "Unknown",
+                                "phone": "91" + phone,
+                                "email": fd.get("email") || "",
+                                "tags": ["demo", "inbound"],
+                                "source": "website clear-aligners orthosquare.in",
+                                "status": "new",
+                                "summary": "Added via Leads API",
+                                "priority": "medium",
+                                "sentiment": "neutral",
+                                "dynamicFields": { "utm_source": fd.get("utm_source") || "" },
+                                "whatsappMessageParams": { "name": fd.get("firstName") || "User" }
+                            }
+                        ],
+                        "config": {
+                            "whatsappMessageDetails": {
+                                "templateName": "lead_welcome",
+                                "broadcastName": "Leads API"
+                            },
+                            "taskDetails": {
+                                "createTask": true,
+                                "taskStatus": "pending",
+                                "taskPriority": "medium",
+                                "taskType": "followup",
+                                "taskDueDate": "2025-12-01T10:00:00.000Z"
+                            }
+                        }
+                    };
+
+                    const res = await fetch(WEB_APP_URL, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+                        body: body.toString(),
+                    });
+
+                    fetch("https://cep.prodoc.ai/api/v1/leads", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": "Bearer 7b0690d1a49cce2e7b17b84143c4a3a9d1544eedfd75156bdb3aac3975209044"
+                        },
+                        body: JSON.stringify(prodocPayload)
+                    }).catch(err => console.error("Prodoc API Error:", err));
+
+                    const text = await res.text();
+                    if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
+
+                    window.location.href = THANK_YOU_URL;
+                } catch (err) {
+                    setStatus("Something went wrong. Please try again.", true);
+                    isSubmitting = false;
+                    disableForm(false);
+                }
+            });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxihHxIU7CpzggdiqBh8g3ucJbcusOTJLJHa9Oyw-cGAw-i9Hh02CUC7N86WwLd_ckh/exec";
+            const THANK_YOU_URL = "https://dentaloffers.avmsmiles.com/thank-you";
+
+            const form = document.getElementById("implant-lead-form");
+            const statusEl = document.getElementById("implant-lead-status");
+            if (!form) return;
+
+            let isSubmitting = false;
+
+            function setStatus(msg, isError) {
+                if (!statusEl) return;
+                statusEl.textContent = msg;
+                statusEl.style.color = isError ? "#b91c1c" : "#166534";
+            }
+
+            function setHidden(name, value) {
+                const el = form.querySelector(`[name="${name}"]`);
+                if (el) el.value = value || "";
+            }
+
+            function ensureHiddenValues() {
+                const params = new URLSearchParams(window.location.search);
+
+                const pinDesktop = (form.querySelector('[name="pincode_desktop"]')?.value || "").trim();
+                const pinMobile = (form.querySelector('[name="pincode_mobile"]')?.value || "").trim();
+                const pincode = pinDesktop || pinMobile || (form.querySelector('[name="pincode"]')?.value || "").trim();
+
+                setHidden("pincode", pincode);
+
+                setHidden("utm_campaign", params.get("utm_campaign") || "");
+                setHidden("utm_medium", params.get("utm_medium") || "");
+                setHidden("utm_source", params.get("utm_source") || "");
+                setHidden("utm_term", params.get("utm_term") || "");
+                setHidden("utm_content", params.get("utm_content") || "");
+
+                setHidden("date", new Date().toISOString());
+
+                if (!form.querySelector('[name="sheet_tab"]')?.value) {
+                    setHidden("sheet_tab", "clear-aligners");
+                }
+            }
+
+            function disableForm(disabled) {
+                form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((btn) => {
+                    btn.disabled = disabled;
+                    btn.style.opacity = disabled ? "0.7" : "";
+                    btn.style.pointerEvents = disabled ? "none" : "";
+                });
+            }
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                if (isSubmitting) return;
+                isSubmitting = true;
+                disableForm(true);
+
+                setStatus("Submitting...", false);
+
+                try {
+                    ensureHiddenValues();
+
+                    const fd = new FormData(form);
+                    const phone = (fd.get("phone") || "").toString().trim();
+                    if (!phone) {
+                        setStatus("Please enter your contact number.", true);
+                        isSubmitting = false;
+                        disableForm(false);
+                        return;
+                    }
+
+                    const body = new URLSearchParams();
+                    for (const [k, v] of fd.entries()) body.append(k, v);
+
+                    const prodocPayload = {
+                        "leads": [
+                            {
+                                "name": ((fd.get("firstName") || "") + " " + (fd.get("lastName") || "")).trim() || "Unknown",
+                                "phone": "91" + phone,
+                                "email": fd.get("email") || "",
+                                "tags": ["demo", "inbound"],
+                                "source": "website clear-aligners orthosquare.in",
+                                "status": "new",
+                                "summary": "Added via Leads API",
+                                "priority": "medium",
+                                "sentiment": "neutral",
+                                "dynamicFields": { "utm_source": fd.get("utm_source") || "" },
+                                "whatsappMessageParams": { "name": fd.get("firstName") || "User" }
+                            }
+                        ],
+                        "config": {
+                            "whatsappMessageDetails": {
+                                "templateName": "lead_welcome",
+                                "broadcastName": "Leads API"
+                            },
+                            "taskDetails": {
+                                "createTask": true,
+                                "taskStatus": "pending",
+                                "taskPriority": "medium",
+                                "taskType": "followup",
+                                "taskDueDate": "2025-12-01T10:00:00.000Z"
+                            }
+                        }
+                    };
+
+                    const res = await fetch(WEB_APP_URL, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+                        body: body.toString(),
+                    });
+
+                    fetch("https://cep.prodoc.ai/api/v1/leads", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": "Bearer 7b0690d1a49cce2e7b17b84143c4a3a9d1544eedfd75156bdb3aac3975209044"
+                        },
+                        body: JSON.stringify(prodocPayload)
+                    }).catch(err => console.error("Prodoc API Error:", err));
+
+                    const text = await res.text();
+                    if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
+
+                    window.location.href = THANK_YOU_URL;
+                } catch (err) {
+                    setStatus("Something went wrong. Please try again.", true);
+                    isSubmitting = false;
+                    disableForm(false);
+                }
+            });
+        })();
+    </script>
 
     <script>
         (function () {
