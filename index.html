@@ -1879,18 +1879,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <button
                 type="button"
                 data-ab-prev
-                class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+                class="h-9 w-9 rounded-full border-2 border-[#DF2028]/60 grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                 aria-label="Previous"
               >
-                <img src="./assets/img/prearrow.svg" alt="" />
+                <img src="./assets/img/prearrow.png" alt="" />
               </button>
               <button
                 type="button"
                 data-ab-next
-                class="h-9 w-9 rounded-full border-2 border-[#362997] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
+                class="h-9 w-9 rounded-full border-2 border-[#DF2028]/60 grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                 aria-label="Next"
               >
-                <img src="./assets/img/nextarrow.svg" alt="" srcset="" />
+                <img src="./assets/img/nextarrow.png" alt="" srcset="" />
               </button>
             </div>
           </div>
@@ -2104,12 +2104,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         position: relative;
       }
 
+      #reviews-splide .splide__list {
+        align-items: stretch;
+      }
+
+      #reviews-splide .splide__slide {
+        display: flex;
+        min-height: 0;
+      }
+
+      #reviews-splide .splide__slide > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 0;
+      }
+
+      #reviews-splide .splide__slide > div > .px-6 {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 0;
+      }
+
+      .review-scroll {
+        position: relative;
+        flex: 1 1 auto;
+        min-height: 0;
+      }
+
       .review-scrollbar {
         position: absolute;
         right: 2px;
         top: 0;
         bottom: 0;
-        width: 10px;
+        width: 5px;
         border-radius: 9999px;
         background: rgba(0, 0, 0, 0.08);
         display: none;
@@ -2118,7 +2147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       .review-scrollbar-thumb {
         width: 100%;
         border-radius: 9999px;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(223, 32, 40, 0.6);
         height: 18px;
         transform: translateY(0);
       }
@@ -2533,7 +2562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img
               src="./assets/img/newsmile.png"
               alt="Smiling man"
-              class="w-[80%] relative z-10 hidden md:block"
+              class="w-[70%] relative z-10 hidden md:block"
             />
             <img
               src="./assets/img/newsmailuncel.png"
@@ -2787,7 +2816,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section>
-    <section class="md:hidden mb-[60px]">
+    <section class="md:hidden mb-[50px]">
       <img src="./assets/img/cta.png" alt="" class="w-full" />
     </section>
     <!-- Recognized For Exceptional Implant Expertise -->
@@ -2830,7 +2859,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Implant Expertise
           </h2>
           <p
-            class="mt-3 text-[#141414]/80 font-bold text-lg md:text-lg bg-[#D2D2D2]/19 md:bg-white md:mx-[5%]"
+            class="mt-3 text-[#141414]/80 font-normal text-lg md:text-lg bg-[#D2D2D2]/19 md:bg-white md:mx-[5%]"
           >
             All-on-4 Treatment Concept <br class="md:hidden" />
             Center of Excellence - 2025
@@ -3002,13 +3031,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </h3>
             <div class="mt-4 space-y-2 text-left">
               <div class="flex items-center gap-3 text-[#141414]">
-                <span class="text-[#362997]"><i class="fa fa-phone"></i></span>
+                <span class="text-[#DF2028]"><i class="fa fa-phone"></i></span>
                 <span class="underline text-base font-medium"
-                  >+91 ---</span
+                  >+91 96991 28442</span
                 >
               </div>
               <div class="flex items-center gap-3 text-[#141414]">
-                <span class="text-[#362997]"
+                <span class="text-[#DF2028]"
                   ><i class="fa fa-envelope"></i
                 ></span>
                 <span class="underline text-base font-medium"
