@@ -1,0 +1,111 @@
+function doPost(e) {
+  try {
+    const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    const params = normalizeParams_(e);
+
+    const sheetName = sanitizeSheetName_(params.sheet_tab) || "Leads";
+    const sheet = getOrCreateSheet_(spreadsheet, sheetName);
+
+    const headers = [
+      "timestamp",
+      "date",
+      "firstName",
+      "lastName",
+      "phone",
+      "email",
+      "pincode",
+      "city",
+      "treatment",
+      "sheet_tab",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content"
+    ];
+
+    ensureHeaders_(sheet, headers);
+
+    const row = [
+      new Date(),
+      valueOrBlank_(params.date),
+      valueOrBlank_(params.firstName),
+      valueOrBlank_(params.lastName),
+      valueOrBlank_(params.phone),
+      valueOrBlank_(params.email),
+      valueOrBlank_(params.pincode),
+      valueOrBlank_(params.city),
+      valueOrBlank_(params.treatment),
+      valueOrBlank_(params.sheet_tab),
+      valueOrBlank_(params.utm_source),
+      valueOrBlank_(params.utm_medium),
+      valueOrBlank_(params.utm_campaign),
+      valueOrBlank_(params.utm_term),
+      valueOrBlank_(params.utm_content)
+    ];
+
+    sheet.appendRow(row);
+
+    return ContentService
+      .createTextOutput("ok")
+      .setMimeType(ContentService.MimeType.TEXT);
+  } catch (error) {
+    return ContentService
+      .createTextOutput("error: " + error.message)
+      .setMimeType(ContentService.MimeType.TEXT);
+  }
+}
+
+function doGet() {
+  return ContentService
+    .createTextOutput("Google Apps Script is live.")
+    .setMimeType(ContentService.MimeType.TEXT);
+}
+
+function normalizeParams_(e) {
+  const params = (e && e.parameter) ? e.parameter : {};
+  const normalized = {};
+
+  Object.keys(params).forEach(function(key) {
+    normalized[key] = typeof params[key] === "string" ? params[key].trim() : params[key];
+  });
+
+  return normalized;
+}
+
+function getOrCreateSheet_(spreadsheet, sheetName) {
+  let sheet = spreadsheet.getSheetByName(sheetName);
+  if (!sheet) {
+    sheet = spreadsheet.insertSheet(sheetName);
+  }
+  return sheet;
+}
+
+function ensureHeaders_(sheet, headers) {
+  if (sheet.getLastRow() === 0) {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.setFrozenRows(1);
+    return;
+  }
+
+  const existingHeaders = sheet.getRange(1, 1, 1, headers.length).getValues()[0];
+  const isMissingHeaders = headers.some(function(header, index) {
+    return existingHeaders[index] !== header;
+  });
+
+  if (isMissingHeaders) {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.setFrozenRows(1);
+  }
+}
+
+function sanitizeSheetName_(name) {
+  return String(name || "")
+    .replace(/[\\\/\?\*\[\]\:]/g, " ")
+    .trim()
+    .substring(0, 100);
+}
+
+function valueOrBlank_(value) {
+  return value || "";
+}
