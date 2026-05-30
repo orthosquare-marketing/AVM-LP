@@ -1,14 +1,18 @@
 {
   "redirects": [
     {
-      "source": "/10999/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "dental-offers-10999.avmsmiles.com"
-        }
-      ],
-      "destination": "/:path*",
+      "source": "/10999",
+      "destination": "https://dental-offers-10999.avmsmiles.com/",
+      "permanent": true
+    },
+    {
+      "source": "/10999/",
+      "destination": "https://dental-offers-10999.avmsmiles.com/",
+      "permanent": true
+    },
+    {
+      "source": "/10999/index.html",
+      "destination": "https://dental-offers-10999.avmsmiles.com/",
       "permanent": true
     }
   ],

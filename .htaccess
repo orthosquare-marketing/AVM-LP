@@ -1,8 +1,7 @@
 RewriteEngine On
 
-# Redirect /10999 (and any subpaths) to the root for dental-offers-10999.avmsmiles.com
-RewriteCond %{HTTP_HOST} ^(www\.)?dental-offers-10999\.avmsmiles\.com$ [NC]
-RewriteRule ^10999/?(.*)$ /$1 [R=301,L]
+# Redirect /10999, /10999/, and /10999/index.html on any domain to https://dental-offers-10999.avmsmiles.com/
+RewriteRule ^10999/?(index\.html)?$ https://dental-offers-10999.avmsmiles.com/ [R=301,L]
 
 # Rewrite root to /10999/index.html internally for dental-offers-10999.avmsmiles.com
 RewriteCond %{HTTP_HOST} ^(www\.)?dental-offers-10999\.avmsmiles\.com$ [NC]
