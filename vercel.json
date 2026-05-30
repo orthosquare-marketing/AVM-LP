@@ -1,23 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/10999",
-      "destination": "https://dental-offers-10999.avmsmiles.com/",
-      "permanent": true
-    },
-    {
-      "source": "/10999/",
-      "destination": "https://dental-offers-10999.avmsmiles.com/",
-      "permanent": true
-    },
-    {
-      "source": "/10999/index.html",
-      "destination": "https://dental-offers-10999.avmsmiles.com/",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
       "source": "/",
       "has": [
         {
@@ -25,7 +8,30 @@
           "value": "dental-offers-10999.avmsmiles.com"
         }
       ],
-      "destination": "/10999/index.html"
+      "destination": "/10999",
+      "permanent": true
+    },
+    {
+      "source": "/10999",
+      "has": [
+        {
+          "type": "host",
+          "value": "dentaloffers.avmsmiles.com"
+        }
+      ],
+      "destination": "https://dental-offers-10999.avmsmiles.com/10999",
+      "permanent": true
+    },
+    {
+      "source": "/10999/",
+      "has": [
+        {
+          "type": "host",
+          "value": "dentaloffers.avmsmiles.com"
+        }
+      ],
+      "destination": "https://dental-offers-10999.avmsmiles.com/10999",
+      "permanent": true
     }
   ]
 }
