@@ -1,10 +1,24 @@
 RewriteEngine On
+SSLProxyEngine on
 
-# If host is dental-offers-10999.avmsmiles.com and path is empty (root /), redirect to /10999
-RewriteCond %{HTTP_HOST} ^(www\.)?dental-offers-10999\.avmsmiles\.com$ [NC]
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^$ /10999 [R=301,L]
+# ====================================================================
+# NEXT.JS REVERSE PROXY RULES
+# ====================================================================
 
-# If host is NOT dental-offers-10999.avmsmiles.com and path is /10999, redirect to https://dental-offers-10999.avmsmiles.com/10999
-RewriteCond %{HTTP_HOST} !^(www\.)?dental-offers-10999\.avmsmiles\.com$ [NC]
-RewriteRule ^10999/?$ https://dental-offers-10999.avmsmiles.com/10999 [R=301,L]
+# Rule for /10999 offer page
+RewriteRule ^10999$ https://dental-offers-10999.avmsmiles.com/ [P,L]
+RewriteRule ^10999/(.*)$ https://dental-offers-10999.avmsmiles.com/$1 [P,L]
+
+# Proxy Next.js global assets (JS/CSS bundles, static images)
+# Note: This routes all /_next paths to the 10999 Next.js deployment.
+RewriteRule ^_next/(.*)$ https://dental-offers-10999.avmsmiles.com/_next/$1 [P,L]
+
+# ====================================================================
+# HOW TO SCALE (To add future offer pages e.g. /20999)
+# ====================================================================
+# To add a new offer path /20999 pointing to dental-offers-29999.avmsmiles.com,
+# simply add the following rules BEFORE the _next rule:
+#
+# RewriteRule ^20999$ https://dental-offers-29999.avmsmiles.com/ [P,L]
+# RewriteRule ^20999/(.*)$ https://dental-offers-29999.avmsmiles.com/$1 [P,L]
+# ====================================================================
