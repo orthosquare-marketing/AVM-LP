@@ -14,24 +14,10 @@
     },
     {
       "source": "/assets/:path*",
-      "has": [
-        {
-          "type": "header",
-          "key": "referer",
-          "value": ".*\\/10999.*"
-        }
-      ],
       "destination": "https://dental-offers-10999.avmsmiles.com/assets/:path*"
     },
     {
       "source": "/images/:path*",
-      "has": [
-        {
-          "type": "header",
-          "key": "referer",
-          "value": ".*\\/10999.*"
-        }
-      ],
       "destination": "https://dental-offers-10999.avmsmiles.com/images/:path*"
     }
   ]

@@ -2,7 +2,7 @@ RewriteEngine On
 SSLProxyEngine on
 
 # ====================================================================
-# NEXT.JS REVERSE PROXY RULES (REFERER-BASED ROUTING)
+# NEXT.JS REVERSE PROXY RULES (FALLBACK ROUTING BASED ON FILE EXISTENCE)
 # ====================================================================
 
 # Proxy /10999 offer page directly to the Next.js subdomain root
@@ -12,11 +12,11 @@ RewriteRule ^10999/(.*)$ https://dental-offers-10999.avmsmiles.com/$1 [P,L]
 # Proxy Next.js global assets (JS/CSS bundles) unconditionally
 RewriteRule ^_next/(.*)$ https://dental-offers-10999.avmsmiles.com/_next/$1 [P,L]
 
-# Proxy /assets and /images only if the referer contains /10999
-RewriteCond %{HTTP_REFERER} /10999 [NC]
+# Proxy /assets and /images only if they DO NOT exist locally on this server
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^assets/(.*)$ https://dental-offers-10999.avmsmiles.com/assets/$1 [P,L]
 
-RewriteCond %{HTTP_REFERER} /10999 [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^images/(.*)$ https://dental-offers-10999.avmsmiles.com/images/$1 [P,L]
 
 # ====================================================================
@@ -24,14 +24,10 @@ RewriteRule ^images/(.*)$ https://dental-offers-10999.avmsmiles.com/images/$1 [P
 # ====================================================================
 # To add a new offer path /14999 pointing to dental-offers-14999.avmsmiles.com:
 #
-# 1. Add page proxy rules:
+# 1. Add page proxy rules at the top:
 #    RewriteRule ^14999$ https://dental-offers-14999.avmsmiles.com/ [P,L]
 #    RewriteRule ^14999/(.*)$ https://dental-offers-14999.avmsmiles.com/$1 [P,L]
 #
-# 2. Add referer asset proxy rules:
-#    RewriteCond %{HTTP_REFERER} /14999 [NC]
-#    RewriteRule ^assets/(.*)$ https://dental-offers-14999.avmsmiles.com/assets/$1 [P,L]
-#
-#    RewriteCond %{HTTP_REFERER} /14999 [NC]
-#    RewriteRule ^images/(.*)$ https://dental-offers-14999.avmsmiles.com/images/$1 [P,L]
+# 2. No other asset rules are needed! The existing fallback rules will
+#    automatically resolve assets from the respective target subdomain.
 # ====================================================================
