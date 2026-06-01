@@ -2,11 +2,37 @@
   "rewrites": [
     {
       "source": "/10999",
-      "destination": "https://dental-offers-10999.avmsmiles.com/10999"
+      "destination": "https://dental-offers-10999.avmsmiles.com/"
     },
     {
       "source": "/10999/:path*",
-      "destination": "https://dental-offers-10999.avmsmiles.com/10999/:path*"
+      "destination": "https://dental-offers-10999.avmsmiles.com/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "https://dental-offers-10999.avmsmiles.com/_next/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": ".*\\/10999.*"
+        }
+      ],
+      "destination": "https://dental-offers-10999.avmsmiles.com/assets/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": ".*\\/10999.*"
+        }
+      ],
+      "destination": "https://dental-offers-10999.avmsmiles.com/images/:path*"
     }
   ]
 }
