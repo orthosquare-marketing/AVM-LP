@@ -2,23 +2,20 @@ RewriteEngine On
 SSLProxyEngine on
 
 # ====================================================================
-# NEXT.JS REVERSE PROXY RULES
+# NEXT.JS REVERSE PROXY RULES WITH BASEPATH
 # ====================================================================
 
-# Rule for /10999 offer page
-RewriteRule ^10999$ https://dental-offers-10999.avmsmiles.com/ [P,L]
-RewriteRule ^10999/(.*)$ https://dental-offers-10999.avmsmiles.com/$1 [P,L]
-
-# Proxy Next.js global assets (JS/CSS bundles, static images)
-# Note: This routes all /_next paths to the 10999 Next.js deployment.
-RewriteRule ^_next/(.*)$ https://dental-offers-10999.avmsmiles.com/_next/$1 [P,L]
+# Proxy /10999 and all its prefixed assets/scripts directly to the Next.js subdomain
+RewriteRule ^10999$ https://dental-offers-10999.avmsmiles.com/10999 [P,L]
+RewriteRule ^10999/(.*)$ https://dental-offers-10999.avmsmiles.com/10999/$1 [P,L]
 
 # ====================================================================
 # HOW TO SCALE (To add future offer pages e.g. /20999)
 # ====================================================================
 # To add a new offer path /20999 pointing to dental-offers-29999.avmsmiles.com,
-# simply add the following rules BEFORE the _next rule:
+# simply configure the new Next.js deployment with basePath: '/20999'
+# and add the following rules BEFORE any general overrides:
 #
-# RewriteRule ^20999$ https://dental-offers-29999.avmsmiles.com/ [P,L]
-# RewriteRule ^20999/(.*)$ https://dental-offers-29999.avmsmiles.com/$1 [P,L]
+# RewriteRule ^20999$ https://dental-offers-29999.avmsmiles.com/20999 [P,L]
+# RewriteRule ^20999/(.*)$ https://dental-offers-29999.avmsmiles.com/20999/$1 [P,L]
 # ====================================================================

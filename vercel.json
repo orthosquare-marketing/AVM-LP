@@ -2,15 +2,11 @@
   "rewrites": [
     {
       "source": "/10999",
-      "destination": "https://dental-offers-10999.avmsmiles.com/"
+      "destination": "https://dental-offers-10999.avmsmiles.com/10999"
     },
     {
       "source": "/10999/:path*",
-      "destination": "https://dental-offers-10999.avmsmiles.com/:path*"
-    },
-    {
-      "source": "/_next/:path*",
-      "destination": "https://dental-offers-10999.avmsmiles.com/_next/:path*"
+      "destination": "https://dental-offers-10999.avmsmiles.com/10999/:path*"
     }
   ]
 }
