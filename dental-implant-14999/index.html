@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      media="print"
+      onload="this.media='all'"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Graduate&family=Poppins:wght@400;600;700&family=Young+Serif&display=swap"
@@ -17,7 +23,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
     <link rel="icon" href="../assets/avmlogo.png" type="image/x-icon" />
 
     <style>
@@ -224,13 +230,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <!-- Mobile Image -->
-    <img 
+    <img loading="lazy" decoding="async" 
         src="../assets/dental-impact/heromob.jpeg" 
         alt="Dental Impact"
         class="w-full h-auto md:hidden" 
       />
 <!-- Desktop -->
-      <img
+      <img loading="lazy" decoding="async"
         src="../assets/dental-impact/heroIMG.jpeg"
         alt="Dental impact"
         class="w-full h-auto hidden md:block"
@@ -590,12 +596,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <input type="hidden" name="utm_content" value="">
         <input type="hidden" name="date" value="">
         <input type="hidden" name="sheet_tab" value="dental-Implant">
+        <input type="hidden" name="treatment" value="dental implants">
       </form>
     </div>
     
     <div class="video-area">
       <h2 class="section-title md:hidden">Thinking About Implants? Watch This</h2>
-      <iframe class="promo-video" src="https://www.youtube.com/embed/v3ocCemLU0I?si=dvZo4OnacYXlTlXI&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe loading="lazy" class="promo-video" src="https://www.youtube.com/embed/v3ocCemLU0I?si=dvZo4OnacYXlTlXI&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
    <div class="button-area">
@@ -631,7 +638,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="guide-grid">
       <div class="guide-card">
-        <img
+        <img loading="lazy" decoding="async"
           src="../assets/dental-impact/Rectangle 254.png"
           alt="Single Tooth Implant"
           class="card-image"
@@ -646,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="guide-card">
-        <img
+        <img loading="lazy" decoding="async"
           src="../assets//dental-impact/Rectangle 257.png"
           alt="Full Mouth Restoration"
           class="card-image"
@@ -661,7 +668,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="guide-card">
-        <img src="../assets/dental-impact/Rectangle 326.png" alt="All-on-4 Implants" class="card-image" />
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/Rectangle 326.png" alt="All-on-4 Implants" class="card-image" />
         <h3 class="card-title">All-on-4 Implants</h3>
         <p class="card-desc">
           A revolutionary option for those needing a full-arch replacement,
@@ -672,7 +679,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="guide-card">
-        <img src="../assets/dental-impact/Rectangle 327.png" alt="All-on-6 Implants" class="card-image" />
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/Rectangle 327.png" alt="All-on-6 Implants" class="card-image" />
         <h3 class="card-title">All-on-6 Implants</h3>
         <p class="card-desc">
           Designed to securely anchor dentures using implants, providing
@@ -823,7 +830,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="splide__list">
         <li class="splide__slide">
           <div class="h-[520px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black">
-            <iframe
+            <iframe loading="lazy"
               class="w-full h-full"
               src="https://www.youtube.com/embed/Sex0uz_OBGc?rel=0&enablejsapi=1&playsinline=1"
               title="YouTube video"
@@ -843,7 +850,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <li class="splide__slide">
           <div class="h-[520px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black">
-            <iframe
+            <iframe loading="lazy"
               class="w-full h-full"
               src="https://www.youtube.com/embed/1gZMs98ub4Q?rel=0&enablejsapi=1&playsinline=1"
               title="YouTube video"
@@ -863,7 +870,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <li class="splide__slide">
           <div class="h-[520px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black">
-            <iframe
+            <iframe loading="lazy"
               class="w-full h-full"
               src="https://www.youtube.com/embed/An_KT8UMZ_o?rel=0&enablejsapi=1&playsinline=1"
               title="YouTube video"
@@ -883,7 +890,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <li class="splide__slide">
           <div class="h-[520px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black">
-            <iframe
+            <iframe loading="lazy"
               class="w-full h-full"
               src="https://www.youtube.com/embed/lFXFaSrspOk?rel=0&enablejsapi=1&playsinline=1"
               title="YouTube video"
@@ -903,7 +910,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <li class="splide__slide">
           <div class="h-[520px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black">
-            <iframe
+            <iframe loading="lazy"
               class="w-full h-full"
               src="https://www.youtube.com/embed/v3ocCemLU0I?rel=0&enablejsapi=1&playsinline=1"
               title="YouTube video"
@@ -944,7 +951,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="main-heading">Discover the smile you<br />deserve!</h2>
 
         <div class="happy-patients-container">
-           <img src="../assets/dental-impact/Frame 13.png" alt="Happy Patients Stats and Avatars" class="combined-proof-img">
+           <img loading="lazy" decoding="async" src="../assets/dental-impact/Frame 13.png" alt="Happy Patients Stats and Avatars" class="combined-proof-img">
           <p class="happy-patients-desc">
             Happy Patients Have Already Transformed Their Smiles with AVMSmiles Revolutionary Dental Implants. Join the Community of Confident Smiles, Register Today!
           </p>
@@ -997,23 +1004,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="carousel-wrapper">
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab1.svg" alt="Transformation 1" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab1.svg" alt="Transformation 1" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab2.svg" alt="Transformation 2" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab2.svg" alt="Transformation 2" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab4.svg" alt="Transformation 3" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab4.svg" alt="Transformation 3" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab5.svg" alt="Transformation 4" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab5.svg" alt="Transformation 4" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab6.svg" alt="Transformation 5" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab6.svg" alt="Transformation 5" class="slide-img" />
           </div>
         </div>
 
@@ -1149,7 +1156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content-wrapper">
     <div class="image-column">
-      <img
+      <img loading="lazy" decoding="async"
         src="../assets//dental-impact/img1.png"
         alt="Dental Implants 3D Illustration"
         class="implant-image"
@@ -1179,7 +1186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-card">
       <div class="card-header">
         <h3>Natural Look and Feel</h3>
-        <img src="../assets/dental-impact/smile 1.png" alt="Natural Look Icon" class="card-icon-img">
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/smile 1.png" alt="Natural Look Icon" class="card-icon-img">
       </div>
       <div class="card-body">
         <p>
@@ -1192,7 +1199,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-card">
       <div class="card-header">
         <h3>Permanent Solution</h3>
-        <img src="../assets/dental-impact//infinity 1.png" alt="Permanent Solution Icon" class="card-icon-img">
+        <img loading="lazy" decoding="async" src="../assets/dental-impact//infinity 1.png" alt="Permanent Solution Icon" class="card-icon-img">
       </div>
       <div class="card-body">
         <p>
@@ -1205,7 +1212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-card">
       <div class="card-header">
         <h3>Faster Results</h3>
-        <img src="../assets/dental-impact/time 1.png" alt="Faster Results Icon" class="card-icon-img">
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/time 1.png" alt="Faster Results Icon" class="card-icon-img">
       </div>
       <div class="card-body">
         <p>
@@ -1218,7 +1225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-card">
       <div class="card-header">
         <h3>Cost Effective</h3>
-        <img src="../assets/dental-impact/affordable 1.png" alt="Cost Effective Icon" class="card-icon-img">
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/affordable 1.png" alt="Cost Effective Icon" class="card-icon-img">
       </div>
       <div class="card-body">
         <p>
@@ -1231,7 +1238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-card">
       <div class="card-header">
         <h3>Improved Oral Health</h3>
-        <img src="../assets/dental-impact/tooth 1.png" alt="Oral Health Icon" class="card-icon-img">
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/tooth 1.png" alt="Oral Health Icon" class="card-icon-img">
       </div>
       <div class="card-body">
         <p>
@@ -1244,7 +1251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-card">
       <div class="card-header">
         <h3>Enhanced Comfort</h3>
-        <img src="../assets/dental-impact/smiling-face 1.png" alt="Comfort Icon" class="card-icon-img">
+        <img loading="lazy" decoding="async" src="../assets/dental-impact/smiling-face 1.png" alt="Comfort Icon" class="card-icon-img">
       </div>
       <div class="card-body">
         <p>
@@ -1410,7 +1417,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div
                 class="h-[620px] md:h-[420px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black"
               >
-                <iframe
+                <iframe loading="lazy"
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/Sex0uz_OBGc?rel=0&enablejsapi=1&playsinline=1"
                   title="YouTube video"
@@ -1432,7 +1439,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div
                 class="h-[620px] md:h-[420px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black"
               >
-                <iframe
+                <iframe loading="lazy"
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/1gZMs98ub4Q?rel=0&enablejsapi=1&playsinline=1"
                   title="YouTube video"
@@ -1454,7 +1461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div
                 class="h-[620px] md:h-[420px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black"
               >
-                <iframe
+                <iframe loading="lazy"
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/An_KT8UMZ_o?rel=0&enablejsapi=1&playsinline=1"
                   title="YouTube video"
@@ -1476,7 +1483,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div
                 class="h-[620px] md:h-[420px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black"
               >
-                <iframe
+                <iframe loading="lazy"
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/lFXFaSrspOk?rel=0&enablejsapi=1&playsinline=1"
                   title="YouTube video"
@@ -1498,7 +1505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div
                 class="h-[620px] md:h-[420px] rounded-2xl overflow-hidden shadow ring-1 ring-black/5 bg-black"
               >
-                <iframe
+                <iframe loading="lazy"
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/v3ocCemLU0I?rel=0&enablejsapi=1&playsinline=1"
                   title="YouTube video"
@@ -1562,90 +1569,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </style>
 
     <script>
-      const shortsInstances = [];
+      window.addEventListener('DOMContentLoaded', function () {
+        const shortsInstances = [];
 
-      function registerYoutubePause(sliderSelector, splideInstance) {
-        const videos = document.querySelectorAll(`${sliderSelector} iframe`);
+        function registerYoutubePause(sliderSelector, splideInstance) {
+          const videos = document.querySelectorAll(`${sliderSelector} iframe`);
 
-        videos.forEach((iframe) => {
-          iframe.addEventListener("load", function () {
-            iframe.contentWindow?.postMessage(
-              JSON.stringify({
-                event: "listening",
-                id: iframe.src,
-                channel: "widget",
-              }),
-              "*",
-            );
+          videos.forEach((iframe) => {
+            iframe.addEventListener("load", function () {
+              iframe.contentWindow?.postMessage(
+                JSON.stringify({
+                  event: "listening",
+                  id: iframe.src,
+                  channel: "widget",
+                }),
+                "*",
+              );
+            });
           });
-        });
 
-        shortsInstances.push(splideInstance);
-      }
+          shortsInstances.push(splideInstance);
+        }
 
-      const desktopSliderEl = document.querySelector("#shortsSlider");
-      if (desktopSliderEl) {
-        const shorts = new Splide("#shortsSlider", {
-          type: "loop",
-          perPage: 3,
-          gap: "1rem",
-          autoplay: true,
-          interval: 2500,
-          pauseOnHover: true,
-          drag: true,
-          swipe: true,
-          paginationKeyboard: true,
-          pagination: false,
-          arrows: false,
-          perMove: 1,
-          breakpoints: {
-            1024: { perPage: 2 },
-            768: { perPage: 1 },
-          },
-        });
+        const desktopSliderEl = document.querySelector("#shortsSlider");
+        if (desktopSliderEl) {
+          const shorts = new Splide("#shortsSlider", {
+            type: "loop",
+            perPage: 3,
+            gap: "1rem",
+            autoplay: true,
+            interval: 2500,
+            pauseOnHover: true,
+            drag: true,
+            swipe: true,
+            paginationKeyboard: true,
+            pagination: false,
+            arrows: false,
+            perMove: 1,
+            breakpoints: {
+              1024: { perPage: 2 },
+              768: { perPage: 1 },
+            },
+          });
 
-        shorts.mount();
-        registerYoutubePause("#shortsSlider", shorts);
-      }
+          shorts.mount();
+          registerYoutubePause("#shortsSlider", shorts);
+        }
 
-      const mobileSliderEl = document.querySelector("#shortsSliderMobile");
-      if (mobileSliderEl) {
-        const shortsMobile = new Splide("#shortsSliderMobile", {
-          type: "loop",
-          perPage: 1,
-          gap: "1rem",
-          autoplay: true,
-          interval: 2500,
-          pauseOnHover: true,
-          drag: true,
-          swipe: true,
-          paginationKeyboard: true,
-          pagination: false,
-          arrows: false,
-          perMove: 1,
-        });
+        const mobileSliderEl = document.querySelector("#shortsSliderMobile");
+        if (mobileSliderEl) {
+          const shortsMobile = new Splide("#shortsSliderMobile", {
+            type: "loop",
+            perPage: 1,
+            gap: "1rem",
+            autoplay: true,
+            interval: 2500,
+            pauseOnHover: true,
+            drag: true,
+            swipe: true,
+            paginationKeyboard: true,
+            pagination: false,
+            arrows: false,
+            perMove: 1,
+          });
 
-        shortsMobile.mount();
-        registerYoutubePause("#shortsSliderMobile", shortsMobile);
-      }
+          shortsMobile.mount();
+          registerYoutubePause("#shortsSliderMobile", shortsMobile);
+        }
 
-      window.addEventListener("message", function (event) {
-        if (!event.origin.includes("youtube.com")) return;
+        window.addEventListener("message", function (event) {
+          if (!event.origin.includes("youtube.com")) return;
 
-        let data = event.data;
-        if (typeof data === "string") {
-          try {
-            data = JSON.parse(data);
-          } catch (error) {
-            return;
+          let data = event.data;
+          if (typeof data === "string") {
+            try {
+              data = JSON.parse(data);
+            } catch (error) {
+              return;
+            }
           }
-        }
 
-        if (data?.event === "onStateChange" && data.info === 1) {
-          shortsInstances.forEach((instance) => {
-            instance.Components.Autoplay.pause();
-          });
-        }
+          if (data?.event === "onStateChange" && data.info === 1) {
+            shortsInstances.forEach((instance) => {
+              instance.Components.Autoplay.pause();
+            });
+          }
+        });
       });
     </script>
 
@@ -1660,7 +1669,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="guide-grid">
           <div class="guide-card">
-            <img
+            <img loading="lazy" decoding="async"
               src="../assets/dental-impact/Rectangle 254.png"
               alt="Single Tooth Implant"
               class="card-image"
@@ -1675,7 +1684,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="guide-card">
-            <img
+            <img loading="lazy" decoding="async"
               src="../assets//dental-impact/Rectangle 257.png"
               alt="Full Mouth Restoration"
               class="card-image"
@@ -1690,7 +1699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="guide-card">
-            <img src="../assets/dental-impact/Rectangle 326.png" alt="All-on-4 Implants" class="card-image" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/Rectangle 326.png" alt="All-on-4 Implants" class="card-image" />
             <h3 class="card-title">All-on-4 Implants</h3>
             <p class="card-desc">
               A revolutionary option for those needing a full-arch replacement,
@@ -1701,7 +1710,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <div class="guide-card">
-            <img src="../assets/dental-impact/Rectangle 327.png" alt="All-on-6 Implants" class="card-image" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/Rectangle 327.png" alt="All-on-6 Implants" class="card-image" />
             <h3 class="card-title">All-on-6 Implants</h3>
             <p class="card-desc">
               Designed to securely anchor dentures using implants, providing
@@ -1852,7 +1861,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </style>
 
     <script>
-      (function () {
+      window.addEventListener('DOMContentLoaded', function () {
         var reelRoot = document.getElementById("reel-splide");
 
         if (reelRoot) {
@@ -1894,7 +1903,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               reelSplide.go(">");
             });
         }
-      })();
+      });
     </script>
 
     <script>
@@ -2223,7 +2232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
 
         <div class="happy-patients-container">
-           <img src="../assets/dental-impact/Frame 13.png" alt="Happy Patients Stats and Avatars" class="combined-proof-img">
+           <img loading="lazy" decoding="async" src="../assets/dental-impact/Frame 13.png" alt="Happy Patients Stats and Avatars" class="combined-proof-img">
           <p class="happy-patients-desc">
             Happy Patients Have Already Transformed Their Smiles with AVMSmiles Revolutionary Dental Implants. Join the Community of Confident Smiles, Register Today!
           </p>
@@ -2836,23 +2845,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="carousel-wrapper">
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab1.svg" alt="Transformation 1" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab1.svg" alt="Transformation 1" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab2.svg" alt="Transformation 2" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab2.svg" alt="Transformation 2" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab4.svg" alt="Transformation 3" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab4.svg" alt="Transformation 3" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab5.svg" alt="Transformation 4" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab5.svg" alt="Transformation 4" class="slide-img" />
           </div>
 
           <div class="carousel-slide">
-            <img src="../assets/dental-impact/ab6.svg" alt="Transformation 5" class="slide-img" />
+            <img loading="lazy" decoding="async" src="../assets/dental-impact/ab6.svg" alt="Transformation 5" class="slide-img" />
           </div>
         </div>
 
@@ -3510,7 +3519,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         reviewsData.forEach((review, index) => {
           // Render Avatar (Image or Initial)
           let avatarHTML = review.avatarSrc
-            ? `<img src="${review.avatarSrc}" alt="${review.author}">`
+            ? `<img loading="lazy" decoding="async" src="${review.avatarSrc}" alt="${review.author}">`
             : review.initial;
 
           // Create Card Element
@@ -3665,7 +3674,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src="../assets/dental-impact/Ellipse 18.png"
                 alt="Infection Control"
                 class="w-full h-full object-cover"
@@ -3682,7 +3691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src="../assets/dental-impact/Ellipse 19.png"
                 alt="Certified Staff"
                 class="w-full h-full object-cover"
@@ -3699,7 +3708,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src="../assets/dental-impact/Ellipse 20.png"
                 alt="Sterilization"
                 class="w-full h-full object-cover"
@@ -3716,7 +3725,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src="../assets/dental-impact/Ellipse 21.png"
                 alt="Environment"
                 class="w-full h-full object-cover"
@@ -3749,7 +3758,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
     <section class="md:hidden mb-[60px]">
-      <img src="../assets/clear-aligners/Group 206.svg" alt="" class="w-full" />
+      <img loading="lazy" decoding="async" src="../assets/clear-aligners/Group 206.svg" alt="" class="w-full" />
     </section>
 
     <!-- Recognized For Exceptional Implant Expertise -->
@@ -3762,7 +3771,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         >
           <div class="relative w-full max-w-[420px] overflow-visible">
             <!-- Wave -->
-            <img
+            <img loading="lazy" decoding="async"
               src="../assets/img/waveRing.png"
               alt=""
               class="absolute left-1 -top-10 md:-left-16 md:-top-20 w-[80%] md:w-[120%] h-auto -z-10 pointer-events-none select-none max-w-none"
@@ -3773,7 +3782,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div
                 class="rounded-full bg-white shadow-[0_14px_40px_rgba(0,0,0,0.10)] w-[270px] h-[270px] md:w-[300px] md:h-[300px] flex items-center justify-center"
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src="../assets/img/award.png"
                   alt="award"
                   class="w-60 md:w-64"
@@ -3956,7 +3965,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div
             class="rounded-2xl bg-white p-6 text-center shadow-[0_10px_24px_rgba(0,0,0,0.08)] self-center"
           >
-            <img
+            <img loading="lazy" decoding="async"
               src="../assets/img/support.png"
               alt="Support"
               class="mx-auto h-45 w-50 object-contain"
@@ -4072,6 +4081,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="hidden" name="utm_content" value="" />
                 <input type="hidden" name="date" value="" />
                 <input type="hidden" name="sheet_tab" value="dental-Implant" />
+                <input type="hidden" name="treatment" value="dental implants" />
 
                 <div class="mt-6 flex justify-center">
                     <button type="submit"

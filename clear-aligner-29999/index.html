@@ -4,15 +4,32 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Graduate&family=Poppins:wght@400;600;700&family=Young+Serif&display=swap"
-        rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Poppins:wght@400;600;700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
     <!-- Splide CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link rel="icon" href="../assets/avmlogo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+    <link
+      rel="icon"
+      href="../assets/avmlogo.png"
+      type="image/x-icon"
+    />
 
     <style>
         .h2-c {
@@ -233,18 +250,18 @@
             <div class="marquee__track">
                 <div class="marquee__group">
                     <div><img src="../assets/clear-aligners/newbadges1.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges2.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges3.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges4.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges5.png" alt=""></div>
-                    <!-- <div><img src="../assets/clear-aligners/badges6.png" alt=""></div> -->
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges2.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges3.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges4.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges5.png" alt=""></div>
+                    <!-- <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/badges6.png" alt=""></div> -->
                 </div>
                 <div class="marquee__group" aria-hidden="true">
-                    <div><img src="../assets/clear-aligners/newbadges1.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges2.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges3.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges4.png" alt=""></div>
-                    <div><img src="../assets/clear-aligners/newbadges5.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges1.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges2.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges3.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges4.png" alt=""></div>
+                    <div><img loading="lazy" decoding="async" src="../assets/clear-aligners/newbadges5.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -259,7 +276,7 @@
         </h2>
 
         <div class="aspect-video w-full overflow-hidden rounded-xl shadow-md">
-            <iframe class="h-full w-full"
+            <iframe loading="lazy" class="h-full w-full"
                 src="https://www.youtube.com/embed/mXiCz4RtlE0?si=6zY4bw2TccuMNuKj&amp;controls=0"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -322,6 +339,7 @@
                 <input type="hidden" name="utm_content" value="" />
                 <input type="hidden" name="date" value="" />
                 <input type="hidden" name="sheet_tab" value="clear-aligners" />
+                <input type="hidden" name="treatment" value="clear aligner" />
 
                 <div class="mt-6 flex justify-center">
                     <button type="submit"
@@ -351,7 +369,7 @@
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:grid-rows-2 md:gap-0">
             <!-- 1 -->
             <div class="text-center max-w-xs mx-auto md:col-start-1 md:row-start-1">
-                <img class="mx-auto mb-3" src="../assets/clear-aligners/Mirror.png" alt="">
+                <img loading="lazy" decoding="async" class="mx-auto mb-3" src="../assets/clear-aligners/Mirror.png" alt="">
                 <h3 class="h2-c text-base md:text-lg font-semibold">Comfort You Can Live With</h3>
                 <p class="p-c text-sm md:text-base mt-1">
                     Smooth, removable aligners that let you eat, speak, and smile naturally while your teeth gradually
@@ -361,7 +379,7 @@
 
             <!-- 2 -->
             <div class="text-center max-w-xs mx-auto md:col-start-3 md:row-start-1">
-                <img class="mx-auto mb-3" src="../assets/img/Appointment.png" alt="">
+                <img loading="lazy" decoding="async" class="mx-auto mb-3" src="../assets/img/Appointment.png" alt="">
                 <h3 class="h2-c text-base md:text-lg font-semibold">Expert-Planned, Fully Guided</h3>
                 <p class="p-c text-sm md:text-base mt-1">
                     Every step is carefully planned using digital scans to ensure safety, comfort, and confidence.
@@ -370,7 +388,7 @@
 
             <!-- 3 -->
             <div class="text-center max-w-xs mx-auto md:col-start-2 md:row-start-2">
-                <img class="mx-auto mb-3" src="../assets/img/Teeth.png" alt="">
+                <img loading="lazy" decoding="async" class="mx-auto mb-3" src="../assets/img/Teeth.png" alt="">
                 <h3 class="h2-c text-base md:text-lg font-semibold">Flexible Options for Every Smile</h3>
                 <p class="p-c text-sm md:text-base mt-1">
                     Multiple aligner plans are available, so you can choose what suits your dental needs, timeline, and
@@ -398,7 +416,7 @@
 
             <div class="card w-full md:max-w-sm ">
                 <h3 class="h2-c  font-semibold text-xl mb-4">Crowded Teeth</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions1" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions1" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
  mb-4" />
                 <p class=" text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
                     When teeth look pushed together, overlap, or feel difficult to clean properly.
@@ -412,7 +430,7 @@
 
             <div class="card w-full md:max-w-sm ">
                 <h3 class="h2-c  font-semibold text-xl mb-4">Crossbite</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions2" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions2" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
  mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
                     When some upper teeth sit inside or behind the lower teeth while biting.
@@ -425,7 +443,7 @@
 
             <div class="card w-full md:max-w-sm ">
                 <h3 class="h2-c  font-semibold text-xl mb-4">Gapped Teeth</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions3" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions3" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
  mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
                     When there are noticeable gaps between teeth that make the smile feel incomplete.
@@ -438,7 +456,7 @@
 
             <div class="card w-full md:max-w-sm ">
                 <h3 class="h2-c  font-semibold text-xl mb-4">Open / Deep Bite</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions4" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions4" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
  mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
                     When front teeth don’t meet properly or cover too much when you close your mouth.
@@ -451,7 +469,7 @@
 
             <div class="card w-full md:max-w-sm ">
                 <h3 class="h2-c  font-semibold text-xl mb-4">Spacing Issues</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions4" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions4" class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)]
  mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4 ">
                     When teeth are unevenly spaced and the smile looks irregular or unbalanced.
@@ -527,7 +545,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/oHsEwYx5L4w?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -540,7 +558,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/K6-HEJ-OkJ8?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -553,7 +571,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/iqbGYxB0KlE?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -566,7 +584,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/6JmvrsITMZc?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -579,7 +597,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/vUioINdiY5Q?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -593,7 +611,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/mOvM0pcyPBc?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -606,7 +624,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/tGXou-fW2t4?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -619,7 +637,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/m_3MhXGnc8I"
+                                        <iframe loading="lazy" class="h-full w-full" src="https://www.youtube.com/embed/m_3MhXGnc8I"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -631,7 +649,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/56jwA3oRhX8"
+                                        <iframe loading="lazy" class="h-full w-full" src="https://www.youtube.com/embed/56jwA3oRhX8"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -643,7 +661,7 @@
                             <div class="h-full w-full rounded-xl shadow-md bg-black overflow-hidden">
                                 <div class="h-full w-full rounded-[10px] border-2 border-[#362997] overflow-hidden">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/MVTfWhE7MxY"
+                                        <iframe loading="lazy" class="h-full w-full" src="https://www.youtube.com/embed/MVTfWhE7MxY"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -660,7 +678,7 @@
                             <ul class="splide__list">
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/oHsEwYx5L4w"
+                                        <iframe loading="lazy" class="h-full w-full" src="https://www.youtube.com/embed/oHsEwYx5L4w"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -668,7 +686,7 @@
                                 </li>
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/K6-HEJ-OkJ8?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -677,7 +695,7 @@
                                 </li>
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/iqbGYxB0KlE?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -686,7 +704,7 @@
                                 </li>
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/6JmvrsITMZc?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -695,7 +713,7 @@
                                 </li>
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full"
+                                        <iframe loading="lazy" class="h-full w-full"
                                             src="https://www.youtube.com/embed/vUioINdiY5Q?rel=0"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -705,7 +723,7 @@
 
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/mOvM0pcyPBc"
+                                        <iframe loading="lazy" class="h-full w-full" src="https://www.youtube.com/embed/mOvM0pcyPBc"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -714,7 +732,7 @@
 
                                 <li class="splide__slide" style="text-align: -webkit-center;">
                                     <div class="aspect-[9/16] h-full w-full">
-                                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/tGXou-fW2t4
+                                        <iframe loading="lazy" class="h-full w-full" src="https://www.youtube.com/embed/tGXou-fW2t4
                                             title=" YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -731,12 +749,12 @@
                         <button type="button" data-ab-prev
                             class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Previous">
-                            <img src="../assets/img/prearrow.png" alt="">
+                            <img loading="lazy" decoding="async" src="../assets/img/prearrow.png" alt="">
                         </button>
                         <button type="button" data-ab-next
                             class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Next">
-                            <img src="../assets/img/nextarrow.png" alt="">
+                            <img loading="lazy" decoding="async" src="../assets/img/nextarrow.png" alt="">
                         </button>
                     </div>
 
@@ -843,7 +861,7 @@
     </section>
     
     <script>
-        (function () {
+        window.addEventListener('DOMContentLoaded', function () {
             var reelRoot = document.getElementById('reel-splide');
 
             if (reelRoot) {
@@ -874,7 +892,7 @@
                 if (reelNext) reelNext.addEventListener('click', function () { reelSplide.go('>'); });
             }
 
-        })();
+        });
     </script>
 
     <script>
@@ -1169,7 +1187,7 @@
                     <div
                         class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/clear-aligners/icon1.png" alt="">
+                            <img loading="lazy" decoding="async" class="h-8 w-8" src="../assets/clear-aligners/icon1.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Discreet & Almost<br>Invisible
                             </h3>
@@ -1183,7 +1201,7 @@
                     <div
                         class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/clear-aligners/icon2.png" alt="">
+                            <img loading="lazy" decoding="async" class="h-8 w-8" src="../assets/clear-aligners/icon2.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Easy EMI Options<br>Available
                             </h3>
@@ -1197,7 +1215,7 @@
                     <div
                         class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/clear-aligners/icon3.png" alt="">
+                            <img loading="lazy" decoding="async" class="h-8 w-8" src="../assets/clear-aligners/icon3.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Designed for<br>Everyday Life
                             </h3>
@@ -1211,7 +1229,7 @@
                     <div
                         class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/clear-aligners/icon4.png" alt="">
+                            <img loading="lazy" decoding="async" class="h-8 w-8" src="../assets/clear-aligners/icon4.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Painless, Guided<br>Procedure
                             </h3>
@@ -1225,7 +1243,7 @@
                     <div
                         class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/clear-aligners/icon5.png" alt="">
+                            <img loading="lazy" decoding="async" class="h-8 w-8" src="../assets/clear-aligners/icon5.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Personalised to Your<br>Smile
                             </h3>
@@ -1239,7 +1257,7 @@
                     <div
                         class="w-full flex-shrink-0 md:w-auto md:flex-shrink rounded-2xl border border-[#E7E7E7] bg-[#F7F9FF] p-4 shadow-sm">
                         <div class="flex items-center gap-3">
-                            <img class="h-8 w-8" src="../assets/clear-aligners/icon6.png" alt="">
+                            <img loading="lazy" decoding="async" class="h-8 w-8" src="../assets/clear-aligners/icon6.png" alt="">
                             <h3 class="text-[#362997] font-semibold text-base border-l-2 -ml-1 pl-3">
                                 Regular Progress<br>Monitoring
                             </h3>
@@ -1440,27 +1458,27 @@
                         <div class="splide__track w-full overflow-hidden">
                             <ul class="splide__list w-full">
                                 <li class="splide__slide md:p-0 content-center">
-                                    <img src="../assets/clear-aligners/aab1.png"
+                                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/aab1.png"
                                         class=" w-full rounded-xl shadow-md object-cover aspect-[4/3]"
                                         alt="Transformation 1" />
                                 </li>
                                 <li class="splide__slide md:p-0 content-center">
-                                    <img src="../assets/clear-aligners/aab2.png"
+                                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/aab2.png"
                                         class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
                                         alt="Transformation 2" />
                                 </li>
                                 <li class="splide__slide md:p-0 content-center">
-                                    <img src="../assets/clear-aligners/aab3.png"
+                                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/aab3.png"
                                         class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
                                         alt="Transformation 3" />
                                 </li>
                                 <li class="splide__slide md:p-0 content-center">
-                                    <img src="../assets/clear-aligners/aab4.png"
+                                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/aab4.png"
                                         class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
                                         alt="Transformation 4" />
                                 </li>
                                 <li class="splide__slide md:p-0 content-center">
-                                    <img src="../assets/clear-aligners/aab5.png"
+                                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/aab5.png"
                                         class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
                                         alt="Transformation 5" />
                                 </li>
@@ -1473,12 +1491,12 @@
                         <button type="button" data-ab-prev
                             class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Previous">
-                            <img src="../assets/img/prearrow.png" alt="">
+                            <img loading="lazy" decoding="async" src="../assets/img/prearrow.png" alt="">
                         </button>
                         <button type="button" data-ab-next
                             class="h-9 w-9 rounded-full border-2 border-[#DF2028] grid place-items-center bg-white hover:bg-[#E8F7FF] pulse active:scale-[0.9]"
                             aria-label="Next">
-                            <img src="../assets/img/nextarrow.png" alt="" srcset="">
+                            <img loading="lazy" decoding="async" src="../assets/img/nextarrow.png" alt="" srcset="">
                         </button>
                     </div>
                 </div>
@@ -1526,7 +1544,7 @@
             <!-- Card 1 -->
             <div class="card w-full">
                 <h3 class="h2-c font-semibold text-lg mb-4">Crowded Teeth</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions1"
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions1"
                     class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)] mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4">
                     When teeth look pushed together, overlap, or feel difficult to clean properly.
@@ -1540,7 +1558,7 @@
             <!-- Card 2 -->
             <div class="card w-full">
                 <h3 class="h2-c font-semibold text-lg mb-4">Crossbite</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions2"
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions2"
                     class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)] mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4">
                     When some upper teeth sit inside or behind the lower teeth while biting.
@@ -1554,7 +1572,7 @@
             <!-- Card 3 -->
             <div class="card w-full">
                 <h3 class="h2-c font-semibold text-lg mb-4">Gapped Teeth</h3>
-                <img src="../assets/clear-aligners/solutions.png" alt="solutions3"
+                <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions3"
                     class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)] mb-4" />
                 <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4">
                     When there are noticeable gaps between teeth that make the smile feel incomplete.
@@ -1571,7 +1589,7 @@
                 <!-- Card 4 -->
                 <div class="card w-full max-w-sm">
                     <h3 class="h2-c font-semibold text-lg mb-4">Open / Deep Bite</h3>
-                    <img src="../assets/clear-aligners/solutions.png" alt="solutions4"
+                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions4"
                         class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)] mb-4" />
                     <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4">
                         When front teeth don't meet properly or cover too much when you close your mouth.
@@ -1585,7 +1603,7 @@
                 <!-- Card 5 -->
                 <div class="card w-full max-w-sm">
                     <h3 class="h2-c font-semibold text-lg mb-4">Spacing Issues</h3>
-                    <img src="../assets/clear-aligners/solutions.png" alt="solutions4"
+                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/solutions.png" alt="solutions4"
                         class="w-full block h-auto rounded-md shadow-[0_2px_6.5px_rgba(0,0,0,0.25)] mb-4" />
                     <p class="text-[#141414]/80 text-base tracking-[-3%] mb-4">
                         When teeth are unevenly spaced and the smile looks irregular or unbalanced.
@@ -1667,7 +1685,7 @@
                         <div class="rounded-[10px]  shadow-[12_10px_10px_rgba(0,0,0,0.18)] border-2 border-gray-200">
                             <div class="px-6 pt-6 ">
                                 <div class="flex items-start justify-between ">
-                                    <img src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                                    <img loading="lazy" decoding="async" src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
                                 </div>
                                 <div class="review-scroll mt-4">
                                     <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
@@ -1684,7 +1702,7 @@
                                 class="mt-[90px] pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
 
                                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 ">
-                                    <img src="../assets/img/man.png" alt="">
+                                    <img loading="lazy" decoding="async" src="../assets/img/man.png" alt="">
                                 </span>
                                 Pramila Tandkar
 
@@ -1697,7 +1715,7 @@
                             class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border-2 border-gray-200 flex flex-col h-full">
                             <div class="px-6 pt-6 ">
                                 <div class="flex items-start justify-between ">
-                                    <img src="../assets/img/quotation.png" alt="profile" class="h-8 w-8 opacity-80">
+                                    <img loading="lazy" decoding="async" src="../assets/img/quotation.png" alt="profile" class="h-8 w-8 opacity-80">
                                 </div>
                                 <div class="review-scroll mt-4">
                                     <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
@@ -1716,7 +1734,7 @@
                             <div
                                 class="mt-[20px] pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
                                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                                    <img src="../assets/img/man.png" alt="">
+                                    <img loading="lazy" decoding="async" src="../assets/img/man.png" alt="">
                                 </span>
                                 Miloni Joshi
                             </div>
@@ -1728,7 +1746,7 @@
                             class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border-2 border-gray-200 flex flex-col h-full">
                             <div class="px-6 pt-6 ">
                                 <div class="flex items-start justify-between ">
-                                    <img src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                                    <img loading="lazy" decoding="async" src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
                                 </div>
                                 <div class="review-scroll mt-4">
                                     <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
@@ -1747,7 +1765,7 @@
                             <div
                                 class="mt-[10px] pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
                                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                                    <img src="../assets/img/man.png" alt="">
+                                    <img loading="lazy" decoding="async" src="../assets/img/man.png" alt="">
                                 </span>
                                 Shriyani Datta
                             </div>
@@ -1759,7 +1777,7 @@
                             class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border-2 border-gray-200 flex flex-col h-full">
                             <div class="px-6 pt-6 ">
                                 <div class="flex items-start justify-between ">
-                                    <img src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                                    <img loading="lazy" decoding="async" src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
                                 </div>
                                 <div class="review-scroll mt-4">
                                     <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
@@ -1777,7 +1795,7 @@
                             <div
                                 class="mt-[20px] pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
                                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                                    <img src="../assets/img/man.png" alt="">
+                                    <img loading="lazy" decoding="async" src="../assets/img/man.png" alt="">
                                 </span>
                                 Anoop Thomas
                             </div>
@@ -1789,7 +1807,7 @@
                             class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border-2 border-gray-200 flex flex-col h-full">
                             <div class="px-6 pt-6  ">
                                 <div class="flex items-start justify-between ">
-                                    <img src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                                    <img loading="lazy" decoding="async" src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
                                 </div>
                                 <div class="review-scroll mt-4">
                                     <p class="review-clamp text-sm text-[#141414]/70  leading-relaxed">
@@ -1805,7 +1823,7 @@
                             <div
                                 class="mt-[90px] pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
                                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                                    <img src="../assets/img/man.png" alt="">
+                                    <img loading="lazy" decoding="async" src="../assets/img/man.png" alt="">
                                 </span>
                                 Mahesh Kadam
                             </div>
@@ -1817,7 +1835,7 @@
                             class="rounded-[10px] bg-white  shadow-[0_8px_20px_rgba(0,0,0,0.08)] border-2 border-gray-200 flex flex-col h-full">
                             <div class="px-6 pt-6 ">
                                 <div class="flex items-start justify-between ">
-                                    <img src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
+                                    <img loading="lazy" decoding="async" src="../assets/img/quotation.png" alt="" class="h-8 w-8 opacity-80">
                                 </div>
                                 <div class="review-scroll mt-4">
                                     <p class="review-clamp text-sm text-[#141414]/70 leading-relaxed">
@@ -1833,7 +1851,7 @@
                             <div
                                 class="mt-[90px] pl-5 flex items-center gap-2 text-[14px] md:text-[16px] text-[#141414]/78 bg-[#F8F8F8] p-3 rounded-b-[10px]">
                                 <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100">
-                                    <img src="../assets/img/man.png" alt="">
+                                    <img loading="lazy" decoding="async" src="../assets/img/man.png" alt="">
                                 </span>
                                 Trevor Baretto
                             </div>
@@ -1847,7 +1865,7 @@
 
 
         <script>
-            (function () {
+            window.addEventListener('DOMContentLoaded', function () {
                 if (typeof Splide === 'undefined') return;
 
                 function initReviewScrollbars() {
@@ -1941,7 +1959,7 @@
                     if (abNext) abNext.addEventListener('click', function () { abSplide.go('>'); });
                 }
 
-            })();
+            });
         </script>
 
     </section>
@@ -1951,9 +1969,9 @@
         <div class=" bg-[#F7F9FF]">
             <div class="grid items-center md:gap-8 md:grid-cols-2 mx-[5%] md:mx-[10%] ">
                 <div class="order-2 md:order-1 flex justify-center self-end relative overflow-hidden">
-                    <img src="../assets/clear-aligners/womendesktop.png" alt="Smiling man"
+                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/womendesktop.png" alt="Smiling man"
                         class="w-[80%] relative z-10 hidden md:block" />
-                    <img src="../assets/clear-aligners/womenmobile.png" alt="Smiling man"
+                    <img loading="lazy" decoding="async" src="../assets/clear-aligners/womenmobile.png" alt="Smiling man"
                         class="w-[100%] relative z-10 md:hidden " />
 
                     <!-- white gradient overlay -->
@@ -1973,7 +1991,7 @@
                     <div class="mt-6 space-y-4">
                         <div class="flex items-start gap-3">
                             <div class=" h-7 w-15 md:w-9 mt-[1%] md:mt-1">
-                                <img src="../assets/img/one.png" alt="one">
+                                <img loading="lazy" decoding="async" src="../assets/img/one.png" alt="one">
                             </div>
                             <div>
                                 <h3 class="h2-c font-semibold text-lg">Free Consultation &amp; Digital Scan</h3>
@@ -1985,7 +2003,7 @@
                         </div>
                         <div class="flex items-start gap-3">
                             <div class=" h-7 w-15 md:w-10 mt-[1%] md:mt-1">
-                                <img src="../assets/img/two.png" alt="one">
+                                <img loading="lazy" decoding="async" src="../assets/img/two.png" alt="one">
                             </div>
                             <div>
                                 <h3 class="h2-c font-semibold text-lg">Wear Your Clear Aligners</h3>
@@ -1997,7 +2015,7 @@
                         </div>
                         <div class="flex items-start gap-3">
                             <div class=" h-7 w-15 md:w-8 mt-[1%] md:mt-1">
-                                <img src="../assets/img/three.png" alt="one">
+                                <img loading="lazy" decoding="async" src="../assets/img/three.png" alt="one">
                             </div>
                             <div>
                                 <h3 class="h2-c font-semibold text-lg">Smile with Confidence</h3>
@@ -2023,7 +2041,7 @@
                     <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:grid-rows-2 md:gap-0">
                         <!-- 1 -->
                         <div class="text-center max-w-xs mx-auto md:col-start-1 md:row-start-1">
-                            <img class="mx-auto mb-3" src="../assets/clear-aligners/Mirror.png" alt="">
+                            <img loading="lazy" decoding="async" class="mx-auto mb-3" src="../assets/clear-aligners/Mirror.png" alt="">
                             <h3 class="h2-c text-base md:text-lg font-semibold">Comfort You Can Live With</h3>
                             <p class="p-c text-sm md:text-base mt-1">
                                 Smooth, removable aligners that let you eat, speak, and smile naturally while your teeth
@@ -2034,7 +2052,7 @@
 
                         <!-- 2 -->
                         <div class="text-center max-w-xs mx-auto md:col-start-3 md:row-start-1">
-                            <img class="mx-auto mb-3" src="../assets/img/Appointment.png" alt="">
+                            <img loading="lazy" decoding="async" class="mx-auto mb-3" src="../assets/img/Appointment.png" alt="">
                             <h3 class="h2-c text-base md:text-lg font-semibold">Expert-Planned, Fully Guided</h3>
                             <p class="p-c text-sm md:text-base mt-1">
                                 Every step is carefully planned using digital scans to ensure safety, comfort, and
@@ -2044,7 +2062,7 @@
 
                         <!-- 3 -->
                         <div class="text-center max-w-xs mx-auto md:col-start-2 md:row-start-2">
-                            <img class="mx-auto mb-3" src="../assets/img/Teeth.png" alt="">
+                            <img loading="lazy" decoding="async" class="mx-auto mb-3" src="../assets/img/Teeth.png" alt="">
                             <h3 class="h2-c text-base md:text-lg font-semibold">Flexible Options for Every Smile</h3>
                             <p class="p-c text-sm md:text-base mt-1">
                                 Multiple aligner plans are available, so you can choose what suits your dental needs,
@@ -2094,27 +2112,27 @@
                     class="mx-auto mt-5 w-full max-w-md rounded-xl bg-white  border-2 border-gray-200 p-5 shadow-[0_0_9.3px_2px_rgba(0,0,0,0.07)] ">
                     <ul class="space-y-2 text-[#141414] text-sm md:text-base">
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4 "><img src="../assets/img/wpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4 "><img loading="lazy" decoding="async" src="../assets/img/wpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Conscious about smiling
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4 "><img src="../assets/img/wpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4 "><img loading="lazy" decoding="async" src="../assets/img/wpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Crooked or uneven teeth
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4 "><img src="../assets/img/wpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4 "><img loading="lazy" decoding="async" src="../assets/img/wpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Don’t want visible braces
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4 "><img src="../assets/img/wpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4 "><img loading="lazy" decoding="async" src="../assets/img/wpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Discomfort while talking
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4 "><img src="../assets/img/wpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4 "><img loading="lazy" decoding="async" src="../assets/img/wpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Gradual, visible improvement
                         </li>
@@ -2124,8 +2142,8 @@
 
             <!-- Connector -->
             <div class="flex justify-center">
-                <img src="../assets/img/deskarrow.png" alt="" class="hidden md:block" srcset="">
-                <img src="../assets/img/mobarrow.png" alt="" class="md:hidden ">
+                <img loading="lazy" decoding="async" src="../assets/img/deskarrow.png" alt="" class="hidden md:block" srcset="">
+                <img loading="lazy" decoding="async" src="../assets/img/mobarrow.png" alt="" class="md:hidden ">
             </div>
 
             <!-- Right: How Aligners Help -->
@@ -2138,27 +2156,27 @@
                     class="mx-auto mt-5 w-full max-w-md rounded-xl bg-white p-5 border-2 border-gray-200 shadow-[0_0_9.3px_2px_rgba(0,0,0,0.07)]">
                     <ul class="space-y-2 text-[#141414] text-sm  md:text-base">
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4"><img src="../assets/img/bpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4"><img loading="lazy" decoding="async" src="../assets/img/bpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Nearly invisible while you wear
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4"><img src="../assets/img/bpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4"><img loading="lazy" decoding="async" src="../assets/img/bpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Comfortable for everyday life
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4"><img src="../assets/img/bpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4"><img loading="lazy" decoding="async" src="../assets/img/bpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             Removable for eating &amp; brushing
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4"><img src="../assets/img/bpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4"><img loading="lazy" decoding="async" src="../assets/img/bpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             A natural-looking, confident smile
                         </li>
                         <li class="flex items-start gap-2 text-base md:text-[20px]">
-                            <span class="mt-1 h-4 w-4"><img src="../assets/img/bpoint.png" alt="pointer"
+                            <span class="mt-1 h-4 w-4"><img loading="lazy" decoding="async" src="../assets/img/bpoint.png" alt="pointer"
                                     class="md:mt-[3px]"></span>
                             High Success &amp; Full Safety
                         </li>
@@ -2187,7 +2205,7 @@
         </div>
     </section>
     <section class="md:hidden mb-[60px]">
-        <img src="../assets/clear-aligners/Group 206.svg" alt="" class="w-full">
+        <img loading="lazy" decoding="async" src="../assets/clear-aligners/Group 206.svg" alt="" class="w-full">
     </section>
     <!-- Recognized For Exceptional Implant Expertise -->
     <section class=" md:mx-[10%] mb-[80px] md:mt-[60px]">
@@ -2197,7 +2215,7 @@
             <div class="order-1 md:col-span-1 flex justify-center md:justify-start mx-[5%]">
                 <div class="relative w-full max-w-[420px] overflow-visible">
                     <!-- Wave -->
-                    <img src="../assets/img/waveRing.png" alt=""
+                    <img loading="lazy" decoding="async" src="../assets/img/waveRing.png" alt=""
                         class="absolute left-1 -top-10 md:-left-16 md:-top-20 w-[80%] md:w-[110%] h-auto -z-10 pointer-events-none select-none max-w-none" />
 
                     <!-- Award circle -->
@@ -2205,7 +2223,7 @@
                         <div class="rounded-full bg-white shadow-[0_14px_40px_rgba(0,0,0,0.10)]
                    w-[270px] h-[270px] md:w-[300px] md:h-[300px]
                    flex items-center justify-center">
-                            <img src="../assets/clear-aligners/award.png" alt="award" class="w-60 md:w-64" />
+                            <img loading="lazy" decoding="async" src="../assets/clear-aligners/award.png" alt="award" class="w-60 md:w-64" />
                         </div>
                     </div>
                 </div>
@@ -2339,7 +2357,7 @@
 
                 <!-- Support card -->
                 <div class="rounded-2xl bg-white p-6 text-center shadow-[0_10px_24px_rgba(0,0,0,0.08)] self-center">
-                    <img src="../assets/img/support.png" alt="Support" class="mx-auto h-45 w-50 object-contain" />
+                    <img loading="lazy" decoding="async" src="../assets/img/support.png" alt="Support" class="mx-auto h-45 w-50 object-contain" />
                     <h3 class="mt-4 text-[#141414] font-semibold md:text-[17px]">Have more questions ? Contact Now</h3>
                     <div class="mt-4 space-y-2 text-left">
                         <div class="flex items-center gap-3 text-[#141414]">
@@ -2394,7 +2412,7 @@
             <div class="mx-auto max-w-3xl text-center">
                 <h2 id="modal-form-title"
                     class="h2-c font-bold text-center mb-7 text-2xl md:text-3xl text-shadow-[0px_1px_1.2px_rgba(0,0,0,0.25)] leading-[110%]">
-                    Offering Free First Visit for Dental Implants
+                    Offering Free First Visit for Clear Aligners
                 </h2>
             </div>
 
@@ -2431,11 +2449,12 @@
                 <input type="hidden" name="utm_content" value="" />
                 <input type="hidden" name="date" value="" />
                 <input type="hidden" name="sheet_tab" value="clear-aligners" />
+                <input type="hidden" name="treatment" value="clear aligner" />
 
                 <div class="mt-6 flex justify-center">
                     <button type="submit"
                         class="w-full md:w-auto rounded-xl bg-[#DF2028] py-2 px-3 rounded-2xl border-2 border-white shadow-[0px_6px_2.5px_-2px_rgba(0,0,0,0.2)] md:px-6 md:py-3 text-white font-bold">
-                        Talk to an Implant Expert
+                        Talk to an Aligner Expert
                     </button>
                 </div>
 
@@ -2461,8 +2480,14 @@
             }
 
             function setHidden(name, value) {
-                const el = form.querySelector(`[name="${name}"]`);
-                if (el) el.value = value || "";
+                let el = form.querySelector(`[name="${name}"]`);
+                if (!el) {
+                    el = document.createElement("input");
+                    el.type = "hidden";
+                    el.name = name;
+                    form.appendChild(el);
+                }
+                el.value = value || "";
             }
 
             function ensureHiddenValues() {
@@ -2482,9 +2507,8 @@
 
                 setHidden("date", new Date().toISOString());
 
-                if (!form.querySelector('[name="sheet_tab"]')?.value) {
-                    setHidden("sheet_tab", "clear-aligners");
-                }
+                setHidden("sheet_tab", "clear-aligners");
+                setHidden("treatment", "clear aligner");
             }
 
             function disableForm(disabled) {
@@ -2597,8 +2621,14 @@
             }
 
             function setHidden(name, value) {
-                const el = form.querySelector(`[name="${name}"]`);
-                if (el) el.value = value || "";
+                let el = form.querySelector(`[name="${name}"]`);
+                if (!el) {
+                    el = document.createElement("input");
+                    el.type = "hidden";
+                    el.name = name;
+                    form.appendChild(el);
+                }
+                el.value = value || "";
             }
 
             function ensureHiddenValues() {
@@ -2618,9 +2648,8 @@
 
                 setHidden("date", new Date().toISOString());
 
-                if (!form.querySelector('[name="sheet_tab"]')?.value) {
-                    setHidden("sheet_tab", "clear-aligners");
-                }
+                setHidden("sheet_tab", "clear-aligners");
+                setHidden("treatment", "clear aligner");
             }
 
             function disableForm(disabled) {

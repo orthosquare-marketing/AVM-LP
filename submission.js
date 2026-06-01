@@ -10,8 +10,14 @@
   }
 
   function setHidden(form, name, value) {
-    const el = form.querySelector(`[name="${name}"]`);
-    if (el) el.value = value || "";
+    let el = form.querySelector(`[name="${name}"]`);
+    if (!el) {
+      el = document.createElement("input");
+      el.type = "hidden";
+      el.name = name;
+      form.appendChild(el);
+    }
+    el.value = value || "";
   }
 
   function ensureHiddenValues(form) {
@@ -35,9 +41,15 @@
     setHidden(form, "utm_content", params.get("utm_content") || "");
     setHidden(form, "date", new Date().toISOString());
 
-    if (!form.querySelector('[name="sheet_tab"]')?.value) {
-      setHidden(form, "sheet_tab", "dental-Implant");
+    const sheetTab = form.querySelector('[name="sheet_tab"]')?.value || "dental-Implant";
+    setHidden(form, "sheet_tab", sheetTab);
+
+    // Set treatment based on sheetTab value or default to dental implants
+    let treatment = "dental implants";
+    if (sheetTab.toLowerCase().includes("aligner")) {
+      treatment = "clear aligner";
     }
+    setHidden(form, "treatment", treatment);
   }
 
   function disableForm(form, disabled) {
