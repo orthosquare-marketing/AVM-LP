@@ -997,30 +997,55 @@
             if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1, true); });
             if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1, true); });
 
-            root.addEventListener('mouseenter', function () { paused = true; stopAutoplay(); });
-            root.addEventListener('mouseleave', function () { paused = false; startAutoplay(); });
+            // Auto-scroll should pause ONLY while a testimonial video is actually
+            // playing. When a video is paused, ended/off, or merely hovered, the
+            // carousel keeps auto-scrolling. We use the YouTube IFrame Player API to
+            // detect real play/pause state (focus/hover alone can't tell them apart).
+            var playingPlayers = new Set();
 
-            // When a user taps a testimonial video to play it, the YouTube iframe
-            // takes keyboard focus and the window fires 'blur'. Detect that and stop
-            // auto-scrolling until the user taps back onto the page (window 'focus').
-            window.addEventListener('blur', function () {
-                setTimeout(function () {
-                    var el = document.activeElement;
-                    if (el && el.tagName === 'IFRAME' && root.contains(el)) {
-                        videoEngaged = true;
-                        paused = true;
-                        stopAutoplay();
+            function refreshVideoEngagement() {
+                var nowEngaged = playingPlayers.size > 0;
+                if (nowEngaged === videoEngaged) return;
+                videoEngaged = nowEngaged;
+                if (videoEngaged) stopAutoplay();
+                else startAutoplay();
+            }
+
+            function setupReelPlayers() {
+                Array.prototype.slice.call(root.querySelectorAll('iframe')).forEach(function (frame) {
+                    if (frame.src.indexOf('enablejsapi=1') === -1) {
+                        frame.src += (frame.src.indexOf('?') === -1 ? '?' : '&') + 'enablejsapi=1';
                     }
-                }, 0);
-            });
+                    var player = new YT.Player(frame, {
+                        events: {
+                            onStateChange: function (e) {
+                                if (e.data === YT.PlayerState.PLAYING) {
+                                    playingPlayers.add(player);
+                                } else if (e.data === YT.PlayerState.PAUSED ||
+                                    e.data === YT.PlayerState.ENDED) {
+                                    playingPlayers.delete(player);
+                                }
+                                refreshVideoEngagement();
+                            }
+                        }
+                    });
+                });
+            }
 
-            window.addEventListener('focus', function () {
-                if (videoEngaged) {
-                    videoEngaged = false;
-                    paused = false;
-                    startAutoplay();
+            if (window.YT && window.YT.Player) {
+                setupReelPlayers();
+            } else {
+                var prevYTReady = window.onYouTubeIframeAPIReady;
+                window.onYouTubeIframeAPIReady = function () {
+                    if (typeof prevYTReady === 'function') prevYTReady();
+                    setupReelPlayers();
+                };
+                if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+                    var ytTag = document.createElement('script');
+                    ytTag.src = 'https://www.youtube.com/iframe_api';
+                    document.head.appendChild(ytTag);
                 }
-            });
+            }
 
             // Swipe gestures
             var startX = 0;
