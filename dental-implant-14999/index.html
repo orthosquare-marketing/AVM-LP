@@ -379,22 +379,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="stats-section">
   <div class="stats-container">
     <div class="stat-card">
-      <div class="stat-number">3,00,000+</div>
+      <div class="stat-number">125+</div>
+      <div class="stat-text">Clinics</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-number">2,00,000+</div>
       <div class="stat-text">Successful Implants</div>
     </div>
 
     <div class="stat-card">
       <div class="stat-number">5,00,000+</div>
-      <div class="stat-text">Happy Patients</div>
+      <div class="stat-text">Happy Smiles</div>
     </div>
 
     <div class="stat-card">
-      <div class="stat-number">20+ Years</div>
-      <div class="stat-text">Of Industry-leading<br>Experience</div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-number">25000+</div>
+      <div class="stat-number">25,000+</div>
       <div class="stat-text">Google Reviews</div>
     </div>
   </div>
@@ -430,11 +430,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   .form-title {
-    color: #362997; 
+    color: #362997;
     font-size: 2.2rem;
     font-weight: 800;
     margin: 0 0 8px 0;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .form-subtitle {
@@ -443,6 +444,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     line-height: 1.5;
     margin: 0 0 25px 0;
     font-weight: 500; /* Added slight weight to make it stand out */
+    text-align: center;
   }
 
   .form-inputs-container {
@@ -574,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="form-top-area">
       <h2 class="form-title text-[#362997]">SCHEDULE YOUR FREE CONSULTATION</h2>
-      <p class="form-subtitle">Fill out the form below and enjoy up to 25% off your treatment—let's bring back your confident smile!</p>
+      <p class="form-subtitle">Fill out the form and get your Dental Implants treatment starting at just Rs. 14,999 - let's bring back your confident smile.</p>
 
       <form id="implant-lead-form" class="form-inputs-container">
         <div class="input-row-2">
@@ -633,7 +635,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="implant-guide-section implant-guide-section-mobile mt-[40px] ">
   <div class="guide-container">
     <div class="guide-banner">
-      <h2>Your Guide To Dental Implant Options</h2>
+      <h2>Choose the Dental Implant that best suits you!</h2>
     </div>
 
     <div class="guide-grid">
@@ -736,8 +738,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   .costing-visual {
     position: relative;
-    width: min(100%, 500px);
-    min-height: 118px;
+    width: min(100%, 560px);
+    min-height: 180px;
     margin: 0 auto;
     border-radius: 4px;
     overflow: hidden;
@@ -795,7 +797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     .costing-visual {
-      min-height: 80px;
+      min-height: 150px;
     }
 
     .costing-button {
@@ -1020,11 +1022,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="time-label">Hours</span>
           </div>
           <div class="time-block">
-            <span class="time-value" data-timer-minutes>35</span>
+            <span class="time-value" data-timer-minutes>59</span>
             <span class="time-label">Minutes</span>
           </div>
           <div class="time-block">
-            <span class="time-value" data-timer-seconds>46</span>
+            <span class="time-value" data-timer-seconds>00</span>
             <span class="time-label">Seconds</span>
           </div>
         </div>
@@ -1660,6 +1662,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         fill: #fff;
       }
 
+      #shortsSliderMobile .splide__arrow {
+        background: #0284c7;
+        opacity: 1;
+        width: 2.2rem;
+        height: 2.2rem;
+      }
       #shortsSliderMobile .splide__arrow svg {
         fill: #fff;
       }
@@ -1704,7 +1712,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             swipe: true,
             paginationKeyboard: true,
             pagination: false,
-            arrows: false,
+            arrows: true,
             perMove: 1,
             breakpoints: {
               1024: { perPage: 2 },
@@ -1729,7 +1737,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             swipe: true,
             paginationKeyboard: true,
             pagination: false,
-            arrows: false,
+            arrows: true,
             perMove: 1,
           });
 
@@ -1745,7 +1753,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="implant-guide-section implant-guide-desktop-only">
       <div class="guide-container">
         <div class="guide-banner">
-          <h2>Your Guide To Dental Implant Options</h2>
+          <h2>Choose the Dental Implant that best suits you!</h2>
         </div>
 
         <div class="guide-grid">
@@ -1936,7 +1944,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         .guide-banner h2 {
-          font-size: 1.3rem;
+          font-size: 1.05rem;
+        }
+
+        /* Mobile ribbon: shorter height, full-bleed width */
+        .implant-guide-section-mobile .guide-banner {
+          width: 100vw;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          position: relative;
+          left: 50%;
+          right: 50%;
+          padding: 10px 16px;
+          border-radius: 0;
+          margin-bottom: 24px;
         }
       }
     </style>
@@ -2200,7 +2221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           intervalId = setInterval(function () {
             index = (index + 1) % total;
             update(true);
-          }, 5000);
+          }, 3000);
         }
 
         function stop() {
@@ -2339,19 +2360,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="time-label">Hours</span>
           </div>
           <div class="time-block">
-            <span class="time-value" data-timer-minutes>35</span>
+            <span class="time-value" data-timer-minutes>59</span>
             <span class="time-label">Minutes</span>
           </div>
           <div class="time-block">
-            <span class="time-value" data-timer-seconds>46</span>
+            <span class="time-value" data-timer-seconds>00</span>
             <span class="time-label">Seconds</span>
           </div>
         </div>
 
         <p class="urgency-warning">The time is ending soon - act up!</p>
-        <p class="offer-details">
-          Free Consultation & X-ray + Extra 25% off on Dental Implants Treatment
-        </p>
         <p class="offer-description">
           Take the first step toward a confident and beautiful smile with
           our exclusive 48-hour offer. Don't miss the chance to get a free
@@ -2548,7 +2566,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   .time-value {
-    font-size: 1.6rem;
+    font-size: 1.85rem;
     font-weight: 800;
     line-height: 1;
     margin-bottom: 4px;
@@ -2640,14 +2658,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       padding: 10px 5px;
     }
     .time-value {
-      font-size: 1.4rem;
+      font-size: 1.55rem;
     }
   }
 </style>
 
     <script>
       document.querySelectorAll("[data-promo-offer]").forEach((section) => {
-        let totalSeconds = 16 * 3600 + 35 * 60 + 46;
+        let totalSeconds = 16 * 3600 + 59 * 60 + 0;
         const daysEl = section.querySelector("[data-timer-days]");
         const hoursEl = section.querySelector("[data-timer-hours]");
         const minutesEl = section.querySelector("[data-timer-minutes]");
@@ -2823,7 +2841,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           intervalId = setInterval(function () {
             index = (index + 1) % total;
             update(true);
-          }, 5000);
+          }, 3000);
         }
 
         function stop() {
@@ -3360,7 +3378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       .reviews-subtitle {
         color: #333333;
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.6;
         max-width: 900px;
         margin: 0 auto 50px auto;
@@ -3532,6 +3550,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       /* Responsive */
       @media (max-width: 768px) {
         .reviews-subtitle {
+          font-size: 0.85rem;
           margin: 0 auto 20px auto;
         }
 
