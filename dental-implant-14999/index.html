@@ -254,10 +254,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Section 2 -->
 <style>
-  body {
+  html, body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #ffffff; /* Updated to white background */
+    overflow-x: hidden; /* prevent full-bleed elements from widening the page on mobile */
+    max-width: 100%;
   }
 
   .stats-section {
@@ -1972,11 +1974,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         /* Mobile ribbon: shorter height, full-bleed width */
         .implant-guide-section-mobile .guide-banner {
           width: 100vw;
-          margin-left: -50vw;
-          margin-right: -50vw;
-          position: relative;
-          left: 50%;
-          right: 50%;
+          max-width: 100vw;
+          margin-left: calc(50% - 50vw);
+          margin-right: calc(50% - 50vw);
           padding: 10px 16px;
           border-radius: 0;
           margin-bottom: 24px;
