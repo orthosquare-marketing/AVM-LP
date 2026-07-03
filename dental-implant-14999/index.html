@@ -1662,14 +1662,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         fill: #fff;
       }
 
+      #shortsSliderMobile {
+        position: relative;
+      }
+      #shortsSliderMobile .splide__arrows {
+        display: block;
+      }
       #shortsSliderMobile .splide__arrow {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
         background: #0284c7;
-        opacity: 1;
-        width: 2.2rem;
-        height: 2.2rem;
+        opacity: 1 !important;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 9999px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+      }
+      #shortsSliderMobile .splide__arrow--prev {
+        left: 0.4rem;
+      }
+      #shortsSliderMobile .splide__arrow--next {
+        right: 0.4rem;
       }
       #shortsSliderMobile .splide__arrow svg {
         fill: #fff;
+        width: 1.1rem;
+        height: 1.1rem;
       }
     </style>
 
@@ -3860,7 +3882,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div class="flex flex-col items-start md:items-center">
+          <div class="flex flex-col items-center">
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
@@ -3871,13 +3893,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               />
             </div>
             <p
-              class="mt-6 text-[#1c1c1c] text-xl md:text-[20px] font-semibold leading-snug text-left md:text-center"
+              class="mt-6 text-[#1c1c1c] text-sm md:text-[20px] font-semibold leading-snug text-center"
             >
               Comprehensive Infection Control
             </p>
           </div>
 
-          <div class="flex flex-col items-start md:items-center">
+          <div class="flex flex-col items-center">
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
@@ -3888,13 +3910,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               />
             </div>
             <p
-              class="mt-6 text-[#1c1c1c] text-xl md:text-[20px] font-semibold leading-snug text-left md:text-center"
+              class="mt-6 text-[#1c1c1c] text-sm md:text-[20px] font-semibold leading-snug text-center"
             >
               Trained and Certified Staff
             </p>
           </div>
 
-          <div class="flex flex-col items-start md:items-center">
+          <div class="flex flex-col items-center">
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
@@ -3905,13 +3927,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               />
             </div>
             <p
-              class="mt-6 text-[#1c1c1c] text-xl md:text-[20px] font-semibold leading-snug text-left md:text-center"
+              class="mt-6 text-[#1c1c1c] text-sm md:text-[20px] font-semibold leading-snug text-center"
             >
               Advanced Sterilization
             </p>
           </div>
 
-          <div class="flex flex-col items-start md:items-center">
+          <div class="flex flex-col items-center">
             <div
               class="w-full max-w-[300px] aspect-square rounded-full overflow-hidden shadow-md border border-gray-100"
             >
@@ -3922,7 +3944,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               />
             </div>
             <p
-              class="mt-6 text-[#1c1c1c] text-xl md:text-[20px] font-semibold leading-snug text-left md:text-center"
+              class="mt-6 text-[#1c1c1c] text-sm md:text-[20px] font-semibold leading-snug text-center"
             >
               Hygienic Environment
             </p>
