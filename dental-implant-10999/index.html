@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental Implants at ₹10,999 | AVM Smiles</title>
+  <meta name="description" content="Book a free dental implants consultation with AVM Smiles. Single tooth, full mouth, All-on-4 and All-on-6 implants starting at ₹10,999 with personalized cost guidance." />
+  <link rel="icon" href="../assets/avmlogo.png" type="image/x-icon" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W9RNL2H8');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Play CDN + custom theme (mirrors tailwind.config.ts) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { heroBlue: "#003f8f", heroRed: "#ed1c24", heroText: "#566166" },
+          fontFamily: { sans: ["Inter", "Segoe UI", "Arial", "sans-serif"] },
+          boxShadow: { heroTile: "0 20px 28px rgba(8, 33, 63, 0.22)" }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* ---- globals.css (ported from the Next.js app) ---- */
+    :root { color: #08213f; background: #ffffff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; overflow-x: hidden; max-width: 100%; width: 100%; }
+    main { overflow-x: hidden; }
+    #stories-track, #transform-track { max-width: 100%; }
+    img { display: block; }
+
+    .consult-input { height: 52px; width: 100%; border: 1px solid #e1e4eb; border-radius: 5px; background: #fff; padding: 0 20px; color: #08213f; font-size: 16px; outline: none; }
+    .consult-input::placeholder { color: #9a9a9a; }
+    .consult-input:focus { border-color: #0056b7; box-shadow: 0 0 0 3px rgba(0, 86, 183, 0.1); }
+    .consult-form-title { display: none; }
+    .consultation-form { display: grid; gap: 30px; width: 100%; }
+    .desktop-form-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 28px; }
+    .desktop-form-grid input { grid-column: span 2; }
+    .desktop-form-grid .desktop-half { grid-column: span 3; }
+    .desktop-form-grid #desktop-email, .desktop-form-grid #desktop-phone { grid-column: span 3; }
+    .desktop-form-grid #desktop-pin { grid-column: 1 / -1; }
+    .mobile-form-grid { display: none; }
+    .consult-submit { display: flex; width: 100%; height: 60px; align-items: center; justify-content: center; gap: 16px; border: 0; border-radius: 10px; background: #ed1c24; color: #fff; font-size: 22px; font-weight: 700; box-shadow: 0 4px 5px rgba(0,0,0,0.25); cursor: pointer; }
+    .consult-submit span { font-size: 28px; font-weight: 400; line-height: 1; }
+    .mobile-benefit-cta { display: none; }
+    .mobile-story-cta { display: none; }
+    .implant-mobile-nav { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+
+    .carousel-controls { position: absolute; right: 0; bottom: 5px; display: flex; gap: 8px; }
+    .carousel-controls button { display: grid; width: 36px; height: 36px; place-items: center; border: 0; border-radius: 999px; background: #ed1c24; color: #fff; font-size: 22px; font-weight: 700; line-height: 1; cursor: pointer; }
+
+    .benefits-surface article > span img { width: 100%; height: 100%; object-fit: contain; }
+
+    .avatar { display: grid; width: 36px; height: 36px; margin-left: -9px; place-items: center; border: 2px solid #fff; border-radius: 999px; background: linear-gradient(135deg, #ffd6a5, #1a8fb7); }
+    .avatar:first-child { margin-left: 0; }
+    .avatar-1 { background: linear-gradient(135deg, #ffd6a5, #6bb56f); }
+    .avatar-2 { background: linear-gradient(135deg, #d8f0ff, #19375f); }
+    .avatar-3 { background: linear-gradient(135deg, #f8c097, #1a5b8f); }
+    .avatar-4 { background: linear-gradient(135deg, #ffe0e4, #188a9b); }
+    .avatar-more { background: #d9e4ff; color: #0056b7; font-size: 12px; font-style: normal; font-weight: 800; }
+
+    .discover-offer { position: relative; }
+    .discover-offer::after { content: ""; position: absolute; right: 10px; bottom: -135px; width: 420px; height: 420px; border-radius: 999px; background: radial-gradient(circle, rgba(223,32,40,0.22) 0 18%, rgba(223,32,40,0.1) 34%, transparent 66%); filter: blur(5px); }
+
+    .review-card { border: 1px solid #dbe2ec; border-radius: 8px; background: #fff; padding: 28px; box-shadow: 0 16px 46px rgba(8,33,63,0.08); }
+    .review-avatar { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; color: #fff; font-size: 13px; font-weight: 900; text-transform: uppercase; }
+
+    .safety-avatar { display: grid; width: 30px; height: 30px; margin-right: -8px; place-items: center; border: 2px solid #fff; border-radius: 999px; background: linear-gradient(135deg, #d9f6ff, #4cb6ca); }
+    .safety-avatar-2 { background: linear-gradient(135deg, #ffe1d5, #de846f); }
+    .safety-avatar-3 { background: linear-gradient(135deg, #d9edff, #5b8bd9); }
+    .safety-avatar-more { background: #074870; color: #fff; font-size: 10px; font-style: normal; font-weight: 800; }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: ""; position: absolute; top: 50%; right: 23px; display: block; width: 23px; height: 23px; border-radius: 999px; background-color: #f2f5f9; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230056b7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>"); background-repeat: no-repeat; background-position: center; background-size: 10px 10px; transform: translateY(-50%) rotate(0deg); transition: transform 0.2s ease-in-out; }
+    .faq-item[open] summary::after { transform: translateY(-50%) rotate(180deg); }
+
+    .contact-card-gradient { background: linear-gradient(120deg, #2b568f 0%, #315c97 60%, #2d5893 100%); display: flex; flex-direction: column; justify-content: center; }
+    .contact-icon { display: grid; width: 36px; height: 36px; flex: 0 0 auto; place-items: center; border-radius: 11px; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.94); font-size: 17px; }
+
+    .mobile-sticky-cta { display: none; }
+
+    /* ---- Custom two-column hero (matches the provided screenshot) ---- */
+    .di-hero { background: radial-gradient(circle at 92% 0%, rgba(223,32,40,0.14), transparent 30%), linear-gradient(180deg, #f3f7fc 0%, #eef4fb 100%); }
+    .di-hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); align-items: center; gap: 30px; }
+    .di-hero-grid > div { min-width: 0; }
+    .di-hero-img-wrap img { max-width: 100%; height: auto; }
+    .di-price { display: inline-block; min-width: 180px; background: #0055b718; border: 1px dashed #4f64a6; border-radius: 8px; padding: 10px 28px; font-size: 30px; font-weight: 800; line-height: 1; color: #362997; box-shadow: 0 10px 24px rgba(0,86,183,0.05); }
+    .di-badge { display: inline-flex; align-items: center; gap: 10px; min-height: 42px; border: 1px solid #e4e7f2; border-radius: 8px; background: #fff; padding: 8px 16px; font-size: 15px; font-weight: 600; color: #242424; box-shadow: 0 6px 16px rgba(8,33,63,0.05); }
+    .di-hero-cta { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 28px; border-radius: 10px; background: #362997; color: #fff; font-size: 17px; font-weight: 700; box-shadow: 0 10px 22px rgba(54,41,151,0.28); cursor: pointer; }
+    .di-hero-cta:hover { background: #2c2080; }
+    @media (max-width: 860px) {
+      .di-hero-grid { grid-template-columns: minmax(0, 1fr); text-align: center; }
+      .di-hero-badges { justify-content: center; }
+      .di-hero-img-wrap { order: -1; }
+      .di-hero h1 { font-size: 32px; line-height: 1.06; }
+      .di-hero h1 span { display: block; }
+      .di-hero-img-wrap img { max-width: 320px; }
+    }
+
+    /* ---- Desktop sticky offer bar (matches FAQ screenshot) ---- */
+    .desktop-sticky-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: center; gap: 26px; background: #ed1c24; padding: 14px 24px; box-shadow: 0 -4px 18px rgba(0,0,0,0.14); }
+    .desktop-sticky-bar p { margin: 0; color: #fff; font-size: 22px; font-weight: 800; }
+    .desktop-sticky-bar a { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 34px; border-radius: 8px; background: #fff; color: #c9141e; font-size: 16px; font-weight: 700; }
+    @media (max-width: 900px) { .desktop-sticky-bar { display: none; } }
+
+    /* ---- globals.css responsive block (<= 900px) ---- */
+    @media (max-width: 900px) {
+      .benefits-surface > div { width: min(100% - 32px, 1280px); }
+      .benefits-surface .grid.grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .patient-stories-panel { width: min(100% - 32px, 1280px); padding: 32px 24px 30px; border-radius: 28px; }
+      .implant-options { width: min(100% - 32px, 1180px); }
+      .discover-offer { width: 100vw; min-height: 0; grid-template-columns: 1fr; gap: 24px; margin-left: calc(50% - 50vw); background: #005cbf; padding: 45px 17px 43px; }
+      .transformation-section > div { width: min(100% - 32px, 1280px); }
+      .testimonials-section > div { width: min(100% - 32px, 1280px); }
+      .safety-section > div { width: min(100% - 32px, 1088px); }
+      .faq-section > div { width: min(100% - 42px, 390px); grid-template-columns: 1fr; gap: 26px; }
+      .faq-section aside { display: block; width: 100%; min-height: 0; margin-top: 0; border-radius: 18px; padding: 27px 25px 24px; box-shadow: none; }
+      .faq-section { padding: 38px 0 24px; }
+      .faq-section h2 { max-width: 280px; margin: 0 auto 28px; font-size: 18px; line-height: 1.12; color: #1f2937; }
+      .faq-section h2 span { display: inline; color: #ed1c24; font-weight: 600; }
+      .faq-item summary { padding: 15px 28px 15px 0; font-size: 12px; color: #0056b7; }
+      .faq-item summary::after { right: 0; }
+      .faq-item p { max-width: 100%; padding-bottom: 16px; font-size: 10px; line-height: 1.55; }
+      .mobile-sticky-cta { position: fixed; z-index: 50; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 43px; gap: 10px; border-top: 1px solid rgba(8,33,63,0.08); background: #fff; padding: 11px 14px; }
+      .mobile-sticky-cta a:first-child { display: flex; height: 44px; align-items: center; justify-content: center; border-radius: 8px; background: #ED1C2A; color: #fff; font-size: 16px; font-weight: 500; }
+      .mobile-sticky-cta a:last-child { display: grid; height: 43px; place-items: center; border-radius: 8px; background: #20c768; color: #fff; font-size: 17px; text-decoration: none; }
+    }
+
+    @media (max-width: 1100px) {
+      .consultation-panel { grid-template-columns: 1fr !important; gap: 34px; padding: 46px 44px; }
+      .consultation-panel > div:first-child { max-width: 680px; justify-self: center; text-align: center; }
+      .consultation-panel > div:first-child p { max-width: 540px; margin-right: auto; margin-left: auto; }
+      .consultation-panel .consultation-form { width: min(100%, 720px); justify-self: center; }
+    }
+
+    /* ---- globals.css responsive block (<= 520px) key parts ---- */
+    @media (max-width: 520px) {
+      .stats-section { padding: 12px 0 12px; }
+      .stats-section > div { width: min(100% - 18px, 420px); }
+      .stats-section h2 { margin-bottom: 9px; font-size: 25px; line-height: 1.1; }
+      .stats-section .grid.grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+      .stats-section article { min-height: 83px; grid-template-columns: 1fr; justify-items: center; align-content: center; gap: 5px; border-radius: 8px; padding: 10px 6px; text-align: center; }
+      .stats-section article img { width: 22px; height: 22px; }
+      .stats-section article strong { font-size: 22px !important; line-height: 1.1; }
+      .stats-section article span { font-size: 12px !important; line-height: 1.2; margin-top: 4px; white-space: normal !important; }
+      .desktop-form-grid { display: none; }
+      .mobile-form-grid { display: grid; gap: 9px; }
+      .consult-form-title { display: block; margin-bottom: 24px; text-align: center; font-size: 25px; font-weight: 400; line-height: 1.1; color: #0056b7; }
+      .consult-form-title span { font-size: 25px; color: #ed1c24; font-weight: 800; }
+      .consult-input { height: 44px; border: 0; border-radius: 8px; padding: 0 15px; font-size: 13px; box-shadow: 0 1px 2px rgba(8,33,63,0.06); }
+      .consult-submit { height: 44px; font-size: 16px; font-weight: 500; }
+      .consult-submit span { font-size: 20px; }
+      .benefits-surface > div { width: min(100% - 20px, 420px); }
+      .benefits-surface .grid.grid-cols-3 { grid-template-columns: 1fr; gap: 8px; }
+      .desktop-benefit-cta { display: none; }
+      .mobile-benefit-cta { display: inline; }
+      .implant-options { width: min(100% - 34px, 420px); }
+      .implant-options .grid.grid-cols-2 { grid-template-columns: 1fr; }
+      .patient-stories-panel { width: min(100% - 36px, 420px); border: 0; border-radius: 0; background: transparent; padding: 32px 0 28px; box-shadow: none; }
+    }
+
+    /* Patient-stories / transformation mobile: show one card */
+    @media (max-width: 900px) {
+      .di-carousel-track > * { flex: 0 0 100% !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9RNL2H8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <main class="min-h-screen bg-white">
+
+    <!-- ============ HERO (custom two-column) ============ -->
+    <header class="di-hero relative overflow-hidden">
+      <div class="mx-auto w-[min(1200px,calc(100%-72px))] py-[56px]">
+        <div class="di-hero-grid">
+          <div>
+            <h1 class="m-0 text-[clamp(34px,5vw,52px)] font-extrabold leading-[1.05]">
+              <span class="text-heroBlue" style="color:#362997">Advanced Dental </span>
+              <span class="text-heroRed">Implant Solution</span>
+            </h1>
+            <p class="mt-[14px] max-w-[520px] text-[16px] leading-[1.35] text-heroText">
+              Restore missing teeth with durable, natural-looking dental implants planned by experienced doctors. Book a free consultation and get personalized treatment and cost guidance.
+            </p>
+
+            <div class="mt-[22px]">
+              <span class="di-price">₹10,999<sup style="font-size:16px">*</sup></span>
+            </div>
+
+            <div class="di-hero-badges mt-[18px] flex flex-wrap gap-[12px]">
+              <span class="di-badge"><img class="h-[18px] w-[18px] object-contain" src="assets/hero-badges/icon.svg" alt="" aria-hidden="true" /> No Cost EMI</span>
+              <span class="di-badge"><img class="h-[18px] w-[18px] object-contain" src="assets/hero-badges/container.svg" alt="" aria-hidden="true" /> 20 Year Warranty</span>
+              <span class="di-badge"><img class="h-[18px] w-[18px] object-contain" src="assets/hero-badges/container.svg" alt="" aria-hidden="true" /> 3L+ Implants Placed</span>
+            </div>
+
+            <div class="mt-[26px]">
+              <a href="#modal-form" class="di-hero-cta">
+                <span>📅</span> Book an Appointment
+              </a>
+            </div>
+          </div>
+
+          <div class="di-hero-img-wrap flex justify-center">
+            <img src="assets/hero-tooth.png" alt="Dental implant with natural tooth-coloured crown" class="w-full max-w-[520px] h-auto object-contain" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ STATS + CONSULTATION ============ -->
+    <section class="stats-section bg-white pb-[40px] pt-[75px]">
+      <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
+        <h2 class="mb-[40px] text-center text-[28px] max-md:!text-[25px] font-normal leading-none tracking-normal text-heroBlue">
+          Trusted By <span class="font-extrabold text-heroRed">Thousand Of Smile</span>
+        </h2>
+
+        <div class="grid grid-cols-4 gap-[15px]">
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+            <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/successful-implants.svg" alt="" aria-hidden="true" />
+            <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">3,00,000+</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Successful Implants</span></div>
+          </article>
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+            <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/happy-patients.svg" alt="" aria-hidden="true" />
+            <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">5,00,000+</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Happy Patients</span></div>
+          </article>
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+            <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/experience.svg" alt="" aria-hidden="true" />
+            <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">20+ Year</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Industry-leading</span></div>
+          </article>
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+            <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/google-reviews.svg" alt="" aria-hidden="true" />
+            <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">25,000+</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Google Reviews</span></div>
+          </article>
+        </div>
+
+        <div class="consultation-panel mt-[62px] grid min-h-[356px] grid-cols-[500px_minmax(0,1fr)] items-center gap-[48px] rounded-[25px] border border-[#cfd4e8] bg-[#f0f2fb] px-[72px] py-[58px] shadow-[0_1px_5px_rgba(8,33,63,0.18)]">
+          <div>
+            <span class="relative inline-flex h-[24px] items-center rounded-full bg-white py-0 pl-[30px] pr-[14px] text-[10px] font-extrabold uppercase tracking-[1.5px] text-[#5e6269] before:absolute before:left-[12px] before:h-[8px] before:w-[8px] before:rounded-full before:bg-[#8b3a06] before:content-['']">
+              Live Availability
+            </span>
+            <h2 class="mt-[24px] text-[42px] max-md:!text-[25px] font-normal leading-[0.97] text-[#0056b7]">
+              Unlock <span class="font-extrabold text-heroRed">Expert Guidance,</span><br />
+              Book Your <span class="font-extrabold text-heroRed">Free</span><br />
+              <span class="font-extrabold text-heroRed">Consultation</span>
+            </h2>
+            <p class="mt-[25px] max-w-[337px] text-[16px] leading-[1.12] text-[#66717f]">
+              Connect with our executive consultation team. Leave your details below and an expert from our team will reach out within 24 hours.
+            </p>
+          </div>
+
+          <!-- Consultation form -->
+          <form class="consultation-form" id="consultation" novalidate>
+            <h2 class="consult-form-title">Book Your <span>Free Consultation</span></h2>
+            <div class="desktop-form-grid">
+              <input class="consult-input desktop-half" id="desktop-first-name" name="desktopFirstName" placeholder="First Name" autocomplete="given-name" type="text" />
+              <input class="consult-input desktop-half" id="desktop-last-name" name="desktopLastName" placeholder="Last Name" autocomplete="family-name" type="text" />
+              <input class="consult-input" id="desktop-email" name="desktopEmail" placeholder="Email" autocomplete="email" type="email" />
+              <input class="consult-input" id="desktop-phone" name="desktopPhoneNumber" placeholder="Phone Number" inputmode="tel" autocomplete="tel" type="tel" maxlength="10" />
+              <input class="consult-input" id="desktop-pin" name="desktopPinCode" placeholder="PIN Code" inputmode="numeric" autocomplete="postal-code" type="text" maxlength="6" />
+            </div>
+            <div class="mobile-form-grid">
+              <input class="consult-input" id="mobile-first-name" name="mobileFirstName" placeholder="First Name" type="text" />
+              <input class="consult-input" id="mobile-last-name" name="mobileLastName" placeholder="Last Name" type="text" />
+              <input class="consult-input" id="mobile-email" name="mobileEmail" placeholder="Email" autocomplete="email" type="email" />
+              <input class="consult-input" id="mobile-phone" name="mobilePhoneNumber" placeholder="Phone Number" inputmode="tel" autocomplete="tel" type="tel" maxlength="10" />
+              <input class="consult-input" id="mobile-pin" name="mobilePinCode" placeholder="Pincode" inputmode="numeric" autocomplete="postal-code" type="text" maxlength="6" />
+            </div>
+            <p id="consultation-form-status" class="m-0 hidden text-[12px] font-bold text-heroRed"></p>
+            <button class="consult-submit" type="submit">Book an Appointment <span>&rarr;</span></button>
+          </form>
+        </div>
+
+        <div class="mt-[61px] grid grid-cols-1 md:grid-cols-2 gap-[14px]">
+          <div class="relative aspect-[455/237] overflow-hidden rounded-[18px] bg-[#eef1f5]">
+            <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/9N7OFPJaj94" title="Dental implants video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <article class="flex min-h-[237px] flex-col justify-center rounded-[18px] bg-[#f6f3f4] px-[24px] py-[22px]">
+            <h2 class="mb-[15px] text-[25px] font-normal leading-[1.08] text-[#0056b7]">What Are <span class="font-extrabold text-heroRed">Dental Implants?</span></h2>
+            <p class="m-0 max-w-[468px] text-[16px] leading-[1.2] text-[#566166]">
+              Dental Implants are titanium posts placed into the jawbone to replace missing teeth. These implants serve as a foundation for crowns, bridges, or dentures, restoring natural tooth function and appearance. They offer a long-lasting solution that prevents bone loss, supports jaw structure, and provides a stable, comfortable alternative to traditional dentures or bridges.
+            </p>
+          </article>
+        </div>
+
+        <section class="relative mt-[60px] flex min-h-[264px] items-center justify-center overflow-hidden rounded-br-[27px] rounded-tl-[27px] bg-[#005cbf] px-[72px] py-[56px] text-center text-white max-[900px]:px-[36px]">
+          <span class="absolute left-[-104px] top-[-28px] h-[138px] w-[138px] rounded-full bg-white" aria-hidden="true"></span>
+          <span class="absolute bottom-[-52px] right-[-69px] h-[163px] w-[163px] rounded-full bg-white" aria-hidden="true"></span>
+          <div class="relative z-10">
+            <h2 class="m-0 text-[30px] md:text-[40px] font-normal leading-[1.08] text-white">Get Your <span class="font-extrabold">Personalized Cost</span> Estimate Now!</h2>
+            <a class="mx-auto mt-[17px] flex h-[49px] w-[318px] max-w-full items-center justify-center rounded-[10px] bg-white text-[18px] font-semibold text-[#004b9c] shadow-[0_4px_6px_rgba(8,33,63,0.22)]" href="#modal-form">Get Expert Guidance</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="benefits-surface bg-[#fbfbff] pb-[56px] pt-[43px]">
+      <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
+        <h2 class="mx-auto mb-[25px] max-w-[570px] text-center text-[28px] max-md:!text-[25px] font-normal leading-[1.08] text-[#0056b7]">
+          <span class="font-extrabold text-heroRed">Smile With Confidence :</span> Key Benefits of Dental Implants
+        </h2>
+        <div class="grid grid-cols-3 gap-x-[16px] gap-y-[17px]">
+          <article class="min-h-[178px] rounded-[22px] border border-[#e5e8f0] bg-white px-[22px] py-[22px] shadow-[0_12px_34px_rgba(8,33,63,0.04)]">
+            <span class="mb-[19px] flex h-[40px] w-[40px] items-center justify-center rounded-[10px] bg-[#fee9ec] text-heroRed" aria-hidden="true"><img class="p-2" src="assets/benefits/icon1.svg" alt="" /></span>
+            <div class="benefits-text-wrapper flex flex-col min-w-0"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Natural Look and Feel</h3><p class="m-0 max-w-[245px] text-[16px] max-md:text-[10px] font-normal leading-[1.18] text-[#566166]">Regain the confidence of a natural smile with teeth that look, feel, and function like your own.</p></div>
+          </article>
+          <article class="min-h-[178px] rounded-[22px] border border-[#e5e8f0] bg-white px-[22px] py-[22px] shadow-[0_12px_34px_rgba(8,33,63,0.04)]">
+            <span class="mb-[19px] flex h-[40px] w-[40px] items-center justify-center rounded-[10px] bg-[#fee9ec] text-heroRed" aria-hidden="true"><img class="p-2" src="assets/benefits/permanent-solution.svg" alt="" /></span>
+            <div class="benefits-text-wrapper flex flex-col min-w-0"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Permanent Solution</h3><p class="m-0 max-w-[245px] text-[16px] max-md:text-[10px] font-normal leading-[1.18] text-[#566166]">Forget removable dentures! All-on-4 implants offer a secure, lasting fix for missing teeth.</p></div>
+          </article>
+          <article class="min-h-[178px] rounded-[22px] border border-[#e5e8f0] bg-white px-[22px] py-[22px] shadow-[0_12px_34px_rgba(8,33,63,0.04)]">
+            <span class="mb-[19px] flex h-[40px] w-[40px] items-center justify-center rounded-[10px] bg-[#eeeeff] text-[#4844bd]" aria-hidden="true"><img class="p-2" src="assets/benefits/icon5.svg" alt="" /></span>
+            <div class="benefits-text-wrapper flex flex-col min-w-0"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Faster Results</h3><p class="m-0 max-w-[245px] text-[16px] max-md:text-[10px] font-normal leading-[1.18] text-[#566166]">Complete your smile in as little as one day with our streamlined All-on-4 process.</p></div>
+          </article>
+          <article class="min-h-[178px] rounded-[22px] border border-[#e5e8f0] bg-white px-[22px] py-[22px] shadow-[0_12px_34px_rgba(8,33,63,0.04)]">
+            <span class="mb-[19px] flex h-[40px] w-[40px] items-center justify-center rounded-[10px] bg-[#eeeeff] text-[#4844bd]" aria-hidden="true"><img class="p-2" src="assets/benefits/icon2.svg" alt="" /></span>
+            <div class="benefits-text-wrapper flex flex-col min-w-0"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Cost Effective</h3><p class="m-0 max-w-[245px] text-[16px] max-md:text-[10px] font-normal leading-[1.18] text-[#566166]">Achieve a full arch using just four implants, minimizing cost while maximizing results.</p></div>
+          </article>
+          <article class="min-h-[178px] rounded-[22px] border border-[#e5e8f0] bg-white px-[22px] py-[22px] shadow-[0_12px_34px_rgba(8,33,63,0.04)]">
+            <span class="mb-[19px] flex h-[40px] w-[40px] items-center justify-center rounded-[10px] bg-[#fee9ec] text-heroRed" aria-hidden="true"><img class="p-2" src="assets/benefits/icon4.svg" alt="" /></span>
+            <div class="benefits-text-wrapper flex flex-col min-w-0"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Improved Oral Health</h3><p class="m-0 max-w-[245px] text-[16px] max-md:text-[10px] font-normal leading-[1.18] text-[#566166]">Preserve your jawbone density and facial structure while maintaining overall oral health.</p></div>
+          </article>
+          <article class="min-h-[178px] rounded-[22px] border border-[#e5e8f0] bg-white px-[22px] py-[22px] shadow-[0_12px_34px_rgba(8,33,63,0.04)]">
+            <span class="mb-[19px] flex h-[40px] w-[40px] items-center justify-center rounded-[10px] bg-[#eeeeff] text-[#4844bd]" aria-hidden="true"><img class="p-2" src="assets/benefits/icon3.svg" alt="" /></span>
+            <div class="benefits-text-wrapper flex flex-col min-w-0"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Enhanced Comfort</h3><p class="m-0 max-w-[245px] text-[16px] max-md:text-[10px] font-normal leading-[1.18] text-[#566166]">Enjoy stability and comfort with implants designed to stay secure-no slipping or discomfort!</p></div>
+          </article>
+        </div>
+        <a class="mx-auto mt-[38px] flex h-[50px] w-[334px] max-w-full items-center justify-center gap-[8px] rounded-[9px] bg-[#ED1C2A] text-[18px] font-semibold text-white shadow-[0_4px_7px_rgba(8,33,63,0.28)]" href="#modal-form">
+          <span class="desktop-benefit-cta">Start Your Dental Journey <span class="ml-2">&rarr;</span></span>
+          <span class="mobile-benefit-cta">Book an Appointment <span class="ml-2 text-xl">&rarr;</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PATIENT STORIES ============ -->
+    <section class="bg-white pb-[34px] pt-[15px]">
+      <div class="patient-stories-panel mx-auto w-[min(1280px,calc(100%_-_72px))] rounded-[40px] border border-[#dfe4ea] bg-white px-[60px] pb-[36px] pt-[41px] text-center shadow-[0_18px_42px_rgba(8,33,63,0.09)]">
+        <h2 class="mb-[19px] text-[28px] max-md:text-[25px] font-normal leading-[1.08] tracking-[1px] text-[#0056b7]">
+          <span class="font-extrabold text-heroRed">PATIENT STORIES:</span> SMILES THAT SPEAK
+        </h2>
+        <div class="relative">
+          <div class="di-carousel-track flex gap-[24px] overflow-x-auto no-scrollbar scroll-smooth" id="stories-track">
+            <!-- story cards injected by JS -->
+          </div>
+          <div class="relative mt-[23px] min-h-[47px]">
+            <a class="mx-auto flex h-[47px] w-[334px] max-w-full items-center justify-center gap-[9px] rounded-[9px] bg-heroRed text-[17px] font-semibold text-white shadow-[0_4px_7px_rgba(8,33,63,0.28)]" href="#modal-form">Hear More From Our Patient <span class="text-[22px] font-normal leading-none">&rarr;</span></a>
+            <div class="carousel-controls">
+              <button type="button" aria-label="Previous item" onclick="scrollStories(-1)">&larr;</button>
+              <button type="button" aria-label="Next item" onclick="scrollStories(1)">&rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPLANT OPTIONS ============ -->
+    <section class="bg-white pb-[42px] pt-[14px]">
+      <div class="implant-options mx-auto w-[min(1180px,calc(100%_-_72px))]">
+        <h2 class="mb-[26px] text-center text-[25px] max-md:text-[25px] font-normal leading-[1.08] text-[#0056b7]">Your Guide To <span class="font-semibold text-heroRed">Dental Implant Options</span></h2>
+        <div class="grid grid-cols-2 gap-x-[17px] gap-y-[18px]" id="implant-options-carousel">
+          <article class="overflow-hidden" data-carousel-item>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-room.svg" alt="Single Tooth Implant dental implant option" /></div>
+            <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Single Tooth Implant</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">Designed to replace a single missing tooth, this implant consists of a titanium post placed in the jawbone, topped with a crown that blends seamlessly with natural teeth.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
+          </article>
+          <article class="overflow-hidden" data-carousel-item>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-scan.svg" alt="Full Mouth Restoration dental implant option" /></div>
+            <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Full Mouth Restoration</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">A comprehensive solution for patients with extensive tooth loss or damage, this approach uses multiple implants to support a full set of prosthetic teeth, restoring aesthetics.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
+          </article>
+          <article class="overflow-hidden is-active" data-carousel-item>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-smile.svg" alt="All-on-4 Implants dental implant option" /></div>
+            <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">All-on-4 Implants</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">A revolutionary option for those needing a full-arch replacement, using only four implants to support an entire set of teeth for a cost-effective and durable solution.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
+          </article>
+          <article class="overflow-hidden" data-carousel-item>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-chair.svg" alt="All-on-6 Implants dental implant option" /></div>
+            <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">All-on-6 Implants</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">Designed to securely anchor dentures using implants, providing superior stability, comfort, and improved chewing ability compared to traditional dentures.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
+          </article>
+        </div>
+        <div class="implant-mobile-nav">
+          <div class="carousel-controls" style="position:static;justify-content:center;gap:14px;margin-top:12px">
+            <button type="button" aria-label="Previous item" onclick="cycleImplant(-1)">&larr;</button>
+            <button type="button" aria-label="Next item" onclick="cycleImplant(1)">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DISCOVER OFFER (desktop) ============ -->
+    <section class="hidden md:block bg-white pb-[57px] pt-[12px]">
+      <div class="discover-offer mx-auto grid min-h-[619px] w-[min(1280px,calc(100%_-_116px))] grid-cols-[minmax(500px,0.82fr)_410px] items-center justify-center gap-[42px] overflow-hidden bg-[#f4f7fb] px-[63px] py-[38px]">
+        <div>
+          <h2 class="m-0 text-[52px] max-md:text-[25px] font-normal leading-[1.12] text-[#0056b7]">Discover The<br /><span class="font-extrabold text-[#bd101b]">Smile</span> You<br /><span class="font-extrabold text-[#bd101b]">Deserve!</span></h2>
+          <p class="mt-[20px] max-w-[474px] text-[16px] leading-[1.2] text-[#566166]">Explore how Dental implants can transform your confidence with a natural, permanent solution.</p>
+          <div class="mt-[29px] grid min-h-[155px] max-w-[363px] grid-cols-[96px_1fr] items-center gap-[27px] rounded-[8px] border border-[#e2e6ee] bg-white px-[22px] py-[20px] shadow-[0_16px_36px_rgba(8,33,63,0.08)]">
+            <div><strong class="block text-[25px] font-extrabold leading-none text-[#0056b7]">2 lac+</strong><span class="mt-[8px] block text-[10px] font-extrabold uppercase leading-[1.2] tracking-[3.5px] text-[#2e3340]">Happy Patients</span></div>
+            <div>
+              <div class="mb-[12px] flex items-center" aria-hidden="true"><span class="avatar avatar-1"></span><span class="avatar avatar-2"></span><span class="avatar avatar-3"></span><span class="avatar avatar-4"></span><em class="avatar avatar-more">+2k</em></div>
+              <p class="m-0 text-[12px] font-normal leading-[1.35] text-[#3f4550]">Happy Patients Have Already Transformed Their Smiles with AVMSmiles Revolutionary Dental Implants. Join the Community Today!</p>
+            </div>
+          </div>
+        </div>
+        <article class="offer-card relative z-10 rounded-[16px] border-t-[6px] border-[#c9141e] bg-white px-[31px] pb-[36px] pt-[37px] text-center shadow-[0_24px_58px_rgba(8,33,63,0.15)]">
+          <h3 class="m-0 text-[18px] font-extrabold leading-[1.1] text-[#1d2025]">48 Hours</h3>
+          <p class="m-0 mt-[4px] text-[17px] font-extrabold leading-[1.12] text-[#0056b7]">Hurry, limited slots remaining</p>
+          <div class="mt-[39px] grid grid-cols-4 justify-center gap-[11px]">
+            <div><strong class="grid h-[57px] place-items-center rounded-[7px] bg-[#0b4fad] px-[14px] text-[22px] font-extrabold leading-none text-white shadow-[0_7px_10px_rgba(8,33,63,0.22)]">00</strong><span class="mt-[9px] block text-[8px] font-normal uppercase leading-none tracking-[3px] text-[#333]">Days</span></div>
+            <div><strong class="grid h-[57px] place-items-center rounded-[7px] bg-[#0b4fad] px-[14px] text-[22px] font-extrabold leading-none text-white shadow-[0_7px_10px_rgba(8,33,63,0.22)]">14</strong><span class="mt-[9px] block text-[8px] font-normal uppercase leading-none tracking-[3px] text-[#333]">Hours</span></div>
+            <div><strong class="grid h-[57px] place-items-center rounded-[7px] bg-[#0b4fad] px-[14px] text-[22px] font-extrabold leading-none text-white shadow-[0_7px_10px_rgba(8,33,63,0.22)]">47</strong><span class="mt-[9px] block text-[8px] font-normal uppercase leading-none tracking-[3px] text-[#333]">Mins</span></div>
+            <div><strong class="grid h-[57px] place-items-center rounded-[7px] bg-[#0b4fad] px-[14px] text-[22px] font-extrabold leading-none text-white shadow-[0_7px_10px_rgba(8,33,63,0.22)]">15</strong><span class="mt-[9px] block text-[8px] font-normal uppercase leading-none tracking-[3px] text-[#333]">Secs</span></div>
+          </div>
+          <p class="mt-[14px] text-[14px] font-extrabold leading-none text-[#0056b7]">The time is ending soon - act up!</p>
+          <div class="mt-[39px] rounded-[12px] border border-[#e0e5ed] bg-[#f2f5f8] px-[15px] py-[18px] text-left">
+            <h4 class="m-0 max-w-[286px] text-[17px] font-semibold leading-[1.05] text-[#c9141e]">Free Consultation &amp; X-ray &mdash; Dental Implants Starting at &#8377;10,999*</h4>
+            <p class="m-0 mt-[11px] text-[12px] font-normal leading-[1.38] text-[#4d5663]">Take the first step toward a confident and beautiful smile with our exclusive 48-hour offer. Don't miss the chance to get a free consultation and X-rays to explore how dental implants can change your life.</p>
+          </div>
+          <a class="mt-[28px] flex h-[45px] w-full items-center justify-center gap-[9px] rounded-[9px] bg-heroRed text-[16px] font-semibold text-white shadow-[0_5px_6px_rgba(158,0,10,0.22)]" href="#modal-form">Book an Appointment <span class="text-[22px] font-normal leading-none">&rarr;</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TRANSFORMATION ============ -->
+    <section class="transformation-section bg-[#f7f9fc] pb-[31px] pt-[31px] overflow-hidden">
+      <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
+        <h2 class="mb-[19px] text-center text-[24px] max-md:text-[25px] font-normal leading-[1.15] text-[#0056b7]"><span class="font-semibold text-heroRed">See the Transformation:</span> Real Smiles, Real Results!</h2>
+        <div class="relative">
+          <div class="di-carousel-track flex gap-[24px] overflow-x-auto no-scrollbar scroll-smooth py-4" id="transform-track">
+            <!-- injected by JS -->
+          </div>
+          <div class="relative mt-[19px] min-h-[44px] text-center">
+            <a class="mx-auto flex h-[44px] w-[253px] max-w-full items-center justify-center gap-[9px] rounded-[8px] bg-heroRed text-[15px] font-extrabold text-white shadow-[0_4px_7px_rgba(8,33,63,0.28)]" href="#modal-form">Book Free Consultation <span class="text-[20px] font-normal leading-none">&rarr;</span></a>
+            <div class="carousel-controls">
+              <button type="button" aria-label="Previous image" onclick="scrollTransform(-1)">&larr;</button>
+              <button type="button" aria-label="Next image" onclick="scrollTransform(1)">&rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS (desktop) ============ -->
+    <section class="testimonials-section overflow-hidden bg-white pb-[48px] pt-[55px]">
+      <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
+        <h2 class="mb-[22px] text-center text-[22px] max-md:text-[25px] font-normal uppercase leading-[1.1] tracking-[1px] text-[#0056b7]">Hear from our <span class="font-semibold text-heroRed">Happy Patients</span></h2>
+        <div class="hidden md:grid grid-cols-[1.2fr_0.9fr_1.05fr] items-start gap-[18px]">
+          <div class="grid gap-[18px]">
+            <blockquote class="review-card min-h-[238px]">
+              <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
+              <p class="m-0 text-[18px] font-semibold leading-[1.35] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
+              <div class="mt-[28px] h-px bg-[#edf0f4]"></div>
+              <div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div>
+            </blockquote>
+            <blockquote class="review-card min-h-[212px]">
+              <span class="review-avatar mb-[17px] bg-[#0b777f]">S</span>
+              <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Got my Invisalign treatment done with Dr. Rathi. Took longer than usual because I was stuck in a different place because of the pandemic. The staff was very helpful in coordinating with me from a different city, even got my retainer set couriered remotely. Excellent service and very happy with the results from Dr. Rathi!"</p>
+              <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+              <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Shriyani Datta</strong>
+              <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+            </blockquote>
+          </div>
+          <div class="grid gap-[18px]">
+            <blockquote class="review-card min-h-[212px]">
+              <span class="review-avatar mb-[17px] bg-[#df3438]">P</span>
+              <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Satisfied with my treatment."</p>
+              <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+              <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Pramila Tandkar</strong>
+              <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+            </blockquote>
+            <blockquote class="review-card min-h-[212px]">
+              <span class="review-avatar mb-[17px] bg-[#3499db]">T</span>
+              <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Very professional and completed my dental implant and aligners treatment without much pain."</p>
+              <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+              <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Trevor Baretto</strong>
+              <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+            </blockquote>
+          </div>
+          <div class="grid gap-[18px]">
+            <blockquote class="review-card min-h-[238px]">
+              <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
+              <p class="m-0 text-[18px] font-semibold leading-[1.35] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
+              <div class="mt-[28px] h-px bg-[#edf0f4]"></div>
+              <div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div>
+            </blockquote>
+            <div class="rating-card grid min-h-[154px] grid-cols-2 gap-[12px] rounded-[10px] border border-[#dbe2ec] bg-[#f5f7fb] p-[20px] text-center shadow-[0_16px_46px_rgba(8,33,63,0.08)]">
+              <div class="grid min-h-[63px] place-items-center rounded-[8px] bg-white"><strong class="block text-[24px] font-extrabold leading-none text-[#0056b7]">4.9/5</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">Google Rating</span></div>
+              <div class="grid min-h-[63px] place-items-center rounded-[8px] bg-white"><strong class="block text-[24px] font-extrabold leading-none text-[#0056b7]">15k+</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">Implants Done</span></div>
+              <p class="col-span-2 m-0 mt-[3px] text-[11px] font-normal leading-[1.45] text-[#425063]">Our commitment to clinical excellence is reflected in the smiles of our patients across the country.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile testimonial slider -->
+        <div class="grid gap-[18px] md:hidden">
+          <div class="review-card min-h-[238px]" id="mobile-testimonial"></div>
+          <div class="flex items-center justify-center gap-[11px]">
+            <button type="button" onclick="cycleTestimonial(-1)" class="grid h-[34px] w-[34px] place-items-center rounded-full border border-[#d6d8df] bg-white text-[20px] font-bold text-[#161a22]" aria-label="Previous testimonial">&larr;</button>
+            <button type="button" onclick="cycleTestimonial(1)" class="grid h-[34px] w-[34px] place-items-center rounded-full bg-heroRed text-[20px] font-bold leading-none text-white" aria-label="Next testimonial">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SAFETY (desktop) ============ -->
+    <section class="hidden md:block safety-section bg-white pb-[65px] pt-[30px]">
+      <div class="mx-auto w-[min(1088px,calc(100%_-_72px))]">
+        <h2 class="mb-[28px] text-center text-[25px] max-md:text-[25px] font-normal leading-[1.1] text-[#003f8f]">We Ensure the <span class="font-semibold text-heroRed">Safety</span> of Our <span class="font-semibold text-heroRed">Patients</span></h2>
+        <div class="grid grid-cols-[0.69fr_0.7fr_1fr] gap-[20px]">
+          <article class="relative col-span-2 min-h-[302px] overflow-hidden rounded-[8px] border border-[#d8dfe8]">
+            <img class="absolute inset-0 h-full w-full object-cover" src="assets/safety/gradient.svg" alt="Dental staff following infection control protocol" />
+            <div class="absolute inset-x-[27px] bottom-[23px] text-white">
+              <img class="mb-[11px] h-[40px] w-[32px] object-contain" src="assets/safety/trained-icon.svg" alt="" aria-hidden="true" />
+              <h3 class="mb-[10px] text-[20px] font-extrabold leading-[1.1] text-white">Comprehensive Infection Control</h3>
+              <p class="m-0 max-w-[520px] text-[11px] font-normal leading-[1.35] text-white/90">Our multi-layered defense protocols exceed OSHA and CDC guidelines, ensuring a sterile environment for every procedure.</p>
+            </div>
+          </article>
+          <article class="min-h-[302px] flex flex-col rounded-[8px] border border-[#d8dfe8] bg-[#1453ad] px-[27px] py-[10px] text-white">
+            <img class="mb-[12px] h-[40px] w-[32px] object-contain" src="assets/safety/trained-icon.svg" alt="" aria-hidden="true" />
+            <h3 class="mb-[16px] mt-[4px] text-[19px] font-extrabold leading-[1.15] text-white">Trained and Certified<br />Staff</h3>
+            <p class="m-0 max-w-[271px] text-[12px] font-normal leading-[1.35] text-white/90">Our medical team undergoes continuous training in advanced biosafety and emergency response protocols.</p>
+            <div class="mt-[25px] flex items-center" aria-hidden="true"><span class="safety-avatar safety-avatar-1"></span><span class="safety-avatar safety-avatar-2"></span><span class="safety-avatar safety-avatar-3"></span><em class="safety-avatar safety-avatar-more">+24</em></div>
+          </article>
+          <article class="min-h-[303px] rounded-[8px] border border-[#d8dfe8] bg-white px-[25px] py-[26px]">
+            <img class="h-[30px] w-[27px] object-contain" src="assets/safety/hygiene-icon.svg" alt="" aria-hidden="true" />
+            <h3 class="mb-[13px] mt-[28px] text-[19px] font-extrabold leading-[1.15] text-[#1f1f1f]">Hygienic Environment</h3>
+            <p class="m-0 max-w-[260px] text-[12px] font-normal leading-[1.35] text-[#425063]">HEPA air filtration systems and hospital-grade surface disinfection are performed between every patient visit.</p>
+            <img class="mt-[16px] h-[96px] w-full rounded-[3px] object-cover" src="assets/safety/hygienic-room.svg" alt="Clean hygienic dental clinic room" />
+          </article>
+          <article class="col-span-2 grid min-h-[303px] grid-cols-[0.4fr_0.6fr] overflow-hidden rounded-[8px] border border-[#d8dfe8] bg-white">
+            <div class="px-[26px] py-[62px]">
+              <img class="h-[48px] w-[48px] object-contain" src="assets/safety/sterilization-overlay.svg" alt="" aria-hidden="true" />
+              <h3 class="mb-[13px] mt-[28px] text-[19px] font-extrabold leading-[1.15] text-[#1f1f1f]">Advanced Sterilization</h3>
+              <p class="m-0 max-w-[236px] text-[12px] font-normal leading-[1.35] text-[#425063]">Our Class-B autoclaves and enzymatic cleaning baths ensure that every instrument is 100% sterile and vacuum-sealed until the moment of use.</p>
+            </div>
+            <div class="relative min-h-[303px]"><img class="absolute inset-0 h-full w-full object-cover" src="assets/safety/sterilization.png" alt="Dental sterilization equipment" /></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section bg-white pb-[20px] pt-[33px]">
+      <div class="mx-auto grid w-[min(1136px,calc(100%_-_72px))] grid-cols-[minmax(0,1fr)_384px] gap-[48px]">
+        <div>
+          <h2 class="mb-[35px] text-center text-[24px] max-md:text-[25px] font-normal leading-[1.1] text-[#0056b7]">Got Doubts ? <span class="font-semibold text-heroRed">We&rsquo;ve Got All Answers</span></h2>
+          <div>
+            <details class="faq-item border-b border-[#dfe5ee]" open><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#0056b7]">What is a dental implant?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">A dental implant is a titanium post placed into the jawbone to replace a missing tooth root, topped with a natural-looking crown, bridge, or denture.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#0056b7]">Who needs dental implants?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Anyone with one or more missing teeth, loose dentures, or damaged teeth that need extraction can be a candidate. A consultation and clinical evaluation confirms suitability.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#0056b7]">How long does the procedure take?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Most dental implant procedures are planned after a consultation and clinical evaluation. Your dentist will explain the treatment timeline, comfort options, recovery guidance, and cost estimate based on your case.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#0056b7]">Is the procedure painful?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">No. The procedure is done under local anesthesia, so you feel minimal discomfort. Most patients resume normal activities within a day.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#0056b7]">What&rsquo;s the cost of implants?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Dental implants at AVM Smiles start at just &#8377;10,999. Your final estimate depends on the number of implants and your clinical needs - book a free consultation for a personalized quote.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#0056b7]">Are implants better than dentures?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Implants are fixed, stable, and feel like natural teeth - no slipping or removal. They also preserve jawbone density, unlike traditional dentures.</p></details>
+          </div>
+        </div>
+        <aside class="contact-card-gradient mt-[52px] rounded-[18px] px-[34px] py-[34px] text-white shadow-[0_24px_42px_rgba(8,33,63,0.24)]">
+          <h3 class="mb-[13px] text-[22px] font-extrabold leading-[1.12] text-white">Still Have Questions?</h3>
+          <p class="m-0 max-w-[279px] text-[12px] font-normal leading-[1.55] text-white/75">Our medical verification certified consultants are ready to assist you 24/7 with expert guidance.</p>
+          <div class="mt-[27px] flex items-center gap-[14px]"><span class="contact-icon" aria-hidden="true">&#9743;</span><div><small class="mb-[7px] block text-[10px] font-normal uppercase tracking-[3px] text-white">Contact Us</small><strong class="text-[13px] font-extrabold leading-none text-white">+91 73049 83464</strong></div></div>
+          <div class="mt-[22px] flex items-center gap-[14px]"><span class="contact-icon" aria-hidden="true">&#9993;</span><div><small class="mb-[7px] block text-[10px] font-normal uppercase tracking-[3px] text-white">Email Concierge</small><strong class="text-[13px] font-extrabold leading-none text-white">info@avmsmiles.com</strong></div></div>
+          <a class="mt-[31px] flex h-[42px] w-full items-center justify-center gap-[9px] rounded-[9px] bg-white text-[12px] font-extrabold text-[#0056b7]" href="#modal-form">Get Instant Callback <span class="text-[17px] font-normal leading-none">&rarr;</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Mobile sticky CTA -->
+    <div class="mobile-sticky-cta">
+      <a href="#modal-form">Claim Offer Now <span class="text-xl ml-2">&rarr;</span></a>
+      <a aria-label="Chat on WhatsApp" href="https://wa.me/917304983464" rel="noopener noreferrer" target="_blank"><img alt="" aria-hidden="true" height="32" width="32" src="assets/whatsapp.svg" /></a>
+    </div>
+
+    <!-- Desktop sticky offer bar -->
+    <div class="desktop-sticky-bar">
+      <p>Start With a Free Expert 3D Scanning</p>
+      <a href="#modal-form">Claim Offer Now</a>
+    </div>
+
+    <footer class="bg-[#f7f9fc] px-[24px] py-[22px] pb-[80px] md:pb-[80px] text-center text-[12px] text-[#566166]">
+      <p class="m-0"><a href="http://avmsmiles.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#0056b7] hover:underline">AVMSmiles</a> dental implant consultation. For appointments, call <a class="font-semibold text-[#0056b7]" href="tel:+917304983464">+91 73049 83464</a>.</p>
+    </footer>
+  </main>
+
+  <!-- ============ MODAL ============ -->
+  <div id="modal-form" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 px-4">
+    <div class="w-full max-w-lg rounded-2xl bg-[#F7F9FF] shadow-[0_4px_20px_rgba(0,0,0,0.15)] px-6 py-8 md:px-8 md:py-10 relative" role="dialog" aria-modal="true" aria-labelledby="modal-form-title" onclick="event.stopPropagation()">
+      <button type="button" class="absolute right-4 top-4 z-10 rounded-full bg-white w-8 h-8 flex items-center justify-center text-gray-500 hover:text-black shadow-sm border border-gray-100" aria-label="Close" onclick="closeModal()">&#10005;</button>
+      <div class="text-center mb-6">
+        <h2 id="modal-form-title" class="text-[#0056b7] font-bold text-2xl md:text-3xl leading-tight">Offering Free First Visit for <span class="text-[#ED1C2A]">Dental Implants</span></h2>
+        <p class="mt-2 text-sm text-gray-500">Fill in your details below and our implant experts will contact you.</p>
+      </div>
+      <form id="modal-lead-form" class="space-y-4" novalidate>
+        <div class="grid grid-cols-2 gap-4">
+          <input class="w-full h-[48px] border border-gray-300 rounded-lg px-4 py-2 text-[#08213f] text-sm focus:border-[#0056b7] focus:outline-none focus:ring-2 focus:ring-[#0056b7]/15 bg-white shadow-sm placeholder:text-gray-400" id="modal-first-name" name="firstName" placeholder="First Name" autocomplete="given-name" type="text" required />
+          <input class="w-full h-[48px] border border-gray-300 rounded-lg px-4 py-2 text-[#08213f] text-sm focus:border-[#0056b7] focus:outline-none focus:ring-2 focus:ring-[#0056b7]/15 bg-white shadow-sm placeholder:text-gray-400" id="modal-last-name" name="lastName" placeholder="Last Name" autocomplete="family-name" type="text" required />
+        </div>
+        <input class="w-full h-[48px] border border-gray-300 rounded-lg px-4 py-2 text-[#08213f] text-sm focus:border-[#0056b7] focus:outline-none focus:ring-2 focus:ring-[#0056b7]/15 bg-white shadow-sm placeholder:text-gray-400" id="modal-email" name="email" placeholder="Email ID" autocomplete="email" type="email" required />
+        <input class="w-full h-[48px] border border-gray-300 rounded-lg px-4 py-2 text-[#08213f] text-sm focus:border-[#0056b7] focus:outline-none focus:ring-2 focus:ring-[#0056b7]/15 bg-white shadow-sm placeholder:text-gray-400" id="modal-phone" name="phoneNumber" placeholder="Contact Number (10-digits)" inputmode="tel" autocomplete="tel" type="tel" maxlength="10" required />
+        <input class="w-full h-[48px] border border-gray-300 rounded-lg px-4 py-2 text-[#08213f] text-sm focus:border-[#0056b7] focus:outline-none focus:ring-2 focus:ring-[#0056b7]/15 bg-white shadow-sm placeholder:text-gray-400" id="modal-pin" name="pinCode" placeholder="PIN Code" inputmode="numeric" autocomplete="postal-code" type="text" maxlength="6" required />
+        <p id="modal-lead-status" class="hidden text-xs font-bold text-[#ED1C2A]"></p>
+        <button type="submit" class="w-full h-[52px] bg-[#ED1C2A] text-white font-bold text-lg rounded-xl flex items-center justify-center gap-2 hover:bg-[#d0151c] active:scale-[0.98] transition-all shadow-[0_4px_6px_rgba(237,28,42,0.2)]">Talk to an Implant Expert <span class="text-xl">&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ Patient story lightbox ============ -->
+  <div id="video-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 px-5" onclick="closeVideo()">
+    <div class="relative w-full max-w-[360px] aspect-[9/16] rounded-[16px] overflow-hidden bg-black shadow-2xl" onclick="event.stopPropagation()">
+      <button class="absolute top-[12px] right-[12px] z-10 flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black/60 text-white text-[20px]" onclick="closeVideo()" aria-label="Close video player" type="button">&#10005;</button>
+      <iframe id="video-lightbox-frame" class="h-full w-full border-0" title="Patient Story Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    var WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyPpDmvoytLHqhNO26sXOnMTk5iMmd8mz2xOVhbE6cuoLoM9pco7sHuxH5VpZPf5Md0/exec";
+    var THANK_YOU_URL = "https://dentaloffers.avmsmiles.com/thank-you";
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var phonePattern = /^[6-9]\d{9}$/;
+    var pinPattern = /^\d{6}$/;
+
+    /* ---------- Modal ---------- */
+    var modal = document.getElementById("modal-form");
+    function openModal() { modal.style.display = "flex"; document.body.style.overflow = "hidden"; }
+    function closeModal() {
+      modal.style.display = "none"; document.body.style.overflow = "";
+      if (location.hash === "#modal-form") history.replaceState(null, "", location.pathname + location.search);
+    }
+    modal.addEventListener("click", closeModal);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeModal(); closeVideo(); } });
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest('a[href="#modal-form"]');
+      if (a) { e.preventDefault(); openModal(); }
+    });
+    if (location.hash === "#modal-form") openModal();
+
+    /* ---------- Lead submission ---------- */
+    function showStatus(el, msg, isError) {
+      if (!el) return;
+      el.textContent = msg; el.classList.remove("hidden");
+      el.style.color = isError ? "#ED1C2A" : "#0056b7";
+    }
+    function postLead(values) {
+      var body = new URLSearchParams();
+      body.append("firstName", values.firstName);
+      body.append("lastName", values.lastName);
+      body.append("email", values.email);
+      body.append("phone", values.phone);
+      body.append("pincode", values.pincode);
+      body.append("date", new Date().toISOString());
+      body.append("sheet_tab", "dental-Implant");
+      body.append("treatment", "dental implants");
+      var p = new URLSearchParams(location.search);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(function (k) { body.append(k, p.get(k) || ""); });
+      return fetch(WEB_APP_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        body: body.toString()
+      }).then(function (res) {
+        return res.text().then(function (t) {
+          if (!res.ok || t.trim().toLowerCase() !== "ok") throw new Error("failed");
+        });
+      });
+    }
+    function validate(values) {
+      if (!values.firstName) return "Please enter your first name.";
+      if (!values.lastName) return "Please enter your last name.";
+      if (!emailPattern.test(values.email)) return "Please enter a valid email address.";
+      if (!phonePattern.test(values.phone)) return "Please enter a valid 10-digit mobile number.";
+      if (!pinPattern.test(values.pincode)) return "Please enter a valid 6-digit pin code.";
+      return "";
+    }
+    function wireForm(formId, statusId, getValues) {
+      var form = document.getElementById(formId);
+      var statusEl = document.getElementById(statusId);
+      if (!form) return;
+      var busy = false;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (busy) return;
+        var values = getValues();
+        var err = validate(values);
+        if (err) { showStatus(statusEl, err, true); return; }
+        busy = true;
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn ? btn.innerHTML : "";
+        if (btn) { btn.disabled = true; btn.style.opacity = "0.7"; }
+        showStatus(statusEl, "Submitting...", false);
+        postLead(values).then(function () {
+          location.href = THANK_YOU_URL;
+        }).catch(function () {
+          showStatus(statusEl, "Something went wrong. Please try again.", true);
+          busy = false;
+          if (btn) { btn.disabled = false; btn.style.opacity = ""; btn.innerHTML = label; }
+        });
+      });
+    }
+    function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; }
+    wireForm("consultation", "consultation-form-status", function () {
+      return {
+        firstName: val("desktop-first-name") || val("mobile-first-name"),
+        lastName: val("desktop-last-name") || val("mobile-last-name"),
+        email: val("desktop-email") || val("mobile-email"),
+        phone: val("desktop-phone") || val("mobile-phone"),
+        pincode: val("desktop-pin") || val("mobile-pin")
+      };
+    });
+    wireForm("modal-lead-form", "modal-lead-status", function () {
+      return {
+        firstName: val("modal-first-name"),
+        lastName: val("modal-last-name"),
+        email: val("modal-email"),
+        phone: val("modal-phone"),
+        pincode: val("modal-pin")
+      };
+    });
+
+    /* ---------- Patient stories carousel ---------- */
+    var stories = [
+      "https://youtube.com/shorts/Sex0uz_OBGc",
+      "https://youtube.com/shorts/1gZMs98ub4Q",
+      "https://youtube.com/shorts/An_KT8UMZ_o",
+      "https://youtube.com/shorts/lFXFaSrspOk"
+    ];
+    function ytId(url) { var m = url.match(/(?:youtu\.be\/|v=|shorts\/)([^?&/]+)/); return m ? m[1] : ""; }
+    (function buildStories() {
+      var track = document.getElementById("stories-track");
+      stories.forEach(function (url) {
+        var id = ytId(url);
+        var a = document.createElement("a");
+        a.href = url;
+        a.className = "group relative block shrink-0 w-[288px] md:w-[calc(33.3333%-16px)] max-w-full aspect-[288/332] overflow-hidden rounded-[9px] bg-[#eef2f6] cursor-pointer";
+        a.innerHTML =
+          '<img class="absolute inset-0 h-full w-full object-cover" src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="Patient story video thumbnail" />' +
+          '<span class="absolute left-1/2 top-1/2 grid h-[74px] w-[74px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full" style="background:rgba(149,125,112,0.75)"><span class="ml-[5px] h-0 w-0 border-y-[14px] border-l-[21px] border-y-transparent border-l-white"></span></span>';
+        a.addEventListener("click", function (e) { e.preventDefault(); openVideo(id); });
+        track.appendChild(a);
+      });
+    })();
+    function scrollStories(dir) {
+      var t = document.getElementById("stories-track");
+      t.scrollBy({ left: dir * (t.clientWidth / 3 + 24), behavior: "smooth" });
+    }
+
+    /* ---------- Transformation carousel ---------- */
+    var transformImgs = ["ab1", "ab2", "ab3", "ab4", "ab5", "ab6"];
+    (function buildTransform() {
+      var track = document.getElementById("transform-track");
+      transformImgs.forEach(function (name, i) {
+        var d = document.createElement("div");
+        d.className = "shrink-0 w-[280px] md:w-[calc(33.3333%-16px)] aspect-[4/3] relative rounded-[12px] overflow-hidden shadow-lg";
+        d.innerHTML = '<img class="absolute inset-0 h-full w-full object-cover" src="assets/before-after/' + name + '.svg" alt="Before and after transformation ' + (i + 1) + '" />';
+        track.appendChild(d);
+      });
+    })();
+    function scrollTransform(dir) {
+      var t = document.getElementById("transform-track");
+      t.scrollBy({ left: dir * (t.clientWidth / 3 + 24), behavior: "smooth" });
+    }
+
+    /* Auto-advance carousels (desktop) */
+    setInterval(function () {
+      var t = document.getElementById("transform-track");
+      if (t && t.scrollWidth > t.clientWidth) {
+        if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 5) t.scrollTo({ left: 0, behavior: "smooth" });
+        else scrollTransform(1);
+      }
+    }, 4500);
+    setInterval(function () {
+      var t = document.getElementById("stories-track");
+      if (t && t.scrollWidth > t.clientWidth) {
+        if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 5) t.scrollTo({ left: 0, behavior: "smooth" });
+        else scrollStories(1);
+      }
+    }, 5000);
+
+    /* ---------- Video lightbox ---------- */
+    var lightbox = document.getElementById("video-lightbox");
+    var lightboxFrame = document.getElementById("video-lightbox-frame");
+    function openVideo(id) {
+      lightboxFrame.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
+      lightbox.style.display = "flex"; document.body.style.overflow = "hidden";
+    }
+    function closeVideo() {
+      if (lightbox.style.display === "flex") { lightbox.style.display = "none"; lightboxFrame.src = ""; document.body.style.overflow = ""; }
+    }
+
+    /* ---------- Implant options mobile cycler ---------- */
+    var implantIdx = 2;
+    function renderImplant() {
+      var items = document.querySelectorAll("#implant-options-carousel [data-carousel-item]");
+      items.forEach(function (el, i) { el.classList.toggle("is-active", i === implantIdx); });
+    }
+    function cycleImplant(dir) {
+      var items = document.querySelectorAll("#implant-options-carousel [data-carousel-item]");
+      implantIdx = (implantIdx + dir + items.length) % items.length;
+      renderImplant();
+    }
+    renderImplant();
+
+    /* ---------- Mobile testimonials ---------- */
+    var testimonialSlides = [
+      { type: "review", quote: "I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants.", author: "Mujib Kazi", badge: "Verified Patient", avatar: "M", avatarClass: "bg-[#005fc8]", highlighted: true },
+      { type: "review", quote: "Very professional and completed my dental implant and aligners treatment without much pain.", author: "Trevor Baretto", badge: "Heart Patient Case", avatar: "T", avatarClass: "bg-[#3499db]" },
+      { type: "review", quote: "Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Satisfied with my treatment.", author: "Pramila Tandkar", badge: "Heart Patient Case", avatar: "P", avatarClass: "bg-[#df3438]" },
+      { type: "rating", rating: "4.9/5", ratingLabel: "Google Rating", secondaryValue: "15k+", secondaryLabel: "Implants Done", description: "Our commitment to clinical excellence is reflected in the smiles of our patients across the country." }
+    ];
+    var testimonialIdx = 0;
+    function renderTestimonial() {
+      var s = testimonialSlides[testimonialIdx];
+      var box = document.getElementById("mobile-testimonial");
+      if (!box) return;
+      if (s.type === "review") {
+        box.innerHTML =
+          (s.highlighted ? '<div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>' : '') +
+          '<p class="m-0 ' + (s.highlighted ? 'text-[18px] font-semibold leading-[1.35] text-[#161a22]' : 'text-[12px] font-normal leading-[1.55] text-[#3f4550]') + '">"' + s.quote + '"</p>' +
+          '<div class="mt-[20px] h-px bg-[#edf0f4]"></div>' +
+          '<div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar ' + s.avatarClass + '">' + s.avatar + '</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">' + s.author + '</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">' + s.badge + '</span></div></div>';
+      } else {
+        box.innerHTML =
+          '<div class="grid gap-[12px]"><div class="grid grid-cols-2 gap-[12px] rounded-[10px] bg-[#f5f7fb] p-[20px] text-center">' +
+          '<div class="rounded-[8px] bg-white p-[12px]"><strong class="block text-[24px] font-extrabold leading-none text-[#0056b7]">' + s.rating + '</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">' + s.ratingLabel + '</span></div>' +
+          '<div class="rounded-[8px] bg-white p-[12px]"><strong class="block text-[24px] font-extrabold leading-none text-[#0056b7]">' + s.secondaryValue + '</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">' + s.secondaryLabel + '</span></div></div>' +
+          '<p class="m-0 text-[12px] font-normal leading-[1.55] text-[#425063]">' + s.description + '</p></div>';
+      }
+    }
+    function cycleTestimonial(dir) {
+      testimonialIdx = (testimonialIdx + dir + testimonialSlides.length) % testimonialSlides.length;
+      renderTestimonial();
+    }
+    renderTestimonial();
+    setInterval(function () { cycleTestimonial(1); }, 5000);
+  </script>
+</body>
+</html>
