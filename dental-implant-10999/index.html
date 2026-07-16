@@ -64,23 +64,19 @@
 
     .benefits-surface article > span img { width: 100%; height: 100%; object-fit: contain; }
 
-    .avatar { display: grid; width: 36px; height: 36px; margin-left: -9px; place-items: center; border: 2px solid #fff; border-radius: 999px; background: linear-gradient(135deg, #ffd6a5, #1a8fb7); }
+    .avatar { display: grid; width: 36px; height: 36px; margin-left: -9px; place-items: center; border: 2px solid #fff; border-radius: 999px; background: #eef2f8; object-fit: cover; }
     .avatar:first-child { margin-left: 0; }
-    .avatar-1 { background: linear-gradient(135deg, #ffd6a5, #6bb56f); }
-    .avatar-2 { background: linear-gradient(135deg, #d8f0ff, #19375f); }
-    .avatar-3 { background: linear-gradient(135deg, #f8c097, #1a5b8f); }
-    .avatar-4 { background: linear-gradient(135deg, #ffe0e4, #188a9b); }
     .avatar-more { background: #d9e4ff; color: #362997; font-size: 12px; font-style: normal; font-weight: 800; }
 
     .discover-offer { position: relative; }
     .discover-offer::after { content: ""; position: absolute; right: 10px; bottom: -135px; width: 420px; height: 420px; border-radius: 999px; background: radial-gradient(circle, rgba(223,32,40,0.22) 0 18%, rgba(223,32,40,0.1) 34%, transparent 66%); filter: blur(5px); }
 
     .review-card { border: 1px solid #dbe2ec; border-radius: 8px; background: #fff; padding: 28px; box-shadow: 0 16px 46px rgba(8,33,63,0.08); }
-    /* Testimonials auto-scroll marquee (scrolls left) */
+    /* Testimonials auto-scroll: the original 3-column layout slides left as a marquee */
     .testimonial-marquee { overflow: hidden; }
-    .testimonial-track { display: flex; width: max-content; animation: testimonial-scroll 40s linear infinite; }
+    .testimonial-track { display: flex; align-items: flex-start; width: max-content; animation: testimonial-scroll 45s linear infinite; }
     .testimonial-marquee:hover .testimonial-track { animation-play-state: paused; }
-    .testimonial-card { flex: 0 0 340px; width: 340px; margin-right: 18px; }
+    .testimonial-col { flex: 0 0 auto; margin-right: 18px; align-content: start; }
     @keyframes testimonial-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @media (prefers-reduced-motion: reduce) { .testimonial-track { animation: none; } }
     .review-avatar { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; color: #fff; font-size: 13px; font-weight: 900; text-transform: uppercase; }
@@ -548,9 +544,9 @@
           <h2 class="m-0 text-[52px] max-md:text-[25px] font-normal leading-[1.12] text-[#362997]">Discover The<br /><span class="font-extrabold text-[#bd101b]">Smile</span> You<br /><span class="font-extrabold text-[#bd101b]">Deserve!</span></h2>
           <p class="mt-[20px] max-w-[474px] text-[16px] leading-[1.2] text-[#566166]">Explore how Dental implants can transform your confidence with a natural, permanent solution.</p>
           <div class="mt-[29px] grid min-h-[155px] max-w-[363px] grid-cols-[96px_1fr] items-center gap-[27px] rounded-[8px] border border-[#e2e6ee] bg-white px-[22px] py-[20px] shadow-[0_16px_36px_rgba(8,33,63,0.08)]">
-            <div><strong class="block text-[25px] font-extrabold leading-none text-[#362997]">2 lac+</strong><span class="mt-[8px] block text-[10px] font-extrabold uppercase leading-[1.2] tracking-[3.5px] text-[#2e3340]">Happy Patients</span></div>
+            <div><strong class="block text-[25px] semi leading-none text-[#362997]">2 lac+</strong><span class="mt-[8px] block text-[10px] font-extrabold uppercase leading-[1.2] tracking-[3.5px] text-[#2e3340]">Happy Patients</span></div>
             <div>
-              <div class="mb-[12px] flex items-center" aria-hidden="true"><span class="avatar avatar-1"></span><span class="avatar avatar-2"></span><span class="avatar avatar-3"></span><span class="avatar avatar-4"></span><em class="avatar avatar-more">+2k</em></div>
+              <div class="mb-[12px] flex items-center" aria-hidden="true"><img class="avatar" src="assets/patients/patient-1.svg" alt="" loading="lazy" /><img class="avatar" src="assets/patients/patient-2.svg" alt="" loading="lazy" /><img class="avatar" src="assets/patients/patient-3.svg" alt="" loading="lazy" /><img class="avatar" src="assets/patients/patient-4.svg" alt="" loading="lazy" /><em class="avatar avatar-more">+2k</em></div>
               <p class="m-0 text-[12px] font-normal leading-[1.35] text-[#3f4550]">Happy Patients Have Already Transformed Their Smiles with AVMSmiles Revolutionary Dental Implants. Join the Community Today!</p>
             </div>
           </div>
@@ -612,41 +608,95 @@
         <div class="testimonial-marquee hidden md:block">
           <div class="testimonial-track">
             <!-- set A -->
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col">
-              <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
-              <p class="m-0 text-[14px] font-semibold leading-[1.4] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div></div>
-            </blockquote>
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col">
-              <p class="m-0 text-[13px] font-normal leading-[1.5] text-[#3f4550]">"Got my Invisalign treatment done with Dr. Rathi. The staff was very helpful in coordinating with me from a different city, even got my retainer set couriered remotely. Excellent service and very happy with the results!"</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#0b777f]">S</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Shriyani Datta</strong><span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Aligner Patient</span></div></div></div>
-            </blockquote>
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col">
-              <p class="m-0 text-[13px] font-normal leading-[1.5] text-[#3f4550]">"Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Very satisfied with my treatment and the overall experience at the clinic."</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#df3438]">P</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Pramila Tandkar</strong><span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Implant Patient</span></div></div></div>
-            </blockquote>
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col">
-              <p class="m-0 text-[13px] font-normal leading-[1.5] text-[#3f4550]">"Very professional and completed my dental implant and aligners treatment without much pain. The whole process was smooth and comfortable from start to finish."</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#3499db]">T</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Trevor Baretto</strong><span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Implant Patient</span></div></div></div>
-            </blockquote>
+            <div class="testimonial-col grid w-[474px] gap-[18px]">
+              <blockquote class="review-card min-h-[238px]">
+                <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
+                <p class="m-0 text-[18px] font-semibold leading-[1.35] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
+                <div class="mt-[28px] h-px bg-[#edf0f4]"></div>
+                <div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div>
+              </blockquote>
+              <blockquote class="review-card min-h-[212px]">
+                <span class="review-avatar mb-[17px] bg-[#0b777f]">S</span>
+                <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Got my Invisalign treatment done with Dr. Rathi. Took longer than usual because I was stuck in a different place because of the pandemic. The staff was very helpful in coordinating with me from a different city, even got my retainer set couriered remotely. Excellent service and very happy with the results from Dr. Rathi!"</p>
+                <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+                <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Shriyani Datta</strong>
+                <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+              </blockquote>
+            </div>
+            <div class="testimonial-col grid w-[355px] gap-[18px]">
+              <blockquote class="review-card min-h-[212px]">
+                <span class="review-avatar mb-[17px] bg-[#df3438]">P</span>
+                <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Satisfied with my treatment."</p>
+                <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+                <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Pramila Tandkar</strong>
+                <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+              </blockquote>
+              <blockquote class="review-card min-h-[212px]">
+                <span class="review-avatar mb-[17px] bg-[#3499db]">T</span>
+                <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Very professional and completed my dental implant and aligners treatment without much pain."</p>
+                <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+                <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Trevor Baretto</strong>
+                <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+              </blockquote>
+            </div>
+            <div class="testimonial-col grid w-[415px] gap-[18px]">
+              <blockquote class="review-card min-h-[238px]">
+                <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
+                <p class="m-0 text-[18px] font-semibold leading-[1.35] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
+                <div class="mt-[28px] h-px bg-[#edf0f4]"></div>
+                <div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div>
+              </blockquote>
+              <div class="rating-card grid min-h-[154px] grid-cols-2 gap-[12px] rounded-[10px] border border-[#dbe2ec] bg-[#f5f7fb] p-[20px] text-center shadow-[0_16px_46px_rgba(8,33,63,0.08)]">
+                <div class="grid min-h-[63px] place-items-center rounded-[8px] bg-white"><strong class="block text-[24px] font-extrabold leading-none text-[#362997]">4.9/5</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">Google Rating</span></div>
+                <div class="grid min-h-[63px] place-items-center rounded-[8px] bg-white"><strong class="block text-[24px] font-extrabold leading-none text-[#362997]">1 lacs +</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">Implants Done</span></div>
+                <p class="col-span-2 m-0 mt-[3px] text-[11px] font-normal leading-[1.45] text-[#425063]">Our commitment to clinical excellence is reflected in the smiles of our patients across the country.</p>
+              </div>
+            </div>
             <!-- set B (duplicate for seamless loop) -->
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col" aria-hidden="true">
-              <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
-              <p class="m-0 text-[14px] font-semibold leading-[1.4] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div></div>
-            </blockquote>
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col" aria-hidden="true">
-              <p class="m-0 text-[13px] font-normal leading-[1.5] text-[#3f4550]">"Got my Invisalign treatment done with Dr. Rathi. The staff was very helpful in coordinating with me from a different city, even got my retainer set couriered remotely. Excellent service and very happy with the results!"</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#0b777f]">S</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Shriyani Datta</strong><span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Aligner Patient</span></div></div></div>
-            </blockquote>
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col" aria-hidden="true">
-              <p class="m-0 text-[13px] font-normal leading-[1.5] text-[#3f4550]">"Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Very satisfied with my treatment and the overall experience at the clinic."</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#df3438]">P</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Pramila Tandkar</strong><span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Implant Patient</span></div></div></div>
-            </blockquote>
-            <blockquote class="review-card testimonial-card flex min-h-[230px] flex-col" aria-hidden="true">
-              <p class="m-0 text-[13px] font-normal leading-[1.5] text-[#3f4550]">"Very professional and completed my dental implant and aligners treatment without much pain. The whole process was smooth and comfortable from start to finish."</p>
-              <div class="mt-auto pt-[18px]"><div class="h-px bg-[#edf0f4]"></div><div class="mt-[16px] flex items-center gap-[12px]"><span class="review-avatar bg-[#3499db]">T</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Trevor Baretto</strong><span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Implant Patient</span></div></div></div>
-            </blockquote>
+            <div class="testimonial-col grid w-[474px] gap-[18px]" aria-hidden="true">
+              <blockquote class="review-card min-h-[238px]">
+                <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
+                <p class="m-0 text-[18px] font-semibold leading-[1.35] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
+                <div class="mt-[28px] h-px bg-[#edf0f4]"></div>
+                <div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div>
+              </blockquote>
+              <blockquote class="review-card min-h-[212px]">
+                <span class="review-avatar mb-[17px] bg-[#0b777f]">S</span>
+                <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Got my Invisalign treatment done with Dr. Rathi. Took longer than usual because I was stuck in a different place because of the pandemic. The staff was very helpful in coordinating with me from a different city, even got my retainer set couriered remotely. Excellent service and very happy with the results from Dr. Rathi!"</p>
+                <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+                <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Shriyani Datta</strong>
+                <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+              </blockquote>
+            </div>
+            <div class="testimonial-col grid w-[355px] gap-[18px]" aria-hidden="true">
+              <blockquote class="review-card min-h-[212px]">
+                <span class="review-avatar mb-[17px] bg-[#df3438]">P</span>
+                <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Satisfied with my treatment."</p>
+                <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+                <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Pramila Tandkar</strong>
+                <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+              </blockquote>
+              <blockquote class="review-card min-h-[212px]">
+                <span class="review-avatar mb-[17px] bg-[#3499db]">T</span>
+                <p class="m-0 text-[12px] font-normal leading-[1.55] text-[#3f4550]">"Very professional and completed my dental implant and aligners treatment without much pain."</p>
+                <div class="mt-[17px] h-px bg-[#edf0f4]"></div>
+                <strong class="mt-[15px] block text-[11px] font-extrabold leading-none text-[#1f1f1f]">Trevor Baretto</strong>
+                <span class="mt-[5px] block text-[9px] font-normal leading-none text-[#3f4550]">Heart Patient Case</span>
+              </blockquote>
+            </div>
+            <div class="testimonial-col grid w-[415px] gap-[18px]" aria-hidden="true">
+              <blockquote class="review-card min-h-[238px]">
+                <div class="mb-[12px] flex items-center gap-[8px] text-[13px] font-bold text-[#ffb800]">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="text-[8px] font-normal tracking-[1px] text-[#8d97a5]">"Most Detailed Review"</span></div>
+                <p class="m-0 text-[18px] font-semibold leading-[1.35] text-[#161a22]">"I am happy with the treatment. The staff here is very helpful and very experienced with all clinical procedures. Highly recommended for full mouth implants."</p>
+                <div class="mt-[28px] h-px bg-[#edf0f4]"></div>
+                <div class="mt-[20px] flex items-center gap-[12px]"><span class="review-avatar bg-[#005fc8]">M</span><div><strong class="block text-[12px] font-extrabold leading-none text-[#1f1f1f]">Mujib Kazi</strong><span class="mt-[5px] block text-[9px] font-extrabold uppercase leading-none text-[#005fc8]">Verified Patient</span></div></div>
+              </blockquote>
+              <div class="rating-card grid min-h-[154px] grid-cols-2 gap-[12px] rounded-[10px] border border-[#dbe2ec] bg-[#f5f7fb] p-[20px] text-center shadow-[0_16px_46px_rgba(8,33,63,0.08)]">
+                <div class="grid min-h-[63px] place-items-center rounded-[8px] bg-white"><strong class="block text-[24px] font-extrabold leading-none text-[#362997]">4.9/5</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">Google Rating</span></div>
+                <div class="grid min-h-[63px] place-items-center rounded-[8px] bg-white"><strong class="block text-[24px] font-extrabold leading-none text-[#362997]">1 lacs +</strong><span class="mt-[7px] block text-[7px] font-extrabold uppercase tracking-[1.6px] text-[#333844]">Implants Done</span></div>
+                <p class="col-span-2 m-0 mt-[3px] text-[11px] font-normal leading-[1.45] text-[#425063]">Our commitment to clinical excellence is reflected in the smiles of our patients across the country.</p>
+              </div>
+            </div>
           </div>
         </div>
 
