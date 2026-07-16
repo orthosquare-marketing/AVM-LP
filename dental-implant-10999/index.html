@@ -327,13 +327,21 @@
       .safety-infection-body h3 { font-size: 15px; }
       html .safety-grid > article:nth-child(2) { background: #362997; padding: 18px; }
       html .safety-grid > article:nth-child(3),
-      html .safety-grid > article:last-child { padding: 18px; }
-      html .safety-grid > article:last-child { display: block; }
+      html .safety-grid > article:last-child { padding: 20px 18px; }
+      html .safety-grid > article:last-child { display: block; text-align: center; }
       html .safety-grid > article:last-child > div:first-child { padding: 0; }
-      html .safety-grid > article:last-child > div:last-child { min-height: 150px; margin-top: 14px; border-radius: 10px; overflow: hidden; }
       .safety-grid h3 { margin-top: 12px !important; margin-bottom: 8px !important; font-size: 15px !important; }
       .safety-grid p { max-width: 100% !important; font-size: 12px !important; }
-      html .safety-grid > article:nth-child(3) > img:last-child { height: 120px; }
+      /* Photos dropped on mobile — these two cards are icon + copy only. */
+      html .safety-grid > article:nth-child(3) > img:last-child,
+      html .safety-grid > article:last-child > div:last-child { display: none; }
+      /* Icons sit in a tinted rounded tile */
+      html .safety-grid > article:nth-child(3) > img:first-child,
+      html .safety-grid > article:last-child img {
+        box-sizing: border-box; height: 40px; width: 40px; padding: 9px;
+        border-radius: 11px; background: #eaf6f1; object-fit: contain;
+      }
+      html .safety-grid > article:last-child img { margin: 0 auto; background: #eef0fb; }
     }
 
     /* ---- Cost-estimate banner (mobile) ---- */
