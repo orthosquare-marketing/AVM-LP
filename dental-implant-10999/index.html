@@ -58,7 +58,7 @@
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
 
-    .carousel-controls { position: absolute; right: 0; bottom: 5px; display: flex; gap: 8px; }
+    .carousel-controls { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: flex; gap: 8px; }
     .carousel-controls button { display: grid; width: 36px; height: 36px; place-items: center; border: 0; border-radius: 999px; background: #ed1c24; color: #fff; font-size: 22px; font-weight: 700; line-height: 1; cursor: pointer; }
 
     .benefits-surface article > span img { width: 100%; height: 100%; object-fit: contain; }
@@ -356,7 +356,7 @@
     <!-- ============ STATS + CONSULTATION ============ -->
     <section class="stats-section bg-white pb-[40px] pt-[75px]">
       <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
-        <h2 class="mb-[40px] text-center text-[44px] max-md:!text-[25px] font-normal leading-none tracking-normal text-heroBlue">
+        <h2 class="mb-[40px] text-center text-[44px] max-md:!text-[25px] font-normal leading-none tracking-normal text-[#362997]">
           Trusted By <span class="font-extrabold text-heroRed">Thousand Of Smile</span>
         </h2>
 
@@ -496,24 +496,24 @@
         <h2 class="mb-[26px] text-center text-[44px] max-md:text-[25px] font-normal leading-[1.08] text-[#362997]">Your Guide To <span class="font-semibold text-heroRed">Dental Implant Options</span></h2>
         <div class="grid grid-cols-2 gap-x-[17px] gap-y-[18px]" id="implant-options-carousel">
           <article class="overflow-hidden" data-carousel-item>
-            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-room.svg" alt="Single Tooth Implant dental implant option" /></div>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-single-tooth.jpg" alt="Single Tooth Implant dental implant option" /></div>
             <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Single Tooth Implant</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">Designed to replace a single missing tooth, this implant consists of a titanium post placed in the jawbone, topped with a crown that blends seamlessly with natural teeth.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
           </article>
           <article class="overflow-hidden" data-carousel-item>
-            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-scan.svg" alt="Full Mouth Restoration dental implant option" /></div>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-full-mouth.jpg" alt="Full Mouth Restoration dental implant option" /></div>
             <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">Full Mouth Restoration</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">A comprehensive solution for patients with extensive tooth loss or damage, this approach uses multiple implants to support a full set of prosthetic teeth, restoring aesthetics.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
           </article>
           <article class="overflow-hidden is-active" data-carousel-item>
-            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-smile.svg" alt="All-on-4 Implants dental implant option" /></div>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-all-on-4.jpg" alt="All-on-4 Implants dental implant option" /></div>
             <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">All-on-4 Implants</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">A revolutionary option for those needing a full-arch replacement, using only four implants to support an entire set of teeth for a cost-effective and durable solution.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
           </article>
           <article class="overflow-hidden" data-carousel-item>
-            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-chair.svg" alt="All-on-6 Implants dental implant option" /></div>
+            <div class="relative h-[290px] overflow-hidden rounded-[16px] bg-[#eef2f6] shadow-[0_3px_10px_rgba(8,33,63,0.1)]"><img class="h-full w-full object-cover" src="assets/implant-all-on-6.jpg" alt="All-on-6 Implants dental implant option" /></div>
             <div class="mt-[12px] min-h-[102px] rounded-[8px] bg-[#f1f2f3] px-[25px] pb-[15px] pt-[21px]"><h3 class="mb-[8px] text-[16px] font-semibold leading-[1.1] text-[#1f1f1f]">All-on-6 Implants</h3><p class="m-0 text-[12px] font-normal leading-[1.25] text-[#566166]">Designed to securely anchor dentures using implants, providing superior stability, comfort, and improved chewing ability compared to traditional dentures.</p><a class="mt-[10px] flex justify-end gap-[6px] text-[10px] font-semibold leading-none text-heroRed cursor-pointer" href="#modal-form">Learn More <span aria-hidden="true">&rarr;</span></a></div>
           </article>
         </div>
         <div class="implant-mobile-nav">
-          <div class="carousel-controls" style="position:static;justify-content:center;gap:14px;margin-top:12px">
+          <div class="carousel-controls" style="position:static;justify-content:center;gap:14px;margin-top:12px;transform:none">
             <button type="button" aria-label="Previous item" onclick="cycleImplant(-1)">&larr;</button>
             <button type="button" aria-label="Next item" onclick="cycleImplant(1)">&rarr;</button>
           </div>
@@ -577,8 +577,8 @@
     <section class="bg-[#f7f9fc] pb-[40px] pt-[10px]">
       <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
         <section class="relative flex min-h-[264px] items-center justify-center overflow-hidden rounded-br-[27px] rounded-tl-[27px] bg-[#362997] px-[72px] py-[56px] text-center text-white max-[900px]:px-[36px]">
-          <span class="absolute left-[-104px] top-[-28px] h-[138px] w-[138px] rounded-full bg-white" aria-hidden="true"></span>
-          <span class="absolute bottom-[-52px] right-[-69px] h-[163px] w-[163px] rounded-full bg-white" aria-hidden="true"></span>
+          <span class="absolute left-[-69px] top-[-69px] h-[138px] w-[138px] rounded-full bg-white" aria-hidden="true"></span>
+          <span class="absolute bottom-[-81px] right-[-81px] h-[163px] w-[163px] rounded-full bg-white" aria-hidden="true"></span>
           <div class="relative z-10">
             <h2 class="m-0 text-[30px] md:text-[40px] font-normal leading-[1.08] text-white">Get Your <span class="font-extrabold">Personalized Cost</span> Estimate Now!</h2>
             <a class="mx-auto mt-[17px] flex h-[49px] w-[318px] max-w-full items-center justify-center rounded-[10px] bg-white text-[18px] font-semibold text-[#004b9c] shadow-[0_4px_6px_rgba(8,33,63,0.22)]" href="#modal-form">Get Expert Guidance</a>
@@ -688,7 +688,7 @@
 
     <!-- ============ FAQ ============ -->
     <section class="faq-section bg-white pb-[20px] pt-[33px]">
-      <div class="mx-auto grid w-[min(1136px,calc(100%_-_72px))] grid-cols-[minmax(0,1fr)_384px] gap-[48px]">
+      <div class="mx-auto grid w-[min(1136px,calc(100%_-_72px))] grid-cols-1">
         <div>
           <h2 class="mb-[35px] text-center text-[44px] max-md:text-[25px] font-normal leading-[1.1] text-[#362997]">Got Doubts ? <span class="font-semibold text-heroRed">We&rsquo;ve Got All Answers</span></h2>
           <div>
@@ -700,13 +700,6 @@
             <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">Are implants better than dentures?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Implants are fixed, stable, and feel like natural teeth - no slipping or removal. They also preserve jawbone density, unlike traditional dentures.</p></details>
           </div>
         </div>
-        <aside class="contact-card-gradient mt-[52px] rounded-[18px] px-[34px] py-[34px] text-white shadow-[0_24px_42px_rgba(8,33,63,0.24)]">
-          <h3 class="mb-[13px] text-[22px] font-extrabold leading-[1.12] text-white">Still Have Questions?</h3>
-          <p class="m-0 max-w-[279px] text-[12px] font-normal leading-[1.55] text-white/75">Our medical verification certified consultants are ready to assist you 24/7 with expert guidance.</p>
-          <div class="mt-[27px] flex items-center gap-[14px]"><span class="contact-icon" aria-hidden="true">&#9743;</span><div><small class="mb-[7px] block text-[10px] font-normal uppercase tracking-[3px] text-white">Contact Us</small><strong class="text-[13px] font-extrabold leading-none text-white">+91 73049 83464</strong></div></div>
-          <div class="mt-[22px] flex items-center gap-[14px]"><span class="contact-icon" aria-hidden="true">&#9993;</span><div><small class="mb-[7px] block text-[10px] font-normal uppercase tracking-[3px] text-white">Email Concierge</small><strong class="text-[13px] font-extrabold leading-none text-white">info@avmsmiles.com</strong></div></div>
-          <a class="mt-[31px] flex h-[42px] w-full items-center justify-center gap-[9px] rounded-[9px] bg-white text-[12px] font-extrabold text-[#362997]" href="#modal-form">Get Instant Callback <span class="text-[17px] font-normal leading-none">&rarr;</span></a>
-        </aside>
       </div>
     </section>
 
