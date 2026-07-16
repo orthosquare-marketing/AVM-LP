@@ -134,6 +134,19 @@
       }
     }
 
+    /* ---- Feature bar (below hero) ---- */
+    .feature-bar { border-bottom: 1px solid #eef0f6; }
+    .feature-icon { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #eeecfa; }
+    .feature-icon svg { width: 22px; height: 22px; }
+    .feature-title { margin: 0; color: #362997; font-size: 16px; font-weight: 700; line-height: 1.2; }
+    .feature-desc { margin: 4px 0 0; color: #566166; font-size: 13px; line-height: 1.35; }
+    @media (max-width: 860px) {
+      .feature-bar .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    }
+    @media (max-width: 480px) {
+      .feature-bar .grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+
     /* ---- Desktop sticky offer bar (matches FAQ screenshot) ---- */
     .desktop-sticky-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: center; gap: 26px; background: #ed1c24; padding: 14px 24px; box-shadow: 0 -4px 18px rgba(0,0,0,0.14); }
     .desktop-sticky-bar p { margin: 0; color: #fff; font-size: 22px; font-weight: 800; }
@@ -219,7 +232,7 @@
               <span class="text-heroRed">Implant Solution</span>
             </h1>
             <p class="mt-[14px] max-w-[520px] text-[16px] leading-[1.35] text-heroText">
-              Restore missing teeth with durable, natural-looking dental implants planned by experienced doctors. Book a free consultation and get personalized treatment and cost guidance.
+              Comfortable, invisible, and doctor-approved aligners designed to transform your smile confidently without anyone noticing.
             </p>
 
             <div class="mt-[22px]">
@@ -246,6 +259,48 @@
       </div>
     </header>
 
+    <!-- ============ FEATURE BAR (below hero) ============ -->
+    <section class="feature-bar bg-white">
+      <div class="mx-auto grid w-[min(1280px,calc(100%_-_72px))] grid-cols-4 gap-[24px] py-[26px]">
+        <article class="flex items-start gap-[14px]">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#362997" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 19a6.5 6.5 0 0 1 13 0"/></svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Expert Implantologists</h3>
+            <p class="feature-desc">Specialized care by experienced professionals</p>
+          </div>
+        </article>
+        <article class="flex items-start gap-[14px]">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#362997" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M4.2 7.5l1.9 1.1M17.9 15.4l1.9 1.1M19.8 7.5l-1.9 1.1M6.1 15.4l-1.9 1.1"/></svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Advanced Technology</h3>
+            <p class="feature-desc">Latest technology for precise and painless treatment</p>
+          </div>
+        </article>
+        <article class="flex items-start gap-[14px]">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#362997" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-4.35-6.5-9.3A3.7 3.7 0 0 1 12 8a3.7 3.7 0 0 1 6.5 3.7C18.5 16.65 12 21 12 21Z"/></svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Long Lasting Results</h3>
+            <p class="feature-desc">Strong, durable implants that last for years</p>
+          </div>
+        </article>
+        <article class="flex items-start gap-[14px]">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#362997" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3 9.5h18M7 14h4"/></svg>
+          </span>
+          <div>
+            <h3 class="feature-title">Flexible Payment Options</h3>
+            <p class="feature-desc">Easy EMI options to make treatment affordable</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- ============ STATS + CONSULTATION ============ -->
     <section class="stats-section bg-white pb-[40px] pt-[75px]">
       <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
@@ -254,19 +309,19 @@
         </h2>
 
         <div class="grid grid-cols-4 gap-[15px]">
-          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#362997] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
             <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/successful-implants.svg" alt="" aria-hidden="true" />
             <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">3,00,000+</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Successful Implants</span></div>
           </article>
-          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#362997] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
             <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/happy-patients.svg" alt="" aria-hidden="true" />
             <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">5,00,000+</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Happy Patients</span></div>
           </article>
-          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#362997] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
             <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/experience.svg" alt="" aria-hidden="true" />
             <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">20+ Year</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Industry-leading</span></div>
           </article>
-          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#0057bd] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
+          <article class="grid min-h-[97px] grid-cols-[44px_1fr] items-center gap-[12px] rounded-[17px] bg-[#362997] px-[20px] text-white max-[1050px]:grid-cols-[38px_1fr] max-[1050px]:gap-[9px] max-[1050px]:px-[14px]">
             <img class="h-[42px] w-[42px] object-contain max-[1050px]:h-[38px] max-[1050px]:w-[38px]" src="assets/stats/google-reviews.svg" alt="" aria-hidden="true" />
             <div class="min-w-0"><strong class="block whitespace-nowrap text-[24px] font-bold leading-[1.05] max-[1050px]:text-[22px]">25,000+</strong><span class="mt-[6px] block whitespace-nowrap text-[24px] md:text-[18px] min-[1050px]:text-[22px] font-normal leading-none">Google Reviews</span></div>
           </article>
@@ -320,15 +375,6 @@
             </p>
           </article>
         </div>
-
-        <section class="relative mt-[60px] flex min-h-[264px] items-center justify-center overflow-hidden rounded-br-[27px] rounded-tl-[27px] bg-[#005cbf] px-[72px] py-[56px] text-center text-white max-[900px]:px-[36px]">
-          <span class="absolute left-[-104px] top-[-28px] h-[138px] w-[138px] rounded-full bg-white" aria-hidden="true"></span>
-          <span class="absolute bottom-[-52px] right-[-69px] h-[163px] w-[163px] rounded-full bg-white" aria-hidden="true"></span>
-          <div class="relative z-10">
-            <h2 class="m-0 text-[30px] md:text-[40px] font-normal leading-[1.08] text-white">Get Your <span class="font-extrabold">Personalized Cost</span> Estimate Now!</h2>
-            <a class="mx-auto mt-[17px] flex h-[49px] w-[318px] max-w-full items-center justify-center rounded-[10px] bg-white text-[18px] font-semibold text-[#004b9c] shadow-[0_4px_6px_rgba(8,33,63,0.22)]" href="#modal-form">Get Expert Guidance</a>
-          </div>
-        </section>
       </div>
     </section>
 
@@ -472,6 +518,20 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ COST ESTIMATE CTA ============ -->
+    <section class="bg-[#f7f9fc] pb-[40px] pt-[10px]">
+      <div class="mx-auto w-[min(1280px,calc(100%_-_72px))]">
+        <section class="relative flex min-h-[264px] items-center justify-center overflow-hidden rounded-br-[27px] rounded-tl-[27px] bg-[#005cbf] px-[72px] py-[56px] text-center text-white max-[900px]:px-[36px]">
+          <span class="absolute left-[-104px] top-[-28px] h-[138px] w-[138px] rounded-full bg-white" aria-hidden="true"></span>
+          <span class="absolute bottom-[-52px] right-[-69px] h-[163px] w-[163px] rounded-full bg-white" aria-hidden="true"></span>
+          <div class="relative z-10">
+            <h2 class="m-0 text-[30px] md:text-[40px] font-normal leading-[1.08] text-white">Get Your <span class="font-extrabold">Personalized Cost</span> Estimate Now!</h2>
+            <a class="mx-auto mt-[17px] flex h-[49px] w-[318px] max-w-full items-center justify-center rounded-[10px] bg-white text-[18px] font-semibold text-[#004b9c] shadow-[0_4px_6px_rgba(8,33,63,0.22)]" href="#modal-form">Get Expert Guidance</a>
+          </div>
+        </section>
       </div>
     </section>
 
