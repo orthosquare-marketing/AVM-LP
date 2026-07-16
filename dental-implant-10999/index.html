@@ -213,6 +213,58 @@
     @media (max-width: 900px) {
       .di-carousel-track > * { flex: 0 0 100% !important; }
     }
+
+    /* ---- Micro-interactions (subtle) ---- */
+    .di-hero-cta,
+    .consult-submit,
+    .bg-heroRed,
+    .desktop-sticky-bar a,
+    .mobile-sticky-cta a {
+      transition: transform 0.18s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      will-change: transform;
+    }
+    .di-hero-cta:hover,
+    .consult-submit:hover,
+    .bg-heroRed:hover,
+    .desktop-sticky-bar a:hover,
+    .mobile-sticky-cta a:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(8,33,63,0.20); }
+    .di-hero-cta:active,
+    .consult-submit:active,
+    .bg-heroRed:active,
+    .desktop-sticky-bar a:active,
+    .mobile-sticky-cta a:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(8,33,63,0.16); }
+
+    /* Cards lift gently on hover */
+    .stats-section article,
+    .benefits-surface article,
+    .implant-options [data-carousel-item],
+    .review-card,
+    .di-badge {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .stats-section article:hover,
+    .benefits-surface article:hover,
+    .implant-options [data-carousel-item]:hover { transform: translateY(-4px); box-shadow: 0 18px 34px rgba(8,33,63,0.14); }
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 22px 52px rgba(8,33,63,0.12); }
+    .di-badge:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(8,33,63,0.10); }
+
+    /* FAQ arrow nudges on hover (rotation on open is already handled) */
+    .faq-item summary { transition: color 0.18s ease; }
+    .faq-item summary:hover { color: #ed1c24; }
+
+    /* Respect users who prefer less motion */
+    @media (prefers-reduced-motion: reduce) {
+      .di-hero-cta, .consult-submit, .bg-heroRed, .desktop-sticky-bar a, .mobile-sticky-cta a,
+      .stats-section article, .benefits-surface article, .implant-options [data-carousel-item],
+      .review-card, .di-badge {
+        transition: none;
+      }
+      .di-hero-cta:hover, .consult-submit:hover, .bg-heroRed:hover, .desktop-sticky-bar a:hover,
+      .mobile-sticky-cta a:hover, .stats-section article:hover, .benefits-surface article:hover,
+      .implant-options [data-carousel-item]:hover, .review-card:hover, .di-badge:hover {
+        transform: none;
+      }
+    }
   </style>
 </head>
 
@@ -640,12 +692,12 @@
         <div>
           <h2 class="mb-[35px] text-center text-[44px] max-md:text-[25px] font-normal leading-[1.1] text-[#362997]">Got Doubts ? <span class="font-semibold text-heroRed">We&rsquo;ve Got All Answers</span></h2>
           <div>
-            <details class="faq-item border-b border-[#dfe5ee]" open><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#362997]">What is a dental implant?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">A dental implant is a titanium post placed into the jawbone to replace a missing tooth root, topped with a natural-looking crown, bridge, or denture.</p></details>
-            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#362997]">Who needs dental implants?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Anyone with one or more missing teeth, loose dentures, or damaged teeth that need extraction can be a candidate. A consultation and clinical evaluation confirms suitability.</p></details>
-            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#362997]">How long does the procedure take?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Most dental implant procedures are planned after a consultation and clinical evaluation. Your dentist will explain the treatment timeline, comfort options, recovery guidance, and cost estimate based on your case.</p></details>
-            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#362997]">Is the procedure painful?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">No. The procedure is done under local anesthesia, so you feel minimal discomfort. Most patients resume normal activities within a day.</p></details>
-            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#362997]">What&rsquo;s the cost of implants?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Dental implants at AVM Smiles start at just &#8377;10,999. Your final estimate depends on the number of implants and your clinical needs - book a free consultation for a personalized quote.</p></details>
-            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-[#362997]">Are implants better than dentures?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Implants are fixed, stable, and feel like natural teeth - no slipping or removal. They also preserve jawbone density, unlike traditional dentures.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]" open><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">What is a dental implant?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">A dental implant is a titanium post placed into the jawbone to replace a missing tooth root, topped with a natural-looking crown, bridge, or denture.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">Who needs dental implants?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Anyone with one or more missing teeth, loose dentures, or damaged teeth that need extraction can be a candidate. A consultation and clinical evaluation confirms suitability.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">How long does the procedure take?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Most dental implant procedures are planned after a consultation and clinical evaluation. Your dentist will explain the treatment timeline, comfort options, recovery guidance, and cost estimate based on your case.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">Is the procedure painful?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">No. The procedure is done under local anesthesia, so you feel minimal discomfort. Most patients resume normal activities within a day.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">What&rsquo;s the cost of implants?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Dental implants at AVM Smiles start at just &#8377;10,999. Your final estimate depends on the number of implants and your clinical needs - book a free consultation for a personalized quote.</p></details>
+            <details class="faq-item border-b border-[#dfe5ee]"><summary class="relative cursor-pointer list-none py-[21px] pr-[58px] text-[17px] font-semibold leading-[1.2] text-black">Are implants better than dentures?</summary><p class="m-0 max-w-[650px] pb-[22px] text-[16px] font-normal leading-[1.45] text-[#566166]">Implants are fixed, stable, and feel like natural teeth - no slipping or removal. They also preserve jawbone density, unlike traditional dentures.</p></details>
           </div>
         </div>
         <aside class="contact-card-gradient mt-[52px] rounded-[18px] px-[34px] py-[34px] text-white shadow-[0_24px_42px_rgba(8,33,63,0.24)]">
