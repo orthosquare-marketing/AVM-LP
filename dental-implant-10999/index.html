@@ -304,6 +304,12 @@
       }
       .patient-stories-panel .stories-controls button { width: 32px; height: 32px; font-size: 17px; }
       .patient-stories-panel .stories-controls button:first-child { background: #fff; border: 1px solid #f3c6c9; color: #ed1c24; }
+      /* Same treatment for the transformation carousel — parked right, the arrows sat on top of the CTA. */
+      .transformation-section .transform-controls {
+        position: static; transform: none; justify-content: center; gap: 16px; margin-top: 14px;
+      }
+      .transformation-section .transform-controls button { width: 32px; height: 32px; font-size: 17px; }
+      .transformation-section .transform-controls button:first-child { background: #fff; border: 1px solid #f3c6c9; color: #ed1c24; }
     }
 
     /* ---- Safety section (mobile): single stacked column ---- */
@@ -741,7 +747,7 @@
           </div>
           <div class="relative mt-[19px] min-h-[44px] text-center">
             <a class="mx-auto flex h-[44px] w-[253px] max-w-full items-center justify-center gap-[9px] rounded-[8px] bg-heroRed text-[15px] font-extrabold text-white shadow-[0_4px_7px_rgba(8,33,63,0.28)]" href="#modal-form">Book Free Consultation <span class="text-[20px] font-normal leading-none">&rarr;</span></a>
-            <div class="carousel-controls">
+            <div class="carousel-controls transform-controls">
               <button type="button" aria-label="Previous image" onclick="scrollTransform(-1)">&larr;</button>
               <button type="button" aria-label="Next image" onclick="scrollTransform(1)">&rarr;</button>
             </div>
