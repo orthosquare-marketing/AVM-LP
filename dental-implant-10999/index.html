@@ -39,7 +39,7 @@
     #stories-track, #transform-track { max-width: 100%; }
     img { display: block; }
 
-    .consult-input { height: 52px; width: 100%; border: 1px solid #e1e4eb; border-radius: 5px; background: #fff; padding: 0 20px; color: #08213f; font-size: 16px; outline: none; }
+    .consult-input { height: 56px; width: 100%; border: 1px solid transparent; border-radius: 10px; background: #fff; padding: 0 22px; color: #08213f; font-size: 16px; outline: none; box-shadow: 0 4px 12px rgba(8,33,63,0.06); }
     .consult-input::placeholder { color: #9a9a9a; }
     .consult-input:focus { border-color: #362997; box-shadow: 0 0 0 3px rgba(0, 86, 183, 0.1); }
     .consult-form-title { display: none; }
@@ -47,8 +47,9 @@
     .desktop-form-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 28px; }
     .desktop-form-grid input { grid-column: span 2; }
     .desktop-form-grid .desktop-half { grid-column: span 3; }
-    .desktop-form-grid #desktop-email, .desktop-form-grid #desktop-phone { grid-column: span 3; }
-    .desktop-form-grid #desktop-pin { grid-column: 1 / -1; }
+    .desktop-form-grid #desktop-email { grid-column: 1 / -1; }
+    .desktop-form-grid #desktop-phone { grid-column: span 3; }
+    .desktop-form-grid #desktop-pin { grid-column: span 3; }
     .mobile-form-grid { display: none; }
     .consult-submit { display: flex; width: 100%; height: 60px; align-items: center; justify-content: center; gap: 16px; border: 0; border-radius: 10px; background: #ed1c24; color: #fff; font-size: 22px; font-weight: 700; box-shadow: 0 4px 5px rgba(0,0,0,0.25); cursor: pointer; }
     .consult-submit span { font-size: 28px; font-weight: 400; line-height: 1; }
