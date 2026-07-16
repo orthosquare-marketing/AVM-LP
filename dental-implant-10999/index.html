@@ -43,6 +43,7 @@
     .consult-input::placeholder { color: #9a9a9a; }
     .consult-input:focus { border-color: #362997; box-shadow: 0 0 0 3px rgba(0, 86, 183, 0.1); }
     .consult-form-title { display: none; }
+    .consult-consent { display: none; }
     .consultation-form { display: grid; gap: 30px; width: 100%; }
     .desktop-form-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 28px; }
     .desktop-form-grid input { grid-column: span 2; }
@@ -55,6 +56,7 @@
     .consult-submit span { font-size: 28px; font-weight: 400; line-height: 1; }
     .mobile-benefit-cta { display: none; }
     .mobile-story-cta { display: none; }
+    .mobile-offer-cta { display: none; }
     .implant-mobile-nav { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -106,6 +108,7 @@
     }
 
     .mobile-sticky-cta { display: none; }
+    .whatsapp-float { display: none; }
 
     /* ---- Custom two-column hero (matches the provided screenshot) ---- */
     .di-hero { position: relative; overflow: hidden; background: radial-gradient(circle at 92% 0%, rgba(223,32,40,0.14), transparent 30%), linear-gradient(180deg, #f3f7fc 0%, #eef4fb 100%); }
@@ -150,6 +153,33 @@
       }
     }
 
+    /* ---- Mobile hero: left-aligned text block, no tooth image, badges as one strip ---- */
+    @media (max-width: 640px) {
+      .di-hero > div { width: min(100% - 36px, 420px); padding-top: 26px; padding-bottom: 26px; }
+      .di-hero-grid { gap: 0; min-height: 0; text-align: left; }
+      .di-hero-img-wrap { display: none; }
+      .di-hero h1 { font-size: 30px; line-height: 1.12; }
+      .di-hero p { margin-top: 12px; font-size: 13px; line-height: 1.45; }
+      .di-price {
+        display: block; width: 100%; min-width: 0; margin-top: 4px;
+        border-radius: 10px; padding: 14px 18px; font-size: 26px; text-align: left;
+      }
+      html .di-hero-badges {
+        justify-content: space-between; gap: 0; margin-top: 12px;
+        border-radius: 10px; background: #eef1f7; padding: 12px 10px;
+      }
+      .di-hero-badges .di-badge {
+        flex: 1 1 0; min-height: 0; justify-content: center; gap: 5px;
+        border: 0; border-radius: 0; background: transparent; padding: 0 6px;
+        font-size: 9px; font-weight: 500; color: #566166; white-space: nowrap;
+        box-shadow: none;
+      }
+      .di-hero-badges .di-badge + .di-badge { border-left: 1px solid #d7dce6; }
+      .di-hero-badges .di-badge img { height: 11px; width: 11px; }
+      .di-hero-badges .di-badge:hover { transform: none; box-shadow: none; }
+      .di-hero-cta { height: 46px; padding: 0 22px; font-size: 15px; }
+    }
+
     /* ---- Feature bar (below hero) ---- */
     .feature-bar {solid #eef0f6; }
     .feature-icon { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #eeecfa; }
@@ -175,7 +205,8 @@
       .benefits-surface .grid.grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .patient-stories-panel { width: min(100% - 32px, 1280px); padding: 32px 24px 30px; border-radius: 28px; }
       .implant-options { width: min(100% - 32px, 1180px); }
-      .discover-offer { width: 100vw; min-height: 0; grid-template-columns: 1fr; gap: 24px; margin-left: calc(50% - 50vw); background: #005cbf; padding: 45px 17px 43px; }
+      /* `html` prefix needed to outrank the element's own Tailwind utilities (w-, grid-cols-, bg-, p-). */
+      html .discover-offer { width: 100vw; min-height: 0; grid-template-columns: 1fr; gap: 24px; margin-left: calc(50% - 50vw); background: #f4f7fb; padding: 45px 17px 43px; }
       .transformation-section > div { width: min(100% - 32px, 1280px); }
       .testimonials-section > div { width: min(100% - 32px, 1280px); }
       .safety-section > div { width: min(100% - 32px, 1088px); }
@@ -190,6 +221,9 @@
       .mobile-sticky-cta { position: fixed; z-index: 50; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 43px; gap: 10px; border-top: 1px solid rgba(8,33,63,0.08); background: #fff; padding: 11px 14px; }
       .mobile-sticky-cta a:first-child { display: flex; height: 44px; align-items: center; justify-content: center; border-radius: 8px; background: #ED1C2A; color: #fff; font-size: 16px; font-weight: 500; }
       .mobile-sticky-cta a:last-child { display: grid; height: 43px; place-items: center; border-radius: 8px; background: #20c768; color: #fff; font-size: 17px; text-decoration: none; }
+      /* Floating WhatsApp button, parked above the sticky CTA bar */
+      .whatsapp-float { position: fixed; z-index: 55; right: 16px; bottom: calc(82px + env(safe-area-inset-bottom, 0px)); display: grid; width: 52px; height: 52px; place-items: center; border-radius: 50%; background: #20c768; box-shadow: 0 6px 18px rgba(8,33,63,0.28); }
+      .whatsapp-float img { width: 32px; height: 32px; }
     }
 
     @media (max-width: 1100px) {
@@ -205,24 +239,52 @@
       .stats-section > div { width: min(100% - 18px, 420px); }
       .stats-section h2 { margin-bottom: 9px; font-size: 25px; line-height: 1.1; }
       .stats-section .grid.grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
-      .stats-section article { min-height: 83px; grid-template-columns: 1fr; justify-items: center; align-content: center; gap: 5px; border-radius: 8px; padding: 10px 6px; text-align: center; }
-      .stats-section article img { width: 22px; height: 22px; }
-      .stats-section article strong { font-size: 22px !important; line-height: 1.1; }
-      .stats-section article span { font-size: 12px !important; line-height: 1.2; margin-top: 4px; white-space: normal !important; }
+      /* Scoped to the stat tiles only — these used to leak into every article in the section. */
+      .stats-section .grid.grid-cols-4 article { min-height: 83px; grid-template-columns: 1fr; justify-items: center; align-content: center; gap: 5px; border-radius: 8px; padding: 10px 6px; text-align: center; }
+      .stats-section .grid.grid-cols-4 article img { width: 22px; height: 22px; }
+      .stats-section .grid.grid-cols-4 article strong { font-size: 22px !important; line-height: 1.1; }
+      .stats-section .grid.grid-cols-4 article span { font-size: 12px !important; line-height: 1.2; margin-top: 4px; white-space: normal !important; }
       .desktop-form-grid { display: none; }
-      .mobile-form-grid { display: grid; gap: 9px; }
-      .consult-form-title { display: block; margin-bottom: 24px; text-align: center; font-size: 25px; font-weight: 400; line-height: 1.1; color: #362997; }
-      .consult-form-title span { font-size: 25px; color: #ed1c24; font-weight: 800; }
+      .mobile-form-grid { display: grid; gap: 12px; }
+      .consult-form-title { display: block; margin-bottom: 22px; text-align: left; font-size: 22px; font-weight: 700; line-height: 1.1; color: #1f2937; }
+      .consult-form-title span { font-size: 22px; color: #ed1c24; font-weight: 800; }
+      /* Mobile form card: dashed outline, icon-prefixed inputs, consent line.
+         The dashed card is the form itself, so the intro column above it keeps its own plain background.
+         NB: the `html` prefix is load-bearing — the Tailwind CDN injects its utilities after this
+         stylesheet, so a bare .class here would lose the tie to the element's utility classes. */
+      html .consultation-panel { border: 0; border-radius: 0; background: transparent; padding: 0; box-shadow: none; gap: 26px; }
+      .consultation-form { gap: 18px; border: 1px dashed #7b86c9; border-radius: 14px; background: #fff; padding: 26px 20px; text-align: left; }
+      .mobile-form-grid .consult-input {
+        height: 48px; border: 1px solid #e2e6f0; border-radius: 10px;
+        padding: 0 15px 0 42px; font-size: 13px; box-shadow: none;
+        background-repeat: no-repeat; background-position: 15px center; background-size: 16px 16px;
+      }
+      #mobile-first-name, #mobile-last-name { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3abbb' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='8' r='3.6'/><path d='M5.5 19.5a6.5 6.5 0 0 1 13 0'/></svg>"); }
+      #mobile-email { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3abbb' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><rect x='2.5' y='5' width='19' height='14' rx='2.5'/><path d='m3.5 7 8.5 6 8.5-6'/></svg>"); }
+      #mobile-phone { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3abbb' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><rect x='6.5' y='2.5' width='11' height='19' rx='2.5'/><path d='M10.5 18.5h3'/></svg>"); }
+      #mobile-pin { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3abbb' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21.5s6.5-5.4 6.5-10.5a6.5 6.5 0 0 0-13 0C5.5 16.1 12 21.5 12 21.5Z'/><circle cx='12' cy='10.5' r='2.4'/></svg>"); }
+      .consult-consent { display: flex; align-items: flex-start; gap: 9px; margin-top: 2px; cursor: pointer; }
+      .consult-consent input { flex: 0 0 auto; width: 14px; height: 14px; margin: 1px 0 0; accent-color: #ed1c24; }
+      .consult-consent span { font-size: 10px; line-height: 1.4; color: #566166; }
       .consult-input { height: 44px; border: 0; border-radius: 8px; padding: 0 15px; font-size: 13px; box-shadow: 0 1px 2px rgba(8,33,63,0.06); }
       .consult-submit { height: 44px; font-size: 16px; font-weight: 500; }
       .consult-submit span { font-size: 20px; }
       .benefits-surface > div { width: min(100% - 20px, 420px); }
       .benefits-surface .grid.grid-cols-3 { grid-template-columns: 1fr; gap: 8px; }
+      .benefits-surface article { min-height: 0; border: 1px solid #ed1c24; border-radius: 12px; padding: 14px 14px; }
+      .benefits-surface article > span { margin-bottom: 10px; height: 34px; width: 34px; border-radius: 8px; }
+      .benefits-surface article > span img { padding: 6px; }
+      .benefits-surface article h3 { margin-bottom: 5px; font-size: 14px; }
       .desktop-benefit-cta { display: none; }
       .mobile-benefit-cta { display: inline; }
       .implant-options { width: min(100% - 34px, 420px); }
       .implant-options .grid.grid-cols-2 { grid-template-columns: 1fr; }
-      .patient-stories-panel { width: min(100% - 36px, 420px); border: 0; border-radius: 0; background: transparent; padding: 32px 0 28px; box-shadow: none; }
+      html .patient-stories-panel { width: min(100% - 36px, 420px); border: 0; border-radius: 0; background: transparent; padding: 32px 0 28px; box-shadow: none; }
+      /* "What Are Dental Implants?" — left-aligned, heading broken onto two lines */
+      .stats-section .implant-intro { min-height: 0; border-radius: 10px; padding: 18px 16px; text-align: left; }
+      .stats-section .implant-intro h2 { margin-bottom: 8px; font-size: 20px; font-weight: 700; line-height: 1.12; }
+      .stats-section .implant-intro h2 span { display: block; }
+      .stats-section .implant-intro p { font-size: 11px; line-height: 1.42; }
     }
 
     /* Patient-stories / transformation mobile: show one card */
@@ -230,12 +292,103 @@
       .di-carousel-track > * { flex: 0 0 100% !important; }
     }
 
+    /* ---- Patient stories (mobile): compact heading, arrows centred under the CTA ---- */
+    @media (max-width: 640px) {
+      .desktop-story-cta { display: none; }
+      .mobile-story-cta { display: inline; }
+      .patient-stories-panel h2 { margin-bottom: 14px; font-size: 15px !important; line-height: 1.3; letter-spacing: 0.5px; }
+      .patient-stories-panel .stories-controls {
+        position: static; transform: none; justify-content: center; gap: 16px; margin-top: 14px;
+      }
+      .patient-stories-panel .stories-controls button { width: 32px; height: 32px; font-size: 17px; }
+      .patient-stories-panel .stories-controls button:first-child { background: #fff; border: 1px solid #f3c6c9; color: #ed1c24; }
+    }
+
+    /* ---- Safety section (mobile): single stacked column ---- */
+    @media (max-width: 640px) {
+      html .safety-section { padding: 26px 0 30px; }
+      html .safety-grid { grid-template-columns: 1fr; gap: 14px; }
+      html .safety-grid > article { grid-column: auto; min-height: 0; border-radius: 14px; }
+      .safety-section h2 { margin-bottom: 20px; font-size: 20px !important; line-height: 1.25; }
+      /* Infection card: image on top, copy in a solid panel underneath rather than overlaid */
+      html .safety-card-infection { position: relative; display: flex; flex-direction: column; border: 0; }
+      html .safety-infection-img { position: static; height: 220px; }
+      .safety-infection-scrim { display: none; }
+      html .safety-infection-body { position: static; background: #362997; padding: 16px 18px 18px; }
+      .safety-infection-body img { margin-bottom: 8px; height: 26px; width: 22px; }
+      .safety-infection-body h3 { font-size: 15px; }
+      html .safety-grid > article:nth-child(2) { background: #362997; padding: 18px; }
+      html .safety-grid > article:nth-child(3),
+      html .safety-grid > article:last-child { padding: 18px; }
+      html .safety-grid > article:last-child { display: block; }
+      html .safety-grid > article:last-child > div:first-child { padding: 0; }
+      html .safety-grid > article:last-child > div:last-child { min-height: 150px; margin-top: 14px; border-radius: 10px; overflow: hidden; }
+      .safety-grid h3 { margin-top: 12px !important; margin-bottom: 8px !important; font-size: 15px !important; }
+      .safety-grid p { max-width: 100% !important; font-size: 12px !important; }
+      html .safety-grid > article:nth-child(3) > img:last-child { height: 120px; }
+    }
+
+    /* ---- Cost-estimate banner (mobile) ---- */
+    @media (max-width: 640px) {
+      html .cost-cta {
+        min-height: 0; border-radius: 16px; padding: 30px 18px;
+        /* Corner circles rescaled for the narrow banner — the desktop radii swallow the heading here. */
+        background:
+          radial-gradient(circle 42px at 4px 4px, #f7f9fc 40px, transparent 41px),
+          radial-gradient(circle 50px at calc(100% - 4px) calc(100% - 4px), #f7f9fc 48px, transparent 49px),
+          #362997;
+      }
+      html .cost-cta h2 { font-size: 21px; line-height: 1.28; }
+      /* Red rule under the emphasised phrase; text-decoration survives the line wrap cleanly. */
+      .cost-cta h2 span { text-decoration: underline; text-decoration-color: #ed1c24; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+      html .cost-cta a { height: 44px; width: 100%; font-size: 15px; }
+    }
+
+    /* ---- Discover offer (mobile): stacked intro + offer card, light background ---- */
+    @media (max-width: 640px) {
+      .desktop-offer-cta { display: none; }
+      .mobile-offer-cta { display: inline; }
+      html .discover-offer-section { padding-top: 0; padding-bottom: 28px; }
+      html .discover-offer { background: #f4f7fb; padding: 30px 18px 32px; gap: 20px; }
+      .discover-offer::after { display: none; }
+      .discover-offer h2 { font-size: 30px !important; line-height: 1.14; }
+      .discover-offer > div:first-child > p { margin-top: 12px; font-size: 12px; line-height: 1.45; }
+      html .offer-patients-box { display: none; }
+      html .offer-card { border-top-width: 5px; border-radius: 12px; padding: 22px 16px 20px; box-shadow: 0 12px 30px rgba(8,33,63,0.12); }
+      .offer-card > div:first-of-type { margin-top: 20px; gap: 8px; }
+      .offer-card > div:first-of-type strong { height: 44px; padding: 0 8px; font-size: 17px; }
+      .offer-card > div:first-of-type span { margin-top: 6px; font-size: 7px; letter-spacing: 1.6px; }
+      .offer-card > p:last-of-type { margin-top: 12px; font-size: 12px; }
+      .offer-card > div:last-of-type { margin-top: 20px; padding: 14px 12px; text-align: center; }
+      .offer-card h4 { max-width: 100%; font-size: 14px; }
+      .offer-card h4 + p { font-size: 11px; }
+      .offer-card > a { margin-top: 20px; height: 42px; font-size: 15px; }
+    }
+
+    /* ---- Implant options (mobile): snap carousel with the neighbouring cards peeking ---- */
+    @media (max-width: 640px) {
+      html .implant-options { width: 100%; }
+      #implant-options-carousel {
+        display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+        scroll-behavior: smooth; padding: 4px 13% 4px; scroll-padding-inline: 13%;
+        -ms-overflow-style: none; scrollbar-width: none;
+      }
+      #implant-options-carousel::-webkit-scrollbar { display: none; }
+      #implant-options-carousel > article { flex: 0 0 100%; scroll-snap-align: center; }
+      #implant-options-carousel > article > div:first-child { height: 200px; border-radius: 12px; }
+      #implant-options-carousel > article > div:last-child { min-height: 0; border-radius: 10px; padding: 14px 14px 12px; }
+      .implant-mobile-nav { display: block; }
+      .implant-mobile-nav button { width: 32px; height: 32px; font-size: 17px; }
+      .implant-mobile-nav button:first-child { background: #fff; border: 1px solid #f3c6c9; color: #ed1c24; }
+    }
+
     /* ---- Micro-interactions (subtle) ---- */
     .di-hero-cta,
     .consult-submit,
     .bg-heroRed,
     .desktop-sticky-bar a,
-    .mobile-sticky-cta a {
+    .mobile-sticky-cta a,
+    .whatsapp-float {
       transition: transform 0.18s ease, box-shadow 0.2s ease, background-color 0.2s ease;
       will-change: transform;
     }
@@ -248,7 +401,8 @@
     .consult-submit:active,
     .bg-heroRed:active,
     .desktop-sticky-bar a:active,
-    .mobile-sticky-cta a:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(8,33,63,0.16); }
+    .mobile-sticky-cta a:active,
+    .whatsapp-float:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(8,33,63,0.16); }
 
     /* Cards lift gently on hover */
     .stats-section article,
@@ -271,6 +425,7 @@
     /* Respect users who prefer less motion */
     @media (prefers-reduced-motion: reduce) {
       .di-hero-cta, .consult-submit, .bg-heroRed, .desktop-sticky-bar a, .mobile-sticky-cta a,
+      .whatsapp-float,
       .stats-section article, .benefits-surface article, .implant-options [data-carousel-item],
       .review-card, .di-badge {
         transition: none;
@@ -424,8 +579,12 @@
               <input class="consult-input" id="mobile-first-name" name="mobileFirstName" placeholder="First Name" type="text" />
               <input class="consult-input" id="mobile-last-name" name="mobileLastName" placeholder="Last Name" type="text" />
               <input class="consult-input" id="mobile-email" name="mobileEmail" placeholder="Email" autocomplete="email" type="email" />
-              <input class="consult-input" id="mobile-phone" name="mobilePhoneNumber" placeholder="Phone Number" inputmode="tel" autocomplete="tel" type="tel" maxlength="10" />
+              <input class="consult-input" id="mobile-phone" name="mobilePhoneNumber" placeholder="Mobile Number" inputmode="tel" autocomplete="tel" type="tel" maxlength="10" />
               <input class="consult-input" id="mobile-pin" name="mobilePinCode" placeholder="Pincode" inputmode="numeric" autocomplete="postal-code" type="text" maxlength="6" />
+              <label class="consult-consent" for="mobile-consent">
+                <input id="mobile-consent" name="mobileConsent" type="checkbox" />
+                <span>I agree to be contacted by the AVM Smiles team regarding my consultation request.</span>
+              </label>
             </div>
             <p id="consultation-form-status" class="m-0 hidden text-[12px] font-bold text-heroRed"></p>
             <button class="consult-submit" type="submit">Book an Appointment <span>&rarr;</span></button>
@@ -436,7 +595,7 @@
           <div class="relative aspect-[455/237] overflow-hidden rounded-[18px] bg-[#eef1f5]">
             <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/9N7OFPJaj94" title="Dental implants video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <article class="flex min-h-[237px] flex-col justify-center rounded-[18px] bg-[#f6f3f4] px-[24px] py-[22px]">
+          <article class="implant-intro flex min-h-[237px] flex-col justify-center rounded-[18px] bg-[#f6f3f4] px-[24px] py-[22px]">
             <h2 class="mb-[15px] text-[28px] font-normal leading-[1.08] text-[#362997]">What Are <span class="font-extrabold text-heroRed">Dental Implants?</span></h2>
             <p class="m-0 max-w-[468px] text-[16px] leading-[1.2] text-[#566166]">
               Dental Implants are titanium posts placed into the jawbone to replace missing teeth. These implants serve as a foundation for crowns, bridges, or dentures, restoring natural tooth function and appearance. They offer a long-lasting solution that prevents bone loss, supports jaw structure, and provides a stable, comfortable alternative to traditional dentures or bridges.
@@ -496,8 +655,8 @@
             <!-- story cards injected by JS -->
           </div>
           <div class="relative mt-[23px] min-h-[47px]">
-            <a class="mx-auto flex h-[47px] w-[334px] max-w-full items-center justify-center gap-[9px] rounded-[9px] bg-heroRed text-[17px] font-semibold text-white shadow-[0_4px_7px_rgba(8,33,63,0.28)]" href="#modal-form">Hear More From Our Patient <span class="text-[22px] font-normal leading-none">&rarr;</span></a>
-            <div class="carousel-controls">
+            <a class="mx-auto flex h-[47px] w-[334px] max-w-full items-center justify-center gap-[9px] rounded-[9px] bg-heroRed text-[17px] font-semibold text-white shadow-[0_4px_7px_rgba(8,33,63,0.28)]" href="#modal-form"><span class="desktop-story-cta">Hear More From Our Patient</span><span class="mobile-story-cta">Book an Appointment</span> <span class="text-[22px] font-normal leading-none">&rarr;</span></a>
+            <div class="carousel-controls stories-controls">
               <button type="button" aria-label="Previous item" onclick="scrollStories(-1)">&larr;</button>
               <button type="button" aria-label="Next item" onclick="scrollStories(1)">&rarr;</button>
             </div>
@@ -537,13 +696,13 @@
       </div>
     </section>
 
-    <!-- ============ DISCOVER OFFER (desktop) ============ -->
-    <section class="hidden md:block bg-white pb-[57px] pt-[12px]">
+    <!-- ============ DISCOVER OFFER ============ -->
+    <section class="discover-offer-section block bg-white pb-[57px] pt-[12px]">
       <div class="discover-offer mx-auto grid min-h-[619px] w-[min(1280px,calc(100%_-_116px))] grid-cols-[minmax(500px,0.82fr)_410px] items-center justify-center gap-[42px] overflow-hidden bg-[#f4f7fb] px-[63px] py-[38px]">
         <div>
           <h2 class="m-0 text-[52px] max-md:text-[25px] font-normal leading-[1.12] text-[#362997]">Discover The<br /><span class="font-extrabold text-[#bd101b]">Smile</span> You<br /><span class="font-extrabold text-[#bd101b]">Deserve!</span></h2>
           <p class="mt-[20px] max-w-[474px] text-[16px] leading-[1.2] text-[#566166]">Explore how Dental implants can transform your confidence with a natural, permanent solution.</p>
-          <div class="mt-[29px] grid min-h-[155px] max-w-[363px] grid-cols-[96px_1fr] items-center gap-[27px] rounded-[8px] border border-[#e2e6ee] bg-white px-[22px] py-[20px] shadow-[0_16px_36px_rgba(8,33,63,0.08)]">
+          <div class="offer-patients-box mt-[29px] grid min-h-[155px] max-w-[363px] grid-cols-[96px_1fr] items-center gap-[27px] rounded-[8px] border border-[#e2e6ee] bg-white px-[22px] py-[20px] shadow-[0_16px_36px_rgba(8,33,63,0.08)]">
             <div><strong class="block text-[25px] semi leading-none text-[#362997]">2 lac+</strong><span class="mt-[8px] block text-[10px] font-extrabold uppercase leading-[1.2] tracking-[3.5px] text-[#2e3340]">Happy Patients</span></div>
             <div>
               <div class="mb-[12px] flex items-center" aria-hidden="true"><img class="avatar" src="assets/patients/patient-1.svg" alt="" loading="lazy" /><img class="avatar" src="assets/patients/patient-2.svg" alt="" loading="lazy" /><img class="avatar" src="assets/patients/patient-3.svg" alt="" loading="lazy" /><img class="avatar" src="assets/patients/patient-4.svg" alt="" loading="lazy" /><em class="avatar avatar-more">+2k</em></div>
@@ -565,7 +724,7 @@
             <h4 class="m-0 max-w-[286px] text-[17px] font-semibold leading-[1.05] text-[#c9141e]">Free Consultation &amp; X-ray &mdash; Dental Implants Starting at &#8377;10,999*</h4>
             <p class="m-0 mt-[11px] text-[12px] font-normal leading-[1.38] text-[#4d5663]">Take the first step toward a confident and beautiful smile with our exclusive 48-hour offer. Don't miss the chance to get a free consultation and X-rays to explore how dental implants can change your life.</p>
           </div>
-          <a class="mt-[28px] flex h-[45px] w-full items-center justify-center gap-[9px] rounded-[9px] bg-heroRed text-[16px] font-semibold text-white shadow-[0_5px_6px_rgba(158,0,10,0.22)]" href="#modal-form">Here More From Our Patients<span class="text-[22px] font-normal leading-none">&rarr;</span></a>
+          <a class="mt-[28px] flex h-[45px] w-full items-center justify-center gap-[9px] rounded-[9px] bg-heroRed text-[16px] font-semibold text-white shadow-[0_5px_6px_rgba(158,0,10,0.22)]" href="#modal-form"><span class="desktop-offer-cta">Here More From Our Patients</span><span class="mobile-offer-cta">Book an Appointment</span><span class="text-[22px] font-normal leading-none">&rarr;</span></a>
         </article>
       </div>
     </section>
@@ -712,14 +871,14 @@
     </section>
 
     <!-- ============ SAFETY (desktop) ============ -->
-    <section class="hidden md:block safety-section bg-white pb-[65px] pt-[30px]">
+    <section class="safety-section block bg-white pb-[65px] pt-[30px]">
       <div class="mx-auto w-[min(1088px,calc(100%_-_72px))]">
         <h2 class="mb-[28px] text-center text-[44px] max-md:text-[25px] font-normal leading-[1.1] text-[#362997]">We Ensure the <span class="font-semibold text-heroRed">Safety</span> of Our <span class="font-semibold text-heroRed">Patients</span></h2>
-        <div class="grid grid-cols-[0.69fr_0.7fr_1fr] gap-[20px]">
-          <article class="relative col-span-2 min-h-[302px] overflow-hidden rounded-[8px] border border-[#d8dfe8]">
-            <img class="absolute inset-0 h-full w-full object-cover" src="assets/safety/infection-control.jpg" alt="Dental staff following infection control protocol" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" aria-hidden="true"></div>
-            <div class="absolute inset-x-[27px] bottom-[23px] text-white">
+        <div class="safety-grid grid grid-cols-[0.69fr_0.7fr_1fr] gap-[20px]">
+          <article class="safety-card-infection relative col-span-2 min-h-[302px] overflow-hidden rounded-[8px] border border-[#d8dfe8]">
+            <img class="safety-infection-img absolute inset-0 h-full w-full object-cover" src="assets/safety/infection-control.jpg" alt="Dental staff following infection control protocol" />
+            <div class="safety-infection-scrim absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" aria-hidden="true"></div>
+            <div class="safety-infection-body absolute inset-x-[27px] bottom-[23px] text-white">
               <img class="mb-[11px] h-[40px] w-[32px] object-contain" src="assets/safety/trained-icon.svg" alt="" aria-hidden="true" />
               <h3 class="mb-[10px] text-[20px] font-extrabold leading-[1.1] text-white">Comprehensive Infection Control</h3>
               <p class="m-0 max-w-[520px] text-[11px] font-normal leading-[1.35] text-white/90">Our multi-layered defense protocols exceed OSHA and CDC guidelines, ensuring a sterile environment for every procedure.</p>
@@ -771,6 +930,9 @@
       <a href="#modal-form">Claim Offer Now <span class="text-xl ml-2">&rarr;</span></a>
       <a aria-label="Chat on WhatsApp" href="https://wa.me/917304983464" rel="noopener noreferrer" target="_blank"><img alt="" aria-hidden="true" height="32" width="32" src="assets/whatsapp.svg" /></a>
     </div>
+
+    <!-- Floating WhatsApp button (mobile) -->
+    <a class="whatsapp-float" aria-label="Chat on WhatsApp" href="https://wa.me/917304983464" rel="noopener noreferrer" target="_blank"><img alt="" aria-hidden="true" height="32" width="32" src="assets/whatsapp.svg" /></a>
 
     <!-- Desktop sticky offer bar -->
     <div class="desktop-sticky-bar">
@@ -867,6 +1029,7 @@
       if (!emailPattern.test(values.email)) return "Please enter a valid email address.";
       if (!phonePattern.test(values.phone)) return "Please enter a valid 10-digit mobile number.";
       if (!pinPattern.test(values.pincode)) return "Please enter a valid 6-digit pin code.";
+      if (values.consentRequired && !values.consent) return "Please agree to be contacted before submitting.";
       return "";
     }
     function wireForm(formId, statusId, getValues) {
@@ -896,12 +1059,16 @@
     }
     function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; }
     wireForm("consultation", "consultation-form-status", function () {
+      var consentEl = document.getElementById("mobile-consent");
       return {
         firstName: val("desktop-first-name") || val("mobile-first-name"),
         lastName: val("desktop-last-name") || val("mobile-last-name"),
         email: val("desktop-email") || val("mobile-email"),
         phone: val("desktop-phone") || val("mobile-phone"),
-        pincode: val("desktop-pin") || val("mobile-pin")
+        pincode: val("desktop-pin") || val("mobile-pin"),
+        // The consent box only renders on mobile, so it can only gate the mobile form.
+        consentRequired: !!(consentEl && consentEl.offsetParent),
+        consent: !!(consentEl && consentEl.checked)
       };
     });
     wireForm("modal-lead-form", "modal-lead-status", function () {
@@ -990,12 +1157,23 @@
       var items = document.querySelectorAll("#implant-options-carousel [data-carousel-item]");
       items.forEach(function (el, i) { el.classList.toggle("is-active", i === implantIdx); });
     }
+    function centreImplant() {
+      var track = document.getElementById("implant-options-carousel");
+      var items = track ? track.querySelectorAll("[data-carousel-item]") : [];
+      if (!track || !items.length) return;
+      // On desktop the track is a plain grid with nothing to scroll, so this is a no-op there.
+      var el = items[implantIdx];
+      track.scrollTo({ left: el.offsetLeft - (track.clientWidth - el.clientWidth) / 2, behavior: "smooth" });
+    }
     function cycleImplant(dir) {
       var items = document.querySelectorAll("#implant-options-carousel [data-carousel-item]");
       implantIdx = (implantIdx + dir + items.length) % items.length;
       renderImplant();
+      centreImplant();
     }
     renderImplant();
+    // Open on All-on-4 (the highlighted option) once layout has settled.
+    window.addEventListener("load", centreImplant);
 
     /* ---------- Mobile testimonials ---------- */
     var testimonialSlides = [
