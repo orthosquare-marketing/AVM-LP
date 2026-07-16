@@ -99,16 +99,16 @@
     /* Image pinned flush to the hero's bottom-right corner, no spacing */
     .di-hero-img-wrap {
       position: absolute; top: 0; right: 0; bottom: 0;
-      width: clamp(320px, 45vw, 600px);
+      width: clamp(400px, 58vw, 720px);
       display: flex; align-items: flex-end; justify-content: flex-end;
       pointer-events: none; z-index: 0;
     }
     .di-hero-img-wrap img {
       width: auto; height: auto; max-width: 100%; max-height: 100%;
       object-fit: contain; object-position: bottom right;
-      /* Soften only the left edge where the gums meet the text column */
-      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 13%, #000 100%);
-      mask-image: linear-gradient(to right, transparent 0, #000 13%, #000 100%);
+      /* Soften the left edge so the gums fade where they overlap the text column */
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 20%, #000 100%);
+      mask-image: linear-gradient(to right, transparent 0, #000 20%, #000 100%);
     }
     .di-price { display: inline-block; min-width: 180px; background: #0055b718; border: 1px dashed #4f64a6; border-radius: 8px; padding: 10px 28px; font-size: 30px; font-weight: 800; line-height: 1; color: #362997; box-shadow: 0 10px 24px rgba(0,86,183,0.05); }
     .di-badge { display: inline-flex; align-items: center; gap: 10px; min-height: 42px; border: 1px solid #e4e7f2; border-radius: 8px; background: #fff; padding: 8px 16px; font-size: 15px; font-weight: 600; color: #242424; box-shadow: 0 6px 16px rgba(8,33,63,0.05); }
