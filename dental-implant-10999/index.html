@@ -108,7 +108,6 @@
     }
 
     .mobile-sticky-cta { display: none; }
-    .whatsapp-float { display: none; }
 
     /* ---- Custom two-column hero (matches the provided screenshot) ---- */
     .di-hero { position: relative; overflow: hidden; background: radial-gradient(circle at 92% 0%, rgba(223,32,40,0.14), transparent 30%), linear-gradient(180deg, #f3f7fc 0%, #eef4fb 100%); }
@@ -223,9 +222,6 @@
       .mobile-sticky-cta { position: fixed; z-index: 50; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 43px; gap: 10px; border-top: 1px solid rgba(8,33,63,0.08); background: #fff; padding: 11px 14px; }
       .mobile-sticky-cta a:first-child { display: flex; height: 44px; align-items: center; justify-content: center; border-radius: 8px; background: #ED1C2A; color: #fff; font-size: 16px; font-weight: 500; }
       .mobile-sticky-cta a:last-child { display: grid; height: 43px; place-items: center; border-radius: 8px; background: #20c768; color: #fff; font-size: 17px; text-decoration: none; }
-      /* Floating WhatsApp button, parked above the sticky CTA bar */
-      .whatsapp-float { position: fixed; z-index: 55; right: 16px; bottom: calc(82px + env(safe-area-inset-bottom, 0px)); display: grid; width: 52px; height: 52px; place-items: center; border-radius: 50%; background: #20c768; box-shadow: 0 6px 18px rgba(8,33,63,0.28); }
-      .whatsapp-float img { width: 32px; height: 32px; }
     }
 
     @media (max-width: 1100px) {
@@ -346,14 +342,8 @@
 
     /* ---- Cost-estimate banner (mobile) ---- */
     @media (max-width: 640px) {
-      html .cost-cta {
-        min-height: 0; border-radius: 16px; padding: 30px 18px;
-        /* Corner circles rescaled for the narrow banner — the desktop radii swallow the heading here. */
-        background:
-          radial-gradient(circle 42px at 4px 4px, #f7f9fc 40px, transparent 41px),
-          radial-gradient(circle 50px at calc(100% - 4px) calc(100% - 4px), #f7f9fc 48px, transparent 49px),
-          #362997;
-      }
+      /* Flat purple on mobile — the corner circles crowd the banner at this width. */
+      html .cost-cta { min-height: 0; border-radius: 16px; padding: 30px 18px; background: #362997; }
       html .cost-cta h2 { font-size: 21px; line-height: 1.28; }
       /* Red rule under the emphasised phrase; text-decoration survives the line wrap cleanly. */
       .cost-cta h2 span { text-decoration: underline; text-decoration-color: #ed1c24; text-decoration-thickness: 2px; text-underline-offset: 4px; }
@@ -403,8 +393,7 @@
     .consult-submit,
     .bg-heroRed,
     .desktop-sticky-bar a,
-    .mobile-sticky-cta a,
-    .whatsapp-float {
+    .mobile-sticky-cta a {
       transition: transform 0.18s ease, box-shadow 0.2s ease, background-color 0.2s ease;
       will-change: transform;
     }
@@ -417,8 +406,7 @@
     .consult-submit:active,
     .bg-heroRed:active,
     .desktop-sticky-bar a:active,
-    .mobile-sticky-cta a:active,
-    .whatsapp-float:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(8,33,63,0.16); }
+    .mobile-sticky-cta a:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(8,33,63,0.16); }
 
     /* Cards lift gently on hover */
     .stats-section article,
@@ -441,7 +429,6 @@
     /* Respect users who prefer less motion */
     @media (prefers-reduced-motion: reduce) {
       .di-hero-cta, .consult-submit, .bg-heroRed, .desktop-sticky-bar a, .mobile-sticky-cta a,
-      .whatsapp-float,
       .stats-section article, .benefits-surface article, .implant-options [data-carousel-item],
       .review-card, .di-badge {
         transition: none;
@@ -948,7 +935,6 @@
     </div>
 
     <!-- Floating WhatsApp button (mobile) -->
-    <a class="whatsapp-float" aria-label="Chat on WhatsApp" href="https://wa.me/917304983464" rel="noopener noreferrer" target="_blank"><img alt="" aria-hidden="true" height="32" width="32" src="assets/whatsapp.svg" /></a>
 
     <!-- Desktop sticky offer bar -->
     <div class="desktop-sticky-bar">
@@ -1119,10 +1105,17 @@
         track.appendChild(a);
       });
     })();
-    function scrollStories(dir) {
-      var t = document.getElementById("stories-track");
-      t.scrollBy({ left: dir * (t.clientWidth / 3 + 24), behavior: "smooth" });
+    /* Advance a carousel by exactly one card. Measure the card itself rather than
+       assuming three across — on mobile each card fills the track, so a fixed
+       clientWidth/3 step only nudged it part of a card. */
+    function scrollTrackByCard(trackId, dir) {
+      var t = document.getElementById(trackId);
+      var card = t && t.firstElementChild;
+      if (!card) return;
+      var gap = parseFloat(getComputedStyle(t).columnGap) || 0;
+      t.scrollBy({ left: dir * (card.getBoundingClientRect().width + gap), behavior: "smooth" });
     }
+    function scrollStories(dir) { scrollTrackByCard("stories-track", dir); }
 
     /* ---------- Transformation carousel ---------- */
     var transformImgs = ["ab1", "ab2", "ab3", "ab4", "ab5", "ab6"];
@@ -1135,10 +1128,7 @@
         track.appendChild(d);
       });
     })();
-    function scrollTransform(dir) {
-      var t = document.getElementById("transform-track");
-      t.scrollBy({ left: dir * (t.clientWidth / 3 + 24), behavior: "smooth" });
-    }
+    function scrollTransform(dir) { scrollTrackByCard("transform-track", dir); }
 
     /* Auto-advance carousels (desktop) */
     setInterval(function () {
