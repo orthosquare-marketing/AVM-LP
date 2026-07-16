@@ -269,7 +269,12 @@
       .consult-submit span { font-size: 20px; }
       .benefits-surface > div { width: min(100% - 20px, 420px); }
       .benefits-surface .grid.grid-cols-3 { grid-template-columns: 1fr; gap: 8px; }
-      .benefits-surface article { min-height: 0; border: 1px solid #ed1c24; border-radius: 12px; padding: 14px 14px; }
+      /* Red stroke on one edge only, alternating sides down the list. The other three
+         edges stay transparent so the rounded corners taper the stroke out and the
+         1px is still reserved (no layout shift between odd and even cards). */
+      .benefits-surface article { min-height: 0; border: 1px solid transparent; border-radius: 12px; padding: 14px 14px; }
+      .benefits-surface article:nth-child(odd) { border-left-color: #ed1c24; }
+      .benefits-surface article:nth-child(even) { border-right-color: #ed1c24; }
       .benefits-surface article > span { margin-bottom: 10px; height: 34px; width: 34px; border-radius: 8px; }
       .benefits-surface article > span img { padding: 6px; }
       .benefits-surface article h3 { margin-bottom: 5px; font-size: 14px; }
@@ -364,9 +369,20 @@
       .discover-offer > div:first-child > p { margin-top: 12px; font-size: 12px; line-height: 1.45; }
       html .offer-patients-box { display: none; }
       html .offer-card { border-top-width: 5px; border-radius: 12px; padding: 22px 16px 20px; box-shadow: 0 12px 30px rgba(8,33,63,0.12); }
-      .offer-card > div:first-of-type { margin-top: 20px; gap: 8px; }
-      .offer-card > div:first-of-type strong { height: 44px; padding: 0 8px; font-size: 17px; }
-      .offer-card > div:first-of-type span { margin-top: 6px; font-size: 7px; letter-spacing: 1.6px; }
+      /* Countdown: the purple tile moves from the number to the wrapper so the unit
+         label sits inside it, under the number. */
+      html .offer-card > div:first-of-type { margin-top: 20px; gap: 8px; }
+      html .offer-card > div:first-of-type > div {
+        border-radius: 12px; background: #362997; padding: 12px 4px 10px;
+        box-shadow: 0 7px 10px rgba(8,33,63,0.22);
+      }
+      html .offer-card > div:first-of-type strong {
+        height: auto; padding: 0; border-radius: 0; background: transparent;
+        box-shadow: none; font-size: 20px;
+      }
+      html .offer-card > div:first-of-type span {
+        margin-top: 7px; font-size: 8px; letter-spacing: 1.2px; color: #fff;
+      }
       .offer-card > p:last-of-type { margin-top: 12px; font-size: 12px; }
       .offer-card > div:last-of-type { margin-top: 20px; padding: 14px 12px; text-align: center; }
       .offer-card h4 { max-width: 100%; font-size: 14px; }
