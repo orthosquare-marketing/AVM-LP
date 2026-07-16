@@ -342,8 +342,11 @@
 
     /* ---- Cost-estimate banner (mobile) ---- */
     @media (max-width: 640px) {
-      /* Flat purple on mobile — the corner circles crowd the banner at this width. */
-      html .cost-cta { min-height: 0; border-radius: 16px; padding: 30px 18px; background: #362997; }
+      /* Supplied 390x200 artwork; the purple underneath covers any aspect ratio cover() can't fill. */
+      html .cost-cta {
+        min-height: 0; border-radius: 16px; padding: 30px 18px;
+        background: url("assets/cost-banner-bg.svg") center / cover no-repeat, #362997;
+      }
       html .cost-cta h2 { font-size: 21px; line-height: 1.28; }
       /* Red rule under the emphasised phrase; text-decoration survives the line wrap cleanly. */
       .cost-cta h2 span { text-decoration: underline; text-decoration-color: #ed1c24; text-decoration-thickness: 2px; text-underline-offset: 4px; }
