@@ -159,22 +159,29 @@
       .di-hero-img-wrap { display: none; }
       .di-hero h1 { font-size: 30px; line-height: 1.12; }
       .di-hero p { margin-top: 12px; font-size: 13px; line-height: 1.45; }
-      .di-price {
+      /* Price and badges read as one grey panel: the price is the top half (square
+         bottom corners, no fill/border of its own) and the badge row is the bottom
+         half, butted up against it. */
+      html .di-price {
         display: block; width: 100%; min-width: 0; margin-top: 4px;
-        border-radius: 10px; padding: 14px 18px; font-size: 26px; text-align: left;
+        border: 0; border-radius: 10px 10px 0 0; background: #e8eaee;
+        padding: 18px 18px 8px; font-size: 26px; text-align: left; box-shadow: none;
       }
       html .di-hero-badges {
-        justify-content: space-between; gap: 0; margin-top: 12px;
-        border-radius: 10px; background: #eef1f7; padding: 12px 10px;
+        justify-content: space-between; gap: 8px; margin-top: 0;
+        border-radius: 0 0 10px 10px; background: #e8eaee; padding: 4px 18px 18px;
       }
       .di-hero-badges .di-badge {
-        flex: 1 1 0; min-height: 0; justify-content: center; gap: 5px;
-        border: 0; border-radius: 0; background: transparent; padding: 0 6px;
-        font-size: 9px; font-weight: 500; color: #566166; white-space: nowrap;
+        flex: 0 1 auto; min-height: 0; gap: 5px;
+        border: 0; border-radius: 0; background: transparent; padding: 0;
+        font-size: 10px; font-weight: 400; color: #4a5560; white-space: nowrap;
         box-shadow: none;
       }
-      .di-hero-badges .di-badge + .di-badge { border-left: 1px solid #d7dce6; }
-      .di-hero-badges .di-badge img { height: 11px; width: 11px; }
+      /* The badge artwork is a red icon; the design calls for a plain tick. */
+      .di-hero-badges .di-badge img { display: none; }
+      .di-hero-badges .di-badge::before {
+        content: "\2714"; font-size: 11px; font-weight: 700; color: #1f2937; line-height: 1;
+      }
       .di-hero-badges .di-badge:hover { transform: none; box-shadow: none; }
       .di-hero-cta { height: 46px; padding: 0 22px; font-size: 15px; }
     }
