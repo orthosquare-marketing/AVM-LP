@@ -305,7 +305,7 @@
       /* Exactly one card carries this class at a time; see the cycler in the script. */
       .benefits-surface article.is-snaking::after {
         opacity: 1;
-        animation: benefit-snake-draw 2.5s cubic-bezier(0.65, 0, 0.35, 1);
+        animation: benefit-snake-draw var(--snake-duration) cubic-bezier(0.65, 0, 0.35, 1);
       }
       .benefits-surface article > span { margin-bottom: 10px; height: 34px; width: 34px; border-radius: 8px; }
       .benefits-surface article > span img { padding: 6px; }
@@ -466,6 +466,9 @@
       inherits: false;
     }
     @keyframes benefit-snake-draw { to { --snake-angle: 360deg; } }
+    /* Seconds per card. The cycler reads this so the handoff can't drift out of sync
+       with the draw — change the speed here only. */
+    .benefits-surface { --snake-duration: 4s; }
 
     /* ---- Micro-interactions (subtle) ---- */
     .di-hero-cta,
@@ -1320,10 +1323,13 @@
        Walks one red stroke down the list, looping back to the first. The ring only
        exists under the mobile breakpoint, so the class is inert on desktop. */
     (function snakeBorder() {
+      var surface = document.querySelector(".benefits-surface");
       var cards = document.querySelectorAll(".benefits-surface article");
-      if (!cards.length) return;
+      if (!surface || !cards.length) return;
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      var DRAW_MS = 2500;
+      // Single source of truth: --snake-duration drives both the draw and this cycler.
+      var raw = getComputedStyle(surface).getPropertyValue("--snake-duration").trim();
+      var DRAW_MS = parseFloat(raw) * (/ms$/.test(raw) ? 1 : 1000) || 4000;
       var i = 0;
       function step() {
         for (var n = 0; n < cards.length; n++) {
