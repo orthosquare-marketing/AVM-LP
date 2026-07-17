@@ -407,14 +407,14 @@
       html .offer-card > div:first-of-type span {
         margin-top: 7px; font-size: 8px; letter-spacing: 1.2px; color: #fff;
       }
-      /* Social proof bar under the countdown */
+      /* Social proof strip between the offer and transformation sections */
       .offer-patients-bar {
-        display: flex; align-items: center; gap: 12px; margin-top: 16px;
-        border: 1px solid #e6c66b; border-radius: 6px; background: #f7f7f7;
-        padding: 10px 12px; text-align: left;
+        display: flex; align-items: center; gap: 14px; margin: 0;
+        border: 0; border-radius: 0; background: #f7f8fa;
+        padding: 14px 18px; text-align: left;
       }
       .offer-patients-avatars { display: flex; flex: 0 0 auto; align-items: center; }
-      .offer-patients-bar .avatar { width: 38px; height: 38px; }
+      .offer-patients-bar .avatar { width: 42px; height: 42px; }
       .offer-patients-bar .avatar-more { background: #b3121f; color: #fff; font-size: 11px; }
       .offer-patients-copy strong {
         display: block; font-size: 13px; font-weight: 800; line-height: 1.2;
@@ -796,18 +796,7 @@
 
           <!-- Social proof under the countdown. Mobile only; the desktop layout carries
                the same claim in the .offer-patients-box beside the card. -->
-          <div class="offer-patients-bar">
-            <span class="offer-patients-avatars" aria-hidden="true">
-              <img class="avatar" src="assets/patients/patient-1.svg" alt="" loading="lazy" />
-              <img class="avatar" src="assets/patients/patient-2.svg" alt="" loading="lazy" />
-              <img class="avatar" src="assets/patients/patient-3.svg" alt="" loading="lazy" />
-              <em class="avatar avatar-more">+2k</em>
-            </span>
-            <span class="offer-patients-copy">
-              <strong>2 Lac+ Happy Patients</strong>
-              <span>Join the community today!</span>
-            </span>
-          </div>
+         
 
           <div class="mt-[39px] rounded-[12px] border border-[#e0e5ed] bg-[#f2f5f8] px-[15px] py-[18px] text-left">
             <h4 class="m-0 max-w-[286px] text-[17px] font-semibold leading-[1.05] text-[#c9141e]">Free Consultation &amp; X-ray &mdash; Dental Implants Starting at &#8377;10,999*</h4>
@@ -817,6 +806,18 @@
         </article>
       </div>
     </section>
+    <div class="offer-patients-bar">
+      <span class="offer-patients-avatars" aria-hidden="true">
+        <img class="avatar" src="assets/patients/patient-1.svg" alt="" loading="lazy" />
+        <img class="avatar" src="assets/patients/patient-2.svg" alt="" loading="lazy" />
+        <img class="avatar" src="assets/patients/patient-3.svg" alt="" loading="lazy" />
+        <em class="avatar avatar-more">+2k</em>
+      </span>
+      <span class="offer-patients-copy">
+        <strong>2 Lac+ Happy Patients</strong>
+        <span>Join the community today!</span>
+      </span>
+    </div>
 
     <!-- ============ TRANSFORMATION ============ -->
     <section class="transformation-section bg-[#f7f9fc] pb-[31px] pt-[31px] overflow-hidden">
