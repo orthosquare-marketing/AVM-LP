@@ -277,25 +277,36 @@
       .consult-submit span { font-size: 20px; }
       .benefits-surface > div { width: min(100% - 20px, 420px); }
       .benefits-surface .grid.grid-cols-3 { grid-template-columns: 1fr; gap: 8px; }
-      /* Border is drawn by the ::before ring below, so the card itself has none. */
-      .benefits-surface article { position: relative; min-height: 0; border: 0; border-radius: 12px; padding: 14px 14px; }
-      .benefits-surface article::before {
+      /* Both rings are drawn by pseudo-elements, so the card carries no border itself:
+         ::before is the resting grey ring, ::after is the red snake that only the
+         active card reveals. Two layers (rather than one gradient) let the red cross-
+         fade independently while the grey stays put. */
+      .benefits-surface article { position: relative; min-height: 0; border: 0; border-radius: 30px; padding: 16px 16px; }
+      .benefits-surface article::before,
+      .benefits-surface article::after {
         content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-        border-radius: inherit; padding: 1px;
-        background: conic-gradient(from var(--border-angle), #e5e8f0 0 90%, #ed1c24 90% 100%);
-        /* Punch out the middle so only the 1px padding ring paints. */
+        border-radius: inherit; padding: 2px;
+        /* Punch out the middle so only the 2px padding ring paints. */
         -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
         -webkit-mask-composite: xor;
         mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
         mask-composite: exclude;
-        animation: benefit-border-spin 4s linear infinite;
       }
-      /* Offset each card so the highlights aren't in lockstep. */
-      .benefits-surface article:nth-child(2)::before { animation-delay: -0.65s; }
-      .benefits-surface article:nth-child(3)::before { animation-delay: -1.3s; }
-      .benefits-surface article:nth-child(4)::before { animation-delay: -1.95s; }
-      .benefits-surface article:nth-child(5)::before { animation-delay: -2.6s; }
-      .benefits-surface article:nth-child(6)::before { animation-delay: -3.25s; }
+      .benefits-surface article::before { background: #e5e8f0; }
+      /* Head plus a tail that fades out behind it, so it reads as a stroke being drawn
+         rather than a block sliding around. */
+      .benefits-surface article::after {
+        background: conic-gradient(from var(--snake-angle),
+          #ed1c24 0 6%, rgba(237, 28, 36, 0.35) 13%, rgba(237, 28, 36, 0) 22% 100%);
+        filter: drop-shadow(0 0 3px rgba(237, 28, 36, 0.45));
+        opacity: 0;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* Exactly one card carries this class at a time; see the cycler in the script. */
+      .benefits-surface article.is-snaking::after {
+        opacity: 1;
+        animation: benefit-snake-draw 2.5s cubic-bezier(0.65, 0, 0.35, 1);
+      }
       .benefits-surface article > span { margin-bottom: 10px; height: 34px; width: 34px; border-radius: 8px; }
       .benefits-surface article > span img { padding: 6px; }
       .benefits-surface article h3 { margin-bottom: 5px; font-size: 14px; }
@@ -446,15 +457,15 @@
       .implant-mobile-nav button:first-child { background: #fff; border: 1px solid #f3c6c9; color: #ed1c24; }
     }
 
-    /* Benefits card travelling border (mobile). Registering the angle makes it
-       animatable; without @property the custom property is a plain string and the
-       keyframe cannot interpolate, so the ring would sit still. */
-    @property --border-angle {
+    /* Benefits card snake border (mobile). Registering the angle makes it animatable;
+       without @property the custom property is a plain string and the keyframe cannot
+       interpolate, so the stroke would sit still. */
+    @property --snake-angle {
       syntax: "<angle>";
       initial-value: 0deg;
       inherits: false;
     }
-    @keyframes benefit-border-spin { to { --border-angle: 360deg; } }
+    @keyframes benefit-snake-draw { to { --snake-angle: 360deg; } }
 
     /* ---- Micro-interactions (subtle) ---- */
     .di-hero-cta,
@@ -506,8 +517,8 @@
       .implant-options [data-carousel-item]:hover, .review-card:hover, .di-badge:hover {
         transform: none;
       }
-      /* Park the travelling border rather than loop it forever. */
-      .benefits-surface article::before { animation: none; }
+      /* Leave the resting grey ring only; the cycler also bails out on this query. */
+      .benefits-surface article::after { animation: none; opacity: 0; }
     }
   </style>
 </head>
@@ -1304,6 +1315,26 @@
     function closeVideo() {
       if (lightbox.style.display === "flex") { lightbox.style.display = "none"; lightboxFrame.src = ""; document.body.style.overflow = ""; }
     }
+
+    /* ---------- Benefits cards: snake border ----------
+       Walks one red stroke down the list, looping back to the first. The ring only
+       exists under the mobile breakpoint, so the class is inert on desktop. */
+    (function snakeBorder() {
+      var cards = document.querySelectorAll(".benefits-surface article");
+      if (!cards.length) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var DRAW_MS = 2500;
+      var i = 0;
+      function step() {
+        for (var n = 0; n < cards.length; n++) {
+          // Toggling the class off and back on is what restarts the draw.
+          cards[n].classList.toggle("is-snaking", n === i);
+        }
+        i = (i + 1) % cards.length;
+      }
+      step();
+      setInterval(step, DRAW_MS);
+    })();
 
     /* ---------- Implant options mobile cycler ---------- */
     var implantIdx = 2;
