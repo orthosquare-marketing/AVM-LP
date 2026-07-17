@@ -1107,7 +1107,22 @@
       "https://youtube.com/shorts/Sex0uz_OBGc",
       "https://youtube.com/shorts/1gZMs98ub4Q",
       "https://youtube.com/shorts/An_KT8UMZ_o",
-      "https://youtube.com/shorts/lFXFaSrspOk"
+      "https://youtube.com/shorts/lFXFaSrspOk",
+      // Implant patient testimonials
+      "https://youtube.com/shorts/H3K1zy5JeoU",
+      "https://youtube.com/shorts/aPnBmGtpT2g",
+      "https://youtube.com/shorts/Q7rPjFp1EkQ",
+      "https://youtube.com/shorts/kSySIkDOszY",
+      "https://youtube.com/shorts/eAzOaPxi9Uo",
+      "https://youtube.com/shorts/n8hpGs2bNXE",
+      "https://youtube.com/shorts/aS9J-nSupFk",
+      "https://youtube.com/shorts/sljAj_yXVW0",
+      "https://youtube.com/shorts/WBPFDZ2GbAA",
+      "https://youtube.com/shorts/QxKen4tyOBM",
+      "https://youtube.com/shorts/blmrTAJQodw",
+      "https://youtube.com/shorts/92OdTHjctfg",
+      "https://youtube.com/shorts/wMZwIf4LfYQ",
+      "https://youtube.com/shorts/BoGbFw4ICqY"
     ];
     function ytId(url) { var m = url.match(/(?:youtu\.be\/|v=|shorts\/)([^?&/]+)/); return m ? m[1] : ""; }
     (function buildStories() {
@@ -1118,7 +1133,7 @@
         a.href = url;
         a.className = "group relative block shrink-0 w-[288px] md:w-[calc(33.3333%-16px)] max-w-full aspect-[288/332] overflow-hidden rounded-[9px] bg-[#eef2f6] cursor-pointer";
         a.innerHTML =
-          '<img class="absolute inset-0 h-full w-full object-cover" src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="Patient story video thumbnail" />' +
+          '<img class="absolute inset-0 h-full w-full object-cover" loading="lazy" src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="Patient story video thumbnail" />' +
           '<span class="absolute left-1/2 top-1/2 grid h-[74px] w-[74px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full" style="background:rgba(149,125,112,0.75)"><span class="ml-[5px] h-0 w-0 border-y-[14px] border-l-[21px] border-y-transparent border-l-white"></span></span>';
         a.addEventListener("click", function (e) { e.preventDefault(); openVideo(id); });
         track.appendChild(a);
