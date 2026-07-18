@@ -103,6 +103,32 @@
         margin: 0;
       }
 
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .cost-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: var(--purple);
+        color: #ffffff;
+        padding: 18px 45px;
+        border-radius: 15px;
+        text-decoration: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .cost-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        background-color: #2d268a;
+      }
+
       @media (max-width: 640px) {
         h1.main-title { font-size: 42px; }
         h2.sub-title { font-size: 22px; }
@@ -110,6 +136,8 @@
         .footer-note { font-size: 20px; }
         .logo { width: 140px; }
         .whatsapp-btn { padding: 15px 25px; }
+        .cost-btn { padding: 15px 25px; }
+        .btn-group { flex-direction: column; }
       }
     </style>
     <!-- Google Tag Manager -->
@@ -183,17 +211,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         We look forward to helping you achieve a healthier smile!
       </div>
 
-      <a
-        href="https://api.whatsapp.com/send?phone=917304983464&text=Hey%20there!%20I%20just%20submitted%20my%20request%20on%20the%20website.%20I'm%20looking%20for%20further%20guidance."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="whatsapp-btn"
-      >
-        <div class="btn-text">
-          Connect on WhatsApp Now<br />
-          for further Guidance
-        </div>
-      </a>
+      <div class="btn-group">
+        <a
+          href="https://api.whatsapp.com/send?phone=917304983464&text=Hey%20there!%20I%20just%20submitted%20my%20request%20on%20the%20website.%20I'm%20looking%20for%20further%20guidance."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-btn"
+        >
+          <div class="btn-text">
+            Connect on WhatsApp Now<br />
+            for further Guidance
+          </div>
+        </a>
+
+        <a
+          href="../assets/treatment-cost.pdf"
+          download="AVMSmiles-Treatment-Cost.pdf"
+          class="cost-btn"
+        >
+          <div class="btn-text">Get Treatment Cost</div>
+        </a>
+      </div>
     </main>
   </body>
 </html>
