@@ -2133,8 +2133,71 @@
             margin: 0;
         }
 
+        /* desktop 5-issue cards (hidden on mobile) */
+        .fix__cards { display: none; }
+
         @media (min-width: 768px) {
-            .fix { display: none; }
+            .fix {
+                background: #eaeef7;
+                padding: 70px 5% 90px;
+            }
+
+            .fix__head {
+                margin-bottom: 44px;
+            }
+
+            .fix__title { font-size: 40px; }
+
+            .fix__sub { font-size: 18px; }
+
+            .fix__grid { display: none; }
+
+            .fix__cards {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 24px;
+                max-width: 1300px;
+                margin: 0 auto;
+            }
+
+            .fix__c {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                background: #fff;
+                border-radius: 16px;
+                padding: 34px 22px 30px;
+                box-shadow: 0 22px 42px -28px rgba(20, 20, 50, 0.32);
+            }
+
+            .fix__c-ic {
+                width: 64px;
+                height: 64px;
+                border-radius: 16px;
+                background: #f1f2f8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 22px;
+                color: var(--red);
+            }
+
+            .fix__c-ic svg { width: 28px; height: 28px; }
+
+            .fix__c-title {
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--indigo);
+                margin: 0 0 10px;
+            }
+
+            .fix__c-desc {
+                font-size: 14px;
+                color: #6b7280;
+                line-height: 1.5;
+                margin: 0;
+            }
         }
     </style>
 
@@ -2183,6 +2246,1412 @@
                 </div>
                 <p class="fix__num">25000+</p>
                 <p class="fix__label">Google Reviews</p>
+            </div>
+        </div>
+
+        <!-- Desktop 5-issue cards -->
+        <div class="fix__cards">
+            <div class="fix__c">
+                <div class="fix__c-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                </div>
+                <h3 class="fix__c-title">Crowding</h3>
+                <p class="fix__c-desc">Teeth overlap due to lack of space.</p>
+            </div>
+
+            <div class="fix__c">
+                <div class="fix__c-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                </div>
+                <h3 class="fix__c-title">Crossbite</h3>
+                <p class="fix__c-desc">Upper teeth sit inside lower teeth.</p>
+            </div>
+
+            <div class="fix__c">
+                <div class="fix__c-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="M9 5l3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg>
+                </div>
+                <h3 class="fix__c-title">Gapped Teeth</h3>
+                <p class="fix__c-desc">Extra space between two or more teeth.</p>
+            </div>
+
+            <div class="fix__c">
+                <div class="fix__c-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+                </div>
+                <h3 class="fix__c-title">Open Bite</h3>
+                <p class="fix__c-desc">Front teeth don't touch when closed.</p>
+            </div>
+
+            <div class="fix__c">
+                <div class="fix__c-ic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </div>
+                <h3 class="fix__c-title">Spacing Issues</h3>
+                <p class="fix__c-desc">Generalized gaps across the arch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BEFORE / AFTER CAROUSEL ==================== -->
+    <style>
+        .bac {
+            background: #fff;
+            padding: 56px 5% 70px;
+            overflow: hidden;
+        }
+
+        .bac__head {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 32px;
+        }
+
+        .bac__title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--indigo);
+            line-height: 1.12;
+            margin: 0 0 12px;
+        }
+
+        .bac__sub {
+            font-size: 15px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .bac__track {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 8px 8vw;
+            max-width: 1300px;
+            margin: 0 auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .bac__track::-webkit-scrollbar { display: none; }
+
+        .bac__card {
+            flex: none;
+            scroll-snap-align: center;
+            width: min(78vw, 320px);
+            border-radius: 18px;
+            overflow: hidden;
+            background: #ececf2;
+            box-shadow: 0 18px 40px -22px rgba(20, 20, 50, 0.4);
+        }
+
+        .bac__card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        .bac__nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .bac__arrow {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: 2px solid var(--red);
+            background: #fff;
+            color: var(--red);
+            transition: transform 0.15s ease;
+        }
+
+        .bac__arrow--next {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .bac__arrow:active { transform: scale(0.92); }
+
+        .bac__arrow svg { width: 18px; height: 18px; }
+
+        @media (min-width: 768px) {
+            .bac {
+                padding: 80px 5% 90px;
+            }
+
+            .bac__head {
+                margin-bottom: 40px;
+            }
+
+            .bac__title { font-size: 40px; }
+
+            .bac__sub { font-size: 18px; }
+
+            .bac__track {
+                padding: 12px 6px;
+                scroll-snap-type: none;
+            }
+
+            .bac__card { width: 300px; }
+
+            .bac__nav {
+                justify-content: flex-end;
+                max-width: 1300px;
+                margin: 26px auto 0;
+            }
+
+            .bac__arrow {
+                background: var(--red);
+                color: #fff;
+            }
+        }
+    </style>
+
+    <section class="bac">
+        <div class="bac__head">
+            <h2 class="bac__title">Real Aligner Transformations</h2>
+            <p class="bac__sub">Documented before &amp; after results from 50,000+ clear aligner treatments.</p>
+        </div>
+
+        <div class="bac__track" id="bacTrack">
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab1.png" alt="Before and after clear aligner transformation 1" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab2.png" alt="Before and after clear aligner transformation 2" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab3.png" alt="Before and after clear aligner transformation 3" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab4.png" alt="Before and after clear aligner transformation 4" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab5.png" alt="Before and after clear aligner transformation 5" /></div>
+        </div>
+
+        <div class="bac__nav">
+            <button type="button" class="bac__arrow bac__arrow--prev" id="bacPrev" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" class="bac__arrow bac__arrow--next" id="bacNext" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            var track = document.getElementById('bacTrack');
+            if (!track) return;
+            var prev = document.getElementById('bacPrev');
+            var next = document.getElementById('bacNext');
+            function step() {
+                var card = track.querySelector('.bac__card');
+                return card ? card.getBoundingClientRect().width + 18 : 300;
+            }
+            prev && prev.addEventListener('click', function () {
+                track.scrollBy({ left: -step(), behavior: 'smooth' });
+            });
+            next && next.addEventListener('click', function () {
+                track.scrollBy({ left: step(), behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+    <!-- ==================== TEXT REVIEWS (Loved by Thousands) ==================== -->
+    <style>
+        .rev {
+            background: #f6f4fd;
+            padding: 50px 5% 60px;
+            overflow: hidden;
+        }
+
+        .rev__wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            background:
+                radial-gradient(50% 60% at 92% 20%, rgba(223, 32, 40, 0.06), transparent 60%),
+                #f8f7fd;
+            border-radius: 24px;
+            padding: 40px 24px 44px;
+        }
+
+        .rev__head {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 34px;
+        }
+
+        .rev__title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--indigo);
+            line-height: 1.1;
+            margin: 0 0 12px;
+        }
+
+        .rev__sub {
+            font-size: 15px;
+            color: #565b6b;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .rev__track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 22px 6vw 10px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .rev__track::-webkit-scrollbar { display: none; }
+
+        .rev__card {
+            position: relative;
+            flex: none;
+            scroll-snap-align: center;
+            width: min(80vw, 380px);
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 26px 24px;
+            box-shadow: 0 22px 45px -26px rgba(20, 20, 50, 0.35);
+        }
+
+        .rev__quote {
+            position: absolute;
+            top: -16px;
+            left: 22px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            box-shadow: 0 10px 18px -8px rgba(0, 0, 0, 0.35);
+        }
+
+        .rev__quote svg { width: 20px; height: 20px; }
+
+        .rev__q-red { background: var(--red); }
+        .rev__q-indigo { background: var(--indigo); }
+        .rev__q-green { background: #16a34a; }
+
+        .rev__stars {
+            display: flex;
+            gap: 4px;
+            margin: 8px 0 16px;
+        }
+
+        .rev__stars svg { width: 18px; height: 18px; }
+
+        .rev__text {
+            color: #4b5563;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 22px;
+            flex: 1;
+        }
+
+        .rev__divider {
+            height: 1px;
+            background: #ececf2;
+            margin: 0 0 18px;
+        }
+
+        .rev__person {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rev__avatar {
+            flex: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .rev__name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--indigo);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .rev__role {
+            font-size: 13px;
+            color: #8b91a1;
+            margin: 2px 0 0;
+        }
+
+        .rev__nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .rev__arrow {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: none;
+            background: var(--red);
+            color: #fff;
+            transition: transform 0.15s ease;
+        }
+
+        .rev__arrow:active { transform: scale(0.92); }
+
+        .rev__arrow svg { width: 18px; height: 18px; }
+
+        @media (min-width: 768px) {
+            .rev {
+                padding: 70px 5% 80px;
+            }
+
+            .rev__wrap {
+                padding: 54px 40px 50px;
+            }
+
+            .rev__title { font-size: 44px; }
+
+            .rev__sub { font-size: 18px; }
+
+            .rev__track {
+                padding: 24px 6px 10px;
+                scroll-snap-type: none;
+            }
+
+            .rev__card { width: 372px; }
+        }
+    </style>
+
+    <section class="rev">
+        <div class="rev__wrap">
+            <div class="rev__head">
+                <h2 class="rev__title">Loved by Thousands</h2>
+                <p class="rev__sub">Don't just take our word for it. Here's what our patients say.</p>
+            </div>
+
+            <div class="rev__track" id="revTrack">
+                <!-- 1 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-red">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"Came here for my aligners and implant treatment. Service here is good. Staff is co-operative. Satisfied with my treatment."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#df2028">P</div>
+                        <div>
+                            <p class="rev__name">Pramila Tandkar</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-indigo">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"Very professional and completed my dental implant and aligners treatment without much pain."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#362997">T</div>
+                        <div>
+                            <p class="rev__name">Trevor Baretto</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-green">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"Came here for my aligner treatment. I am satisfied with it. Orthosquare recommended for aligners."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#16a34a">R</div>
+                        <div>
+                            <p class="rev__name">Raunak Modak</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-red">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"Came here for my aligner treatment. I am satisfied with it. Orthosquare recommended for aligners."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#e08a2a">M</div>
+                        <div>
+                            <p class="rev__name">Mahesh Kadam</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-indigo">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"I had a great experience at Orthosquare Vile Parle East for my aligner treatment. Led by Dr Isha throughout — a very sweet and understanding doctor who explains everything in detail and is always available for queries."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#8a4fd0">M</div>
+                        <div>
+                            <p class="rev__name">Miloni Joshi</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-green">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"Got my Invisalign done with Dr. Rathi. The staff was very helpful coordinating with me from a different city during the pandemic — even couriered my retainer set remotely. Excellent service and very happy with the results!"</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#3f7fd0">S</div>
+                        <div>
+                            <p class="rev__name">Shriyani Datta</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-red">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"Absolutely loved the experience with Dr. Ridhi and her team. They guided me tremendously with my teeth alignment. The services and ambience at Orthosquare made the entire experience a lovely one. Thank you all."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#df2028">A</div>
+                        <div>
+                            <p class="rev__name">Anoop Thomas</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="rev__card">
+                    <div class="rev__quote rev__q-indigo">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm7 0h4v4c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-2V7z"/></svg>
+                    </div>
+                    <div class="rev__stars">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="rev__text">"I got root canal, implant &amp; aligner treatment done at Orthosquare. Thanks to Dr. Shibasish for such good treatment — super friendly, skilled, and a painless experience. I highly recommend."</p>
+                    <div class="rev__divider"></div>
+                    <div class="rev__person">
+                        <div class="rev__avatar" style="background:#362997">S</div>
+                        <div>
+                            <p class="rev__name">Sandeep Kasarvani</p>
+                            <p class="rev__role">Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rev__nav">
+                <button type="button" class="rev__arrow" id="revPrev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" class="rev__arrow" id="revNext" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            var track = document.getElementById('revTrack');
+            if (!track) return;
+            var prev = document.getElementById('revPrev');
+            var next = document.getElementById('revNext');
+            function step() {
+                var card = track.querySelector('.rev__card');
+                return card ? card.getBoundingClientRect().width + 20 : 380;
+            }
+            prev && prev.addEventListener('click', function () {
+                track.scrollBy({ left: -step(), behavior: 'smooth' });
+            });
+            next && next.addEventListener('click', function () {
+                track.scrollBy({ left: step(), behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+    <!-- ==================== READY TO TRANSFORM ==================== -->
+    <style>
+        .rt {
+            background: #fff;
+            padding: 50px 5% 70px;
+        }
+
+        .rt__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .rt__media {
+            position: relative;
+        }
+
+        .rt__img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: 0 34px 60px -28px rgba(20, 20, 40, 0.5);
+            display: block;
+        }
+
+        .rt__badge {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 12px 18px;
+            box-shadow: 0 16px 30px -14px rgba(20, 20, 40, 0.35);
+        }
+
+        .rt__badge-ic {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #fde8ea;
+            display: grid;
+            place-items: center;
+            color: var(--red);
+            flex: none;
+        }
+
+        .rt__badge-ic svg { width: 18px; height: 18px; }
+
+        .rt__badge-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--indigo);
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .rt__badge-sub {
+            font-size: 11px;
+            color: #8b91a1;
+            margin: 2px 0 0;
+        }
+
+        .rt__title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--indigo);
+            line-height: 1.05;
+            margin: 0 0 14px;
+        }
+
+        .rt__hl {
+            display: inline-block;
+            background: var(--red);
+            color: #fff;
+            font-weight: 800;
+            font-size: 26px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 0 18px;
+        }
+
+        .rt__sub {
+            color: #4b5563;
+            font-size: 16px;
+            line-height: 1.55;
+            margin: 0 0 22px;
+            max-width: 520px;
+        }
+
+        .rt__list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .rt__li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--indigo);
+        }
+
+        .rt__li-ic {
+            flex: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #16a34a;
+            display: grid;
+            place-items: center;
+        }
+
+        .rt__li-ic svg { width: 14px; height: 14px; color: #fff; }
+
+        .rt__btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            background: var(--red);
+            color: #fff;
+            font-weight: 700;
+            font-size: 17px;
+            border-radius: 12px;
+            padding: 18px 24px;
+            box-shadow: 0 16px 28px -12px rgba(223, 32, 40, 0.5);
+            transition: transform 0.15s ease;
+        }
+
+        .rt__btn:active { transform: scale(0.98); }
+
+        @media (min-width: 768px) {
+            .rt {
+                padding: 80px 5% 90px;
+            }
+
+            .rt__inner {
+                grid-template-columns: 1fr 1.05fr;
+                gap: 56px;
+            }
+
+            .rt__title { font-size: 48px; }
+
+            .rt__hl { font-size: 30px; }
+
+            .rt__sub { font-size: 18px; }
+        }
+    </style>
+
+    <section class="rt">
+        <div class="rt__inner">
+            <!-- Image -->
+            <div class="rt__media">
+                <img class="rt__img" src="../assets/clear-aligners/dentist.jpg"
+                    onerror="this.onerror=null;this.src='../assets/clear-aligners/womendesktop.png';"
+                    alt="Expert orthodontist at AVM clinic" loading="lazy" decoding="async" />
+                <div class="rt__badge">
+                    <span class="rt__badge-ic">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.2 13 7 22l5-3 5 3-1.2-9"/></svg>
+                    </span>
+                    <div>
+                        <p class="rt__badge-title">Top Rated</p>
+                        <p class="rt__badge-sub">#1 Aligner Clinic 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="rt__content">
+                <h2 class="rt__title">Ready to Transform</h2>
+                <span class="rt__hl">YOUR SMILE</span>
+                <p class="rt__sub">Our expert orthodontists are here to guide you through a personalized journey to
+                    your perfect smile.</p>
+
+                <ul class="rt__list">
+                    <li class="rt__li">
+                        <span class="rt__li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Comprehensive 3D Digital Scan
+                    </li>
+                    <li class="rt__li">
+                        <span class="rt__li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Personalized Treatment Preview
+                    </li>
+                    <li class="rt__li">
+                        <span class="rt__li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Expert Orthodontic Consultation
+                    </li>
+                    <li class="rt__li">
+                        <span class="rt__li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Customized Payment Plans
+                    </li>
+                </ul>
+
+                <a class="rt__btn" href="#">View All Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY WAIT / THE SWITCH ==================== -->
+    <style>
+        .sw {
+            background: #fff;
+            padding: 40px 5% 60px;
+        }
+
+        .sw__panel {
+            position: relative;
+            overflow: hidden;
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #c8dafb;
+            border-radius: 28px;
+            padding: 40px 24px 44px;
+        }
+
+        .sw__panel::before,
+        .sw__panel::after {
+            content: "";
+            position: absolute;
+            width: 304px;
+            height: 304px;
+            border-radius: 50%;
+            border: 72px solid rgba(1, 49, 120, 0.1);
+            pointer-events: none;
+        }
+
+        .sw__panel::before { top: -104px; right: -108px; }
+        .sw__panel::after { bottom: -112px; left: -109px; }
+
+        .sw__head {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin: 0 auto 34px;
+            max-width: 760px;
+        }
+
+        .sw__title {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--indigo);
+            line-height: 1.1;
+            margin: 0 0 8px;
+        }
+
+        .sw__sub {
+            font-size: 15px;
+            color: #5b6480;
+            margin: 0;
+        }
+
+        .sw__cards {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .sw__card {
+            border-radius: 20px;
+            padding: 26px 26px 28px;
+        }
+
+        .sw__card--now {
+            background: #fff;
+            box-shadow: 0 20px 45px -26px rgba(20, 20, 60, 0.3);
+        }
+
+        .sw__card--help {
+            background: var(--indigo);
+        }
+
+        .sw__card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 18px;
+        }
+
+        .sw__card--now .sw__card-title { color: #5b6480; }
+        .sw__card--help .sw__card-title { color: #fff; }
+
+        .sw__item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 0;
+        }
+
+        .sw__item svg { width: 22px; height: 22px; flex: none; }
+
+        .sw__card--now .sw__item { color: var(--indigo); }
+        .sw__card--now .sw__item svg { color: var(--red); }
+        .sw__card--help .sw__item { color: #fff; }
+        .sw__card--help .sw__item svg { color: #34d399; }
+
+        /* The switch */
+        .sw__switch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            justify-self: center;
+        }
+
+        .sw__switch-circle {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: var(--red);
+            display: grid;
+            place-items: center;
+            box-shadow: 0 12px 22px -8px rgba(223, 32, 40, 0.55);
+        }
+
+        .sw__switch-circle svg {
+            width: 22px;
+            height: 22px;
+            color: #fff;
+            transform: rotate(90deg);
+        }
+
+        .sw__switch-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #1e2a5a;
+        }
+
+        @media (min-width: 768px) {
+            .sw {
+                padding: 60px 5% 80px;
+            }
+
+            .sw__panel {
+                border-radius: 40px;
+                padding: 54px 60px 60px;
+            }
+
+            .sw__title { font-size: 44px; }
+
+            .sw__sub { font-size: 18px; }
+
+            .sw__cards {
+                grid-template-columns: 1fr auto 1fr;
+                gap: 28px;
+            }
+
+            .sw__card {
+                padding: 32px 34px 34px;
+            }
+
+            .sw__card-title { font-size: 22px; }
+
+            .sw__switch-circle svg { transform: none; }
+        }
+    </style>
+
+    <section class="sw">
+        <div class="sw__panel">
+            <div class="sw__head">
+                <h2 class="sw__title">Why Wait for a Better Smile?</h2>
+                <p class="sw__sub">See how AVM Align transforms your daily experience.</p>
+            </div>
+
+            <div class="sw__cards">
+                <!-- What you feel now -->
+                <div class="sw__card sw__card--now">
+                    <h3 class="sw__card-title">What You Feel Now</h3>
+                    <div class="sw__item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+                        Self-conscious when smiling in photos
+                    </div>
+                    <div class="sw__item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+                        Discomfort from misaligned teeth
+                    </div>
+                    <div class="sw__item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+                        Worried about painful traditional braces
+                    </div>
+                </div>
+
+                <!-- The switch -->
+                <div class="sw__switch">
+                    <div class="sw__switch-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <span class="sw__switch-label">THE SWITCH</span>
+                </div>
+
+                <!-- How aligners help -->
+                <div class="sw__card sw__card--help">
+                    <h3 class="sw__card-title">How Aligners Help</h3>
+                    <div class="sw__item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+                        Confidence to smile wide and proud
+                    </div>
+                    <div class="sw__item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+                        Perfect alignment for better oral health
+                    </div>
+                    <div class="sw__item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+                        Painless, invisible, and fast results
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AWARDS & RECOGNITION ==================== -->
+    <style>
+        .awd {
+            background: #fff;
+            padding: 50px 5% 70px;
+        }
+
+        .awd__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .awd__img {
+            width: 100%;
+            aspect-ratio: 16 / 7;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 26px 50px -28px rgba(20, 20, 40, 0.4);
+            display: block;
+        }
+
+        .awd__badge {
+            display: inline-block;
+            background: #fdeede;
+            color: #e08a2a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 7px 16px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+        }
+
+        .awd__title {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--indigo);
+            line-height: 1.08;
+            margin: 0 0 14px;
+        }
+
+        .awd__sub {
+            color: #4b5563;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 24px;
+            max-width: 520px;
+        }
+
+        .awd__chips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            max-width: 540px;
+        }
+
+        .awd__chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f4f6fc;
+            border: 1px solid #e8ebf5;
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .awd__chip svg {
+            width: 20px;
+            height: 20px;
+            flex: none;
+            color: var(--red);
+        }
+
+        @media (min-width: 768px) {
+            .awd {
+                padding: 70px 5% 90px;
+            }
+
+            .awd__inner {
+                grid-template-columns: 1.1fr 1fr;
+                gap: 56px;
+            }
+
+            .awd__title { font-size: 46px; }
+
+            .awd__sub { font-size: 18px; }
+        }
+    </style>
+
+    <section class="awd">
+        <div class="awd__inner">
+            <img class="awd__img" src="../assets/clear-aligners/awards.jpg"
+                onerror="this.onerror=null;this.src='../assets/clear-aligners/award.png';"
+                alt="AVMSmiles awards and certificates" loading="lazy" decoding="async" />
+
+            <div class="awd__content">
+                <span class="awd__badge">RECOGNIZED EXCELLENCE</span>
+                <h2 class="awd__title">Awards &amp; Recognition</h2>
+                <p class="awd__sub">AVMSmiles is proud to be recognized as a leader in digital orthodontics and
+                    patient care excellence across India.</p>
+
+                <div class="awd__chips">
+                    <div class="awd__chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                        ISO Certified
+                    </div>
+                    <div class="awd__chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.2 13 7 22l5-3 5 3-1.2-9"/></svg>
+                        Best Clinic 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <style>
+        .faq {
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            padding: 50px 5% 70px;
+        }
+
+        .faq__title {
+            text-align: center;
+            color: var(--indigo);
+            font-size: 28px;
+            line-height: 1.15;
+            margin: 0 auto 34px;
+            font-weight: 400;
+        }
+
+        .faq__title strong { font-weight: 800; }
+
+        .faq__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 34px;
+            align-items: start;
+        }
+
+        .faq__item {
+            border-bottom: 1px solid #ececf2;
+        }
+
+        .faq__q {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            padding: 20px 0;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--indigo);
+        }
+
+        .faq__q::-webkit-details-marker { display: none; }
+
+        .faq__chev {
+            flex: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid #e2e4ee;
+            display: grid;
+            place-items: center;
+            color: var(--indigo);
+            transition: transform 0.25s ease;
+        }
+
+        .faq__chev svg { width: 16px; height: 16px; }
+
+        .faq__item[open] .faq__chev { transform: rotate(180deg); }
+
+        .faq__a {
+            color: #6b7280;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 0 22px;
+            max-width: 660px;
+        }
+
+        /* Contact card */
+        .faq__card {
+            background: var(--indigo);
+            border-radius: 20px;
+            padding: 30px 28px 32px;
+            color: #fff;
+        }
+
+        .faq__card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 14px;
+        }
+
+        .faq__card-sub {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 15px;
+            line-height: 1.55;
+            margin: 0 0 26px;
+        }
+
+        .faq__contact {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .faq__contact-ic {
+            flex: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.12);
+            display: grid;
+            place-items: center;
+        }
+
+        .faq__contact-ic svg { width: 20px; height: 20px; color: #fff; }
+
+        .faq__contact-label {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        .faq__contact-val {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin: 2px 0 0;
+        }
+
+        .faq__card-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #fff;
+            color: var(--indigo);
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 10px;
+        }
+
+        .faq__card-btn svg { width: 16px; height: 16px; }
+
+        @media (min-width: 768px) {
+            .faq {
+                padding: 70px 5% 90px;
+            }
+
+            .faq__title { font-size: 40px; margin-bottom: 44px; }
+
+            .faq__inner {
+                grid-template-columns: 1.6fr 1fr;
+                gap: 50px;
+            }
+
+            .faq__q { font-size: 19px; padding: 24px 0; }
+
+            .faq__card { position: sticky; top: 24px; }
+        }
+    </style>
+
+    <section class="faq">
+        <h2 class="faq__title">Got Doubts ? <strong>We've Got All Answers</strong></h2>
+
+        <div class="faq__inner">
+            <!-- Accordion -->
+            <div class="faq__list">
+                <details class="faq__item" open>
+                    <summary class="faq__q">
+                        Are Clear Aligners painful?
+                        <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                    </summary>
+                    <p class="faq__a">No. The procedure is done under local anesthesia, so you feel minimal discomfort. Most patients resume normal activities within a day.</p>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__q">
+                        How long does aligners treatment takes?
+                        <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                    </summary>
+                    <p class="faq__a">Most aligner treatments take 6 to 18 months depending on the complexity of your case. You'll receive an exact timeline after your free 3D scan.</p>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__q">
+                        Can i eat and drink normally with aligners
+                        <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                    </summary>
+                    <p class="faq__a">Yes. Simply remove your aligners before eating or drinking anything other than water, then place them back in after brushing.</p>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__q">
+                        Do clear aligners noticeable
+                        <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                    </summary>
+                    <p class="faq__a">Clear aligners are virtually invisible. Made from transparent medical-grade material, most people won't notice you're wearing them.</p>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__q">
+                        Do i need to wear aligners all days?
+                        <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+                    </summary>
+                    <p class="faq__a">For best results, wear them 20–22 hours a day, removing only for meals, brushing, and flossing.</p>
+                </details>
+            </div>
+
+            <!-- Contact card -->
+            <div class="faq__card">
+                <h3 class="faq__card-title">Still Have Questions?</h3>
+                <p class="faq__card-sub">Our medical verification certified consultants are ready to assist you 24/7 with expert guidance.</p>
+
+                <a class="faq__contact" href="tel:+919699128442">
+                    <span class="faq__contact-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg></span>
+                    <div>
+                        <p class="faq__contact-label">DIRECT LINE</p>
+                        <p class="faq__contact-val">+91 96991 28442</p>
+                    </div>
+                </a>
+
+                <a class="faq__contact" href="mailto:info@avmsmiles.com">
+                    <span class="faq__contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                    <div>
+                        <p class="faq__contact-label">EMAIL CONCIERGE</p>
+                        <p class="faq__contact-val">info@avmsmiles.com</p>
+                    </div>
+                </a>
+
+                <a class="faq__card-btn" href="#">
+                    Get Instant Callback
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
         </div>
     </section>
