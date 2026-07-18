@@ -896,7 +896,7 @@
     </style>
 
     <section class="lead" id="book" style="scroll-margin-top: 20px;">
-        <a class="lead__call" href="tel:+919999999999">
+        <a class="lead__call" href="https://wa.me/917304983464?text=Hi%20AVMSmiles%2C%20I%20want%20to%20know%20more%20about%20clear%20aligners." target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" />
             </svg>
@@ -1223,7 +1223,7 @@
             }
 
             .feat__divider--b {
-                margin: auto 0 0;
+                display: none;
             }
 
             .feat__card-desc {
@@ -1346,7 +1346,7 @@
         }
 
         .tst__inner {
-            max-width: 1280px;
+            max-width: 1360px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
@@ -1369,6 +1369,10 @@
             padding: 7px 18px;
             border-radius: 999px;
             margin-bottom: 14px;
+        }
+
+        .tst__badge--d {
+            display: none;
         }
 
         .tst__title {
@@ -1413,10 +1417,10 @@
             scroll-snap-align: center;
             width: min(74vw, 300px);
             aspect-ratio: 9 / 16;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             background: #e7e7ef;
-            box-shadow: 0 18px 40px -22px rgba(20, 20, 50, 0.4);
+            box-shadow: 0 14px 34px -26px rgba(20, 20, 50, 0.3);
         }
 
         .tst__card iframe {
@@ -1507,36 +1511,47 @@
             }
 
             .tst__inner {
-                grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-                gap: 40px;
+                grid-template-columns: minmax(0, 0.66fr) minmax(0, 1fr);
+                gap: 48px;
                 align-items: center;
             }
 
             .tst__head {
                 text-align: left;
                 position: relative;
+                padding: 20px 0;
+            }
+
+            .tst__badge--d {
+                display: inline-block;
+            }
+
+            .tst__badge--m {
+                display: none;
             }
 
             .tst__badge {
                 font-size: 15px;
                 font-weight: 700;
-                padding: 12px 22px;
+                padding: 11px 22px;
                 border-radius: 10px;
-                margin-bottom: 18px;
+                margin-bottom: 22px;
             }
 
             .tst__title {
-                font-size: 52px;
-                margin-bottom: 18px;
+                font-size: 46px;
+                line-height: 1.05;
+                margin-bottom: 22px;
+                max-width: 8em;
             }
 
             .tst__sub {
                 display: block;
-                color: #4b5563;
+                color: #6b7280;
                 font-size: 16px;
-                line-height: 1.6;
+                line-height: 1.75;
                 max-width: 420px;
-                margin: 0 0 30px;
+                margin: 0 0 34px;
             }
 
             .tst__cta-row {
@@ -1545,14 +1560,18 @@
             }
 
             .tst__pill {
-                display: inline-block;
-               
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 background: var(--red);
                 color: #fff;
-                font-weight: 700;
-                font-size: 17px;
-                padding: 16px 28px;
+                font-weight: 600;
+                font-size: 16px;
+                padding: 18px 30px;
+                min-height: 58px;
                 border-radius: 12px;
+                box-shadow: 0 14px 26px -14px rgba(223, 32, 40, 0.55);
+                cursor: pointer;
             }
 
             .tst__arrow {
@@ -1564,30 +1583,71 @@
                 pointer-events: none;
             }
 
+            /* Featured + preview carousel */
             .tst__track {
-                padding: 12px 6px;
-                gap: 20px;
+                padding: 6px 0;
+                gap: 28px;
+                overflow: visible;
+                align-items: flex-start;
+                scroll-snap-type: none;
             }
 
             .tst__card {
-                width: 260px;
+                display: none;
+                width: auto;
+                aspect-ratio: auto;
+                scroll-snap-align: none;
+                box-shadow: 0 22px 48px -30px rgba(20, 20, 50, 0.35);
+            }
+
+            .tst__card.is-featured {
+                display: block;
+                width: 340px;
+                height: 552px;
+            }
+
+            .tst__card.is-preview {
+                display: block;
+            }
+
+            .tst__card.is-p1 {
+                width: 244px;
+                height: 486px;
+                margin-top: 40px;
+            }
+
+            .tst__card.is-p2 {
+                width: 244px;
+                height: 430px;
+                margin-top: 92px;
+            }
+
+            .tst__card.is-featured,
+            .tst__card.is-preview {
+                animation: tstFade 0.45s ease;
+            }
+
+            @keyframes tstFade {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: none; }
+            }
+
+            .tst__dots {
+                margin-top: 26px;
             }
 
             .tst__nav {
                 justify-content: flex-end;
-                margin-top: 22px;
-                padding-right: 6px;
+                margin-top: 18px;
+                padding-right: 2px;
             }
 
             .tst__arrow-btn {
                 background: var(--red);
                 color: #fff;
+                border-color: var(--red);
                 width: 48px;
                 height: 48px;
-            }
-
-            .tst__arrow-btn--prev {
-                border-color: var(--red);
             }
 
             .tst__all {
@@ -1612,7 +1672,7 @@
         <div class="tst__inner">
             <!-- Heading -->
             <div class="tst__head">
-                <span class="tst__badge tst__badge--d" style="display:none;">50K + REAL</span>
+                <span class="tst__badge tst__badge--d">50K + REAL</span>
                 <span class="tst__badge tst__badge--m">50K+ REAL RESULTS</span>
                 <h2 class="tst__title">Aligners Transformation</h2>
                 <p class="tst__sub">Trusted by thousands of patients who have transformed their smiles with our
@@ -1688,62 +1748,116 @@
         (function () {
             var track = document.getElementById('tstTrack');
             if (!track) return;
-            var prev = document.getElementById('tstPrev');
-            var next = document.getElementById('tstNext');
+            var prevBtn = document.getElementById('tstPrev');
+            var nextBtn = document.getElementById('tstNext');
             var dotsWrap = document.getElementById('tstDots');
             var cards = Array.prototype.slice.call(track.querySelectorAll('.tst__card'));
+            var n = cards.length;
+            if (!n) return;
 
-            function step() {
-                var card = track.querySelector('.tst__card');
-                var gap = 20;
-                return card ? card.getBoundingClientRect().width + gap : 280;
-            }
-            prev && prev.addEventListener('click', function () {
-                track.scrollBy({ left: -step(), behavior: 'smooth' });
-            });
-            next && next.addEventListener('click', function () {
-                track.scrollBy({ left: step(), behavior: 'smooth' });
-            });
+            var mq = window.matchMedia('(min-width: 768px)');
+            var active = 0;
+            var timer = null, paused = false;
 
-            // Dot indicators
+            // Build one dot per testimonial
             var dots = [];
-            if (dotsWrap && cards.length) {
+            if (dotsWrap) {
                 cards.forEach(function (card, i) {
                     var b = document.createElement('button');
                     b.type = 'button';
                     b.className = 'tst__dot';
                     b.setAttribute('role', 'tab');
                     b.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-                    b.addEventListener('click', function () {
-                        var left = card.offsetLeft - track.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
-                        track.scrollTo({ left: left, behavior: 'smooth' });
-                    });
+                    b.addEventListener('click', function () { goTo(i); });
                     dotsWrap.appendChild(b);
                     dots.push(b);
                 });
-
-                function syncActive() {
-                    var center = track.scrollLeft + track.clientWidth / 2;
-                    var best = 0, bestDist = Infinity;
-                    cards.forEach(function (card, i) {
-                        var cardCenter = card.offsetLeft - track.offsetLeft + card.clientWidth / 2;
-                        var d = Math.abs(cardCenter - center);
-                        if (d < bestDist) { bestDist = d; best = i; }
-                    });
-                    dots.forEach(function (dot, i) {
-                        dot.classList.toggle('tst__dot--active', i === best);
-                        dot.setAttribute('aria-selected', i === best ? 'true' : 'false');
-                    });
-                }
-
-                var raf = null;
-                track.addEventListener('scroll', function () {
-                    if (raf) return;
-                    raf = requestAnimationFrame(function () { raf = null; syncActive(); });
-                }, { passive: true });
-                window.addEventListener('resize', syncActive);
-                syncActive();
             }
+
+            function setDot(idx) {
+                dots.forEach(function (dot, i) {
+                    dot.classList.toggle('tst__dot--active', i === idx);
+                    dot.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+                });
+            }
+
+            // Desktop: one large featured card + two graduated preview cards
+            function clearFeatured() {
+                cards.forEach(function (c) {
+                    c.classList.remove('is-featured', 'is-preview', 'is-p1', 'is-p2');
+                });
+            }
+            function renderFeatured() {
+                clearFeatured();
+                cards[active].classList.add('is-featured');
+                cards[(active + 1) % n].classList.add('is-preview', 'is-p1');
+                cards[(active + 2) % n].classList.add('is-preview', 'is-p2');
+                setDot(active);
+            }
+
+            // Mobile: horizontal scroll
+            function scrollToCard(i) {
+                var card = cards[i];
+                var left = card.offsetLeft - track.offsetLeft - (track.clientWidth - card.clientWidth) / 2;
+                track.scrollTo({ left: left, behavior: 'smooth' });
+            }
+            function syncScrollDot() {
+                var center = track.scrollLeft + track.clientWidth / 2;
+                var best = 0, bestDist = Infinity;
+                cards.forEach(function (card, i) {
+                    var cc = card.offsetLeft - track.offsetLeft + card.clientWidth / 2;
+                    var d = Math.abs(cc - center);
+                    if (d < bestDist) { bestDist = d; best = i; }
+                });
+                active = best;
+                setDot(best);
+            }
+
+            // Unified navigation (keeps the same data + prev/next/dot controls)
+            function goTo(i) {
+                active = (i % n + n) % n;
+                if (mq.matches) renderFeatured();
+                else scrollToCard(active);
+            }
+            function go(dir) { goTo(active + dir); }
+
+            prevBtn && prevBtn.addEventListener('click', function () { go(-1); });
+            nextBtn && nextBtn.addEventListener('click', function () { go(1); });
+
+            // Auto-advance (pauses on interaction / hidden tab)
+            function tick() { if (!paused) go(1); }
+            function start() { if (!timer) timer = setInterval(tick, 3800); }
+            function stop() { if (timer) { clearInterval(timer); timer = null; } }
+            ['mouseenter', 'touchstart', 'focusin'].forEach(function (ev) {
+                track.addEventListener(ev, function () { paused = true; }, { passive: true });
+            });
+            ['mouseleave', 'touchend', 'focusout'].forEach(function (ev) {
+                track.addEventListener(ev, function () { paused = false; }, { passive: true });
+            });
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) stop(); else start();
+            });
+
+            var raf = null;
+            track.addEventListener('scroll', function () {
+                if (mq.matches || raf) return;
+                raf = requestAnimationFrame(function () { raf = null; syncScrollDot(); });
+            }, { passive: true });
+
+            function applyMode() {
+                if (mq.matches) {
+                    renderFeatured();
+                } else {
+                    clearFeatured();
+                    scrollToCard(active);
+                    syncScrollDot();
+                }
+            }
+            if (mq.addEventListener) mq.addEventListener('change', applyMode);
+            else if (mq.addListener) mq.addListener(applyMode);
+
+            applyMode();
+            start();
         })();
     </script>
 
@@ -4104,7 +4218,6 @@
                 start();
             }
 
-            autoScroll('tstTrack', 3500);  // video testimonials
             autoScroll('bacTrack', 3200);  // before / after
             autoScroll('revTrack', 4200);  // text reviews
         })();
