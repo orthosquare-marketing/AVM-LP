@@ -3656,6 +3656,134 @@
         </div>
     </section>
 
+    <!-- ==================== MICRO-INTERACTIONS ==================== -->
+    <style>
+        /* Scroll reveal (JS adds .mi-reveal, then .mi-in when in view) */
+        .mi-reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+            will-change: opacity, transform;
+        }
+
+        .mi-reveal.mi-in {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Hover lifts on cards */
+        .feat__card, .feat__row, .why__card, .why__row, .fix__c, .fix__card,
+        .sw__card, .rev__card, .bac__card, .tst__card, .awd__chip {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .feat__card-icon, .why__card-ic, .why__row-ic, .fix__c-ic,
+        .rt__img, .bac__card img {
+            transition: transform 0.3s ease;
+        }
+
+        @media (hover: hover) {
+            .feat__card:hover, .why__card:hover, .fix__c:hover, .sw__card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 32px 55px -28px rgba(20, 20, 50, 0.42);
+            }
+
+            .feat__row:hover, .why__row:hover, .fix__card:hover {
+                transform: translateY(-3px);
+            }
+
+            .rev__card:hover, .tst__card:hover {
+                transform: translateY(-6px);
+            }
+
+            .awd__chip:hover {
+                transform: translateY(-3px);
+                border-color: #d6dcec;
+            }
+
+            /* Icon pop when its card is hovered */
+            .feat__card:hover .feat__card-icon,
+            .why__card:hover .why__card-ic,
+            .why__row:hover .why__row-ic,
+            .fix__c:hover .fix__c-ic {
+                transform: scale(1.09) rotate(-3deg);
+            }
+
+            /* Image zoom */
+            .rt__media:hover .rt__img { transform: scale(1.03); }
+            .bac__card:hover img { transform: scale(1.06); }
+
+            /* Buttons */
+            .hero__cta, .lead__btn, .cta__btn, .tst__all, .rt__btn,
+            .faq__card-btn, .bac__arrow, .rev__arrow, .tst__arrow-btn,
+            .lead__call {
+                transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+            }
+
+            .hero__cta:hover, .lead__btn:hover, .tst__all:hover, .rt__btn:hover {
+                transform: translateY(-2px);
+                filter: brightness(1.05);
+            }
+
+            .cta__btn:hover, .faq__card-btn:hover { transform: translateY(-2px); }
+            .lead__call:hover { transform: translateX(-4px); }
+
+            .bac__arrow:hover, .rev__arrow:hover, .tst__arrow-btn:hover {
+                transform: scale(1.09);
+            }
+
+            /* FAQ row hover tint */
+            .faq__q:hover { color: var(--red); }
+            .faq__contact:hover .faq__contact-val { text-decoration: underline; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .mi-reveal { opacity: 1 !important; transform: none !important; }
+        }
+    </style>
+
+    <script>
+        (function () {
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce || !('IntersectionObserver' in window)) return;
+
+            var selector = [
+                '.hero__content', '.hero__media',
+                '.feat__head', '.feat__card', '.feat__row',
+                '.tst__head', '.why__head', '.why__card', '.why__row',
+                '.fix__head', '.fix__c', '.fix__card',
+                '.bac__head', '.rev__head', '.sw__head',
+                '.sw__card', '.rt__media', '.rt__content',
+                '.awd__img', '.awd__content',
+                '.lead__card', '.lead__text', '.cta__banner', '.faq__item'
+            ].join(',');
+
+            var els = Array.prototype.slice.call(document.querySelectorAll(selector));
+            els.forEach(function (el) {
+                el.classList.add('mi-reveal');
+                // stagger siblings that also reveal
+                var i = 0, p = el.previousElementSibling;
+                while (p) {
+                    if (p.classList && p.classList.contains('mi-reveal')) i++;
+                    p = p.previousElementSibling;
+                }
+                el.style.transitionDelay = Math.min(i, 6) * 70 + 'ms';
+            });
+
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('mi-in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+            els.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
+
     <script src="../submission.js" defer></script>
 </body>
 
