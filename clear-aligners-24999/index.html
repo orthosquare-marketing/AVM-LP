@@ -3758,9 +3758,6 @@
     <!-- ==================== CAROUSEL AUTO-SCROLL ==================== -->
     <script>
         (function () {
-            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (reduce) return;
-
             function autoScroll(trackId, interval) {
                 var track = document.getElementById(trackId);
                 if (!track || track.children.length < 2) return;
