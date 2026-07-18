@@ -1454,6 +1454,56 @@
             height: 18px;
         }
 
+        /* Side (overlay) navigator arrows */
+        .tst__side {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: 0;
+            background: var(--red);
+            color: #fff;
+            box-shadow: 0 10px 24px -8px rgba(223, 32, 40, 0.6);
+            transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+
+        .tst__side--prev {
+            left: 6px;
+        }
+
+        .tst__side--next {
+            right: 6px;
+        }
+
+        .tst__side:hover {
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .tst__side:active {
+            transform: translateY(-50%) scale(0.92);
+        }
+
+        .tst__side svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .tst__side--prev {
+                left: -8px;
+            }
+
+            .tst__side--next {
+                right: -8px;
+            }
+        }
+
         /* Dot indicators */
         .tst__dots {
             display: flex;
@@ -1611,6 +1661,18 @@
 
             <!-- Video carousel -->
             <div class="tst__carousel">
+                <button type="button" class="tst__side tst__side--prev" id="tstSidePrev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+                <button type="button" class="tst__side tst__side--next" id="tstSideNext" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
                 <div class="tst__track" id="tstTrack">
                     <div class="tst__card"><iframe loading="lazy" src="https://www.youtube.com/embed/oHsEwYx5L4w?rel=0"
                             title="Patient testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1679,12 +1741,14 @@
                 var gap = 20;
                 return card ? card.getBoundingClientRect().width + gap : 280;
             }
-            prev && prev.addEventListener('click', function () {
-                track.scrollBy({ left: -step(), behavior: 'smooth' });
-            });
-            next && next.addEventListener('click', function () {
-                track.scrollBy({ left: step(), behavior: 'smooth' });
-            });
+            function goPrev() { track.scrollBy({ left: -step(), behavior: 'smooth' }); }
+            function goNext() { track.scrollBy({ left: step(), behavior: 'smooth' }); }
+            prev && prev.addEventListener('click', goPrev);
+            next && next.addEventListener('click', goNext);
+            var sidePrev = document.getElementById('tstSidePrev');
+            var sideNext = document.getElementById('tstSideNext');
+            sidePrev && sidePrev.addEventListener('click', goPrev);
+            sideNext && sideNext.addEventListener('click', goNext);
 
             // Dot indicators
             var dots = [];
