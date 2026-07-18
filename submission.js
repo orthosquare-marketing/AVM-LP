@@ -116,4 +116,5 @@
 
   attachSubmission("implant-lead-form-modal", "implant-lead-status-modal");
   attachSubmission("implant-lead-form", "implant-lead-status");
+  attachSubmission("implant-lead-form-mobile", "implant-lead-status-mobile");
 })();
