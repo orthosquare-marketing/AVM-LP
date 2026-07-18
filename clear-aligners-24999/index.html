@@ -280,7 +280,7 @@
                 position: relative;
                 z-index: 2;
                 max-width: 1120px;
-                margin: 44px auto 0;
+                margin: 44px auto 48px;
                 padding: 0 4%;
             }
 
@@ -1197,6 +1197,12 @@
                 color: var(--indigo);
             }
 
+            .feat__card-icon img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+            }
+
             .feat__card-title {
                 font-size: 26px;
                 font-weight: 800;
@@ -1259,11 +1265,8 @@
 
             <article class="feat__card feat__card--hl">
                 <div class="feat__card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="9" />
-                        <path d="M12 8v8M8 12h8" />
-                    </svg>
+                    <img src="../assets/clear-aligners/flexibility-icon.svg" alt="Flexible options icon"
+                        width="40" height="40" loading="lazy" decoding="async" />
                 </div>
                 <h3 class="feat__card-title">Flexible Options<br>for Every Smile</h3>
                 <div class="feat__divider"></div>
@@ -1543,7 +1546,7 @@
 
             .tst__pill {
                 display: inline-block;
-                border: 2px dashed rgba(255, 255, 255, 0.55);
+               
                 background: var(--red);
                 color: #fff;
                 font-weight: 700;
@@ -3661,7 +3664,7 @@
         .faq__title strong { font-weight: 800; }
 
         .faq__inner {
-            max-width: 1200px;
+            max-width: 760px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
@@ -3933,8 +3936,91 @@
             .faq__contact:hover .faq__contact-val { text-decoration: underline; }
         }
 
+        /* ---- Extra micro-interactions ---- */
+
+        /* Tactile press feedback on buttons */
+        .hero__cta:active, .lead__btn:active, .cta__btn:active, .rt__btn:active,
+        .tst__all:active, .tst__pill:active, .lead__call:active, .faq__card-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* Primary CTA: shine sweep + gentle attention pulse */
+        .hero__cta {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero__cta::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -130%;
+            width: 55%;
+            height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            transform: skewX(-18deg);
+            pointer-events: none;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero__cta {
+                animation: mi-pulse 2.8s ease-in-out infinite;
+            }
+
+            .hero__cta::after {
+                animation: mi-shine 4.5s ease-in-out infinite;
+            }
+
+            /* Highlighted feature icon gently floats */
+            .feat__card--hl .feat__card-icon {
+                animation: mi-float 3.6s ease-in-out infinite;
+            }
+        }
+
+        @keyframes mi-pulse {
+            0%, 100% { box-shadow: 0 12px 24px -12px rgba(223, 32, 40, 0.5); }
+            50% { box-shadow: 0 14px 32px -8px rgba(223, 32, 40, 0.75); }
+        }
+
+        @keyframes mi-shine {
+            0%, 60%, 100% { left: -130%; }
+            80% { left: 150%; }
+        }
+
+        @keyframes mi-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* FAQ answer slides in when opened */
+        .faq__item[open] .faq__a {
+            animation: mi-faq 0.35s ease;
+        }
+
+        @keyframes mi-faq {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: none; }
+        }
+
+        .faq__chev { transition: transform 0.25s ease; }
+
+        @media (hover: hover) {
+            .faq__q:hover .faq__chev { transform: translateY(2px); }
+            .tst__dot:hover { transform: scale(1.35); background: var(--red); }
+            .hero__cta:hover { filter: brightness(1.05); }
+        }
+
+        /* Keyboard focus rings */
+        a:focus-visible, button:focus-visible, summary:focus-visible {
+            outline: 2px solid var(--indigo);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
         @media (prefers-reduced-motion: reduce) {
             .mi-reveal { opacity: 1 !important; transform: none !important; }
+            .hero__cta, .hero__cta::after,
+            .feat__card--hl .feat__card-icon { animation: none !important; }
         }
     </style>
 
