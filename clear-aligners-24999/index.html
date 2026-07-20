@@ -545,16 +545,24 @@
                 display: none;
             }
 
-            /* stat bar */
+            /* stat bar (auto-scrolling marquee) */
             .hero__stats {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: block;
                 background: linear-gradient(90deg, #3a2ea3 0%, #2c2380 100%);
                 margin: 52px -20px 0;
-                padding: 16px 8px;
+                padding: 16px 0;
+                overflow: hidden;
+            }
+
+            .hero__stats-track {
+                display: flex;
+                width: max-content;
+                animation: heroStatScroll 16s linear infinite;
             }
 
             .hero__stat {
+                flex: 0 0 auto;
+                padding: 0 26px;
                 text-align: center;
                 color: #fff;
                 position: relative;
@@ -568,6 +576,15 @@
                 height: 70%;
                 width: 1px;
                 background: rgba(255, 255, 255, 0.22);
+            }
+
+            @keyframes heroStatScroll {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .hero__stats-track { animation: none; }
             }
 
             .hero__stat-num {
@@ -684,19 +701,17 @@
             </div>
         </div>
 
-        <!-- Mobile stats bar -->
+        <!-- Mobile stats bar (auto-scrolling marquee) -->
         <div class="hero__stats">
-            <div class="hero__stat">
-                <div class="hero__stat-num">5 lacs+</div>
-                <div class="hero__stat-label">Happy Patients</div>
-            </div>
-            <div class="hero__stat">
-                <div class="hero__stat-num">20 Years</div>
-                <div class="hero__stat-label">Legacy of Trust</div>
-            </div>
-            <div class="hero__stat">
-                <div class="hero__stat-num">1.5L+</div>
-                <div class="hero__stat-label">Smile Designed</div>
+            <div class="hero__stats-track">
+                <div class="hero__stat"><div class="hero__stat-num">25,000+</div><div class="hero__stat-label">Google Review</div></div>
+                <div class="hero__stat"><div class="hero__stat-num">20+ Years</div><div class="hero__stat-label">Legacy Of Trust</div></div>
+                <div class="hero__stat"><div class="hero__stat-num">1.5L+</div><div class="hero__stat-label">Smile Aligned</div></div>
+                <div class="hero__stat"><div class="hero__stat-num">125+</div><div class="hero__stat-label">Expert Clinic</div></div>
+                <div class="hero__stat" aria-hidden="true"><div class="hero__stat-num">25,000+</div><div class="hero__stat-label">Google Review</div></div>
+                <div class="hero__stat" aria-hidden="true"><div class="hero__stat-num">20+ Years</div><div class="hero__stat-label">Legacy Of Trust</div></div>
+                <div class="hero__stat" aria-hidden="true"><div class="hero__stat-num">1.5L+</div><div class="hero__stat-label">Smile Aligned</div></div>
+                <div class="hero__stat" aria-hidden="true"><div class="hero__stat-num">125+</div><div class="hero__stat-label">Expert Clinic</div></div>
             </div>
         </div>
 
@@ -2475,10 +2490,17 @@
             position: relative;
             background: #fff;
             border-radius: 16px;
-            padding: 22px 24px;
             box-shadow: 0 26px 55px -30px rgba(20, 20, 50, 0.4);
-            filter: blur(2.5px);
             overflow: hidden;
+            aspect-ratio: 16 / 11;
+        }
+
+        .pce__sheet-img {
+            width: 100%;
+            display: block;
+            filter: blur(2.6px);
+            transform: scale(1.05);
+            transform-origin: top center;
         }
 
         .pce__row {
@@ -2608,10 +2630,6 @@
                 margin: 0;
             }
 
-            .pce__sheet {
-                padding: 30px 34px;
-            }
-
             .pce__btn {
                 padding: 18px 40px;
             }
@@ -2643,21 +2661,8 @@
 
             <div class="pce__media">
                 <div class="pce__sheet" aria-hidden="true">
-                    <div class="pce__row pce__row--head">
-                        <span class="pce__bar pce__bar--l pce__bar--head"></span>
-                        <span class="pce__bar pce__bar--price pce__bar--head"></span>
-                        <span class="pce__bar pce__bar--r pce__bar--head"></span>
-                    </div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
-                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <img class="pce__sheet-img" src="../assets/clear-aligners/pricing-preview.png"
+                        alt="" loading="lazy" decoding="async" />
                 </div>
 
                 <a class="pce__btn" href="../assets/treatment-cost.pdf" download="AVMSmiles-Treatment-Rate-Card.pdf">
@@ -4668,7 +4673,7 @@
     <!-- Uniform 60px gap between sections on mobile (30px top + 30px bottom) -->
     <style>
         @media (max-width: 767px) {
-            .lead, .feat, .cta--m, .tst, .why, .fix, .bac, .rev, .rt, .sw, .awd, .faq {
+            .lead, .feat, .cta--m, .tst, .why, .pce, .fix, .bac, .rev, .rt, .sw, .awd, .faq {
                 padding-top: 30px;
                 padding-bottom: 30px;
             }
