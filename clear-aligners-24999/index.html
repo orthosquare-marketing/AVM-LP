@@ -642,7 +642,8 @@
                     <picture>
                         <source media="(max-width: 767px)" srcset="../assets/clear-aligners/womenmobile.png" />
                         <img src="../assets/clear-aligners/womendesktop.png"
-                            alt="Woman holding a clear aligner" loading="eager" decoding="async" />
+                            alt="Woman holding a clear aligner - AVMSmiles invisible braces"
+                            loading="eager" fetchpriority="high" decoding="async" />
                     </picture>
 
                     <!-- Mobile price banner -->
@@ -1715,6 +1716,7 @@
 
             .tst__card.is-featured {
                 display: block;
+                order: 1;
                 width: 340px;
                 height: 552px;
             }
@@ -1724,12 +1726,14 @@
             }
 
             .tst__card.is-p1 {
+                order: 2;
                 width: 244px;
                 height: 486px;
                 margin-top: 40px;
             }
 
             .tst__card.is-p2 {
+                order: 3;
                 width: 244px;
                 height: 430px;
                 margin-top: 92px;
@@ -4096,7 +4100,7 @@
 
                 <details class="faq__item">
                     <summary class="faq__q">
-                        Can i eat and drink normally with aligners
+                        Can I eat and drink normally with aligners?
                         <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
                     </summary>
                     <p class="faq__a">Yes. Simply remove your aligners before eating or drinking anything other than water, then place them back in after brushing.</p>
@@ -4104,7 +4108,7 @@
 
                 <details class="faq__item">
                     <summary class="faq__q">
-                        Do clear aligners noticeable
+                        Are clear aligners noticeable?
                         <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
                     </summary>
                     <p class="faq__a">Clear aligners are virtually invisible. Made from transparent medical-grade material, most people won't notice you're wearing them.</p>
@@ -4112,7 +4116,7 @@
 
                 <details class="faq__item">
                     <summary class="faq__q">
-                        Do i need to wear aligners all days?
+                        Do I need to wear aligners all day?
                         <span class="faq__chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
                     </summary>
                     <p class="faq__a">For best results, wear them 20–22 hours a day, removing only for meals, brushing, and flossing.</p>
