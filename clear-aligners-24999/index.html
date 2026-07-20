@@ -494,6 +494,7 @@
             .hero__card {
                 aspect-ratio: 1 / 0.82;
                 border-radius: 28px;
+                overflow: visible;
                 background: linear-gradient(160deg, #e9edf4 0%, #d7dded 100%);
             }
 
@@ -507,6 +508,7 @@
                 height: 100%;
                 object-fit: cover;
                 object-position: center top;
+                border-radius: 28px;
             }
 
             /* hide the desktop floating card, show bottom banner */
@@ -518,7 +520,8 @@
                 display: block;
                 position: absolute;
                 left: 50%;
-                bottom: 14px;
+                bottom: -28px;
+                z-index: 3;
                 transform: translateX(-50%);
                 background: #eef0fb;
                 color: #3a34a0;
@@ -546,7 +549,7 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 background: linear-gradient(90deg, #3a2ea3 0%, #2c2380 100%);
-                margin: 0 -20px 0;
+                margin: 52px -20px 0;
                 padding: 16px 8px;
             }
 
