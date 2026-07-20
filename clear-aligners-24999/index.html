@@ -139,6 +139,7 @@
 
         body {
             margin: 0;
+            overflow-x: hidden;
             background: var(--page-bg);
         }
 
@@ -2413,6 +2414,267 @@
         </div>
     </section>
 
+    <!-- ==================== PERSONALIZED COST ESTIMATE ==================== -->
+    <style>
+        .pce {
+            background: linear-gradient(120deg, #f7f1fb 0%, #eef1fb 55%, #eeecfb 100%);
+            padding: 30px 5%;
+            overflow: hidden;
+        }
+
+        .pce__br {
+            display: inline;
+        }
+
+        .pce__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .pce__content {
+            text-align: center;
+        }
+
+        .pce__title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--indigo);
+            margin: 0 0 6px;
+        }
+
+        .pce__badge {
+            display: inline-block;
+            max-width: 100%;
+            color: var(--red);
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 1.2;
+            margin: 0 0 14px;
+        }
+
+        .pce__sub {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #4b5563;
+            margin: 0 auto;
+            max-width: 480px;
+        }
+
+        .pce__media {
+            position: relative;
+            max-width: 520px;
+            width: 100%;
+            margin: 6px auto 0;
+        }
+
+        .pce__sheet {
+            position: relative;
+            background: #fff;
+            border-radius: 16px;
+            padding: 22px 24px;
+            box-shadow: 0 26px 55px -30px rgba(20, 20, 50, 0.4);
+            filter: blur(2.5px);
+            overflow: hidden;
+        }
+
+        .pce__row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 0;
+        }
+
+        .pce__row--head {
+            border-bottom: 1px solid #eceef5;
+            margin-bottom: 6px;
+            padding-bottom: 10px;
+        }
+
+        .pce__bar {
+            height: 8px;
+            border-radius: 5px;
+            background: #d9dbe6;
+        }
+
+        .pce__bar--l {
+            flex: 1;
+        }
+
+        .pce__bar--head {
+            background: #b9bcd0;
+            height: 10px;
+        }
+
+        .pce__bar--price {
+            width: 46px;
+            background: #f3b4b7;
+        }
+
+        .pce__bar--r {
+            width: 40px;
+            background: #e2e4ee;
+        }
+
+        .pce__btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            background: var(--red);
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 14px;
+            box-shadow: 0 20px 38px -16px rgba(223, 32, 40, 0.6);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .pce__btn:active {
+            transform: translate(-50%, -50%) scale(0.97);
+        }
+
+        .pce__btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .pce__btn-main svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .pce__btn-sub {
+            font-size: 11px;
+            letter-spacing: 0.13em;
+            opacity: 0.92;
+        }
+
+        @media (min-width: 768px) {
+            .pce {
+                padding: 80px 5%;
+            }
+
+            .pce__inner {
+                grid-template-columns: 0.85fr 1.15fr;
+                gap: 56px;
+            }
+
+            .pce__content {
+                text-align: left;
+            }
+
+            .pce__title {
+                font-size: 56px;
+                margin-bottom: 16px;
+            }
+
+            .pce__badge {
+                background: var(--red);
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.02em;
+                font-size: 27px;
+                padding: 12px 26px;
+                border-radius: 12px;
+                margin-bottom: 22px;
+                box-shadow: 0 16px 30px -16px rgba(223, 32, 40, 0.5);
+            }
+
+            .pce__br {
+                display: none;
+            }
+
+            .pce__sub {
+                font-size: 17px;
+                margin: 0;
+                max-width: 470px;
+            }
+
+            .pce__media {
+                max-width: 620px;
+                margin: 0;
+            }
+
+            .pce__sheet {
+                padding: 30px 34px;
+            }
+
+            .pce__btn {
+                padding: 18px 40px;
+            }
+
+            .pce__btn-main {
+                font-size: 22px;
+            }
+
+            .pce__btn-main svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .pce__btn-sub {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <section class="pce">
+        <div class="pce__inner">
+            <div class="pce__content">
+                <h2 class="pce__title">Get Your</h2>
+                <span class="pce__badge">Personalized Cost<br class="pce__br"> Estimate</span>
+                <p class="pce__sub">Every smile is unique, and so is its treatment. Download our pricing guide to
+                    explore personalized cost estimates, flexible financing options, and everything included in your
+                    clear aligner journey with confidence.</p>
+            </div>
+
+            <div class="pce__media">
+                <div class="pce__sheet" aria-hidden="true">
+                    <div class="pce__row pce__row--head">
+                        <span class="pce__bar pce__bar--l pce__bar--head"></span>
+                        <span class="pce__bar pce__bar--price pce__bar--head"></span>
+                        <span class="pce__bar pce__bar--r pce__bar--head"></span>
+                    </div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                    <div class="pce__row"><span class="pce__bar pce__bar--l"></span><span class="pce__bar pce__bar--price"></span><span class="pce__bar pce__bar--r"></span></div>
+                </div>
+
+                <a class="pce__btn" href="../assets/treatment-cost.pdf" download="AVMSmiles-Treatment-Rate-Card.pdf">
+                    <span class="pce__btn-main">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
+                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                        </svg>
+                        Download Pricing Guide
+                    </span>
+                    <span class="pce__btn-sub">PDF • INSTANT ACCESS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== WE CAN FIX YOUR SMILE (mobile only) ==================== -->
     <style>
         .fix {
@@ -3909,8 +4171,7 @@
             <div class="awd__content">
                 <span class="awd__badge">RECOGNIZED EXCELLENCE</span>
                 <h2 class="awd__title">Awards &amp; Recognition</h2>
-                <p class="awd__sub">AVMSmiles is proud to be recognized as a leader in digital orthodontics and
-                    patient care excellence across India.</p>
+                <p class="awd__sub">This recognition reflects our commitment to consistent, high-quality dental care across the nation. </p>
 
                 <div class="awd__chips">
                     <div class="awd__chip">
