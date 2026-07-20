@@ -2680,6 +2680,173 @@
         </div>
     </section>
 
+    <!-- ==================== BEFORE / AFTER CAROUSEL ==================== -->
+    <style>
+        .bac {
+            background: #fff;
+            padding: 56px 5% 70px;
+            overflow: hidden;
+        }
+
+        .bac__head {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 32px;
+        }
+
+        .bac__title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--indigo);
+            line-height: 1.12;
+            margin: 0 0 12px;
+        }
+
+        .bac__sub {
+            font-size: 15px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .bac__track {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 8px 8vw;
+            max-width: 1300px;
+            margin: 0 auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .bac__track::-webkit-scrollbar { display: none; }
+
+        .bac__card {
+            flex: none;
+            scroll-snap-align: center;
+            width: min(78vw, 320px);
+            border-radius: 18px;
+            overflow: hidden;
+            background: #ececf2;
+            box-shadow: 0 18px 40px -22px rgba(20, 20, 50, 0.4);
+        }
+
+        .bac__card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        .bac__nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .bac__arrow {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: 2px solid var(--red);
+            background: #fff;
+            color: var(--red);
+            transition: transform 0.15s ease;
+        }
+
+        .bac__arrow--next {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .bac__arrow:active { transform: scale(0.92); }
+
+        .bac__arrow svg { width: 18px; height: 18px; }
+
+        @media (min-width: 768px) {
+            .bac {
+                padding: 80px 5% 90px;
+            }
+
+            .bac__head {
+                margin-bottom: 40px;
+            }
+
+            .bac__title { font-size: 40px; }
+
+            .bac__sub { font-size: 18px; }
+
+            .bac__track {
+                padding: 12px 6px;
+                scroll-snap-type: none;
+            }
+
+            .bac__card { width: 300px; }
+
+            .bac__nav {
+                justify-content: flex-end;
+                max-width: 1300px;
+                margin: 26px auto 0;
+            }
+
+            .bac__arrow {
+                background: var(--red);
+                color: #fff;
+            }
+        }
+    </style>
+
+    <section class="bac">
+        <div class="bac__head">
+            <h2 class="bac__title">Real Aligner Transformations</h2>
+            <p class="bac__sub">Documented before &amp; after results from 50,000+ clear aligner treatments.</p>
+        </div>
+
+        <div class="bac__track" id="bacTrack">
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab1.png" alt="Before and after clear aligner transformation 1" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab2.png" alt="Before and after clear aligner transformation 2" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab3.png" alt="Before and after clear aligner transformation 3" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab4.png" alt="Before and after clear aligner transformation 4" /></div>
+            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab5.png" alt="Before and after clear aligner transformation 5" /></div>
+        </div>
+
+        <div class="bac__nav">
+            <button type="button" class="bac__arrow bac__arrow--prev" id="bacPrev" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" class="bac__arrow bac__arrow--next" id="bacNext" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            var track = document.getElementById('bacTrack');
+            if (!track) return;
+            var prev = document.getElementById('bacPrev');
+            var next = document.getElementById('bacNext');
+            function step() {
+                var card = track.querySelector('.bac__card');
+                return card ? card.getBoundingClientRect().width + 18 : 300;
+            }
+            prev && prev.addEventListener('click', function () {
+                track.scrollBy({ left: -step(), behavior: 'smooth' });
+            });
+            next && next.addEventListener('click', function () {
+                track.scrollBy({ left: step(), behavior: 'smooth' });
+            });
+        })();
+    </script>
+
     <!-- ==================== WE CAN FIX YOUR SMILE (mobile only) ==================== -->
     <style>
         .fix {
@@ -2934,173 +3101,6 @@
             </div>
         </div>
     </section>
-
-    <!-- ==================== BEFORE / AFTER CAROUSEL ==================== -->
-    <style>
-        .bac {
-            background: #fff;
-            padding: 56px 5% 70px;
-            overflow: hidden;
-        }
-
-        .bac__head {
-            text-align: center;
-            max-width: 820px;
-            margin: 0 auto 32px;
-        }
-
-        .bac__title {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--indigo);
-            line-height: 1.12;
-            margin: 0 0 12px;
-        }
-
-        .bac__sub {
-            font-size: 15px;
-            color: #6b7280;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .bac__track {
-            display: flex;
-            gap: 18px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            padding: 8px 8vw;
-            max-width: 1300px;
-            margin: 0 auto;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .bac__track::-webkit-scrollbar { display: none; }
-
-        .bac__card {
-            flex: none;
-            scroll-snap-align: center;
-            width: min(78vw, 320px);
-            border-radius: 18px;
-            overflow: hidden;
-            background: #ececf2;
-            box-shadow: 0 18px 40px -22px rgba(20, 20, 50, 0.4);
-        }
-
-        .bac__card img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            aspect-ratio: 1 / 1;
-        }
-
-        .bac__nav {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .bac__arrow {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            cursor: pointer;
-            border: 2px solid var(--red);
-            background: #fff;
-            color: var(--red);
-            transition: transform 0.15s ease;
-        }
-
-        .bac__arrow--next {
-            background: var(--red);
-            color: #fff;
-        }
-
-        .bac__arrow:active { transform: scale(0.92); }
-
-        .bac__arrow svg { width: 18px; height: 18px; }
-
-        @media (min-width: 768px) {
-            .bac {
-                padding: 80px 5% 90px;
-            }
-
-            .bac__head {
-                margin-bottom: 40px;
-            }
-
-            .bac__title { font-size: 40px; }
-
-            .bac__sub { font-size: 18px; }
-
-            .bac__track {
-                padding: 12px 6px;
-                scroll-snap-type: none;
-            }
-
-            .bac__card { width: 300px; }
-
-            .bac__nav {
-                justify-content: flex-end;
-                max-width: 1300px;
-                margin: 26px auto 0;
-            }
-
-            .bac__arrow {
-                background: var(--red);
-                color: #fff;
-            }
-        }
-    </style>
-
-    <section class="bac">
-        <div class="bac__head">
-            <h2 class="bac__title">Real Aligner Transformations</h2>
-            <p class="bac__sub">Documented before &amp; after results from 50,000+ clear aligner treatments.</p>
-        </div>
-
-        <div class="bac__track" id="bacTrack">
-            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab1.png" alt="Before and after clear aligner transformation 1" /></div>
-            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab2.png" alt="Before and after clear aligner transformation 2" /></div>
-            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab3.png" alt="Before and after clear aligner transformation 3" /></div>
-            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab4.png" alt="Before and after clear aligner transformation 4" /></div>
-            <div class="bac__card"><img loading="lazy" decoding="async" src="../assets/clear-aligners/aab5.png" alt="Before and after clear aligner transformation 5" /></div>
-        </div>
-
-        <div class="bac__nav">
-            <button type="button" class="bac__arrow bac__arrow--prev" id="bacPrev" aria-label="Previous">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            </button>
-            <button type="button" class="bac__arrow bac__arrow--next" id="bacNext" aria-label="Next">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
-    </section>
-
-    <script>
-        (function () {
-            var track = document.getElementById('bacTrack');
-            if (!track) return;
-            var prev = document.getElementById('bacPrev');
-            var next = document.getElementById('bacNext');
-            function step() {
-                var card = track.querySelector('.bac__card');
-                return card ? card.getBoundingClientRect().width + 18 : 300;
-            }
-            prev && prev.addEventListener('click', function () {
-                track.scrollBy({ left: -step(), behavior: 'smooth' });
-            });
-            next && next.addEventListener('click', function () {
-                track.scrollBy({ left: step(), behavior: 'smooth' });
-            });
-        })();
-    </script>
 
     <!-- ==================== TEXT REVIEWS (Loved by Thousands) ==================== -->
     <style>
