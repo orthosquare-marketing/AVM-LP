@@ -2733,6 +2733,18 @@
 
         .fix__card-ic svg { width: 32px; height: 32px; }
 
+        /* Condition icon images */
+        .fix__ic {
+            width: 42px;
+            height: 34px;
+            object-fit: contain;
+        }
+
+        /* White on the purple mobile cards */
+        .fix__card-ic .fix__ic {
+            filter: brightness(0) invert(1);
+        }
+
         .fix__num {
             font-size: 24px;
             font-weight: 800;
@@ -2835,7 +2847,7 @@
         <div class="fix__grid">
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-crowding.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__card-title">Crowding</h3>
                 <p class="fix__card-desc">Teeth overlap due to lack of space.</p>
@@ -2843,7 +2855,7 @@
 
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-crossbite.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__card-title">Crossbite</h3>
                 <p class="fix__card-desc">Upper teeth sit inside lower teeth.</p>
@@ -2851,7 +2863,7 @@
 
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="M9 5l3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-gapped.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__card-title">Gapped Teeth</h3>
                 <p class="fix__card-desc">Extra space between two or more teeth.</p>
@@ -2859,7 +2871,7 @@
 
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-openbite.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__card-title">Open Bite</h3>
                 <p class="fix__card-desc">Front teeth don't touch when closed.</p>
@@ -2867,7 +2879,7 @@
 
             <div class="fix__card fix__card--wide">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="6" width="4" height="12" rx="2"/><rect x="10" y="6" width="4" height="12" rx="2"/><rect x="16.5" y="6" width="4" height="12" rx="2"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-spacing.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__card-title">Spacing Issues</h3>
                 <p class="fix__card-desc">Generalized gaps across the arch.</p>
@@ -2878,7 +2890,7 @@
         <div class="fix__cards">
             <div class="fix__c">
                 <div class="fix__c-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-crowding.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__c-title">Crowding</h3>
                 <p class="fix__c-desc">Teeth overlap due to lack of space.</p>
@@ -2886,7 +2898,7 @@
 
             <div class="fix__c">
                 <div class="fix__c-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-crossbite.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__c-title">Crossbite</h3>
                 <p class="fix__c-desc">Upper teeth sit inside lower teeth.</p>
@@ -2894,7 +2906,7 @@
 
             <div class="fix__c">
                 <div class="fix__c-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="M9 5l3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-gapped.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__c-title">Gapped Teeth</h3>
                 <p class="fix__c-desc">Extra space between two or more teeth.</p>
@@ -2902,7 +2914,7 @@
 
             <div class="fix__c">
                 <div class="fix__c-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-openbite.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__c-title">Open Bite</h3>
                 <p class="fix__c-desc">Front teeth don't touch when closed.</p>
@@ -2910,7 +2922,7 @@
 
             <div class="fix__c">
                 <div class="fix__c-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="6" width="4" height="12" rx="2"/><rect x="10" y="6" width="4" height="12" rx="2"/><rect x="16.5" y="6" width="4" height="12" rx="2"/></svg>
+                    <img class="fix__ic" src="../assets/clear-aligners/ic-spacing.svg" alt="" loading="lazy" />
                 </div>
                 <h3 class="fix__c-title">Spacing Issues</h3>
                 <p class="fix__c-desc">Generalized gaps across the arch.</p>
