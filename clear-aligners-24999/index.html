@@ -1055,10 +1055,17 @@
                     <form id="implant-lead-form" class="lead__form lead__form--desktop implant-lead-form">
                         <h3 class="lead__card-title">Claim Your <span class="red">Free First Consultation</span></h3>
 
-                        <div class="lead__group">
-                            <label class="lead__label" for="d-name">Full Name</label>
-                            <input id="d-name" class="lead__input" type="text" name="firstName"
-                                placeholder="Enter your name" aria-label="Full Name" />
+                        <div class="lead__row">
+                            <div>
+                                <label class="lead__label" for="d-fname">First Name</label>
+                                <input id="d-fname" class="lead__input" type="text" name="firstName"
+                                    placeholder="Enter first name" aria-label="First Name" />
+                            </div>
+                            <div>
+                                <label class="lead__label" for="d-lname">Last Name</label>
+                                <input id="d-lname" class="lead__input" type="text" name="lastName"
+                                    placeholder="Enter last name" aria-label="Last Name" />
+                            </div>
                         </div>
 
                         <div class="lead__row">
@@ -1083,7 +1090,6 @@
                                 placeholder="name@example.com" aria-label="Email Address" />
                         </div>
 
-                        <input type="hidden" name="lastName" value="" />
                         <input type="hidden" name="pincode" value="" />
                         <input type="hidden" name="utm_campaign" value="" />
                         <input type="hidden" name="utm_medium" value="" />
@@ -1821,8 +1827,10 @@
                 <h2 class="tst__title">Aligners Transformation</h2>
                 <p class="tst__sub">Trusted by thousands of patients who have transformed their smiles with our
                     advanced clear aligner treatments and expert dental care.</p>
-                <div class="tst__cta-row">
-                    <span class="tst__pill">Here More From Our Patient</span>
+                <div class="tst__cta-row"  >
+                    <span class="tst__pill" role="button" tabindex="0"
+                        onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('book').scrollIntoView({behavior:'smooth'})}">Here More From Our Patient</span>
                     <svg class="tst__arrow" viewBox="0 0 220 96" fill="none" aria-hidden="true">
                         <path d="M6 20 C 46 96, 150 100, 202 58" stroke="#362997" stroke-width="2.5"
                             fill="none" stroke-linecap="round" />
