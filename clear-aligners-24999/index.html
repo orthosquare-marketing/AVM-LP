@@ -336,7 +336,7 @@
         /* ================= MOBILE ================= */
         @media (max-width: 767px) {
             .hero {
-                padding: 26px 20px 0;
+                padding: 0 20px 0;
                 text-align: left;
             }
 
@@ -366,7 +366,7 @@
 
             .hero__feature {
                 color: var(--ink);
-                font-size: 14px;
+                font-size: 13px;
             }
 
             /* green checks on mobile */
@@ -424,7 +424,7 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 background: linear-gradient(90deg, #3a2ea3 0%, #2c2380 100%);
-                margin: 22px -20px 0;
+                margin: 0 -20px 0;
                 padding: 16px 8px;
             }
 
@@ -2358,6 +2358,19 @@
             margin: 0;
         }
 
+        .fix__card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 6px;
+        }
+
+        .fix__card-desc {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.45;
+            margin: 0;
+        }
+
         /* desktop 5-issue cards (hidden on mobile) */
         .fix__cards { display: none; }
 
@@ -2435,42 +2448,42 @@
         <div class="fix__grid">
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#f4b4b8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 14.6 9l6 .5-4.6 4 1.4 5.9L12 16.3 6.6 19.4 8 13.5 3.4 9.5l6-.5L12 3.5z"/><path d="M9.5 11.5l1.7 1.7 3.3-3.3" stroke="#ff6b6b"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
                 </div>
-                <p class="fix__num">3,00,000</p>
-                <p class="fix__label">Successful Implants</p>
+                <h3 class="fix__card-title">Crowding</h3>
+                <p class="fix__card-desc">Teeth overlap due to lack of space.</p>
             </div>
 
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
                 </div>
-                <p class="fix__num">5,00,000</p>
-                <p class="fix__label">Happy Patient</p>
+                <h3 class="fix__card-title">Crossbite</h3>
+                <p class="fix__card-desc">Upper teeth sit inside lower teeth.</p>
             </div>
 
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#7aa8ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="#ff6b6b" stroke="#ff6b6b"/><path d="M12 3v3M18 6l3-3" stroke="#ff6b6b"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="M9 5l3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg>
                 </div>
-                <p class="fix__num">20+ Year</p>
-                <p class="fix__label">Industry-leading</p>
+                <h3 class="fix__card-title">Gapped Teeth</h3>
+                <p class="fix__card-desc">Extra space between two or more teeth.</p>
             </div>
 
             <div class="fix__card">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 14.6 9l6 .5-4.6 4 1.4 5.9L12 16.3 6.6 19.4 8 13.5 3.4 9.5l6-.5L12 3.5z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
                 </div>
-                <p class="fix__num">25000+</p>
-                <p class="fix__label">Google Reviews</p>
+                <h3 class="fix__card-title">Open Bite</h3>
+                <p class="fix__card-desc">Front teeth don't touch when closed.</p>
             </div>
 
             <div class="fix__card fix__card--wide">
                 <div class="fix__card-ic">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 14.6 9l6 .5-4.6 4 1.4 5.9L12 16.3 6.6 19.4 8 13.5 3.4 9.5l6-.5L12 3.5z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                 </div>
-                <p class="fix__num">25000+</p>
-                <p class="fix__label">Google Reviews</p>
+                <h3 class="fix__card-title">Spacing Issues</h3>
+                <p class="fix__card-desc">Generalized gaps across the arch.</p>
             </div>
         </div>
 
@@ -3234,6 +3247,32 @@
 
         .rt__btn:active { transform: scale(0.98); }
 
+        @media (max-width: 767px) {
+            .rt {
+                background: #E4E5F3;
+            }
+
+            /* "Ready to Transform Your Smile" flows as one heading */
+            .rt__title {
+                display: inline;
+                margin: 0;
+            }
+
+            .rt__hl {
+                display: inline;
+                background: none;
+                color: var(--red);
+                font-size: inherit;
+                padding: 0;
+                margin: 0 0 0 0.28em;
+                border-radius: 0;
+            }
+
+            .rt__sub {
+                margin-top: 18px;
+            }
+        }
+
         @media (min-width: 768px) {
             .rt {
                 padding: 80px 5% 90px;
@@ -3643,6 +3682,12 @@
         .awd {
             background: #fff;
             padding: 50px 5% 70px;
+        }
+
+        @media (max-width: 767px) {
+            .awd {
+                background: #E4E5F3;
+            }
         }
 
         .awd__inner {
