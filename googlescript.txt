@@ -21,7 +21,10 @@ function doPost(e) {
       "utm_medium",
       "utm_campaign",
       "utm_term",
-      "utm_content"
+      "utm_content",
+      "gclid",
+      "gbraid",
+      "wbraid"
     ];
 
     ensureHeaders_(sheet, headers);
@@ -41,7 +44,10 @@ function doPost(e) {
       valueOrBlank_(params.utm_medium),
       valueOrBlank_(params.utm_campaign),
       valueOrBlank_(params.utm_term),
-      valueOrBlank_(params.utm_content)
+      valueOrBlank_(params.utm_content),
+      valueOrBlank_(params.gclid),
+      valueOrBlank_(params.gbraid),
+      valueOrBlank_(params.wbraid)
     ];
 
     sheet.appendRow(row);

@@ -39,6 +39,13 @@
     setHidden(form, "utm_source", params.get("utm_source") || "");
     setHidden(form, "utm_term", params.get("utm_term") || "");
     setHidden(form, "utm_content", params.get("utm_content") || "");
+
+    // Google Ads click ids, so the lead can be imported back as an offline conversion.
+    const clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
+    setHidden(form, "gclid", clickIds.gclid || params.get("gclid") || "");
+    setHidden(form, "gbraid", clickIds.gbraid || params.get("gbraid") || "");
+    setHidden(form, "wbraid", clickIds.wbraid || params.get("wbraid") || "");
+
     setHidden(form, "date", new Date().toISOString());
 
     const sheetTab = form.querySelector('[name="sheet_tab"]')?.value || "dental-Implant";

@@ -162,6 +162,8 @@
   <script defer src="/_vercel/insights/script.js"></script>
   <!-- End Vercel Web Analytics -->
 
+  <!-- Google Ads click id capture (gclid/gbraid/wbraid) -->
+  <script src="../click-ids.js"></script>
 </head>
 
 <body>
@@ -2528,6 +2530,12 @@
                 setHidden("utm_term", params.get("utm_term") || "");
                 setHidden("utm_content", params.get("utm_content") || "");
 
+                // Google Ads click ids, so the lead can be imported back as an offline conversion.
+                const clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
+                setHidden("gclid", clickIds.gclid || params.get("gclid") || "");
+                setHidden("gbraid", clickIds.gbraid || params.get("gbraid") || "");
+                setHidden("wbraid", clickIds.wbraid || params.get("wbraid") || "");
+
                 setHidden("date", new Date().toISOString());
 
                 setHidden("sheet_tab", "clear-aligners");
@@ -2668,6 +2676,12 @@
                 setHidden("utm_source", params.get("utm_source") || "");
                 setHidden("utm_term", params.get("utm_term") || "");
                 setHidden("utm_content", params.get("utm_content") || "");
+
+                // Google Ads click ids, so the lead can be imported back as an offline conversion.
+                const clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
+                setHidden("gclid", clickIds.gclid || params.get("gclid") || "");
+                setHidden("gbraid", clickIds.gbraid || params.get("gbraid") || "");
+                setHidden("wbraid", clickIds.wbraid || params.get("wbraid") || "");
 
                 setHidden("date", new Date().toISOString());
 

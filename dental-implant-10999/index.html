@@ -524,6 +524,8 @@
       .benefits-surface article::after { animation: none; opacity: 0; }
     }
   </style>
+  <!-- Google Ads click id capture (gclid/gbraid/wbraid) -->
+  <script src="../click-ids.js"></script>
 </head>
 
 <body>
@@ -1162,6 +1164,9 @@
       body.append("treatment", "dental implants");
       var p = new URLSearchParams(location.search);
       ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(function (k) { body.append(k, p.get(k) || ""); });
+      // Google Ads click ids, so the lead can be imported back as an offline conversion.
+      var clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
+      ["gclid", "gbraid", "wbraid"].forEach(function (k) { body.append(k, clickIds[k] || p.get(k) || ""); });
       return fetch(WEB_APP_URL, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
