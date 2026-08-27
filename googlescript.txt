@@ -1,3 +1,32 @@
+/**
+ * Lead capture endpoint for the AVM landing pages.
+ *
+ * Columns are matched by HEADER NAME, not by position, so manually added
+ * columns (REMARK, LOCATION, ...) are never overwritten and any new field
+ * is appended after whatever the sheet already has.
+ */
+
+var LEAD_FIELDS = [
+  "timestamp",
+  "date",
+  "firstName",
+  "lastName",
+  "phone",
+  "email",
+  "pincode",
+  "city",
+  "treatment",
+  "sheet_tab",
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "gclid",
+  "gbraid",
+  "wbraid"
+];
+
 function doPost(e) {
   try {
     const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
@@ -6,49 +35,33 @@ function doPost(e) {
     const sheetName = sanitizeSheetName_(params.sheet_tab) || "Leads";
     const sheet = getOrCreateSheet_(spreadsheet, sheetName);
 
-    const headers = [
-      "timestamp",
-      "date",
-      "firstName",
-      "lastName",
-      "phone",
-      "email",
-      "pincode",
-      "city",
-      "treatment",
-      "sheet_tab",
-      "utm_source",
-      "utm_medium",
-      "utm_campaign",
-      "utm_term",
-      "utm_content",
-      "gclid",
-      "gbraid",
-      "wbraid"
-    ];
+    const headers = ensureHeaders_(sheet, LEAD_FIELDS);
 
-    ensureHeaders_(sheet, headers);
+    const values = {
+      timestamp: new Date(),
+      date: valueOrBlank_(params.date),
+      firstName: valueOrBlank_(params.firstName),
+      lastName: valueOrBlank_(params.lastName),
+      phone: valueOrBlank_(params.phone),
+      email: valueOrBlank_(params.email),
+      pincode: valueOrBlank_(params.pincode),
+      city: valueOrBlank_(params.city),
+      treatment: valueOrBlank_(params.treatment),
+      sheet_tab: valueOrBlank_(params.sheet_tab),
+      utm_source: valueOrBlank_(params.utm_source),
+      utm_medium: valueOrBlank_(params.utm_medium),
+      utm_campaign: valueOrBlank_(params.utm_campaign),
+      utm_term: valueOrBlank_(params.utm_term),
+      utm_content: valueOrBlank_(params.utm_content),
+      gclid: valueOrBlank_(params.gclid),
+      gbraid: valueOrBlank_(params.gbraid),
+      wbraid: valueOrBlank_(params.wbraid)
+    };
 
-    const row = [
-      new Date(),
-      valueOrBlank_(params.date),
-      valueOrBlank_(params.firstName),
-      valueOrBlank_(params.lastName),
-      valueOrBlank_(params.phone),
-      valueOrBlank_(params.email),
-      valueOrBlank_(params.pincode),
-      valueOrBlank_(params.city),
-      valueOrBlank_(params.treatment),
-      valueOrBlank_(params.sheet_tab),
-      valueOrBlank_(params.utm_source),
-      valueOrBlank_(params.utm_medium),
-      valueOrBlank_(params.utm_campaign),
-      valueOrBlank_(params.utm_term),
-      valueOrBlank_(params.utm_content),
-      valueOrBlank_(params.gclid),
-      valueOrBlank_(params.gbraid),
-      valueOrBlank_(params.wbraid)
-    ];
+    // One cell per existing column; anything the form doesn't own stays blank.
+    const row = headers.map(function (header) {
+      return Object.prototype.hasOwnProperty.call(values, header) ? values[header] : "";
+    });
 
     sheet.appendRow(row);
 
@@ -64,7 +77,7 @@ function doPost(e) {
 
 function doGet() {
   return ContentService
-    .createTextOutput("Google Apps Script is live.")
+    .createTextOutput("Google Apps Script is live. v2-gclid")
     .setMimeType(ContentService.MimeType.TEXT);
 }
 
@@ -87,27 +100,40 @@ function getOrCreateSheet_(spreadsheet, sheetName) {
   return sheet;
 }
 
-function ensureHeaders_(sheet, headers) {
-  if (sheet.getLastRow() === 0) {
-    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+/**
+ * Returns the sheet's header row, after appending any required header that is
+ * missing. Existing headers keep their position and their name.
+ */
+function ensureHeaders_(sheet, requiredHeaders) {
+  if (sheet.getLastRow() === 0 || sheet.getLastColumn() === 0) {
+    sheet.getRange(1, 1, 1, requiredHeaders.length).setValues([requiredHeaders]);
     sheet.setFrozenRows(1);
-    return;
+    return requiredHeaders.slice();
   }
 
-  const existingHeaders = sheet.getRange(1, 1, 1, headers.length).getValues()[0];
-  const isMissingHeaders = headers.some(function(header, index) {
-    return existingHeaders[index] !== header;
+  const headers = sheet
+    .getRange(1, 1, 1, sheet.getLastColumn())
+    .getValues()[0]
+    .map(function (header) {
+      return String(header || "").trim();
+    });
+
+  const missing = requiredHeaders.filter(function (header) {
+    return headers.indexOf(header) === -1;
   });
 
-  if (isMissingHeaders) {
-    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+  if (missing.length) {
+    sheet.getRange(1, headers.length + 1, 1, missing.length).setValues([missing]);
     sheet.setFrozenRows(1);
+    return headers.concat(missing);
   }
+
+  return headers;
 }
 
 function sanitizeSheetName_(name) {
   return String(name || "")
-    .replace(/[\\\/\?\*\[\]\:]/g, " ")
+    .replace(/[\\/\?\*\[\]\:]/g, " ")
     .trim()
     .substring(0, 100);
 }

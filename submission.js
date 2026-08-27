@@ -1,6 +1,6 @@
 (function () {
   const WEB_APP_URL =
-    "https://script.google.com/macros/s/AKfycbyPpDmvoytLHqhNO26sXOnMTk5iMmd8mz2xOVhbE6cuoLoM9pco7sHuxH5VpZPf5Md0/exec";
+    "https://script.google.com/macros/s/AKfycby4JVZOuC9U7ziyniciX1j-1R4Q-PLakl0c6ZkDxGO3mxVoCRSjioPtlFnN3loKKStD/exec";
   const THANK_YOU_URL = "https://dentaloffers.avmsmiles.com/thank-you";
 
   function setStatus(statusEl, msg, isError) {
