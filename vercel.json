@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/p9dk",
+      "destination": "https://GTM-W9RNL2H8.fps.goog/p9dk"
+    },
+    {
+      "source": "/p9dk/:path*",
+      "destination": "https://GTM-W9RNL2H8.fps.goog/p9dk/:path*"
+    },
+    {
       "source": "/10999",
       "destination": "https://dental-offers-10999.avmsmiles.com/"
     },
