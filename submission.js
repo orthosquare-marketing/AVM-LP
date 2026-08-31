@@ -69,6 +69,26 @@
       });
   }
 
+  function formLocation(formId) {
+    if (formId.indexOf("modal") > -1) return "modal";
+    if (formId.indexOf("mobile") > -1) return "mobile sticky";
+    return "hero";
+  }
+
+  // Never let a tracking hiccup block the redirect the user is waiting on.
+  function fireFormSubmitted(form, formId) {
+    if (!window.AVMTracking) return Promise.resolve();
+    try {
+      return window.AVMTracking.formSubmitted(form, {
+        form_id: formId,
+        form_name: "lead form",
+        form_location: formLocation(formId)
+      }).catch(function () {});
+    } catch (err) {
+      return Promise.resolve();
+    }
+  }
+
   function attachSubmission(formId, statusId) {
     const form = document.getElementById(formId);
     const statusEl = document.getElementById(statusId);
@@ -111,6 +131,9 @@
         if (!res.ok || text.trim().toLowerCase() !== "ok") {
           throw new Error("failed");
         }
+
+        // Only now is the lead real: fire the conversion event, then leave.
+        await fireFormSubmitted(form, formId);
 
         window.location.href = THANK_YOU_URL;
       } catch (err) {

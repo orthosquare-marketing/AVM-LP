@@ -164,6 +164,7 @@
 
   <!-- Google Ads click id capture (gclid/gbraid/wbraid) -->
   <script src="../click-ids.js"></script>
+  <script src="../tracking.js"></script>
 </head>
 
 <body>
@@ -2622,6 +2623,14 @@
                     const text = await res.text();
                     if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
 
+                    // Only now is the lead real: fire the conversion event, then leave.
+                    if (window.AVMTracking) {
+                        await window.AVMTracking.formSubmitted(form, {
+                            form_name: "lead form",
+                            form_location: form.id.indexOf("modal") > -1 ? "modal" : "hero"
+                        }).catch(function () { });
+                    }
+
                     window.location.href = THANK_YOU_URL;
                 } catch (err) {
                     setStatus("Something went wrong. Please try again.", true);
@@ -2767,6 +2776,14 @@
 
                     const text = await res.text();
                     if (!res.ok || text.trim().toLowerCase() !== "ok") throw new Error("failed");
+
+                    // Only now is the lead real: fire the conversion event, then leave.
+                    if (window.AVMTracking) {
+                        await window.AVMTracking.formSubmitted(form, {
+                            form_name: "lead form",
+                            form_location: form.id.indexOf("modal") > -1 ? "modal" : "hero"
+                        }).catch(function () { });
+                    }
 
                     window.location.href = THANK_YOU_URL;
                 } catch (err) {

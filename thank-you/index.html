@@ -233,5 +233,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </div>
     </main>
+
+    <!--
+      Safety net: replays `form_submitted` with the same lead_id only when the
+      landing page pushed it but GTM never confirmed its tags before the
+      redirect. A confirmed submission leaves nothing to replay.
+    -->
+    <script src="../tracking.js"></script>
+    <script>
+      if (window.AVMTracking) window.AVMTracking.replayPending();
+    </script>
   </body>
 </html>
