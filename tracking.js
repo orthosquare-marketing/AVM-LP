@@ -94,7 +94,8 @@
     extra = extra || {};
     var given = extra.values || {};
     var params = new URLSearchParams(w.location.search);
-    var clickIds = (w.AVMClickIds && w.AVMClickIds.get()) || {};
+    var attribution = (w.AVMAttribution && w.AVMAttribution.get()) || {};
+    var attributionKeys = (w.AVMAttribution && w.AVMAttribution.keys) || [];
     var firstName =
       given.firstName ||
       firstFilled(form, ["firstName", "first_name", "fname", "name"]);
@@ -108,7 +109,7 @@
       lastName = parts.join(" ");
     }
 
-    return {
+    var lead = {
       email: normalizeEmail(
         given.email || firstFilled(form, ["email", "email_id"])
       ),
@@ -132,15 +133,20 @@
       utm_campaign:
         val(form, "utm_campaign") || params.get("utm_campaign") || "",
       utm_term: val(form, "utm_term") || params.get("utm_term") || "",
-      utm_content: val(form, "utm_content") || params.get("utm_content") || "",
-      gclid: clickIds.gclid || params.get("gclid") || "",
-      gbraid: clickIds.gbraid || params.get("gbraid") || "",
-      wbraid: clickIds.wbraid || params.get("wbraid") || ""
+      utm_content: val(form, "utm_content") || params.get("utm_content") || ""
     };
+
+    // Every ad platform's click id, so a GTM conversion tag (Google, Meta CAPI,
+    // Microsoft, ...) can read the one it needs off the same event.
+    attributionKeys.forEach(function (key) {
+      lead[key] = attribution[key] || params.get(key) || "";
+    });
+
+    return lead;
   }
 
   function buildEvent(lead, meta, hashes) {
-    return {
+    var event = {
       event: EVENT_NAME,
       lead_id: meta.lead_id,
       form_id: meta.form_id || "",
@@ -155,9 +161,6 @@
       utm_campaign: lead.utm_campaign,
       utm_term: lead.utm_term,
       utm_content: lead.utm_content,
-      gclid: lead.gclid,
-      gbraid: lead.gbraid,
-      wbraid: lead.wbraid,
       // Plain values -> GTM "User-Provided Data" variable (manual configuration).
       user_data: {
         email: lead.email,
@@ -181,6 +184,12 @@
         }
       }
     };
+
+    ((w.AVMAttribution && w.AVMAttribution.keys) || []).forEach(function (key) {
+      event[key] = lead[key] || "";
+    });
+
+    return event;
   }
 
   function clearPending() {

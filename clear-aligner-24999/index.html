@@ -2529,11 +2529,13 @@
                 setHidden("utm_term", params.get("utm_term") || "");
                 setHidden("utm_content", params.get("utm_content") || "");
 
-                // Google Ads click ids, so the lead can be imported back as an offline conversion.
-                const clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
-                setHidden("gclid", clickIds.gclid || params.get("gclid") || "");
-                setHidden("gbraid", clickIds.gbraid || params.get("gbraid") || "");
-                setHidden("wbraid", clickIds.wbraid || params.get("wbraid") || "");
+                // Ad-platform click ids, so the lead can be imported back as an
+                // offline conversion by Google, Meta and the rest.
+                const attribution = (window.AVMAttribution && window.AVMAttribution.get()) || {};
+                const attributionKeys = (window.AVMAttribution && window.AVMAttribution.keys) || [];
+                attributionKeys.forEach(function (key) {
+                    setHidden(key, attribution[key] || params.get(key) || "");
+                });
 
                 setHidden("date", new Date().toISOString());
 
@@ -2684,11 +2686,13 @@
                 setHidden("utm_term", params.get("utm_term") || "");
                 setHidden("utm_content", params.get("utm_content") || "");
 
-                // Google Ads click ids, so the lead can be imported back as an offline conversion.
-                const clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
-                setHidden("gclid", clickIds.gclid || params.get("gclid") || "");
-                setHidden("gbraid", clickIds.gbraid || params.get("gbraid") || "");
-                setHidden("wbraid", clickIds.wbraid || params.get("wbraid") || "");
+                // Ad-platform click ids, so the lead can be imported back as an
+                // offline conversion by Google, Meta and the rest.
+                const attribution = (window.AVMAttribution && window.AVMAttribution.get()) || {};
+                const attributionKeys = (window.AVMAttribution && window.AVMAttribution.keys) || [];
+                attributionKeys.forEach(function (key) {
+                    setHidden(key, attribution[key] || params.get(key) || "");
+                });
 
                 setHidden("date", new Date().toISOString());
 

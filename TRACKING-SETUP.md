@@ -27,7 +27,10 @@ plus a replay safety net on `/thank-you`.
   sheet_tab: "dental-Implant",
   page_path, page_location,
   utm_source, utm_medium, utm_campaign, utm_term, utm_content,
-  gclid, gbraid, wbraid,
+  gclid, gbraid, wbraid,                    // Google
+  fbclid, fbc, fbp,                         // Meta (fbc/fbp are the pixel's cookies)
+  msclkid, ttclid, li_fat_id, twclid,       // Microsoft, TikTok, LinkedIn, X
+  referrer, landing_page,
 
   // Plain, already normalised (lowercased email, E.164 phone)
   user_data: {
@@ -70,7 +73,11 @@ Name it `CE - form_submitted`.
 **Variables → New → Data Layer Variable** for each (Version 2):
 
 `lead_id`, `form_location`, `treatment`, `gclid`, `gbraid`, `wbraid`,
+`fbclid`, `fbc`, `fbp`, `msclkid`, `ttclid`, `li_fat_id`, `twclid`,
 `utm_source`, `utm_campaign`
+
+`fbc` and `fbp` are what a Meta Conversions API tag needs; without them
+Meta can only match on hashed email and phone.
 
 ## 3. GTM — Google Ads conversion tag
 
@@ -127,8 +134,11 @@ any legacy action built on `gtm.formInteract` or a `/thank-you` pageview to
 
 ## 6. Enhanced conversions for leads (offline import)
 
-The lead sheet already stores `gclid` / `gbraid` / `wbraid` (`click-ids.js`
-keeps them for 90 days across page moves) plus email, phone, name and pincode.
+The lead sheet already stores every platform's click id — `gclid` / `gbraid` /
+`wbraid` for Google, `fbclid` / `fbc` / `fbp` for Meta, plus `msclkid`,
+`ttclid`, `li_fat_id` and `twclid` (`click-ids.js` keeps them for 90 days across
+page moves) — alongside email, phone, name and pincode. Untagged leads still get
+`referrer` and `landing_page`, which is usually enough to tell the source.
 Once you can mark which leads booked or showed up, import those back as offline
 conversions against the stored click id, keyed on the same fields. That teaches
 Smart Bidding on *qualified* leads rather than raw form fills, which is where
@@ -146,3 +156,7 @@ most of the campaign efficiency actually comes from.
 4. In Google Ads, the conversion action shows **"Recording conversions"** within
    ~24h and enhanced-conversions diagnostics report no errors after ~48–72h.
 5. Confirm the test lead landed in the sheet with its `gclid` column filled.
+   For Meta, land on the page with a `?fbclid=` and check `fbclid` / `fbc` / `fbp`.
+
+Columns are matched by header **name**, so they can be reordered freely — but do
+not blank one out or rename it, or that field stops being recorded.

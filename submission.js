@@ -40,11 +40,14 @@
     setHidden(form, "utm_term", params.get("utm_term") || "");
     setHidden(form, "utm_content", params.get("utm_content") || "");
 
-    // Google Ads click ids, so the lead can be imported back as an offline conversion.
-    const clickIds = (window.AVMClickIds && window.AVMClickIds.get()) || {};
-    setHidden(form, "gclid", clickIds.gclid || params.get("gclid") || "");
-    setHidden(form, "gbraid", clickIds.gbraid || params.get("gbraid") || "");
-    setHidden(form, "wbraid", clickIds.wbraid || params.get("wbraid") || "");
+    // Ad-platform click ids, so the lead can be imported back as an offline
+    // conversion by Google, Meta and the rest.
+    const attribution = (window.AVMAttribution && window.AVMAttribution.get()) || {};
+    const attributionKeys =
+      (window.AVMAttribution && window.AVMAttribution.keys) || [];
+    attributionKeys.forEach((key) => {
+      setHidden(form, key, attribution[key] || params.get(key) || "");
+    });
 
     setHidden(form, "date", new Date().toISOString());
 
